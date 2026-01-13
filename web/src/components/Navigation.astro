@@ -1,0 +1,55 @@
+---
+const currentPath = Astro.url.pathname;
+---
+
+<header class="bg-white sticky top-0 z-50 shadow-sm">
+  <div class="container-custom flex items-center justify-between">
+    <a href="/" class="font-bold text-xl">Komm Raus</a>
+
+    <!-- desktop nav -->
+    <nav class="hidden md:block" role="navigation" aria-label="Hauptnavigation">
+      <ul class="flex gap-6 items-center">
+        <li><a href="/" class={`no-underline ${currentPath === '/' ? 'font-semibold underline' : ''}`}>Home</a></li>
+        <li><a href="/about" class={`no-underline ${currentPath.startsWith('/about') ? 'font-semibold underline' : ''}`}>Über uns</a></li>
+        <li><a href="/angebote" class={`no-underline ${currentPath.startsWith('/angebote') ? 'font-semibold underline' : ''}`}>Angebote</a></li>
+        <li><a href="/schule" class={`no-underline ${currentPath.startsWith('/schule') ? 'font-semibold underline' : ''}`}>Schule</a></li>
+        <li><a href="/assessment" class={`no-underline ${currentPath.startsWith('/assessment') ? 'font-semibold underline' : ''}`}>Assessment</a></li>
+        <li><a href="/adhs" class={`no-underline ${currentPath.startsWith('/adhs') ? 'font-semibold underline' : ''}`}>ADHS</a></li>
+        <li><a href="/blaulicht" class={`no-underline ${currentPath.startsWith('/blaulicht') ? 'font-semibold underline' : ''}`}>Blaulicht</a></li>
+      </ul>
+    </nav>
+
+    <!-- mobile menu toggle -->
+    <div class="md:hidden">
+      <button id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" class="p-2 rounded focus:outline-none">☰ <span class="sr-only">Menü öffnen</span></button>
+    </div>
+  </div>
+
+  <!-- mobile menu -->
+  <nav id="mobile-nav" class="md:hidden hidden bg-white border-t">
+    <div class="container-custom py-4">
+      <ul class="flex flex-col gap-3">
+        <li><a href="/" class="no-underline">Home</a></li>
+        <li><a href="/about" class="no-underline">Über uns</a></li>
+        <li><a href="/angebote" class="no-underline">Angebote</a></li>
+        <li><a href="/schule" class="no-underline">Schule</a></li>
+        <li><a href="/assessment" class="no-underline">Assessment</a></li>
+        <li><a href="/adhs" class="no-underline">ADHS</a></li>
+        <li><a href="/blaulicht" class="no-underline">Blaulicht</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // mobile nav toggle
+  const btn = document.getElementById('nav-toggle');
+  const mobile = document.getElementById('mobile-nav');
+  if (btn && mobile) {
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      mobile.classList.toggle('hidden');
+    });
+  }
+</script>
