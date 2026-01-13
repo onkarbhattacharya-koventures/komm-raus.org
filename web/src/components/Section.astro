@@ -1,0 +1,13 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+}
+const { id = '', class: cls = '' } = Astro.props as Props;
+---
+
+<section id={id} class={`py-12 ${cls}`}>
+  <div class="container-custom">
+    <slot />
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  body?: string;
+  image?: string; // base name, e.g., 'konzept_toprope_240px'
+}
+const { title, body = '', image } = Astro.props as Props;
+---
+
+<article class="p-6 bg-white rounded-md shadow-sm">
+  {image && (
+    <picture>
+      <source type="image/webp" srcset={`/images/${image}-400.webp 400w, /images/${image}-800.webp 800w`} />
+      <img src={`/images/${image}-400.jpg`} srcset={`/images/${image}-400.jpg 400w, /images/${image}-800.jpg 800w`} alt={title} class="w-full h-40 object-cover rounded-md mb-4" loading="lazy" />
+    </picture>
+  )}
+
+  <h3 class="font-semibold text-lg">{title}</h3>
+  {body && <p class="mt-3 text-sm text-gray-700">{body}</p>}
+</article>

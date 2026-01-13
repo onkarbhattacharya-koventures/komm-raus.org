@@ -1,0 +1,95 @@
+---
+import '../styles/global.css';
+import { buildMeta } from '../lib/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+}
+const { title = 'komm-raus.org', description, image } = Astro.props as Props;
+const meta = buildMeta({ title, description, image });
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={meta.description} />
+    <link rel="icon" href="/favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content={meta.title} />
+    <meta property="og:description" content={meta.description} />
+    <meta property="og:image" content={meta.image} />
+    <meta property="og:url" content={meta.url} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <title>{meta.title}</title>
+  </head>
+  <body class="min-h-screen bg-brand-light text-brand-text font-sans">
+    <header class="bg-white sticky top-0 z-50 shadow-sm">
+      <div class="container-custom flex items-center justify-between">
+        <a href="/" class="font-bold text-xl">Komm Raus</a>
+
+        <!-- simple responsive nav -->
+        <nav class="hidden md:block" role="navigation" aria-label="Hauptnavigation">
+          <ul class="flex gap-6 items-center">
+            <li><a href="/" class={`no-underline ${Astro.url.pathname === '/' ? 'font-semibold underline' : ''}`}>Home</a></li>
+            <li><a href="/about" class={`no-underline ${Astro.url.pathname.startsWith('/about') ? 'font-semibold underline' : ''}`}>Über uns</a></li>
+            <li><a href="/angebote" class={`no-underline ${Astro.url.pathname.startsWith('/angebote') ? 'font-semibold underline' : ''}`}>Angebote</a></li>
+          </ul>
+        </nav>
+
+        <!-- mobile menu toggle -->
+        <div class="md:hidden">
+          <button id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" class="p-2 rounded focus:outline-none">☰ <span class="sr-only">Menü öffnen</span></button>
+        </div>
+      </div>
+
+      <!-- mobile menu (hidden by default) -->
+      <nav id="mobile-nav" class="md:hidden hidden bg-white border-t">
+        <div class="container-custom py-4">
+          <ul class="flex flex-col gap-3">
+            <li><a href="/" class="no-underline">Home</a></li>
+            <li><a href="/about" class="no-underline">Über uns</a></li>
+            <li><a href="/angebote" class="no-underline">Angebote</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="bg-brand-sand text-sm">
+      <div class="container-custom">
+        <p class="text-center py-6">© {new Date().getFullYear()} Komm Raus</p>
+      </div>
+    </footer>
+
+    <!-- AOS init (client-only) -->
+    <script type="module" client:load>
+      import AOS from 'aos';
+      import 'aos/dist/aos.css';
+      AOS.init({ duration: 600, easing: 'ease-in-out', once: true });
+
+      // mobile nav toggle
+      const btn = document.getElementById('nav-toggle');
+      const mobile = document.getElementById('mobile-nav');
+      if (btn && mobile) {
+        btn.addEventListener('click', () => {
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          mobile.classList.toggle('hidden');
+        });
+      }
+    </script>
+  </body>
+</html>

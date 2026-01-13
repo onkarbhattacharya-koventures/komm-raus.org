@@ -1,0 +1,109 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<MainLayout title="Assessment & Weiterbildung – Laubfrosch">
+  <Hero title="Assessment & Weiterbildung: effektive Stellschrauben" subtitle="Führung, Kommunikation, Entscheidungsfindung, Stresskompetenz und Teamverhalten sichtbar machen." image="Baumklettern-Seilaufstiegstechnik" />
+
+  <Section>
+    <h2>Erlebnispädagogisches Assessment Center</h2>
+    <p class="subtitle">Soft Skills sichtbar machen. Entscheidungen wirksam fundieren.</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+      <picture>
+        <source type="image/webp" srcset="/images/kanu-fahren-400.webp 400w, /images/kanu-fahren-800.webp 800w, /images/kanu-fahren-1200.webp 1200w" />
+        <img src="/images/kanu-fahren-400.jpg" alt="Kanu fahren" loading="lazy" class="w-full h-40 object-cover rounded-md" />
+      </picture>
+
+      <picture>
+        <source type="image/webp" srcset="/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.webp 400w, /images/Floß-bauen-Erlebnispädagogik-Teambuilding-800.webp 800w" />
+        <img src="/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.jpg" alt="Floß bauen" loading="lazy" class="w-full h-40 object-cover rounded-md" />
+      </picture>
+
+      <picture>
+        <source type="image/webp" srcset="/images/Baumklettern-Seilaufstiegstechnik-400.webp 400w, /images/Baumklettern-Seilaufstiegstechnik-800.webp 800w" />
+        <img src="/images/Baumklettern-Seilaufstiegstechnik-400.jpg" alt="Baumklettern" loading="lazy" class="w-full h-40 object-cover rounded-md" />
+      </picture>
+
+      <picture>
+        <source type="image/webp" srcset="/images/kurs_taschenmesser-400.webp 400w, /images/kurs_taschenmesser-800.webp 800w" />
+        <img src="/images/kurs_taschenmesser-400.jpg" alt="Taschenmesser Kurs" loading="lazy" class="w-full h-40 object-cover rounded-md" />
+      </picture>
+    </div>
+
+  </Section>
+
+  <Section class="light">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2>Das Problem klassischer Assessment Center</h2>
+        <p>In klassischen Settings bleiben Teilnehmende in Rollenmustern. Sozial erwünschtes Verhalten verzerrt die Ergebnisse und führt zu Fehlentscheidungen.</p>
+      </div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/Feuer-machen-bowdrill-set-400.webp 400w, /images/Feuer-machen-bowdrill-set-800.webp 800w" />
+          <img src="/images/Feuer-machen-bowdrill-set-400.jpg" alt="Feuer machen" loading="lazy" class="w-full h-48 object-cover rounded-md" />
+        </picture>
+      </div>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/parkplatz_small2-400.webp 400w, /images/parkplatz_small2-800.webp 800w" />
+          <img src="/images/parkplatz_small2-400.jpg" alt="Assessment Szene" loading="lazy" class="w-full h-48 object-cover rounded-md" />
+        </picture>
+      </div>
+
+      <div>
+        <h2>Unser Ansatz: Stress und Spaß demaskieren</h2>
+        <ul class="list-disc pl-6 mt-4 space-y-2">
+          <li><strong>Realstress</strong> – Natürliche Belastung statt Rollenspiel</li>
+          <li><strong>Beobachtbares Verhalten</strong> – Handlungen statt Selbstdarstellung</li>
+          <li><strong>Teamdynamik</strong> – Führung entsteht, sie wird nicht behauptet</li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <Section class="sand">
+    <h2>Welche Soft Skills sichtbar werden</h2>
+    <div class="cards mt-4">
+      <Card title="Teamfähigkeit" body="Kooperation, Kommunikation, Konfliktfähigkeit" />
+      <Card title="Kreativität" body="Lösungsorientierung unter Unsicherheit" />
+      <Card title="Verantwortung" body="Eigeninitiative, Entscheidungsstärke" />
+    </div>
+  </Section>
+
+  <Section class="dark">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2>Return on Invest</h2>
+        <p>Fehlbesetzungen kosten Zeit, Geld und Kultur. Richtige Entscheidungen zahlen sich nachhaltig aus.</p>
+      </div>
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.webp 400w, /images/internationale-schüler-austausch-kooperation-erlebnispädagogik-800.webp 800w" />
+          <img src="/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.jpg" alt="Team Arbeit" loading="lazy" class="w-full h-48 object-cover rounded-md" />
+        </picture>
+      </div>
+    </div>
+  </Section>
+
+  <Section class="yellow">
+    <h2>Unsere Assessment-Formate</h2>
+    <div class="cards mt-4">
+      <Card title="AC Azubi" body="Potenzialanalyse für Berufseinsteiger" />
+      <Card title="AC Compact" body="Fokussierte Entscheidungsgrundlage" />
+      <Card title="AC Classic" body="Ganzheitliche Eignungsdiagnostik" />
+      <Card title="AC Executive" body="Führung unter Hochdruck" />
+    </div>
+  </Section>
+
+</MainLayout>

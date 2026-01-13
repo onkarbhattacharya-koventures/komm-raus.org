@@ -1,0 +1,80 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+---
+
+<MainLayout title="Schule – Programme & Konzepte">
+  <Section class="sand">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-bold">Gemeinschaft stärken.<br />Mindset wecken.<br />Potenziale entfalten.</h2>
+        <p class="mt-4">Lernen, das man fühlt. Entwicklung, die im Alltag wirkt. Unsere Programme verbinden Natur, Bewegung und Persönlichkeitsentwicklung.</p>
+      </div>
+
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/prog_schule_400-400.webp 400w, /images/prog_schule_400-800.webp 800w" />
+          <img src="/images/prog_schule_400-400.jpg" alt="Schulprogramm" loading="lazy" class="w-full h-52 object-cover rounded-md" />
+        </picture>
+      </div>
+    </div>
+  </Section>
+
+  <Section class="light">
+    <h2>Von der Gruppe zum Dreamteam</h2>
+    <p class="subtitle">Warum ein Tag bei uns mehr ist als nur ein Ausflug.</p>
+
+    <div class="cards">
+      <Card title="Soziale Kompetenz fördern" body="Kommunikation, Vertrauen und Zusammenarbeit entstehen durch echte Herausforderungen." />
+      <Card title="Selbstvertrauen entwickeln" body="Erfolge werden körperlich erlebt – nicht nur theoretisch verstanden." />
+      <Card title="Eigenverantwortung stärken" body="Jede Entscheidung hat Konsequenzen. Genau darin liegt der Lernmoment." />
+      <Card title="Gemeinschaft erleben" body="Zusammenhalt entsteht nicht durch Worte, sondern durch gemeinsames Handeln." />
+    </div>
+  </Section>
+
+  <Section>
+    <h2>Unser Konzept</h2>
+    <p class="subtitle">Die Praxis entscheidet – nicht das Versprechen.</p>
+
+    <div class="cards">
+      <Card title="Erleben" body="Reale Herausforderungen in der Natur schaffen emotionale Beteiligung." />
+      <Card title="Reflektieren" body="Erfahrungen werden gemeinsam eingeordnet und bewusst gemacht." />
+      <Card title="Übertragen" body="Erkenntnisse werden gezielt in den Alltag integriert." />
+    </div>
+  </Section>
+
+  <Section class="dark">
+    <h2>Nützliche Programme</h2>
+    <div class="cards">
+      <Card title="Basisprogramme" body="Kennenlernen, Vertrauen, erste Herausforderungen und gemeinsames Erleben." />
+      <Card title="Projektprogramme" body="Mehrtägige Formate mit vertiefter Persönlichkeitsentwicklung." />
+      <Card title="Intensivprogramme" body="Tiefe Prozesse, echte Grenzerfahrungen und nachhaltige Veränderung." />
+    </div>
+  </Section>
+
+  <Section class="sand">
+    <h2>Train the Trainer</h2>
+    <p class="subtitle">Fortbildungen für Pädagog:innen, Lehrkräfte und Multiplikator:innen.</p>
+    <div class="cards">
+      <Card title="Kletterwald für Lehrer" body="Sicherheit, Führung und Verantwortung in erlebnispädagogischen Settings." />
+      <Card title="Fokus & Konzentration" body="Methoden zur Aufmerksamkeits- und Selbstregulation." />
+      <Card title="Stressmanagement" body="Eigene Ressourcen stärken, bevor man andere begleitet." />
+    </div>
+  </Section>
+
+  <Section class="light">
+    <h2>Sicherheit und Verantwortung</h2>
+    <p class="subtitle">Ihr verlässlicher Partner.</p>
+    <div class="cards">
+      <Card title="Unsere Qualifikation" body="Zertifizierte Trainer, fundierte Ausbildung, langjährige Erfahrung." />
+      <Card title="Sicherungssysteme" body="Geprüfte Anlagen, regelmäßige Wartung, klare Sicherheitsstandards." />
+      <Card title="Rechtliche Sicherheit" body="Haftpflicht, Konzepte, transparente Verantwortung." />
+    </div>
+  </Section>
+
+  <Section class="yellow">
+    <h2>Geprüfte Anlage</h2>
+    <p>Unsere Anlage wird regelmäßig überprüft und erfüllt alle relevanten Sicherheitsstandards.</p>
+  </Section>
+</MainLayout>

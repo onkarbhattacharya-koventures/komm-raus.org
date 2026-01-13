@@ -1,0 +1,10 @@
+{
+  "standard": "WCAG2AA",
+  "timeout": 30000,
+  "ignore": [
+    {
+      "code": "notice",
+      "context": "HTML has a long description"
+    }
+  ]
+}

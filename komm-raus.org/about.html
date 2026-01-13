@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Laubfrosch Waldseilgarten</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #1f2a24;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .hero {
+            background: #1f3a2f;
+            color: white;
+            padding: 120px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .btn-primary {
+            background: #d9a441;
+            color: black;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+        }
+
+        .section {
+            background: #f4f4f2;
+        }
+
+        .section.light {
+            background: #ffffff;
+        }
+
+        .section.sand {
+            background: #e8dfcf;
+        }
+
+        .section.dark {
+            background: #2a3f36;
+            color: white;
+        }
+
+        .section.yellow {
+            background: #f1b800;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            margin-bottom: 40px;
+            max-width: 700px;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .img-box,
+        .img-placeholder {
+            background: #ccc;
+            height: 180px;
+            border-radius: 8px;
+        }
+
+        .features {
+            list-style: none;
+        }
+
+        .features li {
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        .section.dark .card {
+            background: #3b5a4c;
+            color: white;
+        }
+
+        @media (max-width: 800px) {
+            .split {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO / HEADER -->
+    <header class="hero">
+        <div class="container">
+
+            <!-- Logo oben rechts wie im Screenshot -->
+            <div style="display:flex; justify-content:flex-end; margin-bottom:80px;">
+                <div style="text-align:right;">
+                    <div style="font-weight:bold; letter-spacing:1px; font-size:14px;">
+                        LAUBFROSCH<br>WALDSEILGÄRTEN
+                    </div>
+                    <!-- Platzhalter für Logo-Grafik -->
+                    <div class="img-placeholder" style="margin-top:10px; width:80px; margin-left:auto;"></div>
+                </div>
+            </div>
+
+            <!-- Textblock im Vordergrund des Header-Bildes -->
+            <div style="max-width:650px;">
+                <h1>Individuelle Programme<br>für Ihre Ziele</h1>
+                <p>
+                    Pädagogisch wirksam: Erlebnis- und Wildnispädagogik mit klarem Lernziel –
+                    Kommunikation, Vertrauen, Problemlösen, Resilienz.
+                </p>
+                <a href="#" class="btn-primary">Studien</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION: Wo Abenteuer auf Potentialentfaltung trifft -->
+    <section class="section">
+        <div class="container">
+
+            <h2 style="text-align:center; margin-bottom:40px;">
+                Wo Abenteuer auf Potentialentfaltung trifft
+            </h2>
+
+            <!-- Logo + Claim links / Einleitungstext rechts -->
+            <div class="split" style="margin-bottom:60px;">
+                <div>
+                    <p style="font-weight:bold; letter-spacing:1px; margin-bottom:20px;">
+                        LAUBFROSCH<br>WALDSEILGARTEN
+                    </p>
+                    <!-- kleiner Baum/Frosch-Icon-Platzhalter -->
+                    <div class="img-placeholder" style="width:90px;"></div>
+                </div>
+                <div>
+                    <p class="subtitle">
+                        Willkommen in einem der letzten authentischen pädagogischen Hochseilgärten.
+                        Hier verbinden wir Abenteuer in der Natur mit fundierter pädagogischer
+                        Arbeit – für nachhaltige Entwicklung von Kindern, Jugendlichen und Erwachsenen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Drei Spalten wie im Screenshot -->
+            <div class="cards">
+                <div class="card">
+                    <h3 style="margin-bottom:15px;">Unsere Perspektive</h3>
+                    <p>
+                        Platzhaltertext für eine Beschreibung des pädagogischen Ansatzes, der sich
+                        klar vom reinen „Spaßklettern“ abgrenzt und Entwicklungsziele in den Fokus stellt.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom:15px;">Was ist gut gemacht?</h3>
+                    <p>
+                        Platzhaltertext für Erläuterungen zu Sicherheit, Prozessqualität
+                        und der methodischen Gestaltung der Programme.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3 style="margin-bottom:15px;">Unser Spektrum</h3>
+                    <p>
+                        Platzhaltertext für eine Übersicht über Zielgruppen und Formate:
+                        Klassen, Teams, Fachkräfte, Familien und besondere Settings.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Angebote mit Wirkkraft -->
+    <section class="section light">
+        <div class="container">
+
+            <!-- Überschrift links, Logo rechts -->
+            <div class="split" style="align-items:center; margin-bottom:60px;">
+                <div>
+                    <h2>Angebote mit Wirkkraft!</h2>
+                </div>
+                <div style="text-align:right;">
+                    <p style="font-weight:bold; letter-spacing:1px; margin-bottom:10px;">
+                        LAUBFROSCH<br>WALDSEILGARTEN
+                    </p>
+                    <div class="img-placeholder" style="width:90px; margin-left:auto;"></div>
+                </div>
+            </div>
+
+            <!-- Bild links, Text rechts -->
+            <div class="split">
+                <div>
+                    <div class="img-placeholder"></div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom:15px;">Warum wir tun, was wir tun</h3>
+                    <p style="margin-bottom:15px;">
+                        Platzhaltertext für die Darstellung der Haltung, Werte und Motivation:
+                        Naturerfahrung, Verantwortung, soziale Kompetenzen und Resilienzförderung.
+                    </p>
+                    <p>
+                        Platzhalter für weitere Details zu den Angebotsformen, Zielen und
+                        Rahmenbedingungen der Programme im Waldseilgarten.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Was die Forschung sagt -->
+    <section class="section light">
+        <div class="container">
+
+            <div class="split">
+                <!-- Linke Spalte: Bild + Titel -->
+                <div>
+                    <h2>Was die Forschung sagt:</h2>
+                    <div class="img-placeholder" style="margin-top:20px;"></div>
+                </div>
+
+                <!-- Rechte Spalte: Studienliste -->
+                <div>
+                    <h3 style="margin-bottom:15px;">Ausgewählte Studien</h3>
+                    <ul class="features">
+                        <li>
+                            Platzhalter für Studien, die Effekte von Erlebnispädagogik auf
+                            Selbstwirksamkeit, Teamfähigkeit und Resilienz belegen.
+                        </li>
+                        <li>
+                            Platzhalter für Metaanalysen und Reviews zu langfristigen
+                            Wirkungen naturbasierter Lernsettings.
+                        </li>
+                        <li>
+                            Platzhalter für Hinweise auf neurobiologische und psychologische
+                            Grundlagen der Wirksamkeit.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Was wir bewirken -->
+    <section class="section light">
+        <div class="container">
+
+            <div class="split">
+                <!-- Linke Spalte: Bild + Überschrift -->
+                <div>
+                    <h2>Was wir bewirken</h2>
+                    <div class="img-placeholder" style="margin-top:20px;"></div>
+                </div>
+
+                <!-- Rechte Spalte: Wirkungsbeschreibung -->
+                <div>
+                    <h3 style="margin-bottom:15px;">Messbar und nachhaltig</h3>
+                    <ul class="features">
+                        <li>
+                            Platzhalter für Ergebnisse zu Verbesserungen in Selbstvertrauen,
+                            sozialer Kompetenz und Konfliktfähigkeit.
+                        </li>
+                        <li>
+                            Platzhalter für Angaben zu Transfer in Schule, Beruf und Alltag.
+                        </li>
+                        <li>
+                            Platzhalter für Rückmeldungen von Teilnehmenden, Lehrkräften
+                            und Auftraggebern.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Flexibel und skalierbar -->
+    <section class="section sand">
+        <div class="container">
+
+            <div class="split">
+                <div>
+                    <h2>Flexibel und skalierbar</h2>
+                    <div class="img-placeholder" style="margin-top:20px;"></div>
+                </div>
+                <div>
+                    <h3 style="margin-bottom:15px;">
+                        Spezialisierte Programme für komplexe Herausforderungen
+                    </h3>
+                    <ul class="features">
+                        <li>Platzhalter für Angebote bei ADHS, Autismus-Spektrum, Trauma u. a.</li>
+                        <li>Platzhalter für Programme für Fachkräfte und Teams.</li>
+                        <li>Platzhalter für kombinierte Bausteine mit Beratung und Coaching.</li>
+                        <li>Platzhalter für Angaben zu Skalierung: Einzelperson bis Großgruppe.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: Kein Geschwätz -->
+    <section class="section light">
+        <div class="container">
+
+            <div class="split">
+                <!-- Linke Spalte: Claim + Bildreihe -->
+                <div>
+                    <h2>Kein Geschwätz</h2>
+                    <div class="img-placeholder" style="margin-top:20px;"></div>
+                </div>
+
+                <!-- Rechte Spalte: Erfahrung & Haltung -->
+                <div>
+                    <h3 style="margin-bottom:15px;">
+                        18 Jahre, 0 Unfälle, tausende Transformationen
+                    </h3>
+                    <p style="margin-bottom:15px;">
+                        Platzhaltertext für Erfahrungswerte, Anzahl der begleiteten Personen,
+                        Qualitätsstandards und Sicherheitskonzept.
+                    </p>
+
+                    <h3 style="margin:30px 0 15px;">
+                        Der Wald ist kein Setting – er ist der Co‑Trainer
+                    </h3>
+                    <p>
+                        Platzhaltertext zur Rolle des Naturraums: echte Herausforderungen,
+                        unmittelbare Rückmeldungen, intensive Gruppenerfahrungen und
+                        ressourcenorientierte Begleitung.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Unterer Claim mittig wie im Screenshot -->
+            <p style="text-align:center; margin-top:60px; font-weight:bold; letter-spacing:1px;">
+                Ursachenbewältigung statt Symptombehandlung
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>

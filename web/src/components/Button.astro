@@ -1,0 +1,11 @@
+---
+interface Props {
+  href?: string;
+  type?: 'primary' | 'dark';
+}
+const { href = '#', type = 'primary' } = Astro.props as Props;
+---
+
+<a href={href} class={`inline-block ${type === 'primary' ? 'btn-primary' : 'btn-dark'}`}>
+  <slot />
+</a>

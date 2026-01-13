@@ -1,0 +1,29 @@
+{
+  "name": "web",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "images:optimize": "node ./scripts/optimize-images.cjs",
+    "build": "npm run images:optimize && astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "a11y": "pa11y http://localhost:4323 --standard WCAG2AA",
+    "a11y:local": "node ./scripts/a11y-run-all.mjs http://127.0.0.1:4324",
+    "ci": "npm run images:optimize && npm run build && echo 'Run a11y on CI runner (optional)'"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "aos": "^2.3.4",
+    "astro": "^5.16.9",
+    "sharp": "^0.34.5",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@astrojs/react": "^4.4.2",
+    "lucide-react": "^0.562.0",
+    "pa11y": "^9.0.1",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  }
+}

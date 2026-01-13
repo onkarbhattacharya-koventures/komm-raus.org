@@ -1,0 +1,102 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<MainLayout title="Der Gonichi-Weg – artgerechtes Leben für ein sensibles Nervensystem">
+  <!-- HERO -->
+  <section class="bg-brand-secondary text-white py-16" data-aos="fade-up">
+    <div class="container-custom">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold mb-4">Der Gonichi-Weg</h1>
+      <p class="max-w-2xl">
+        Ein artgerechtes Betriebssystem für ein überreiztes Nervensystem.<br />
+        Erfahrungsbasiertes Training bei ADHS-Symptomen, Reizüberflutung
+        und chronischer Erschöpfung.
+      </p>
+
+      <div class="mt-6">
+        <Button href="#start" type="primary">Gespräch anfragen</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <Section class="light" data-aos="fade-up">
+    <h2>Eine Welt, die unser Nervensystem krank macht</h2>
+    <p class="subtitle">Was Psychologie, Neurowissenschaften und Public Health zeigen.</p>
+
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+      <li>Deutlich weniger und schlechterer Schlaf als früher</li>
+      <li>Über 90 % der Zeit in Innenräumen, oft sitzend</li>
+      <li>Massiver Bewegungsmangel bei Kindern und Erwachsenen</li>
+      <li>Dauerhafte Reizüberflutung durch Screens und Multitasking</li>
+    </ul>
+
+    <p class="mt-4">Studien zeigen konsistent: Schlafmangel, Bewegungsarmut, chronischer Stress und hochverarbeitete Ernährung verstärken genau jene Symptome, die häufig zur ADHS-Diagnose führen.</p>
+  </Section>
+
+  <!-- THESE -->
+  <Section class="sand" data-aos="fade-up">
+    <h2>Unsere These</h2>
+    <p>ADHS ist oft keine starre Defekt-Diagnose, sondern die sichtbare Reaktion eines chronisch überlasteten Nervensystems auf nicht artgerechte Lebensbedingungen.</p>
+
+    <p>Menschen mit sensibler neurobiologischer Ausstattung leiden in einer reizintensiven, bewegungsarmen und schlafarmen Umwelt besonders stark.</p>
+  </Section>
+
+  <!-- ARGUMENTATION -->
+  <Section data-aos="fade-up">
+    <h2>Warum Lebensführung keine Nebensache ist</h2>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+      <Card title="Bewegung & Natur" body="Regelmäßige Bewegung und Naturkontakt reduzieren Stress und verbessern Aufmerksamkeit messbar." />
+      <Card title="Schlaf" body="Verbesserter Schlaf senkt Unruhe, Reizbarkeit und Konzentrationsprobleme deutlich." />
+      <Card title="Ernährung" body="Unverarbeitete, nährstoffreiche Kost stabilisiert Energie und Stimmung." />
+      <Card title="Atmung & Achtsamkeit" body="Atem- und Achtsamkeitstraining verbessern Emotions- und Impulskontrolle." />
+    </div>
+  </Section>
+
+  <!-- LÖSUNG -->
+  <Section class="dark" data-aos="fade-up">
+    <h2>Der Gonichi-Weg</h2>
+    <p>Kein Schnellfix. Kein Motivations-Hype. Sondern ein Betriebssystem für ein artgerechtes Leben mit empfindlichem Nervensystem.</p>
+  </Section>
+
+  <!-- FUNDAMENT -->
+  <Section class="light" data-aos="fade-up">
+    <h2>Die 5 Grunddisziplinen</h2>
+
+    <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-6 mt-6">
+      <Card title="Atmung" body="Konkrete Techniken zur akuten Nervensystem-Regulation." />
+      <Card title="Schlaf" body="Rhythmus, Regeneration und echte Erholung." />
+      <Card title="Bewegung" body="Achtsame Bewegung in der Natur statt Leistungsdruck." />
+      <Card title="Ernährung" body="Einfach, nährend, stabilisierend." />
+      <Card title="Geist" body="Fokus, Präsenz und Selbstwahrnehmung trainieren." />
+    </div>
+  </Section>
+
+  <!-- ERLEBNIS -->
+  <Section class="sand" data-aos="fade-up">
+    <h2>Erfahrung statt Theorie</h2>
+    <p>Regulation entsteht nicht durch Wissen, sondern durch verkörperte Erfahrung.</p>
+
+    <ul class="list-disc pl-6 mt-4 space-y-2">
+      <li>Waldseilgarten: Angst regulieren, Selbstvertrauen aufbauen</li>
+      <li>Wald &amp; Natur: Nervensystem runterfahren</li>
+      <li>Dojo: Atem- und Körpertraining</li>
+      <li>Küche: Ernährung als Lebenskompetenz</li>
+      <li>Digitaler Companion: Dranbleiben im Alltag</li>
+    </ul>
+  </Section>
+
+  <!-- CTA -->
+  <Section class="yellow" id="start" data-aos="fade-up">
+    <h2>Der nächste Schritt</h2>
+    <p>Wenn du spürst, dass Medikamente allein nicht reichen und du bereit bist, aktiv an deinem Nervensystem zu arbeiten, dann ist der Gonichi-Weg eine realistische Option.</p>
+
+    <div class="mt-6">
+      <Button href="#" type="primary">Gespräch anfragen</Button>
+    </div>
+  </Section>
+</MainLayout>

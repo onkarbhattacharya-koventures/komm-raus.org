@@ -1,0 +1,150 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<MainLayout title="Laubfrosch Waldseilgarten – Startseite">
+  <!-- HERO -->
+  <section class="bg-brand-secondary text-white home-hero" data-aos="fade-up">
+    <div class="container-custom">
+      <div class="w-28 h-28 rounded-full bg-gray-200 mb-6"></div>
+
+      <p class="font-bold tracking-wider mb-2">
+        LAUBFROSCH<br />WALDSEILGARTEN
+      </p>
+
+      <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-huge font-bold max-w-xl font-display leading-tight">
+        Wachsen.<br />Über sich hinaus.
+      </h1>
+
+      <p class="max-w-md mt-4">
+        Entfalte Deine Potentiale und mach’ Deine wilde Truppe zum Dreamteam.
+      </p>
+
+      <div class="mt-6">
+        <Button href="#" type="primary">Jetzt anfragen</Button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FÜR WEN? -->
+  <Section class="centered" id="fuer" data-aos="fade-up">
+    <h2 class="uppercase tracking-wider mb-8">Für wen?</h2>
+
+    <div class="cards">
+      <div class="audience-card">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_schule_400-400.webp 400w, /images/prog_schule_400-800.webp 800w, /images/prog_schule_400-1200.webp 1200w" />
+          <img src="/images/prog_schule_400-400.jpg" srcset="/images/prog_schule_400-400.jpg 400w, /images/prog_schule_400-800.jpg 800w, /images/prog_schule_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Schulen & Vereine" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
+        </picture>
+        <h3 class="mt-4 mb-2">Schulen &amp; Vereine</h3>
+        <p class="mb-4 text-sm">Teamgeist fördern, Klassengemeinschaft stärken. Klassenfahrten, Konzentrations- und Mindset-Trainings, „Train the Trainer“-Kurse.</p>
+        <Button href="#" type="dark">anfragen</Button>
+      </div>
+
+      <div class="audience-card">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_firmen_400-400.webp 400w, /images/prog_firmen_400-800.webp 800w, /images/prog_firmen_400-1200.webp 1200w" />
+          <img src="/images/prog_firmen_400-400.jpg" srcset="/images/prog_firmen_400-400.jpg 400w, /images/prog_firmen_400-800.jpg 800w, /images/prog_firmen_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Unternehmen" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
+        </picture>
+        <h3 class="mt-4 mb-2">Unternehmen</h3>
+        <p class="mb-4 text-sm">Teams entwickeln, Growth Mindset stärken, Führungskräfte trainieren, Assessment Center und Firmenevents mit echtem Mehrwert.</p>
+        <Button href="#" type="dark">anfragen</Button>
+      </div>
+
+      <div class="audience-card">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_fobi_400-400.webp 400w, /images/prog_fobi_400-800.webp 800w, /images/prog_fobi_400-1200.webp 1200w" />
+          <img src="/images/prog_fobi_400-400.jpg" srcset="/images/prog_fobi_400-400.jpg 400w, /images/prog_fobi_400-800.jpg 800w, /images/prog_fobi_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Blaulicht‑Verbände" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
+        </picture>
+        <h3 class="mt-4 mb-2">Blaulicht‑Verbände</h3>
+        <p class="mb-4 text-sm">Spezielle Trainings zu Stressmanagement, Höhenangst, Teamkommunikation und Einsatzresilienz – gemeinsam eine richtig gute Zeit haben.</p>
+        <Button href="#" type="dark">anfragen</Button>
+      </div>
+
+      <div class="audience-card">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_kindergeb_400-400.webp 400w, /images/prog_kindergeb_400-800.webp 800w, /images/prog_kindergeb_400-1200.webp 1200w" />
+          <img src="/images/prog_kindergeb_400-400.jpg" srcset="/images/prog_kindergeb_400-400.jpg 400w, /images/prog_kindergeb_400-800.jpg 800w, /images/prog_kindergeb_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Familie & Freizeit" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
+        </picture>
+        <h3 class="mt-4 mb-2">Familie &amp; Freizeit</h3>
+        <p class="mb-4 text-sm">Besondere Momente mit Mehrwert schaffen, gemeinsam Abenteuer erleben: Familientage, Initiationen, Wildkräuter‑Workshops u.&nbsp;v.&nbsp;m.</p>
+        <Button href="#" type="dark">anfragen</Button>
+      </div>
+    </div>
+  </Section>
+
+  <!-- IMAGE STRIP -->
+  <Section class="strip-image p-0" data-aos="fade-up">
+    <picture>
+      <source type="image/webp" srcset="/images/lagerfeuer-bg-400.webp 400w, /images/lagerfeuer-bg-800.webp 800w, /images/lagerfeuer-bg-1200.webp 1200w" />
+      <img src="/images/lagerfeuer-bg-400.jpg" srcset="/images/lagerfeuer-bg-400.jpg 400w, /images/lagerfeuer-bg-800.jpg 800w, /images/lagerfeuer-bg-1200.jpg 1200w" sizes="100vw" alt="Lagerfeuer" loading="lazy" class="w-full h-[220px] object-cover" />
+    </picture>
+  </Section>
+
+  <!-- WARUM LAUBFROSCH? -->
+  <Section class="light" data-aos="fade-up">
+    <h2>Warum Laubfrosch?</h2>
+
+    <div class="grid md:grid-cols-2 gap-8 mt-6">
+      <div>
+        <p class="mb-4">Wir sind kein klassischer Kletterwald. Wir sind Anbieter von Erlebnis‑ und Wildnispädagogik und Methoden zur Potentialentfaltung auf vielen verschiedenen Ebenen.</p>
+        <p class="mb-4">Bei uns kaufen Sie kein Ticket, um einen Parcours abzuklettern. Sie buchen einen maßgeschneiderten, begleiteten Prozess für sich oder Ihre Gruppe. Unser Ziel ist nicht nur die Baumkrone, sondern die nachhaltige Entwicklung Ihres Teams, Ihrer Klasse oder Ihrer Familie.</p>
+      </div>
+
+      <div>
+        <p class="mb-4">Wir entwickeln erlebnisorientierte Programme – von kooperativen Bodenübungen bis zur gemeinsamen Höhenherausforderung – die systematisch Ihre Ziele adressieren: Vertrauen stärken, Kommunikation verbessern, Potentiale entfalten, Ängsten begegnen und praktikable Methoden etablieren.</p>
+        <p class="mb-4">Sicher, pädagogisch begleitet und wirkungsorientiert: Schritt für Schritt, behutsam. Atmen. Loslassen. Wachsen.</p>
+      </div>
+    </div>
+
+    <p class="text-center mt-8 font-bold">Bei uns steht der Mensch im Mittelpunkt, nicht der Parcours.</p>
+  </Section>
+
+  <!-- WAS UNS AUSZEICHNET -->
+  <Section class="sand" data-aos="fade-up">
+    <div class="flex items-start justify-between mb-6">
+      <h2>Was uns auszeichnet</h2>
+      <div class="text-right">
+        <p class="font-bold tracking-wider mb-2">LAUBFROSCH<br />WALDSEILGARTEN</p>
+        <img src="/images/logo_laubfrosch-400.jpg" srcset="/images/logo_laubfrosch-400.jpg 400w, /images/logo_laubfrosch-800.jpg 800w" alt="Laubfrosch" class="w-24 h-24 rounded-md ml-auto object-cover" loading="lazy" />
+      </div>
+    </div>
+
+    <div class="cards">
+      <Card image="konzept_toprope_240px" title="Maßgeschneiderte Programme" body="Wir arbeiten prozessorientiert, nicht nach Schema F, und richten jedes Setting an Ihren Zielen aus." />
+      <Card image="konzept_team_240px" title="Qualifizierte Trainer:innen" body="Pädagogisch geschulte, erfahrene Trainer:innen, zertifiziert und sicherheitsorientiert, mit Blick fürs Wesentliche." />
+      <Card image="konzept_koop_240px" title="Gelebte Sicherheit" body="Durchdachtes Sicherheitskonzept, klare Abläufe, kleine Gruppen und viel Raum für Reflexion." />
+      <Card image="konzept_toprope_240px" title="Nachhaltige Erlebnisse" body="Wir schaffen Erkenntnisse, die sich in Alltag, Schule und Arbeitswelt übertragen lassen – nicht nur ein toller Tag im Wald." />
+    </div>
+  </Section>
+
+  <!-- Baumkletter-Bildband -->
+  <Section class="strip-image p-0" data-aos="fade-up">
+    <picture>
+      <source type="image/webp" srcset="/images/Baumklettern-Seilaufstiegstechnik-400.webp 400w, /images/Baumklettern-Seilaufstiegstechnik-800.webp 800w, /images/Baumklettern-Seilaufstiegstechnik-1200.webp 1200w" />
+      <img src="/images/Baumklettern-Seilaufstiegstechnik-400.jpg" srcset="/images/Baumklettern-Seilaufstiegstechnik-400.jpg 400w, /images/Baumklettern-Seilaufstiegstechnik-800.jpg 800w, /images/Baumklettern-Seilaufstiegstechnik-1200.jpg 1200w" sizes="100vw" alt="Baumklettern" loading="lazy" class="w-full h-[220px] object-cover" />
+    </picture>
+  </Section>
+
+  <!-- ABSCHLUSS-CTA -->
+  <section class="cta-hero" data-aos="fade-up">
+    <div class="container-custom flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-left">
+        <img src="/images/logo_laubfrosch-400.jpg" srcset="/images/logo_laubfrosch-400.jpg 400w, /images/logo_laubfrosch-800.jpg 800w" alt="Laubfrosch Logo" class="w-24 h-24 object-cover mb-4 rounded-md" loading="lazy" />
+        <p class="font-bold tracking-wider">LAUBFROSCH<br />WALDSEILGARTEN</p>
+      </div>
+
+      <div class="max-w-lg">
+        <h1 class="text-3xl md:text-4xl font-bold font-display">SPRECHEN SIE<br />MIT UNS ÜBER<br />IHRE ZIELE</h1>
+        <p class="text-lg mt-2">Wir freuen uns auf Sie!</p>
+      </div>
+
+      <div>
+        <Button href="#" type="primary">Kontakt aufnehmen</Button>
+      </div>
+    </div>
+  </section>
+</MainLayout>

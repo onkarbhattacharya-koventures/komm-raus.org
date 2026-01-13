@@ -1,0 +1,112 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<MainLayout title="Laubfrosch Waldseilgarten – Über uns">
+  <Hero title="Individuelle Programme für Ihre Ziele" subtitle="Pädagogisch wirksam: Erlebnis- und Wildnispädagogik mit klarem Lernziel." image="lagerfeuer-bg" />
+
+  <!-- WHERE ADVENTURE MEETS POTENTIAL -->
+  <Section>
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <p class="font-bold tracking-wider mb-4">LAUBFROSCH<br />WALDSEILGARTEN</p>
+        <img src="/images/logo_laubfrosch-400.jpg" srcset="/images/logo_laubfrosch-400.jpg 400w, /images/logo_laubfrosch-800.jpg 800w" alt="Laubfrosch Logo" class="w-24 h-24 object-cover rounded-md" loading="lazy" />
+      </div>
+
+      <div>
+        <p class="subtitle">Willkommen in einem der letzten authentischen pädagogischen Hochseilgärten. Hier verbinden wir Abenteuer in der Natur mit fundierter pädagogischer Arbeit – für nachhaltige Entwicklung von Kindern, Jugendlichen und Erwachsenen.</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- THREE CARDS -->
+  <Section class="light">
+    <div class="cards">
+      <Card image="konzept_team_240px" title="Unsere Perspektive" body="Wir unterscheiden uns vom reinen ‚Spaßklettern‘: bei uns steht nachhaltige Entwicklung im Fokus." />
+      <Card image="konzept_koop_240px" title="Was ist gut gemacht?" body="Sicherheit, Prozessqualität und pädagogische Tiefe sind zentrale Bestandteile unserer Arbeit." />
+      <Card image="konzept_toprope_240px" title="Unser Spektrum" body="Klassen, Teams, Fachkräfte, Familien und besondere Settings – maßgeschneiderte Formate." />
+    </div>
+  </Section>
+
+  <!-- OFFERS WITH IMPACT -->
+  <Section class="light">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/kurs_naturwanderung-400.webp 400w, /images/kurs_naturwanderung-800.webp 800w, /images/kurs_naturwanderung-1200.webp 1200w" />
+          <img src="/images/kurs_naturwanderung-400.jpg" srcset="/images/kurs_naturwanderung-400.jpg 400w, /images/kurs_naturwanderung-800.jpg 800w, /images/kurs_naturwanderung-1200.jpg 1200w" alt="Naturwanderung" loading="lazy" class="w-full h-48 object-cover rounded-md" />
+        </picture>
+      </div>
+
+      <div>
+        <h3 class="mb-4">Warum wir tun, was wir tun</h3>
+        <p class="mb-4">Naturerfahrung, Verantwortung und ressourcenorientierte Begleitung stehen im Mittelpunkt unserer Arbeit – miteinander verbunden mit klaren Lernzielen.</p>
+        <p>Unsere Angebote sind flexibel und an die Zielgruppe anpassbar: von Schulklassen über Firmenworkshops bis zu Familienangeboten.</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- WHAT THE RESEARCH SAYS -->
+  <Section class="light">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2>Was die Forschung sagt:</h2>
+        <picture>
+          <source type="image/webp" srcset="/images/Rätsel-Rally-geocaching-schnitzeljagd-400.webp 400w, /images/Rätsel-Rally-geocaching-schnitzeljagd-800.webp 800w, /images/Rätsel-Rally-geocaching-schnitzeljagd-1200.webp 1200w" />
+          <img src="/images/Rätsel-Rally-geocaching-schnitzeljagd-400.jpg" srcset="/images/Rätsel-Rally-geocaching-schnitzeljagd-400.jpg 400w, /images/Rätsel-Rally-geocaching-schnitzeljagd-800.jpg 800w, /images/Rätsel-Rally-geocaching-schnitzeljagd-1200.jpg 1200w" alt="Geocaching Rätsel Rally" loading="lazy" class="w-full h-48 object-cover rounded-md" />
+        </picture>
+      </div>
+      <div>
+        <h3>Ausgewählte Studien</h3>
+        <ul class="features">
+          <li>Platzhalter für Studien, die Effekte von Erlebnispädagogik auf Selbstwirksamkeit, Teamfähigkeit und Resilienz belegen.</li>
+          <li>Platzhalter für Metaanalysen und Reviews zu langfristigen Wirkungen naturbasierter Lernsettings.</li>
+          <li>Platzhalter für Hinweise auf neurobiologische und psychologische Grundlagen der Wirksamkeit.</li>
+        </ul>
+      </div>
+    </div>
+  </Section>
+
+  <!-- WHAT WE ACHIEVE -->
+  <Section class="light">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <h2>Was wir bewirken</h2>
+        <p class="mt-4">Platzhalter für Ergebnisse zu Selbstvertrauen, sozialer Kompetenz und Transfer in Alltag und Schule.</p>
+      </div>
+
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/maedchen-hände-erdbeere-400.webp 400w, /images/maedchen-hände-erdbeere-800.webp 800w, /images/maedchen-hände-erdbeere-1200.webp 1200w" />
+          <img src="/images/maedchen-hände-erdbeere-400.jpg" srcset="/images/maedchen-hände-erdbeere-400.jpg 400w, /images/maedchen-hände-erdbeere-800.jpg 800w, /images/maedchen-hände-erdbeere-1200.jpg 1200w" alt="Erlebnis in der Natur" loading="lazy" class="w-full h-48 object-cover rounded-md" />
+        </picture>
+      </div>
+    </div>
+  </Section>
+
+  <!-- FLEXIBLE & SCALABLE -->
+  <Section class="sand">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.webp 400w, /images/Floß-bauen-Erlebnispädagogik-Teambuilding-800.webp 800w, /images/Floß-bauen-Erlebnispädagogik-Teambuilding-1200.webp 1200w" />
+          <img src="/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.jpg" srcset="/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.jpg 400w, /images/Floß-bauen-Erlebnispädagogik-Teambuilding-800.jpg 800w, /images/Floß-bauen-Erlebnispädagogik-Teambuilding-1200.jpg 1200w" alt="Floß bauen Team" loading="lazy" class="w-full h-48 object-cover rounded-md" />
+        </picture>
+      </div>
+
+      <div>
+        <h3 class="mb-4">Flexibel und skalierbar</h3>
+        <p>Programme für besondere Herausforderungen, spezialisierte Angebote und kombinierte Bausteine mit Beratung und Coaching – skalierbar vom Einzelsetting bis zur Großgruppe.</p>
+      </div>
+    </div>
+  </Section>
+
+  <!-- CLOSING CLAIM -->
+  <Section class="light">
+    <p class="text-center mt-8 font-bold">Ursachenbewältigung statt Symptombehandlung</p>
+  </Section>
+</MainLayout>

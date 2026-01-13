@@ -1,0 +1,87 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+import Button from '../components/Button.astro';
+---
+
+<MainLayout title="Blaulichtorganisationen & Hilfsdienste">
+  <Section class="sand">
+    <div class="grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <div class="border-l-4 border-brand-dark pl-3 mb-4">
+          <h2>Für Blaulichtorganisationen &amp; Hilfsdienste</h2>
+        </div>
+        <p class="font-bold mb-4">Stärke im Einsatz. Geschmiedet im Team.</p>
+        <p class="mb-4">Praxisorientierte Trainings und Stressregulation zur Stärkung von Kameradschaft, Belastbarkeit und Kommunikation.</p>
+        <Button href="#" type="primary">Jetzt Spezialtraining vereinbaren</Button>
+      </div>
+
+      <div>
+        <div class="grid grid-cols-2 gap-4">
+          <picture>
+            <source type="image/webp" srcset="/images/Baumklettern-Seilaufstiegstechnik-400.webp 400w, /images/Baumklettern-Seilaufstiegstechnik-800.webp 800w" />
+            <img src="/images/Baumklettern-Seilaufstiegstechnik-400.jpg" alt="Baumklettern" loading="lazy" class="w-full h-64 object-cover rounded-xl" />
+          </picture>
+
+          <div class="grid gap-4">
+            <picture>
+              <source type="image/webp" srcset="/images/Feuer-machen-bowdrill-set-400.webp 400w, /images/Feuer-machen-bowdrill-set-800.webp 800w" />
+              <img src="/images/Feuer-machen-bowdrill-set-400.jpg" alt="Feuer machen" loading="lazy" class="w-full h-28 object-cover rounded-md" />
+            </picture>
+
+            <picture>
+              <source type="image/webp" srcset="/images/Rätsel-Rally-geocaching-schnitzeljagd-400.webp 400w, /images/Rätsel-Rally-geocaching-schnitzeljagd-800.webp 800w" />
+              <img src="/images/Rätsel-Rally-geocaching-schnitzeljagd-400.jpg" alt="Rätsel Rally" loading="lazy" class="w-full h-28 object-cover rounded-md" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="grid md:grid-cols-2 gap-8 items-start">
+      <div>
+        <picture>
+          <source type="image/webp" srcset="/images/kanu-fahren-400.webp 400w, /images/kanu-fahren-800.webp 800w" />
+          <img src="/images/kanu-fahren-400.jpg" alt="Kanu fahren" loading="lazy" class="w-full h-64 object-cover rounded-md mb-4" />
+        </picture>
+      </div>
+
+      <div>
+        <h2>Aus eigener Erfahrung: Wir verstehen Ihre Welt</h2>
+        <p class="mb-4">Als aktives DLRG‑Mitglied und ehemaliger Feuerwehrmann wissen wir, was Kameradschaft bedeutet. Unsere Programme schaffen realitätsnahe Szenarien, in denen die Grundlagen jeder erfolgreichen Einheit unter kontrolliertem Stress trainiert werden.</p>
+        <h3 class="mb-2">Blindes Vertrauen erleben</h3>
+        <p class="mb-2">Wenn ein Kamerad den anderen sichert, wird Vertrauen zur körperlichen Erfahrung.</p>
+        <h3 class="mb-2">Klare Kommunikation unter Druck</h3>
+        <p class="mb-2">Unsere Aufgaben erfordern präzise Absprachen und klare Führung – wie im echten Einsatz.</p>
+        <h3 class="mb-2">Mentale Belastbarkeit steigern</h3>
+        <p>Das Überwinden persönlicher Grenzen stärkt individuelle Resilienz und die Fähigkeit, in belastenden Situationen handlungsfähig zu bleiben.</p>
+      </div>
+    </div>
+  </Section>
+
+  <Section class="light">
+    <h2>Spezial‑Module &amp; Besondere Expertise</h2>
+    <p>Module mit Einsatzbezug: Abseilen, Simulationen zur Höhenrettung, Überwinden beweglicher Teile in der Höhe – individuell angepasste Module für Ihre Einheit.</p>
+  </Section>
+
+  <Section class="light">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2>Unsere Trainingspakete</h2>
+      <p class="italic">Maßgeschneidert für Ihre Einheit</p>
+
+      <div class="grid md:grid-cols-2 gap-6 mt-6">
+        <div class="p-4 bg-white rounded-md shadow-sm">
+          <strong>PAKET „KAMERADSCHAFT“</strong>
+          <p class="mt-2">Halbtägig, Fokus: Teamgeist und Kommunikation. Mindestpauschale: 3.000 €.</p>
+        </div>
+
+        <div class="p-4 bg-white rounded-md shadow-sm">
+          <strong>PAKET „EINSATZTRAINING“</strong>
+          <p class="mt-2">Ganztägig, Fokus: komplexe Herausforderungen und Reflexion. Mindestpauschale: 3.000 €.</p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</MainLayout>

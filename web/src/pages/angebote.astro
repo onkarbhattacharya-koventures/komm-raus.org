@@ -1,0 +1,55 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+---
+
+<MainLayout title="Angebote – Laubfrosch">
+  <Section>
+    <h1 class="text-3xl md:text-4xl font-display font-bold mb-4">Unsere Angebote</h1>
+    <p class="subtitle">Maßgeschneidert: Programme für Schulen, Firmen, Blaulicht‑Verbände und besondere Zielgruppen.</p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-6">
+      <article class="p-4 bg-white rounded-md shadow-sm">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_schule_400-400.webp 400w, /images/prog_schule_400-800.webp 800w" />
+          <img src="/images/prog_schule_400-400.jpg" alt="Programme für Schulen" class="w-full h-40 object-cover rounded-md mb-4" loading="lazy" />
+        </picture>
+        <h3 class="font-semibold">Schule</h3>
+        <p class="mt-2 text-sm">Programme zur Stärkung von Gemeinschaft, Fokus und Sozialkompetenz.</p>
+        <div class="mt-4"><Button href="/schule" type="dark">Mehr</Button></div>
+      </article>
+
+      <article class="p-4 bg-white rounded-md shadow-sm">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_firmen_400-400.webp 400w, /images/prog_firmen_400-800.webp 800w" />
+          <img src="/images/prog_firmen_400-400.jpg" alt="Programme für Firmen" class="w-full h-40 object-cover rounded-md mb-4" loading="lazy" />
+        </picture>
+        <h3 class="font-semibold">Firmen</h3>
+        <p class="mt-2 text-sm">Teamentwicklung, Assessments und Führungstraining mit Praxisnähe.</p>
+        <div class="mt-4"><Button href="/assessment" type="dark">Mehr</Button></div>
+      </article>
+
+      <article class="p-4 bg-white rounded-md shadow-sm">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_fobi_400-400.webp 400w, /images/prog_fobi_400-800.webp 800w" />
+          <img src="/images/prog_fobi_400-400.jpg" alt="Fortbildung und Training" class="w-full h-40 object-cover rounded-md mb-4" loading="lazy" />
+        </picture>
+        <h3 class="font-semibold">Fortbildung</h3>
+        <p class="mt-2 text-sm">Train-the-Trainer, Fokus-Methoden und Supervision für Pädagog:innen.</p>
+        <div class="mt-4"><Button href="/adhs" type="dark">Mehr</Button></div>
+      </article>
+
+      <article class="p-4 bg-white rounded-md shadow-sm">
+        <picture>
+          <source type="image/webp" srcset="/images/prog_kindergeb_400-400.webp 400w, /images/prog_kindergeb_400-800.webp 800w" />
+          <img src="/images/prog_kindergeb_400-400.jpg" alt="Familien und Freizeit" class="w-full h-40 object-cover rounded-md mb-4" loading="lazy" />
+        </picture>
+        <h3 class="font-semibold">Familie & Freizeit</h3>
+        <p class="mt-2 text-sm">Erlebnistage, Familienprogramme und Workshops mit sofortigem Mehrwert.</p>
+        <div class="mt-4"><Button href="/blaulicht" type="dark">Mehr</Button></div>
+      </article>
+    </div>
+  </Section>
+</MainLayout>

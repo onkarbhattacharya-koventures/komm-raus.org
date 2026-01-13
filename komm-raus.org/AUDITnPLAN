@@ -1,0 +1,59 @@
+Project Audit & Recreation Plan: komm-raus.org
+1. Deep Audit Results
+Architecture & Structure
+Technology: Legacy static HTML/CSS.
+Organization: Monolithic pages with significant code duplication. Common elements (Header, Footer, Navigation) are repeated in every file.
+Routing: File-system based .html links.
+Assets: 90+ files in a single /assets directory with inconsistent naming and no optimization.
+Styling
+Inconsistency: index.html uses internal <style> tags, while others use style.css.
+Modernity: No CSS variables, no utility classes, and limited responsive design logic. Basic media queries are manually managed.
+Maintainability: Changing a brand color requires updating multiple locations across various files.
+Performance & SEO
+Images: Multiple high-resolution images (>2MB) served as .jpg/.png without modern compression (WebP).
+Meta Tags: Minimal SEO metadata (only basic charset and title found).
+A11y: Limited use of semantic HTML and ARIA roles.
+2. Modern Recreation Plan
+Phase 1: Tech Stack Setup
+Framework: Astro (Preferred for content-heavy sites) or Next.js.
+Language: TypeScript for type-safe development.
+Styling: Tailwind CSS for a consistent, utility-first design system.
+Icons: Lucide React or React Icons.
+Phase 2: Component Architecture
+Layouts: Create a MainLayout.astro to wrap all pages with a unified Header/Footer.
+UI Components:
+Hero.tsx: Dynamic hero section with optimized background images.
+Card.tsx: Standardized card for "Für wen?" and "Was uns auszeichnet".
+Section.tsx: Reusable container with padding and background variants (light, sand, dark).
+Button.tsx: Consistent CTA styles for "Jetzt anfragen".
+Phase 3: Asset Optimization
+Image Pipeline: Use Astro/Next <Image /> components to automatically:
+Convert to WebP/AVIF.
+Generate srcset for mobile/desktop.
+Implement Lazy Loading.
+Organization: Move assets to structured folders: /public/images/, /public/videos/, etc.
+Phase 4: UI/UX Enhancements
+Animations: Implement Framer Motion or AOS for subtle entry animations.
+Navigation: Sticky header with an active-state indicator and a mobile-optimized menu.
+Typography: Implement a modern font pair (e.g., Inter for UI, Playfair Display for headings).
+Phase 5: Deployment & SEO
+Metadata: Centralized SEO config for OpenGraph tags and structured data (Schema.org).
+Deployment: Vercel or Netlify for automated builds and global CDN distribution.
+3. Immediate Next Steps
+Initialize a new Astro/Next.js project.
+Extract the shared CSS from index.html and style.css into a tailwind.config.js.
+Begin migrating the Home page (index.html) as the primary template.
+// Migrated Home page from index.html
+
+Phase 1 started: Added `tailwind.config.cjs`, scaffolded `MainLayout.astro` and component placeholders (`Hero`, `Card`, `Section`, `Button`) in `web/src` to begin migration and componentization.
+Added `@astrojs/react`, `react`, `react-dom` and `lucide-react`; created `IconExample.tsx` to test icon usage.
+Moved representative image `lagerfeuer-bg.jpg` into `web/public/images/` and created `web/README-images.md` with a proposed optimization pipeline (sharp, webp/avif conversion, srcset generation).
+Added `src/lib/site.ts` and updated `MainLayout.astro` to inject default SEO/OpenGraph meta tags and make metadata configurable per page.
+Installed `aos` and added a client `AOS` init block in `MainLayout.astro` to enable simple scroll animations (configurable).
+
+Polish: added Inter & Playfair Display fonts in `MainLayout.astro`, extended `tailwind.config.cjs` with font families, improved `src/styles/global.css` for typography and responsive spacing, and used `font-display` for headings on key sections.
+
+Images: added `scripts/optimize-images.cjs` (uses `sharp`) and generated responsive JPG/WebP variants into `web/public/images/`; replaced placeholder elements across the Home page with responsive `<picture>` / `<img>` markup to load optimized images and `loading="lazy"`.
+
+Accessibility & responsiveness: added `pa11y` as a dev dependency and a `npm run a11y` script (WCAG2AA); added `.pa11yrc.json` and `ACCESSIBILITY.md` with run & CI instructions; refined Tailwind `screens` with a `tablet` breakpoint and tightened hero/cta responsive spacing and heading sizes across `src/pages/index.astro` and `src/styles/global.css`.
+Fixed a syntax issue in `web/src/pages/index.astro` (unescaped inner double-quote in a `Card` prop) and adjusted Tailwind usage in `src/styles/global.css` (replaced `hover:bg-opacity-90` with `hover:opacity-90` to match Tailwind utilities).
