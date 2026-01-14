@@ -5,12 +5,15 @@
   "scripts": {
     "dev": "astro dev",
     "images:optimize": "node ./scripts/optimize-images.cjs",
-    "build": "npm run images:optimize && astro build",
+    "videos:copy": "node ./scripts/copy-videos.cjs",
+    "audio:copy": "node ./scripts/copy-audio.cjs",
+    "assets:optimize": "npm run images:optimize && npm run videos:copy && npm run audio:copy",
+    "build": "npm run assets:optimize && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "a11y": "pa11y http://localhost:4323 --standard WCAG2AA",
     "a11y:local": "node ./scripts/a11y-run-all.mjs http://127.0.0.1:4324",
-    "ci": "npm run images:optimize && npm run build && echo 'Run a11y on CI runner (optional)'"
+    "ci": "npm run assets:optimize && npm run build && echo 'Run a11y on CI runner (optional)'"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
