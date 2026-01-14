@@ -2,54 +2,105 @@
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="bg-white sticky top-0 z-50 shadow-sm">
+<header class="bg-white sticky top-0 z-50 shadow-sm animate-slide-down">
   <div class="container-custom flex items-center justify-between">
-    <a href="/" class="font-bold text-xl">Komm Raus</a>
+    <a href="/" class="font-bold text-xl transition-transform duration-200 hover:scale-105">Komm Raus</a>
 
     <!-- desktop nav -->
     <nav class="hidden md:block" role="navigation" aria-label="Hauptnavigation">
       <ul class="flex gap-6 items-center">
-        <li><a href="/" class={`no-underline ${currentPath === '/' ? 'font-semibold underline' : ''}`}>Home</a></li>
-        <li><a href="/about" class={`no-underline ${currentPath.startsWith('/about') ? 'font-semibold underline' : ''}`}>Über uns</a></li>
-        <li><a href="/angebote" class={`no-underline ${currentPath.startsWith('/angebote') ? 'font-semibold underline' : ''}`}>Angebote</a></li>
-        <li><a href="/schule" class={`no-underline ${currentPath.startsWith('/schule') ? 'font-semibold underline' : ''}`}>Schule</a></li>
-        <li><a href="/assessment" class={`no-underline ${currentPath.startsWith('/assessment') ? 'font-semibold underline' : ''}`}>Assessment</a></li>
-        <li><a href="/adhs" class={`no-underline ${currentPath.startsWith('/adhs') ? 'font-semibold underline' : ''}`}>ADHS</a></li>
-        <li><a href="/blaulicht" class={`no-underline ${currentPath.startsWith('/blaulicht') ? 'font-semibold underline' : ''}`}>Blaulicht</a></li>
+        <li><a href="/" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath === '/' ? 'font-semibold underline text-brand-dark' : ''}`}>Home</a></li>
+        <li><a href="/about" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/about') ? 'font-semibold underline text-brand-dark' : ''}`}>Über uns</a></li>
+        <li><a href="/angebote" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/angebote') ? 'font-semibold underline text-brand-dark' : ''}`}>Angebote</a></li>
+        <li><a href="/schule" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/schule') ? 'font-semibold underline text-brand-dark' : ''}`}>Schule</a></li>
+        <li><a href="/assessment" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/assessment') ? 'font-semibold underline text-brand-dark' : ''}`}>Assessment</a></li>
+        <li><a href="/adhs" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/adhs') ? 'font-semibold underline text-brand-dark' : ''}`}>ADHS</a></li>
+        <li><a href="/blaulicht" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/blaulicht') ? 'font-semibold underline text-brand-dark' : ''}`}>Blaulicht</a></li>
       </ul>
     </nav>
 
     <!-- mobile menu toggle -->
     <div class="md:hidden">
-      <button id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" class="p-2 rounded focus:outline-none">☰ <span class="sr-only">Menü öffnen</span></button>
+      <button id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" class="p-2 rounded focus:outline-none transition-transform duration-200 hover:scale-110">
+        <span id="hamburger-icon">☰</span>
+        <span class="sr-only">Menü öffnen</span>
+      </button>
     </div>
   </div>
 
   <!-- mobile menu -->
-  <nav id="mobile-nav" class="md:hidden hidden bg-white border-t">
+  <nav id="mobile-nav" class="md:hidden hidden bg-white border-t shadow-lg animate-slide-down">
     <div class="container-custom py-4">
       <ul class="flex flex-col gap-3">
-        <li><a href="/" class="no-underline">Home</a></li>
-        <li><a href="/about" class="no-underline">Über uns</a></li>
-        <li><a href="/angebote" class="no-underline">Angebote</a></li>
-        <li><a href="/schule" class="no-underline">Schule</a></li>
-        <li><a href="/assessment" class="no-underline">Assessment</a></li>
-        <li><a href="/adhs" class="no-underline">ADHS</a></li>
-        <li><a href="/blaulicht" class="no-underline">Blaulicht</a></li>
+        <li><a href="/" class="no-underline transition-colors duration-200 hover:text-brand-dark">Home</a></li>
+        <li><a href="/about" class="no-underline transition-colors duration-200 hover:text-brand-dark">Über uns</a></li>
+        <li><a href="/angebote" class="no-underline transition-colors duration-200 hover:text-brand-dark">Angebote</a></li>
+        <li><a href="/schule" class="no-underline transition-colors duration-200 hover:text-brand-dark">Schule</a></li>
+        <li><a href="/assessment" class="no-underline transition-colors duration-200 hover:text-brand-dark">Assessment</a></li>
+        <li><a href="/adhs" class="no-underline transition-colors duration-200 hover:text-brand-dark">ADHS</a></li>
+        <li><a href="/blaulicht" class="no-underline transition-colors duration-200 hover:text-brand-dark">Blaulicht</a></li>
       </ul>
     </div>
   </nav>
 </header>
 
 <script>
-  // mobile nav toggle
+  // mobile nav toggle with animation
   const btn = document.getElementById('nav-toggle');
   const mobile = document.getElementById('mobile-nav');
-  if (btn && mobile) {
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+
+  if (btn && mobile && hamburgerIcon) {
     btn.addEventListener('click', () => {
       const expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!expanded));
-      mobile.classList.toggle('hidden');
+
+      if (expanded) {
+        // Closing menu
+        mobile.classList.add('animate-slide-up');
+        setTimeout(() => {
+          mobile.classList.add('hidden');
+          mobile.classList.remove('animate-slide-up');
+        }, 300);
+        hamburgerIcon.textContent = '☰';
+      } else {
+        // Opening menu
+        mobile.classList.remove('hidden');
+        mobile.classList.add('animate-slide-down');
+        hamburgerIcon.textContent = '✕';
+      }
     });
   }
 </script>
+
+<style>
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-in forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+  }
+</style>

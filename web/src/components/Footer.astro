@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
   <div class="container-custom">
     <div class="grid md:grid-cols-3 gap-8 py-8">
       <!-- Logo & Contact -->
-      <div>
+      <div class="animate-fade-in">
         <div class="font-bold text-lg mb-4">Komm Raus</div>
         <p class="mb-2">Laubfrosch Waldseilgarten</p>
         <p class="mb-2">Erlebnispädagogik & Wildnispädagogik</p>
@@ -14,21 +14,21 @@ const currentYear = new Date().getFullYear();
       </div>
 
       <!-- Quick Links -->
-      <div>
+      <div class="animate-fade-in animation-delay-200">
         <h3 class="font-semibold mb-4">Navigation</h3>
         <ul class="space-y-2">
-          <li><a href="/" class="no-underline hover:underline">Home</a></li>
-          <li><a href="/about" class="no-underline hover:underline">Über uns</a></li>
-          <li><a href="/angebote" class="no-underline hover:underline">Angebote</a></li>
-          <li><a href="/schule" class="no-underline hover:underline">Schule</a></li>
-          <li><a href="/assessment" class="no-underline hover:underline">Assessment</a></li>
-          <li><a href="/adhs" class="no-underline hover:underline">ADHS</a></li>
-          <li><a href="/blaulicht" class="no-underline hover:underline">Blaulicht</a></li>
+          <li><a href="/" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Home</a></li>
+          <li><a href="/about" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Über uns</a></li>
+          <li><a href="/angebote" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Angebote</a></li>
+          <li><a href="/schule" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Schule</a></li>
+          <li><a href="/assessment" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Assessment</a></li>
+          <li><a href="/adhs" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">ADHS</a></li>
+          <li><a href="/blaulicht" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Blaulicht</a></li>
         </ul>
       </div>
 
       <!-- Contact & Social -->
-      <div>
+      <div class="animate-fade-in animation-delay-400">
         <h3 class="font-semibold mb-4">Kontakt</h3>
         <p class="mb-2">📧 info@komm-raus.org</p>
         <p class="mb-2">📞 +49 123 456789</p>
@@ -36,21 +36,46 @@ const currentYear = new Date().getFullYear();
 
         <!-- Social Links (placeholder) -->
         <div class="flex gap-4">
-          <a href="#" class="no-underline" aria-label="Facebook">📘</a>
-          <a href="#" class="no-underline" aria-label="Instagram">📷</a>
-          <a href="#" class="no-underline" aria-label="YouTube">📺</a>
+          <a href="#" class="no-underline transition-transform duration-200 hover:scale-110" aria-label="Facebook">📘</a>
+          <a href="#" class="no-underline transition-transform duration-200 hover:scale-110" aria-label="Instagram">📷</a>
+          <a href="#" class="no-underline transition-transform duration-200 hover:scale-110" aria-label="YouTube">📺</a>
         </div>
       </div>
     </div>
 
     <!-- Copyright -->
-    <div class="border-t border-brand-dark/20 pt-4 mt-4 text-center">
+    <div class="border-t border-brand-dark/20 pt-4 mt-4 text-center animate-fade-in animation-delay-600">
       <p>© {currentYear} Komm Raus. Alle Rechte vorbehalten.</p>
       <p class="text-xs mt-1">
-        <a href="#" class="no-underline hover:underline">Impressum</a> |
-        <a href="#" class="no-underline hover:underline">Datenschutz</a> |
-        <a href="#" class="no-underline hover:underline">AGB</a>
+        <a href="#" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Impressum</a> |
+        <a href="#" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Datenschutz</a> |
+        <a href="#" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">AGB</a>
       </p>
     </div>
   </div>
 </footer>
+
+<style>
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+</style>

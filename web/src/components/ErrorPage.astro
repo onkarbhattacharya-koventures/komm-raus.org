@@ -1,0 +1,31 @@
+---
+// Error page component for handling errors
+export interface Props {
+  title?: string;
+  message?: string;
+  statusCode?: number;
+}
+
+const { title = "Fehler", message = "Etwas ist schiefgelaufen.", statusCode = 500 } = Astro.props;
+---
+
+<div class="min-h-screen flex items-center justify-center bg-gray-50">
+  <div class="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+    <div class="mb-6">
+      <div class="text-6xl mb-4">😵</div>
+      <h1 class="text-2xl font-bold text-gray-900 mb-2">{title}</h1>
+      <p class="text-gray-600 mb-4">{message}</p>
+      {statusCode && <p class="text-sm text-gray-500">Fehlercode: {statusCode}</p>}
+    </div>
+
+    <div class="space-y-3">
+      <a href="/" class="inline-block bg-brand-dark text-white px-6 py-2 rounded-lg hover:bg-brand-dark/90 transition-colors duration-200">
+        Zur Startseite
+      </a>
+      <br>
+      <button onclick="history.back()" class="text-sm text-gray-500 hover:text-gray-700 underline">
+        Zurück zur vorherigen Seite
+      </button>
+    </div>
+  </div>
+</div>

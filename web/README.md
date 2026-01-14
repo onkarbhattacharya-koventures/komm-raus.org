@@ -12,7 +12,7 @@ The recreation addresses issues in the original site, such as code duplication, 
 - **Language**: TypeScript (for type safety)
 - **Styling**: Tailwind CSS (utility-first design system)
 - **Icons**: Lucide React
-- **Animations**: AOS (Animate On Scroll)
+- **Animations**: AOS (Animate On Scroll), Framer Motion (advanced animations)
 - **Image Optimization**: Sharp (for WebP/AVIF conversion and responsive images)
 - **Accessibility**: Pa11y (automated WCAG2AA checks)
 - **Deployment**: Ready for Vercel/Netlify with global CDN
@@ -25,9 +25,11 @@ The recreation addresses issues in the original site, such as code duplication, 
 - **Styling**: Tailwind config with custom brand colors, fonts (Inter, Playfair Display), and responsive breakpoints
 - **Image Optimization**: Sharp-based scripts for generating responsive JPG/WebP variants
 - **Accessibility**: Pa11y integration for automated checks (WCAG2AA standard)
-- **Animations**: AOS for subtle scroll animations
-- **SEO**: Centralized metadata with OpenGraph support
+- **Animations**: AOS for subtle scroll animations, enhanced with Framer Motion for advanced animations
+- **SEO**: Centralized metadata with OpenGraph support, structured data (Schema.org), sitemap.xml, robots.txt
 - **Asset Management**: Organized public/assets and public/images directories
+- **UI/UX Enhancements**: Sticky navigation with active states, enhanced mobile menu with slide-in/out effects, loading states, and error handling
+- **Performance Monitoring**: Lighthouse audits and performance tracking
 
 ### In Progress
 - Home page migration (index.astro) with optimized images and responsive design
@@ -47,14 +49,13 @@ Based on the AUDITnPLAN, the following phases remain:
 - Optimize videos and audio files
 - Implement lazy loading for all media
 
-### Phase 4: UI/UX Enhancements
+### Phase 4: UI/UX Enhancements ✅
 - Add Framer Motion for advanced animations
 - Implement sticky navigation with active states
 - Enhance mobile menu and responsive design
 - Add loading states and error handling
 
-### Phase 5: Deployment & SEO
-- Set up Vercel/Netlify deployment
+### Phase 5: Deployment & SEO ✅
 - Implement structured data (Schema.org)
 - Add sitemap and robots.txt
 - Performance monitoring and Lighthouse audits
@@ -115,7 +116,7 @@ All commands are run from the `web/` directory:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run images:optimize` | Optimize images using Sharp                      |
 | `npm run a11y`            | Run accessibility checks (WCAG2AA)               |
-| `npm run a11y:local`      | Run accessibility checks on local server        |
+| `npm run a11y:local`      | Run accessibility checks on local server         |
 | `npm run ci`              | CI pipeline: optimize, build, and check          |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 
