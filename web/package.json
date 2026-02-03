@@ -16,16 +16,14 @@
     "ci": "npm run assets:optimize && npm run build && echo 'Run a11y on CI runner (optional)'"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
     "aos": "^2.3.4",
     "astro": "^5.16.9",
-    "sharp": "^0.34.5",
-    "tailwindcss": "^4.1.18"
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "@astrojs/react": "^4.4.2",
     "lucide-react": "^0.562.0",
-    "pa11y": "^9.0.1",
+    "pa11y": "^6.2.3",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
   }

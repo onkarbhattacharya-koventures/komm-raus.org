@@ -1,106 +1,125 @@
 ---
-const currentPath = Astro.url.pathname;
+// Navigation component for the website header - Mobile-first responsive design
 ---
 
-<header class="bg-white sticky top-0 z-50 shadow-sm animate-slide-down">
-  <div class="container-custom flex items-center justify-between">
-    <a href="/" class="font-bold text-xl transition-transform duration-200 hover:scale-105">Komm Raus</a>
+<nav class="bg-brand-dark text-white shadow-lg sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center py-3 sm:py-4">
+      <!-- Logo - Mobile optimized -->
+      <div class="flex items-center flex-shrink-0">
+        <a href="/" class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-brand-light focus:ring-offset-2 focus:ring-offset-brand-dark rounded-md">
+          <img src="/images/logo_laubfrosch.png" alt="Laubfrosch Logo" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full" />
+          <span class="font-bold text-base sm:text-lg">Laubfrosch</span>
+        </a>
+      </div>
 
-    <!-- desktop nav -->
-    <nav class="hidden md:block" role="navigation" aria-label="Hauptnavigation">
-      <ul class="flex gap-6 items-center">
-        <li><a href="/" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath === '/' ? 'font-semibold underline text-brand-dark' : ''}`}>Home</a></li>
-        <li><a href="/about" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/about') ? 'font-semibold underline text-brand-dark' : ''}`}>Über uns</a></li>
-        <li><a href="/angebote" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/angebote') ? 'font-semibold underline text-brand-dark' : ''}`}>Angebote</a></li>
-        <li><a href="/schule" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/schule') ? 'font-semibold underline text-brand-dark' : ''}`}>Schule</a></li>
-        <li><a href="/assessment" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/assessment') ? 'font-semibold underline text-brand-dark' : ''}`}>Assessment</a></li>
-        <li><a href="/adhs" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/adhs') ? 'font-semibold underline text-brand-dark' : ''}`}>ADHS</a></li>
-        <li><a href="/blaulicht" class={`no-underline transition-all duration-200 hover:text-brand-dark ${currentPath.startsWith('/blaulicht') ? 'font-semibold underline text-brand-dark' : ''}`}>Blaulicht</a></li>
-      </ul>
-    </nav>
+      <!-- Desktop Menu - Hidden on mobile, shown on md and up -->
+      <div class="hidden md:flex md:items-center md:space-x-6 lg:space-x-8">
+        <a href="/" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">Home</a>
+        <a href="/about" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">Über uns</a>
+        <a href="/angebote" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">Angebote</a>
+        <a href="/schule" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">Schule</a>
+        <a href="/assessment" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">Assessment</a>
+        <a href="/adhs" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">ADHS</a>
+        <a href="/blaulicht" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">Blaulicht</a>
+        <a href="/kontakt" class="text-sm lg:text-base font-medium hover:text-brand-light transition-colors duration-200 focus:outline-none focus:text-brand-light">Kontakt</a>
+      </div>
 
-    <!-- mobile menu toggle -->
-    <div class="md:hidden">
-      <button id="nav-toggle" aria-controls="mobile-nav" aria-expanded="false" class="p-2 rounded focus:outline-none transition-transform duration-200 hover:scale-110">
-        <span id="hamburger-icon">☰</span>
-        <span class="sr-only">Menü öffnen</span>
-      </button>
+      <!-- Mobile menu button - Visible on mobile, hidden on md and up -->
+      <div class="md:hidden">
+        <button
+          id="mobile-menu-button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-brand-light hover:bg-brand-dark/20 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-brand-light transition-colors duration-200"
+          aria-expanded="false"
+          aria-label="Hauptmenü öffnen"
+        >
+          <!-- Hamburger icon -->
+          <svg id="hamburger-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close icon (hidden by default) -->
+          <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu - Hidden by default, shown when toggled -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10">
+      <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <a href="/" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">Home</a>
+        <a href="/about" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">Über uns</a>
+        <a href="/angebote" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">Angebote</a>
+        <a href="/schule" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">Schule</a>
+        <a href="/assessment" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">Assessment</a>
+        <a href="/adhs" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">ADHS</a>
+        <a href="/blaulicht" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">Blaulicht</a>
+        <a href="/kontakt" class="block px-3 py-2 text-base font-medium hover:text-brand-light hover:bg-white/10 rounded-md transition-colors duration-200 focus:outline-none focus:text-brand-light focus:bg-white/10">Kontakt</a>
+      </div>
     </div>
   </div>
-
-  <!-- mobile menu -->
-  <nav id="mobile-nav" class="md:hidden hidden bg-white border-t shadow-lg animate-slide-down">
-    <div class="container-custom py-4">
-      <ul class="flex flex-col gap-3">
-        <li><a href="/" class="no-underline transition-colors duration-200 hover:text-brand-dark">Home</a></li>
-        <li><a href="/about" class="no-underline transition-colors duration-200 hover:text-brand-dark">Über uns</a></li>
-        <li><a href="/angebote" class="no-underline transition-colors duration-200 hover:text-brand-dark">Angebote</a></li>
-        <li><a href="/schule" class="no-underline transition-colors duration-200 hover:text-brand-dark">Schule</a></li>
-        <li><a href="/assessment" class="no-underline transition-colors duration-200 hover:text-brand-dark">Assessment</a></li>
-        <li><a href="/adhs" class="no-underline transition-colors duration-200 hover:text-brand-dark">ADHS</a></li>
-        <li><a href="/blaulicht" class="no-underline transition-colors duration-200 hover:text-brand-dark">Blaulicht</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+</nav>
 
 <script>
-  // mobile nav toggle with animation
-  const btn = document.getElementById('nav-toggle');
-  const mobile = document.getElementById('mobile-nav');
+  // Mobile menu toggle with improved UX
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
   const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
 
-  if (btn && mobile && hamburgerIcon) {
-    btn.addEventListener('click', () => {
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
+  if (mobileMenuButton && mobileMenu && hamburgerIcon && closeIcon) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
 
-      if (expanded) {
-        // Closing menu
-        mobile.classList.add('animate-slide-up');
-        setTimeout(() => {
-          mobile.classList.add('hidden');
-          mobile.classList.remove('animate-slide-up');
-        }, 300);
-        hamburgerIcon.textContent = '☰';
-      } else {
-        // Opening menu
-        mobile.classList.remove('hidden');
-        mobile.classList.add('animate-slide-down');
-        hamburgerIcon.textContent = '✕';
+      // Toggle menu visibility
+      mobileMenu.classList.toggle('hidden');
+
+      // Toggle icons
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+
+      // Update aria-expanded
+      mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+
+      // Update aria-label
+      mobileMenuButton.setAttribute('aria-label', isExpanded ? 'Hauptmenü öffnen' : 'Hauptmenü schließen');
+    });
+
+    // Close menu when clicking outside or on a link
+    document.addEventListener('click', (event) => {
+      if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Hauptmenü öffnen');
+      }
+    });
+
+    // Close menu when pressing Escape
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+        hamburgerIcon.classList.remove('hidden');
+        closeIcon.classList.add('hidden');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        mobileMenuButton.setAttribute('aria-label', 'Hauptmenü öffnen');
       }
     });
   }
 </script>
 
 <style>
-  .animate-slide-down {
-    animation: slideDown 0.3s ease-out forwards;
+  .bg-brand-dark {
+    background-color: var(--brand-dark);
   }
 
-  .animate-slide-up {
-    animation: slideUp 0.3s ease-in forwards;
+  .text-brand-light {
+    color: var(--brand-light);
   }
 
-  @keyframes slideDown {
-    from {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideUp {
-    from {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    to {
-      transform: translateY(-100%);
-      opacity: 0;
-    }
+  .hover\:text-brand-light:hover {
+    color: var(--brand-light);
   }
 </style>

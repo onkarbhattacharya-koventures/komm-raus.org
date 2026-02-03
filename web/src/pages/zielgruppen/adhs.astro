@@ -1,0 +1,337 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+---
+
+<MainLayout title="ADHS - Komm Raus">
+  <Hero title="ADHS – System statt Symptom – Fundament vor Medikament" subtitle="Die Frage, die fast nie gestellt wird: Wie stabil ist dein Fundament?" image="lagerfeuer-bg" />
+
+  <!-- SEKTION 2: QUIZ -->
+  <Section id="quiz">
+    <h2>Der Fundament-Check</h2>
+    <p>10 Fragen. 2 Minuten. Finde heraus, wie stabil dein Fundament ist – und wo deine größten Hebel liegen.</p>
+
+    <div id="quiz-container">
+      <form id="fundament-quiz">
+        <div class="question" data-question="1">
+          <h3>Frage 1</h3>
+          <p>Wie oft passiert es, dass du bei längeren Aufgaben die Konzentration verlierst?</p>
+          <label><input type="radio" name="q1" value="0"> Fast nie</label><br>
+          <label><input type="radio" name="q1" value="1"> Manchmal</label><br>
+          <label><input type="radio" name="q1" value="2"> Oft</label><br>
+          <label><input type="radio" name="q1" value="3"> Fast immer</label>
+        </div>
+
+        <div class="question" data-question="2">
+          <h3>Frage 2</h3>
+          <p>Schläfst du an den meisten Tagen mindestens 7 Stunden?</p>
+          <label><input type="radio" name="q2" value="3"> Ja, fast immer</label><br>
+          <label><input type="radio" name="q2" value="2"> Meistens</label><br>
+          <label><input type="radio" name="q2" value="1"> Selten</label><br>
+          <label><input type="radio" name="q2" value="0"> Fast nie</label>
+        </div>
+
+        <div class="question" data-question="3">
+          <h3>Frage 3</h3>
+          <p>Wie oft schiebst du wichtige Dinge auf, obwohl du weißt, dass du sie erledigen solltest?</p>
+          <label><input type="radio" name="q3" value="0"> Fast nie</label><br>
+          <label><input type="radio" name="q3" value="1"> Manchmal</label><br>
+          <label><input type="radio" name="q3" value="2"> Oft</label><br>
+          <label><input type="radio" name="q3" value="3"> Fast immer</label>
+        </div>
+
+        <div class="question" data-question="4">
+          <h3>Frage 4</h3>
+          <p>Bewegst du dich täglich mindestens 30 Minuten intensiv (so dass du ins Schwitzen kommst)?</p>
+          <label><input type="radio" name="q4" value="3"> Ja, fast täglich</label><br>
+          <label><input type="radio" name="q4" value="2"> Mehrmals pro Woche</label><br>
+          <label><input type="radio" name="q4" value="1"> Selten</label><br>
+          <label><input type="radio" name="q4" value="0"> Fast nie</label>
+        </div>
+
+        <div class="question" data-question="5">
+          <h3>Frage 5</h3>
+          <p>Wie oft fühlst du dich innerlich rastlos, auch wenn du äußerlich stillsitzt?</p>
+          <label><input type="radio" name="q5" value="0"> Fast nie</label><br>
+          <label><input type="radio" name="q5" value="1"> Manchmal</label><br>
+          <label><input type="radio" name="q5" value="2"> Oft</label><br>
+          <label><input type="radio" name="q5" value="3"> Fast immer</label>
+        </div>
+
+        <div class="question" data-question="6">
+          <h3>Frage 6</h3>
+          <p>Bist du innerhalb der ersten Stunde nach dem Aufwachen im natürlichen Tageslicht?</p>
+          <label><input type="radio" name="q6" value="3"> Ja, fast immer</label><br>
+          <label><input type="radio" name="q6" value="2"> Meistens</label><br>
+          <label><input type="radio" name="q6" value="1"> Selten</label><br>
+          <label><input type="radio" name="q6" value="0"> Fast nie</label>
+        </div>
+
+        <div class="question" data-question="7">
+          <h3>Frage 7</h3>
+          <p>Wie oft unterbrichst du andere oder beendest ihre Sätze?</p>
+          <label><input type="radio" name="q7" value="0"> Fast nie</label><br>
+          <label><input type="radio" name="q7" value="1"> Manchmal</label><br>
+          <label><input type="radio" name="q7" value="2"> Oft</label><br>
+          <label><input type="radio" name="q7" value="3"> Fast immer</label>
+        </div>
+
+        <div class="question" data-question="8">
+          <h3>Frage 8</h3>
+          <p>Wie oft isst du hochverarbeitete Lebensmittel (Fertiggerichte, Fast Food, Süßigkeiten)?</p>
+          <label><input type="radio" name="q8" value="3"> Fast nie</label><br>
+          <label><input type="radio" name="q8" value="2"> Manchmal</label><br>
+          <label><input type="radio" name="q8" value="1"> Oft</label><br>
+          <label><input type="radio" name="q8" value="0"> Fast täglich</label>
+        </div>
+
+        <div class="question" data-question="9">
+          <h3>Frage 9</h3>
+          <p>Wie oft fühlst du dich abends erschöpft, aber dein Kopf läuft weiter?</p>
+          <label><input type="radio" name="q9" value="0"> Fast nie</label><br>
+          <label><input type="radio" name="q9" value="1"> Manchmal</label><br>
+          <label><input type="radio" name="q9" value="2"> Oft</label><br>
+          <label><input type="radio" name="q9" value="3"> Fast immer</label>
+        </div>
+
+        <div class="question" data-question="10">
+          <h3>Frage 10</h3>
+          <p>Hast du eine regelmäßige Praxis zur Stressregulation (Atmung, Meditation, Natur)?</p>
+          <label><input type="radio" name="q10" value="3"> Ja, täglich</label><br>
+          <label><input type="radio" name="q10" value="2"> Mehrmals pro Woche</label><br>
+          <label><input type="radio" name="q10" value="1"> Selten</label><br>
+          <label><input type="radio" name="q10" value="0"> Nein</label>
+        </div>
+
+        <button type="button" id="submit-quiz">Auswertung anzeigen</button>
+      </form>
+
+      <div id="results" style="display: none;">
+        <h3>Dein Ergebnis</h3>
+        <div id="result-content"></div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- SEKTION 3: WAS IST ADHS -->
+  <Section>
+    <h2>Heutzutage wird ADHS als ein Defekt, eine Krankheit bezeichnet.</h2>
+    <h3>Die konventionelle Sicht</h3>
+    <p>ADHS wird meist als neurobiologische Störung beschrieben: ein Ungleichgewicht der Neurotransmitter Dopamin und Noradrenalin im präfrontalen Kortex. Die Symptome – Unaufmerksamkeit, Impulsivität, Hyperaktivität – werden als Defekte behandelt, die korrigiert werden müssen.</p>
+    <h3>Die erweiterte Sicht</h3>
+    <p>Doch diese Sichtweise greift zu kurz. Sie erklärt nicht, warum ADHS-Diagnosen in 50 Jahren um das 40-fache gestiegen sind. Sie erklärt nicht, warum dieselben Menschen in manchen Umgebungen brillieren und in anderen scheitern. Sie erklärt nicht, warum Medikamente oft wirken – aber allein selten ausreichen.</p>
+    <blockquote>ADHS ist nicht nur eine Störung im Gehirn. Es ist auch ein Signal des Körpers, dass etwas fehlt.</blockquote>
+    <h3>Die Zahlen</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Zeitraum</th>
+          <th>Entwicklung</th>
+          <th>Bedeutung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1970</td><td>1–2 % der Kinder</td><td>Baseline</td></tr>
+        <tr><td>1990</td><td>3–5 % der Kinder</td><td>2–3-facher Anstieg</td></tr>
+        <tr><td>2010</td><td>7–9 % der Kinder</td><td>4–5-facher Anstieg</td></tr>
+        <tr><td>2023</td><td>10–12 % der Kinder, 4–5 % der Erwachsenen</td><td>6–8-facher Anstieg</td></tr>
+        <tr><td>2016–2022</td><td>+199 % bei Erwachsenen</td><td>Explosionsartiger Anstieg in nur 6 Jahren</td></tr>
+      </tbody>
+    </table>
+    <p>Genetik verändert sich nicht in 50 Jahren. Was sich verändert hat: Wie wir leben. Wie wir schlafen. Wie wir uns bewegen. Was wir essen. Wie viel Natur wir sehen. Wie viel Bildschirm.</p>
+  </Section>
+
+  <!-- SEKTION 4: WARUM KONVENTIONELLE ANSÄTZE NICHT AUSREICHEN -->
+  <Section>
+    <h2>Medikamente helfen. Aber sie heilen nicht.</h2>
+    <h3>Was passiert typischerweise?</h3>
+    <ol>
+      <li>Symptome fallen auf – in der Schule, bei der Arbeit, in Beziehungen</li>
+      <li>Diagnose durch Psychiater oder Psychologe</li>
+      <li>Medikation (Methylphenidat, Amphetamine) und/oder Verhaltenstherapie</li>
+      <li>Symptome werden besser – solange man die Medikamente nimmt</li>
+      <li>Langfristige Begleitung? Selten. Ursachenarbeit? Noch seltener.</li>
+    </ol>
+    <h3>Die Heilungsrate – die Zahl, die niemand nennt</h3>
+    <p><strong>Wie viele Menschen werden durch ADHS-Medikamente geheilt?</strong></p>
+    <p><strong>Null Prozent.</strong></p>
+    <p>Medikamente reduzieren Symptome – solange man sie nimmt. Sobald man absetzt, kehren die Symptome zurück. Das Gehirn wird nicht repariert. Es wird chemisch unterstützt. Das ist keine Kritik an Medikamenten. Sie helfen vielen Menschen, ihren Alltag zu bewältigen. Aber sie heilen nicht.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Was funktioniert</th>
+          <th>Was fehlt</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Stimulanzien erhöhen Dopamin und lindern Symptome sofort</td><td>Keine Veränderung der Grundvoraussetzungen, die ADHS verschärfen</td></tr>
+        <tr><td>Verhaltenstherapie trainiert Kompensationsstrategien</td><td>Adressiert nicht die biologische Erschöpfung, die viele Betroffene erleben</td></tr>
+        <tr><td>Psychoedukation erklärt ADHS</td><td>Wissen allein schließt nicht die Kluft zwischen Wissen und Handeln</td></tr>
+      </tbody>
+    </table>
+    <h3>Die Frage, die nie gestellt wird</h3>
+    <p>Bevor wir Medikamente verschreiben: Wie ist dein Schlaf? Deine Bewegung? Deine Ernährung? Dein Lichtverhältnis? Dein Stresslevel? In 90 % der Diagnosen werden diese Fragen nicht gestellt. Man behandelt das Symptom, ohne das Fundament zu prüfen.</p>
+    <div class="metaphor-box">
+      <h4>Die Reifen-Metapher</h4>
+      <p>Stell dir vor, dein Auto hat einen platten Reifen. Du könntest den Reifen wechseln. Oder du könntest die Höchstgeschwindigkeit reduzieren, damit es nicht so sehr ruckelt. Medikamente reduzieren das Ruckeln. Das Resilienzprotokoll wechselt den Reifen.</p>
+    </div>
+  </Section>
+
+  <!-- SEKTION 5: DIE UMWELTFAKTOREN -->
+  <Section>
+    <h2>Die gute Nachricht, die fast niemand erzählt</h2>
+    <p>Die Wissenschaft hat Faktoren identifiziert, die ADHS-Symptome um 30–70 % reduzieren können – unabhängig von Medikation. Diese Faktoren sind nicht geheimnisvoll. Sie sind fundamental. Und sie werden systematisch vernachlässigt.</p>
+    <blockquote>Die Gene sind die Waffe. Die Umwelt drückt ab. – Joel Nigg, ADHS-Forscher</blockquote>
+    <h3>Die fünf größten Hebel</h3>
+    <div class="factor">
+      <h4>Schlaf</h4>
+      <p><strong>Effektstärke:</strong> Jede Stunde mehr = 20 % weniger Symptome</p>
+      <p><strong>Wissenschaft:</strong> 75 % der ADHS-Betroffenen haben einen gestörten circadianen Rhythmus. Schlafextension zeigt Effekte vergleichbar mit Methylphenidat.</p>
+      <p><strong>Bedeutung:</strong> Dein Gehirn regeneriert im Schlaf. Ohne ausreichend Schlaf funktioniert keine andere Intervention.</p>
+    </div>
+    <div class="factor">
+      <h4>Bewegung</h4>
+      <p><strong>Effektstärke:</strong> 30 Minuten intensive Bewegung = Effekt wie niedrig dosiertes Medikament</p>
+      <p><strong>Wissenschaft:</strong> Meta-Analysen zeigen: Aerobic Exercise reduziert ADHS-Symptome signifikant. 20 Minuten Laufen verbessern die Aufmerksamkeit sofort.</p>
+      <p><strong>Bedeutung:</strong> Dein Körper ist für Bewegung gebaut. Stillsitzen ist biologischer Stress.</p>
+    </div>
+    <div class="factor">
+      <h4>Licht</h4>
+      <p><strong>Effektstärke:</strong> Blaulichtfilter ab 18 Uhr = 47 % Symptomreduktion in 2 Wochen</p>
+      <p><strong>Wissenschaft:</strong> Blaues Licht am Abend verzögert den Schlaf um 1–2 Stunden. Bei ADHS-Betroffenen ist dieser Effekt doppelt so stark.</p>
+      <p><strong>Bedeutung:</strong> Dein circadianer Rhythmus steuert alles. Falsches Licht zur falschen Zeit sabotiert dein System.</p>
+    </div>
+    <div class="factor">
+      <h4>Natur</h4>
+      <p><strong>Effektstärke:</strong> 20 Minuten im Grünen = sofortige Aufmerksamkeitsverbesserung</p>
+      <p><strong>Wissenschaft:</strong> Kinder mit regelmäßigem Naturkontakt haben 30 % weniger ADHS-Symptome. Grünflächen im Wohnumfeld senken das ADHS-Risiko um 55 %.</p>
+      <p><strong>Bedeutung:</strong> Dein Nervensystem braucht natürliche Reize zur Regeneration. Beton und Bildschirme liefern das nicht.</p>
+    </div>
+    <div class="factor">
+      <h4>Atmung</h4>
+      <p><strong>Effektstärke:</strong> Langsame Ausatmung aktiviert den Parasympathikus in Sekunden</p>
+      <p><strong>Wissenschaft:</strong> Langsame Bauchatmung reduziert Cortisol um 15–25 %. Atemübungen verbessern Aufmerksamkeit und emotionale Regulation.</p>
+      <p><strong>Bedeutung:</strong> Dein Atem ist der einzige direkte Zugang zu deinem autonomen Nervensystem.</p>
+    </div>
+    <div class="abschluss-box">
+      <h4>Die Kumulation macht den Unterschied</h4>
+      <p>Jeder einzelne Faktor hat moderate Effekte. Aber in Kombination – wenn du alle fünf Säulen stabilisierst – zeigt die Forschung kumulative Effektstärken, die mit Medikamenten vergleichbar sind. Aber ohne Nebenwirkungen. Und mit dem Potenzial, die Ursache zu adressieren, nicht nur das Symptom.</p>
+    </div>
+  </Section>
+
+  <!-- SEKTION 6: SELBSTREFLEXION -->
+  <Section>
+    <h2>Wo liegen deine größten Hebel?</h2>
+    <p>Nimm dir einen Moment und schätze ehrlich ein, wie stabil dein Fundament in jedem Bereich ist.</p>
+    <!-- Self-reflection sliders would go here -->
+  </Section>
+
+  <!-- SEKTION 7: DER SATORI-ANSATZ -->
+  <Section>
+    <h2>Das Resilienzprotokoll: System statt Symptom</h2>
+    <p>Das Resilienzprotokoll behandelt nicht ADHS. Es stärkt das Fundament, das bei ADHS systematisch vernachlässigt wird. Wenn Schlaf, Atmung, Bewegung, Ernährung und Geist in Balance sind, verändert sich das System. Die Symptome werden oft milder. Manchmal verschwinden sie.</p>
+    <h3>Die fünf Grunddisziplinen (DODAI)</h3>
+    <!-- Disciplines list -->
+    <h3>Die fünf Haltungen (SHIN-HŌ)</h3>
+    <!-- Attitudes list -->
+    <h3>Die Erfahrungsräume (TANREN)</h3>
+    <!-- Experience spaces list -->
+  </Section>
+
+  <!-- SEKTION 8: FÜR WEN – FÜR WEN NICHT -->
+  <Section>
+    <h2>Ist das Resilienzprotokoll das Richtige für dich?</h2>
+    <p>Ehrlichkeit spart Zeit – für uns beide.</p>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div>
+        <h3>Das Resilienzprotokoll ist für dich, wenn...</h3>
+        <ul>
+          <li>Du ADHS hast (diagnostiziert oder vermutet) und spürst, dass Medikation oder Therapie allein nicht ausreichen</li>
+          <li>Du bereit bist, an deinen Grundlagen zu arbeiten – auch wenn das manchmal unbequem ist</li>
+          <li>Du erkennst, dass dein Körper Signale sendet, die du bisher ignoriert hast</li>
+          <li>Du Struktur, Gemeinschaft und verkörperte Erfahrung brauchst – nicht nur Information</li>
+          <li>Du offen bist für einen ganzheitlichen Ansatz, der Zeit braucht</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Das Resilienzprotokoll ist NICHT für dich, wenn...</h3>
+        <ul>
+          <li>Du eine schnelle Lösung suchst, die in zwei Wochen fertig ist</li>
+          <li>Du glaubst, dass Willenskraft allein das Problem löst</li>
+          <li>Du eine Alternative zu ärztlicher Behandlung suchst, weil du Medikamente grundsätzlich ablehnst</li>
+          <li>Du nach einem weiteren Buch, Kurs oder Podcast suchst, der dir sagt, was du tun sollst</li>
+          <li>Du akut in einer schweren Krise bist – dann brauchst du zuerst professionelle Hilfe</li>
+        </ul>
+      </div>
+    </div>
+    <div class="disclaimer-box">
+      <h4>Wichtiger Hinweis</h4>
+      <p>Das Resilienzprotokoll ersetzt keine ärztliche Diagnose oder Behandlung. Wenn du Medikamente nimmst und sie dir helfen, setze sie nicht ohne Rücksprache mit deinem Arzt ab. Unser Ansatz kann medizinische Behandlung ergänzen – bei manchen Menschen ersetzt er sie langfristig, bei anderen nicht. Beides ist in Ordnung.</p>
+    </div>
+  </Section>
+
+  <!-- SEKTION 9: SOCIAL PROOF -->
+  <Section>
+    <h2>Was andere erlebt haben</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        <blockquote>"Ich habe 15 Jahre lang Medikamente genommen und dachte, das sei alles, was geht. Das Resilienzprotokoll hat mir gezeigt, dass ich meinen Körper systematisch vernachlässigt hatte. Heute brauche ich nur noch die Hälfte der Dosis – und fühle mich besser als je zuvor."</blockquote>
+        <p><strong>Michael</strong>, 42, Unternehmensberater</p>
+      </div>
+      <div class="testimonial">
+        <blockquote>"Ich wurde erst mit 38 diagnostiziert. Jahrzehntelang dachte ich, ich sei einfach faul oder dumm. Das Resilienzprotokoll hat mir nicht nur Techniken gegeben, sondern ein Verständnis dafür, wie mein System funktioniert. Das hat alles verändert."</blockquote>
+        <p><strong>Sandra</strong>, 41, Projektmanagerin</p>
+      </div>
+      <div class="testimonial">
+        <blockquote>"Als Mutter eines ADHS-Kindes habe ich alles probiert. Erst als wir angefangen haben, das Fundament der ganzen Familie zu stabilisieren – Schlaf, Bewegung, Bildschirmzeit – hat sich etwas grundlegend verändert. Mein Sohn braucht immer noch Unterstützung, aber er ist ein anderes Kind."</blockquote>
+        <p><strong>Kathrin</strong>, 45, Lehrerin</p>
+      </div>
+    </div>
+    <h3>Wissenschaftlich fundiert</h3>
+    <p>Das Resilienzprotokoll basiert auf über 200 peer-reviewed Studien zu den Auswirkungen von Schlaf, Bewegung, Ernährung, Licht und Atmung auf ADHS-Symptome. Die Einzeleffekte sind moderat, aber die Kumulation zeigt in der Forschung Effektstärken, die mit medikamentöser Behandlung vergleichbar sind.</p>
+    <p><a href="#">Die wissenschaftliche Basis im Detail</a></p>
+  </Section>
+
+  <!-- SEKTION 10: CTA -->
+  <Section>
+    <h2>Der nächste Schritt</h2>
+    <p>Du hast gelesen. Du hast vielleicht den Fundament-Check gemacht. Du spürst, dass hier etwas ist, das dir helfen könnte. Die Frage ist nicht, ob du genug weißt. Die Frage ist, ob du bereit bist, etwas anderes zu tun als bisher.</p>
+    <div class="cta-options">
+      <div class="cta-option">
+        <h3>Erstgespräch</h3>
+        <p>30 Minuten. Kostenlos. Wir sprechen über deine Situation und ob das Resilienzprotokoll für dich passt.</p>
+        <button>Gespräch buchen</button>
+        <p class="target">Menschen, die bereit sind</p>
+      </div>
+      <div class="cta-option">
+        <h3>E-Mail-Serie</h3>
+        <p>7 Tage. Konkrete erste Schritte für jede der fünf Säulen. Direkt umsetzbar.</p>
+        <button>Erste Schritte erhalten</button>
+        <p class="target">Menschen, die mehr wissen wollen</p>
+      </div>
+      <div class="cta-option">
+        <h3>PDF-Download</h3>
+        <p>Die 5 größten Energie-Lecks bei ADHS – und wie du sie schließt. Kompakt. Wissenschaftlich fundiert.</p>
+        <button>Kostenlos herunterladen</button>
+        <p class="target">Menschen, die noch recherchieren</p>
+      </div>
+    </div>
+    <blockquote>
+      <p><em>Ichi-go Ichi-e (一期一会)</em></p>
+      <p>Eine Begegnung, eine Gelegenheit</p>
+    </blockquote>
+    <p class="footer-tagline">Satori Akademie – System statt Symptom – Die Einheit von Wissen und Handeln</p>
+  </Section>
+</MainLayout>
+
+<style>
+  .metaphor-box, .abschluss-box {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+  .factor {
+    margin-bottom: 1rem;
+  }
+</style>

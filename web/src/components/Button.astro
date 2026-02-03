@@ -6,6 +6,10 @@ interface Props {
 const { href = '#', type = 'primary' } = Astro.props as Props;
 ---
 
-<a href={href} class={`inline-block ${type === 'primary' ? 'btn-primary' : 'btn-dark'}`}>
+<a href={href} class={`inline-flex items-center justify-center px-6 py-3 font-medium text-sm rounded-xl border-none cursor-pointer transition-all duration-200 ease-out shadow-md text-decoration-none ${
+  type === 'primary'
+    ? 'bg-md-primary text-md-on-primary hover:bg-md-primary-container hover:text-md-on-primary-container hover:shadow-lg hover:-translate-y-0.5 active:shadow-md active:translate-y-0'
+    : 'bg-md-secondary text-md-on-secondary hover:bg-md-secondary-container hover:text-md-on-secondary-container hover:shadow-lg hover:-translate-y-0.5 active:shadow-md active:translate-y-0'
+}`}>
   <slot />
 </a>

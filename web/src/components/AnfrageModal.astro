@@ -1,0 +1,225 @@
+---
+// AnfrageModal.astro
+const currentPath = Astro.url.pathname;
+
+// Only render on pages that are not excluded
+const excludedPaths = ['/', '/about', '/download', '/kontakt', '/impressum'];
+const shouldRender = !excludedPaths.includes(currentPath);
+---
+
+{shouldRender && (
+  <>
+    <!-- Sticky Button -->
+    <button
+      id="anfrage-button"
+      class="fixed bottom-20 right-4 bg-brand-dark text-white px-4 py-2 rounded-full shadow-lg hover:bg-brand-darker transition-colors duration-200 z-40 flex items-center gap-2"
+      aria-label="Termin anfragen"
+    >
+      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+      </svg>
+      Termin anfragen
+    </button>
+
+    <!-- Modal Overlay -->
+    <div id="anfrage-modal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+      <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
+        <!-- Close Button -->
+        <button
+          id="close-modal"
+          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
+          aria-label="Modal schließen"
+        >
+          ×
+        </button>
+
+        <!-- Form -->
+        <form
+          id="anfrage-form"
+          action="mailto:kontakt@komm-raus.org"
+          method="post"
+          enctype="text/plain"
+          class="p-6"
+        >
+          <h2 class="text-2xl font-bold mb-6 text-brand-dark">Termin anfragen</h2>
+
+          <!-- Gruppe 1: Termin & Kontakt -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-4 text-brand-dark">Termin & Kontakt</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="wunschtermin" class="block text-sm font-medium text-gray-700 mb-1">Wunschtermin</label>
+                <input type="date" id="wunschtermin" name="wunschtermin" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+              </div>
+              <div>
+                <label for="alternative" class="block text-sm font-medium text-gray-700 mb-1">Alternative</label>
+                <input type="date" id="alternative" name="alternative" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+              </div>
+              <div>
+                <label for="beginn" class="block text-sm font-medium text-gray-700 mb-1">Beginn</label>
+                <input type="time" id="beginn" name="beginn" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+              </div>
+              <div>
+                <label for="programmlaenge" class="block text-sm font-medium text-gray-700 mb-1">Programmlänge</label>
+                <select id="programmlaenge" name="programmlaenge" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required>
+                  <option value="">Bitte wählen</option>
+                  <option value="1 Tag">1 Tag</option>
+                  <option value="2 Tage">2 Tage</option>
+                  <option value="3 Tage">3 Tage</option>
+                  <option value="Mehrtägig">Mehrtägig</option>
+                </select>
+              </div>
+              <div>
+                <label for="ansprechpartner" class="block text-sm font-medium text-gray-700 mb-1">Ansprechpartner</label>
+                <input type="text" id="ansprechpartner" name="ansprechpartner" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+              </div>
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+              </div>
+              <div>
+                <label for="tel" class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
+                <input type="tel" id="tel" name="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+              </div>
+              <div>
+                <label for="gruppe" class="block text-sm font-medium text-gray-700 mb-1">Gruppe/Organisation</label>
+                <input type="text" id="gruppe" name="gruppe" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label class="flex items-center">
+                <input type="checkbox" id="abweichende-rechnung" class="mr-2" />
+                <span class="text-sm font-medium text-gray-700">Abweichende Rechnungsadresse?</span>
+              </label>
+            </div>
+            <div id="rechnungsadresse" class="hidden mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label for="strasse" class="block text-sm font-medium text-gray-700 mb-1">Straße</label>
+                <input type="text" id="strasse" name="strasse" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+              </div>
+              <div>
+                <label for="plz" class="block text-sm font-medium text-gray-700 mb-1">PLZ</label>
+                <input type="text" id="plz" name="plz" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+              </div>
+              <div>
+                <label for="ort" class="block text-sm font-medium text-gray-700 mb-1">Ort</label>
+                <input type="text" id="ort" name="ort" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Gruppe 2: Details -->
+          <div class="mb-6">
+            <h3 class="text-lg font-semibold mb-4 text-brand-dark">Details</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="programm-fuer" class="block text-sm font-medium text-gray-700 mb-1">Programm für</label>
+                <select id="programm-fuer" name="programm-fuer" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required>
+                  <option value="">Bitte wählen</option>
+                  <option value="Schulklasse">Schulklasse</option>
+                  <option value="Firma">Firma</option>
+                  <option value="Verein">Verein</option>
+                  <option value="Privat">Privat</option>
+                  <option value="Andere">Andere</option>
+                </select>
+              </div>
+              <div>
+                <label for="alter" class="block text-sm font-medium text-gray-700 mb-1">Alter</label>
+                <input type="text" id="alter" name="alter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" placeholder="z.B. 12-16 Jahre" />
+              </div>
+              <div>
+                <label for="anzahl" class="block text-sm font-medium text-gray-700 mb-1">Anzahl Gesamt</label>
+                <input type="number" id="anzahl" name="anzahl" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label for="wünsche" class="block text-sm font-medium text-gray-700 mb-1">Wünsche / Zielsetzung</label>
+              <textarea id="wünsche" name="wünsche" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark"></textarea>
+            </div>
+            <div class="mt-4 space-y-2">
+              <label class="flex items-center">
+                <input type="checkbox" id="sicherungserfahrung" name="sicherungserfahrung" class="mr-2" />
+                <span class="text-sm font-medium text-gray-700">Sicherungserfahrung vorhanden?</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" id="gegenseitiges-sichern" name="gegenseitiges-sichern" class="mr-2" />
+                <span class="text-sm font-medium text-gray-700">Gegenseitiges Sichern unerwünscht?</span>
+              </label>
+              <label class="flex items-center">
+                <input type="checkbox" id="besonderheiten" class="mr-2" />
+                <span class="text-sm font-medium text-gray-700">Besonderheiten/Behinderungen?</span>
+              </label>
+            </div>
+            <div id="besonderheiten-details" class="hidden mt-4">
+              <label for="besonderheiten-text" class="block text-sm font-medium text-gray-700 mb-1">Details zu Besonderheiten</label>
+              <textarea id="besonderheiten-text" name="besonderheiten-text" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark"></textarea>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="flex justify-end">
+            <button type="submit" class="bg-brand-dark text-white px-6 py-2 rounded-md hover:bg-brand-darker transition-colors duration-200">
+              Anfrage senden
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </>
+)}
+
+<script client:load>
+  // Modal open/close
+  const button = document.getElementById('anfrage-button');
+  const modal = document.getElementById('anfrage-modal');
+  const closeBtn = document.getElementById('close-modal');
+
+  if (button && modal && closeBtn) {
+    button.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modal.classList.add('hidden');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  }
+
+  // Conditional fields
+  const rechnungCheckbox = document.getElementById('abweichende-rechnung');
+  const rechnungsadresse = document.getElementById('rechnungsadresse');
+  const besonderheitenCheckbox = document.getElementById('besonderheiten');
+  const besonderheitenDetails = document.getElementById('besonderheiten-details');
+
+  if (rechnungCheckbox && rechnungsadresse) {
+    rechnungCheckbox.addEventListener('change', () => {
+      rechnungsadresse.classList.toggle('hidden', !rechnungCheckbox.checked);
+    });
+  }
+
+  if (besonderheitenCheckbox && besonderheitenDetails) {
+    besonderheitenCheckbox.addEventListener('change', () => {
+      besonderheitenDetails.classList.toggle('hidden', !besonderheitenCheckbox.checked);
+    });
+  }
+
+  // Dynamic subject
+  const form = document.getElementById('anfrage-form');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      const wunschtermin = document.getElementById('wunschtermin').value;
+      const beginn = document.getElementById('beginn').value;
+      const ansprechpartner = document.getElementById('ansprechpartner').value;
+      const gruppe = document.getElementById('gruppe').value;
+
+      const subject = `Anfrage ${wunschtermin} ${beginn} - ${ansprechpartner} - ${gruppe}`;
+      form.action = `mailto:kontakt@komm-raus.org?subject=${encodeURIComponent(subject)}`;
+    });
+  }
+</script>
