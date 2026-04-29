@@ -1,0 +1,332 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  { href: '#worum-es-geht', image: '/images/wildkraeutertour-1.jpg', alt: 'Worum es geht', label: 'Worum es geht' },
+  { href: '#fuer-wen', image: '/images/wildkraeutertour-2.jpg', alt: 'Für wen geeignet', label: 'Für wen geeignet' },
+  { href: '#inhalte-ablauf', image: '/images/wildkraeutertour-3.jpg', alt: 'Inhalte und Ablauf', label: 'Inhalte und Ablauf' },
+  { href: '#wissenschaft', image: '/images/wildkraeutertour-4.jpg', alt: 'Wissenschaftliche Einordnung', label: 'Wissenschaft' },
+  { href: '#sicherheit-haltung', image: '/images/wildkraeutertour-5.jpg', alt: 'Sicherheit und Haltung', label: 'Sicherheit und Haltung' },
+  { href: '#organisatorisches-anfrage', image: '/images/wildkraeutertour-6.jpg', alt: 'Organisatorisches und Anfrage', label: 'Organisatorisches und Anfrage' },
+];
+---
+
+<MainLayout title="Wildkräuterwanderung - Komm Raus">
+  <Hero title="Wildkräuterwanderung" subtitle="Pflanzen erkennen, Boden verstehen, Natur mit anderen Augen sehen." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" />
+
+  <Section class="wildkraeutertour-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>„Dumme rennen, Kluge warten, Weise gehen in den Garten.“</p>
+      <p>Eine Wildkräuterwanderung bei uns ist kein „Sammeln für den schnellen Smoothie“, sondern eine Begegnung mit der natürlichen Welt:</p>
+      <ul class="card-list">
+        <li>Was passiert eigentlich im Boden unter unseren Füßen?</li>
+        <li>Wie kommen Mineralien aus dem Gestein in die Pflanze – und später in unseren Körper?</li>
+        <li>Welche Pflanzen sind essbar, welche heilsam, welche sollten wir unbedingt stehen lassen?</li>
+        <li>Wie hängen Bodenleben, Landwirtschaft, Ernährung und unser eigenes Wohlbefinden zusammen?</li>
+      </ul>
+      <p>Wir bewegen uns dafür zu Fuß durch Wiesen, Wälder oder Gärten – langsam, aufmerksam, mit Lupe und, wenn gewünscht, Skizzenbuch. Wir schauen auf das Soil Food Web (Bodenorganismen, Pilze, Bakterien, Regenwürmer), sprechen über Kreisläufe, Permakultur und über ganz praktische Fragen wie Kompost, Anzucht oder Stecklingsvermehrung.</p>
+      <p>Ziel ist weniger, „möglichst viele Namen“ zu lernen, sondern:</p>
+      <ul class="card-list">
+        <li>Natur neu wahrzunehmen,</li>
+        <li>einige ausgewählte Pflanzen und Pilze wirklich kennenzulernen,</li>
+        <li>und einen ersten, soliden Einstieg in Botanik, Bodenökologie und Wildkräuternutzung zu bekommen.</li>
+      </ul>
+      <picture class="image-card">
+        <img src="/images/wildkraeutertour-1.jpg" alt="Wildkräuterwanderung in der Natur" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="fuer-wen" class="prose max-w-none">
+      <h2>Für wen diese Wildkräuterwanderung geeignet ist</h2>
+      <p>Unsere Wildkräuterangebote richten sich an:</p>
+      <ul class="card-list">
+        <li><strong>Familien</strong><br>– die gemeinsam draußen sein, lernen und staunen möchten.</li>
+        <li><strong>Interessierte Erwachsene</strong><br>– die einen praxisnahen Einstieg in Wildkräuter, Bodenleben und Permakultur suchen.</li>
+        <li><strong>Kinder- und Jugendgruppen / Schulklassen</strong><br>– als Baustein für Bildung für nachhaltige Entwicklung (BNE) oder Projekttage.</li>
+        <li><strong>Vereine, Initiativen, Nachbarschaften</strong><br>– die ihren Garten, Schulhof oder ihr Gelände in eine lebendige Lern- und Nahrungsfläche verwandeln möchten.</li>
+      </ul>
+      <p>In Umfang und Tiefe passen wir den Kurs an Alter, Vorerfahrung, Jahreszeit und Gelände an.</p>
+      <picture class="image-card">
+        <img src="/images/wildkraeutertour-2.jpg" alt="Familie bei Wildkräuterwanderung" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="inhalte-ablauf" class="prose max-w-none">
+      <h2>Inhalte & Ablauf: Was wir konkret tun</h2>
+      <p>Der genaue Ablauf entsteht aus Gruppe, Ort, Jahreszeit und Wetter. Typische Bausteine sind:</p>
+      <h3>3.1 Bodenleben & Kreisläufe – „Theater im Untergrund“</h3>
+      <ul class="card-list">
+        <li>Blick auf den Boden: Was sehen wir an der Oberfläche, was passiert darunter?</li>
+        <li>Einführung in das Soil Food Web: Bakterien, Pilze, Regenwürmer, Kleinstlebewesen.</li>
+        <li>Unterschiede zwischen konventioneller Landwirtschaft (Pflügen, Kunstdünger, „Pflanzenschutz“) und Alternativen wie No-Dig, Permakultur, Food Forest.</li>
+        <li>Praktische Beispiele:</li>
+        <ul class="card-list">
+          <li>Was macht guten Kompost aus, warum braucht er Luft?</li>
+          <li>Warum ist schlecht belüfteter Mist eher Problem als Lösung?</li>
+          <li>Was macht Wurmkompost besonders wertvoll?</li>
+          <li>Was ist Bokashi und wann kann es sinnvoll sein?</li>
+        </ul>
+        <li>Je nach Setting können kleine Experimente oder Demonstrationen stattfinden (z.B. Bodenprofile, einfache Tests zur Bodenstruktur).</li>
+      </ul>
+      <h3>3.2 Pflanzen & Pilze erkennen – „Freundschaft schließen“</h3>
+      <ul class="card-list">
+        <li>Kennenlernen ausgewählter Wildkräuter, Sträucher und Baum-Pilze:</li>
+        <ul class="card-list">
+          <li>essbare Arten,</li>
+          <li>traditionell als heilsam genutzte Pflanzen,</li>
+          <li>und deutlich gekennzeichnete, nicht-essbare / potenziell giftige Arten.</li>
+        </ul>
+        <li>Beispiel Spitzwegerich (Plantago lanceolata):</li>
+        <ul class="card-list">
+          <li>in der Phytotherapie seit langem als pflanzliches Hustenmittel beschrieben,</li>
+          <li>enthält u.a. Schleimstoffe und bestimmte sekundäre Pflanzenstoffe,</li>
+          <li>wird traditionell äußerlich bei kleinen Verletzungen oder Insektenstichen genutzt.</li>
+        </ul>
+        <li>Wir ordnen solche Beispiele in Ruhe ein, ohne sie als „Wundermittel“ darzustellen.</li>
+        <li>Wir sprechen dabei immer auch über:</li>
+        <ul class="card-list">
+          <li>Naturschutz (z.B. nicht alles abernten, keine geschützten Arten sammeln),</li>
+          <li>Standort- und Jahreszeitenabhängigkeit,</li>
+          <li>sinnvolle Vorbereitung, wenn man später selbst sammeln möchte.</li>
+        </ul>
+        <li>Oberste Regel: Eine Pflanze wird nur dann verwendet oder verzehrt, wenn sie zweifelsfrei bestimmt ist.</li>
+        <li>Wir schulen lieber Vorsicht und Respekt als schnellen Konsum.</li>
+      </ul>
+      <h3>3.3 Achtsamkeit & inneres Auge – „Pflanzen wirklich sehen“</h3>
+      <ul class="card-list">
+        <li>Ein zentrales Element ist das aufmerksame Betrachten:</li>
+        <li>Wir schauen uns Aufbau und „Bauplan“ einzelner Pflanzen an: Wurzel, Spross, Blatt, Blüte, Frucht.</li>
+        <li>Wir üben, das Gesehene so weit zu verinnerlichen, dass wir es mit geschlossenen Augen („inneres Auge“) wieder aufrufen können.</li>
+        <li>Wer mag, hält das im Skizzenbuch fest:</li>
+        <ul class="card-list">
+          <li>einfache Zeichnung,</li>
+          <li>kurze Notizen zu Standort, Wetter, Jahreszeit und eigenen Eindrücken.</li>
+        </ul>
+        <li>Diese Form des Zeichnens ist kein Kunstkurs, sondern ein Werkzeug, um Wahrnehmung, Geduld und Detailblick zu schulen. Studien legen nahe, dass solches „aktive Beobachten“ Aufmerksamkeit und Erinnerungsleistung fördert – bei Kindern wie bei Erwachsenen.</li>
+        <li>Auf Wunsch stellen wir (bei Vorbestellung) ein kleines Set aus Skizzenbuch, Bleistift und Radiergummi bereit.</li>
+      </ul>
+      <h3>3.4 Mit Kindern unterwegs – spielerisch forschen</h3>
+      <ul class="card-list">
+        <li>Mit jüngeren Teilnehmenden passen wir Sprache und Methoden an:</li>
+        <li>Wir „werden“ Regenwurm oder Maulwurf, schauen mit Lupe in den Boden.</li>
+        <li>Wir suchen Wurzeln, vergleichen Blätter, schauen, was wo wie wächst.</li>
+        <li>Wir üben, wie man Brennnesseln erntet, ohne sich zu stechen.</li>
+        <li>Wir pflücken Gänseblümchen und Löwenzahnblüten für einen einfachen Wildkräuter-Snack (wo das Gelände es hergibt und rechtlich erlaubt ist).</li>
+        <li>Wir finden Tierspuren und gießen sie eventuell in Gips ab.</li>
+        <li>Wir spielen Wahrnehmungsspiele (Richtungshören, Gewicht-Lauschen, „Indianerblick“).</li>
+        <li>Wir halten spannende Funde und Eindrücke im Skizzenbuch fest.</li>
+        <li>Dazu gehört immer auch ein Grundverständnis von „gesund“:</li>
+        <ul class="card-list">
+          <li>Was braucht der Körper (z.B. für Nägel, Haare, Zähne)?</li>
+          <li>Wie hängen Ernährung, Bewegung und Wohlbefinden zusammen – ohne moralischen Zeigefinger, eher forschend und neugierig.</li>
+        </ul>
+      </ul>
+      <h3>3.5 Samen setzen – im wörtlichen und übertragenen Sinn</h3>
+      <ul class="card-list">
+        <li>Je nach Format können Teilnehmende als „Erinnerungs-Anker“ mitnehmen:</li>
+        <ul class="card-list">
+          <li>einige ausgewählte Pflanzensamen,</li>
+          <li>einen kleinen Setzling (z.B. Brutblatt/Goethepflanze) zum Beobachten und Vermehren,</li>
+          <li>einfache Anzucht- oder Stecklingsideen für zuhause.</li>
+        </ul>
+        <li>Auf Wunsch kommen wir auch in euren Garten, auf Schulgelände oder Firmengrünflächen und beginnen dort gemeinsam, aus „Rasen“ nach und nach eine lebendige, essbare oder artenreichere Fläche zu machen.</li>
+      </ul>
+      <picture class="image-card">
+        <img src="/images/wildkraeutertour-3.jpg" alt="Pflanzen und Boden erkunden" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wissenschaft" class="prose max-w-none">
+      <h2>Warum eine Wildkräuterwanderung gut tun kann – wissenschaftlich eingeordnet</h2>
+      <p>Die Effekte einer Wildkräuterwanderung entstehen aus einem Bündel von Faktoren, die in der Forschung jeweils für sich gut begründet sind:</p>
+      <h3>4.1 Naturkontakt & psychische Gesundheit</h3>
+      <p>Studien zu Naturaufenthalten deuten darauf hin, dass regelmäßiger Aufenthalt in Grünräumen:</p>
+      <ul class="card-list">
+        <li>Stressmarker (z.B. Cortisol) senken kann,</li>
+        <li>mit besserer Stimmung und weniger Erschöpfung verbunden ist,</li>
+        <li>die Fähigkeit zur Aufmerksamkeitsfokussierung verbessert (Attention Restoration Theory).</li>
+      </ul>
+      <p>Eine Wildkräuterwanderung ist ein klar strukturierter Naturaufenthalt: Menschen bewegen sich, nutzen ihre Sinne, sind mit anderen draußen – das kann einen spürbaren Gegenpol zu Bildschirm- und Innenraumalltag bilden.</p>
+      <h3>4.2 Körperliche Aktivität & Sinneswahrnehmung</h3>
+      <p>Auch moderate Bewegung (langsames Gehen, Bücken, Hocken, Tragen) unterstützt:</p>
+      <ul class="card-list">
+        <li>Herz-Kreislauf-System,</li>
+        <li>Stoffwechsel,</li>
+        <li>Schlafregulation.</li>
+      </ul>
+      <p>Gleichzeitig werden alle Sinne angesprochen:</p>
+      <ul class="card-list">
+        <li>Sehen: Farben, Formen, Details von Pflanzen</li>
+        <li>Riechen: Kräuter, Erde, feuchte Luft</li>
+        <li>Tasten: Rinde, Blätter, Bodenstruktur</li>
+        <li>Hören: Vögel, Wind, Insekten</li>
+      </ul>
+      <p>Diese Art von multisensorischer Aktivität ist in der modernen, stark visuellen Bildschirmwelt seltener geworden und kann gerade bei Kindern die sensorische Integration und Konzentrationsfähigkeit fördern.</p>
+      <h3>4.3 Systemverständnis & Nachhaltigkeit</h3>
+      <p>Das Beschäftigen mit Boden, Stoffkreisläufen und Permakultur fördert ein Verständnis von:</p>
+      <ul class="card-list">
+        <li>Ursache-Wirkungs-Zusammenhängen (z.B. was Dünger, Pflügen oder Monokultur mit Boden und Wasserhaushalt machen können),</li>
+        <li>Abhängigkeiten (Boden – Pflanze – Tier – Mensch),</li>
+        <li>möglichen Alternativen (Kompost, Wurmkompost, No-Dig, Mischkulturen).</li>
+      </ul>
+      <p>Bildungsforschung im Bereich BNE zeigt, dass solches systemische Denken ein wichtiger Baustein für späteres, eigenverantwortliches Handeln im Umwelt- und Gesundheitsbereich ist.</p>
+      <h3>4.4 Ernährung & Gesundheit – mit Vorsicht formuliert</h3>
+      <p>Viele Wildpflanzen sind sehr nährstoffreich – z.B. im Hinblick auf bestimmte Mineralstoffe, Vitamine oder sekundäre Pflanzenstoffe. Eine bewusste Auseinandersetzung mit Herkunft und Qualität von Nahrung kann:</p>
+      <ul class="card-list">
+        <li>das Interesse an frischen, möglichst unverarbeiteten Lebensmitteln stärken,</li>
+        <li>den Blick weg von reinem „Schmeckt / schmeckt nicht“ hin zu „Was tut mir gut?“ lenken,</li>
+        <li>und langfristig helfen, Essgewohnheiten bewusster zu gestalten.</li>
+      </ul>
+      <p>Eine Wildkräuterwanderung kann hier Impulse setzen, ersetzt aber keine medizinische Behandlung und ist kein Diät- oder Therapiekonzept. Konkrete gesundheitliche Fragen gehören in ärztliche oder therapeutische Hände.</p>
+      <h3>4.5 Achtsamkeit & kognitive Fähigkeiten</h3>
+      <p>Die Übungen zum inneren Auge, Zeichnen und genauen Hinschauen trainieren:</p>
+      <ul class="card-list">
+        <li>Aufmerksamkeitsfokussierung,</li>
+        <li>Geduld,</li>
+        <li>detailorientiertes Wahrnehmen.</li>
+      </ul>
+      <p>Es gibt Hinweise darauf, dass solche Formen der „aktiven Achtsamkeit“:</p>
+      <ul class="card-list">
+        <li>Exekutivfunktionen (Planen, Innehalten, Prüfen) unterstützen,</li>
+        <li>und Kindern wie Erwachsenen helfen können, ihre Umgebung klarer und differenzierter wahrzunehmen.</li>
+      </ul>
+      <p>Wir versprechen keine bestimmten kognitiven Effekte. Wir schaffen einen Rahmen, in dem diese Fähigkeiten geübt werden können.</p>
+      <picture class="image-card">
+        <img src="/images/wildkraeutertour-4.jpg" alt="Natur und Gesundheit" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit-haltung" class="prose max-w-none">
+      <h2>Sicherheit & Haltung</h2>
+      <h3>5.1 Safety first – klare Regeln beim Sammeln</h3>
+      <ul class="card-list">
+        <li>Pflanzen werden nur verwendet, wenn sie zweifelsfrei bestimmt sind.</li>
+        <li>Wir üben bewusstes Differenzieren zwischen essbaren, heilsam genutzten und giftigen Arten.</li>
+        <li>Wir betonen: Regelmäßiges, sorgfältiges Üben ist nötig, bevor jemand selbstständig sammelt.</li>
+        <li>Kinder und unerfahrene Erwachsene sammeln grundsätzlich nur unter Anleitung – und auch dann in kleinen Mengen.</li>
+      </ul>
+      <h3>5.2 Naturschutz & Respekt</h3>
+      <ul class="card-list">
+        <li>Keine Sammelaktionen in Schutzgebieten oder bei seltenen Arten.</li>
+        <li>Wir ernten maßvoll (z.B. nur einen Anteil einer Fläche), lassen immer genügend Pflanzen für Tiere und Regeneration stehen.</li>
+        <li>Wir vermitteln ein Bild, in dem jede Art – vom Regenwurm bis zum Wildschwein – eine Funktion im System hat.</li>
+      </ul>
+      <h3>5.3 Grenzen des Kurses</h3>
+      <ul class="card-list">
+        <li>Der Kurs ist ein Einstieg in Botanik, Bodenleben und Wildkräuter – kein Schnellzertifikat zur Selbstversorgung.</li>
+        <li>Nach einem Nachmittag oder Tag kennt man einige Pflanzen und Prinzipien, aber noch nicht „die Natur“.</li>
+        <li>Für Vertiefungen bieten wir weitere Trainings oder – bei Interesse – Begleitung, damit Menschen selbst zu Mentor:innen werden können.</li>
+      </ul>
+      <picture class="image-card">
+        <img src="/images/wildkraeutertour-5.jpg" alt="Sicherheit und Naturschutz" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches-anfrage" class="prose max-w-none">
+      <h2>Organisatorisches & Anfrage</h2>
+      <p>Rahmen (Richtwerte):</p>
+      <ul class="card-list">
+        <li><strong>Teilnehmendenzahl:</strong> bis ca. 8 Personen pro Gruppe (ab etwa 6 Jahren, nach oben offen)</li>
+        <li><strong>Dauer:</strong> meist 4–6 Stunden; auf Wunsch auch mehrtägige Formate mit Übernachtung (z.B. Heuboden, Jurte, Zirkuszelt, je nach Infrastruktur)</li>
+        <li><strong>Ort:</strong></li>
+        <ul class="card-list">
+          <li>Wiesen, Wälder und Gärten im Umfeld des Waldseilgartens</li>
+          <li>oder nach Absprache direkt bei euch:</li>
+          <ul class="card-list">
+            <li>im Schullandheim,</li>
+            <li>auf Firmengelände,</li>
+            <li>in privaten oder Vereinsgärten.</li>
+          </ul>
+        </ul>
+        <li><strong>Material:</strong></li>
+        <ul class="card-list">
+          <li>wetterangepasste Kleidung, robustes Schuhwerk</li>
+          <li>ggf. Trinkflasche, kleine Brotzeit</li>
+          <li>optional: eigenes Skizzenbuch und Stift (oder Bereitstellung durch uns nach Vorbestellung)</li>
+        </ul>
+      </ul>
+      <p>Wir gestalten kein starres Programm, das „abgearbeitet“ wird. Jahreszeit, Wetter, Gelände und die Menschen vor Ort bestimmen, welche Schwerpunkte wir setzen.</p>
+      <p>Wenn ihr möchtet, dass aus eurer Rasenfläche langfristig eine Erlebnis- und Nahrungsfläche wird, können wir als nächster Schritt auch gemeinsam Pflanzkonzepte, Kompoststellen oder kleine Permakultur-Elemente entwickeln.</p>
+      <button id="wildkraeutertour-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+        Anfrage „Wildkräuterwanderung“ stellen
+      </button>
+      <picture class="image-card">
+        <img src="/images/wildkraeutertour-6.jpg" alt="Organisatorisches" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.wildkraeutertour-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('wildkraeutertour-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

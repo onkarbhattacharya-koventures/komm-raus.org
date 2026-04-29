@@ -1,0 +1,200 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import GlassPanel from '../components/GlassPanel.astro';
+import SectionTeaserGrid from '../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+image: '/images/kooperationstraining-feuerwehr-komm-raus-400.jpg',
+    alt: 'Worum es geht',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#fuer-wen',
+    image: '/bilder_nach_page/einsatzkraefte/leiter-feuerwehr-vertrauen-komm-raus.jpg',
+    alt: 'Für wen geeignet',
+    label: 'Für wen geeignet',
+  },
+  {
+    href: '#typische-anlaesse',
+    image: '/bilder_nach_page/einsatzkraefte/vertikale-leiter-feuerwehr-teamtraining.jpg',
+    alt: 'Typische Anlässe',
+    label: 'Typische Anlässe',
+  },
+  {
+    href: '#wie-wir-arbeiten',
+    image: '/bilder_nach_page/einsatzkraefte/vertikale-leiterueberwindung-laubfrosch.jpg',
+    alt: 'Wie wir arbeiten',
+    label: 'Wie wir arbeiten',
+  },
+  {
+    href: '#formate',
+    image: '/bilder_nach_page/einsatzkraefte/Reflexion-teamkreis-kommunikation.jpg',
+    alt: 'Unsere Formate',
+    label: 'Unsere Formate',
+  },
+  {
+    href: '#sicherheit',
+    image: '/bilder_nach_page/einsatzkraefte/feuerwehr-laubfrosch-waldseilgarten.jpg',
+    alt: 'Sicherheit',
+    label: 'Sicherheit',
+  },
+];
+---
+
+<MainLayout title="Einsatzkräfte – Laubfrosch">
+imagePath="/images/kooperationstraining-feuerwehr-komm-raus-800.jpg"
+
+  <Section class="einsatzkraefte-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Einsatzkräfte bewegen sich regelmäßig in Situationen, in denen wenig Spielraum für Fehler bleibt: Entscheidungen unter Zeitdruck, wechselnde Lagen, Anspannung vor, während und nach Einsätzen, Schichtdienst. In der Regel sind Ausbildung und Technik gut etabliert. Die Frage ist oft: Wie bleibt ein Team unter Belastung ansprechbar und handlungsfähig – und wie bleibt der einzelne Mensch dabei gesund?</p>
+      <p>Im Waldseilgarten Laubfrosch bieten wir Einsatzteams einen Rahmen, in dem sie zentrale Aspekte ihrer Arbeit unter sicheren Bedingungen üben können: Kommunikation unter Stress, gegenseitige Sicherung, verantwortungsvolle Risikoeinschätzung und der Umgang mit der eigenen Belastung. Ohne Alarm, ohne Blaulicht – aber mit echten körperlichen und mentalen Herausforderungen.</p>
+      <picture class="image-card">
+src="/images/leiter-feuerwehr-vertrauen-komm-raus-400.jpg"
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="fuer-wen" class="prose max-w-none">
+      <h2>Für wen diese Angebote gedacht sind</h2>
+      <ul class="card-list">
+        <li><strong>Feuerwehren</strong><br>Berufs-, Werk- und Freiwillige Feuerwehren</li>
+        <li><strong>Rettungsdienste und Hilfsorganisationen</strong><br>DRK, Malteser, Johanniter und andere</li>
+        <li><strong>Polizei und Justizvollzug</strong><br>Einsatzkräfte mit hoher psychischer Belastung</li>
+        <li><strong>Katastrophenschutz, ggf. THW</strong><br>Technisches Hilfswerk und vergleichbare Organisationen</li>
+        <li><strong>Notfall- und Krisenstäbe</strong><br>Koordinationsebenen bei Großlagen</li>
+      </ul>
+      <p>Wir verstehen unsere Angebote als Ergänzung zu bestehenden Aus- und Fortbildungsstrukturen, nicht als Ersatz.</p>
+      <picture class="image-card">
+src="/images/vertikale-leiterueberwindung-laubfrosch-400.jpg"
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="typische-anlaesse" class="prose max-w-none">
+      <h2>Typische Anlässe</h2>
+      <p>Einsatzorganisationen kommen zum Beispiel dann zu uns, wenn sie:</p>
+      <ul class="card-list">
+        <li>die Zusammenarbeit im Einsatzteam stärken möchten</li>
+        <li>Kommunikation und Führung unter Belastung in einem anderen Rahmen reflektieren wollen</li>
+        <li>das Thema Resilienz, Schlaf und Regeneration im Schichtdienst praxisnah aufgreifen wollen</li>
+        <li>Angebote für Nachwuchs und Jugendgruppen suchen, die über „Action" hinaus auch Haltungsfragen berühren</li>
+        <li>nach einem herausfordernden Jahr einen Rahmen für ein gemeinsames "Innehalten und Sortieren" suchen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wie-wir-arbeiten" class="prose max-w-none">
+      <h2>Wie wir arbeiten</h2>
+      <p>Unsere Arbeit basiert auf drei Säulen:</p>
+      <ul class="card-list">
+        <li><strong>Reale Aufgaben unter körperlicher und mentaler Belastung</strong><br>Hochseilgarten, Teamaufgaben am Boden, Zeitdruck-Elemente</li>
+        <li><strong>Reflexion im Team</strong><br>moderierte Auswertung: Was ist passiert? Wer hat wie reagiert? Was bedeutet das für Einsätze?</li>
+        <li><strong>konkrete Werkzeuge für den Alltag</strong><br>z.B. einfache Atem-, Fokus- und Regenerationsübungen, Impulse zu Schlafhygiene und Umgang mit Stress</li>
+      </ul>
+      <p>Wir ahmen keine echten Einsatzlagen nach und geben keine taktischen Vorgaben. Stattdessen schaffen wir ein Übungsfeld, in dem Verhaltensmuster sichtbar werden, die für Einsatzrealität relevant sind – und sprechen darüber auf Augenhöhe.</p>
+      <picture class="image-card">
+        <img src="/bilder_nach_page/einsatzkraefte/Reflexion-teamkreis-kommunikation.jpg" alt="Reflexion und Teamarbeit bei Einsatzkräften" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="formate" class="prose max-w-none">
+      <h2>Unsere Formate für Einsatzkräfte</h2>
+      <div class="cards mt-4">
+        <Card title="Einsatztraining & Team-Resilienz" body="Funktionieren, wenn es darauf ankommt. Kommunikation unter physischer und psychischer Belastung. Teams erleben, wie sie unter Anspannung miteinander arbeiten: Wer übernimmt Führung, wie werden Entscheidungen getroffen, wie werden Zweifel geäußert oder geschluckt? Hochseilgarten und Kooperationsaufgaben machen solche Prozesse sichtbar und besprechbar." href="/einsatzkraefte/team-resilienz" />
+        <Card title="Regeneration & Prävention" body="Den Mensch hinter der Uniform stärken. Strategien gegen Überlastung und für gesunden Schlaf im Schichtdienst. Hier geht es um die Frage, wie Einsatzkräfte mit dauerhafter Anspannung, Schichtdienst und Schlafdefizit umgehen können. Wir vermitteln alltagstaugliche Werkzeuge zur Stressregulation und Regeneration und schaffen Raum für Austausch im Team." href="/einsatzkraefte/regeneration-praevention" />
+        <Card title="Nachwuchsförderung" body="Jugendgruppen und Anwärter:innen stärken – in Verantwortung, Teamfähigkeit und Selbstwahrnehmung. Jugendfeuerwehren, Rettungsdienst-Nachwuchs oder andere Nachwuchsgruppen erleben Verantwortung, Kooperation und Umgang mit Risiko in einem altersgerechten Rahmen." href="/einsatzkraefte/nachwuchsfoerderung" />
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit" class="prose max-w-none">
+      <h2>Sicherheit & Rahmenbedingungen</h2>
+      <p>Der Waldseilgarten Laubfrosch wird nach relevanten Normen und Richtlinien betrieben (u.a. DIN 15567, ERCA-Standards, DGUV-Rahmenvorgaben). Die Anlage wird regelmäßig überprüft, die Trainer:innen sind entsprechend qualifiziert. Der Umgang mit Risiko ist Teil des pädagogischen Konzeptes, die technischen Sicherungen sind darauf ausgelegt, Unfälle zu vermeiden.</p>
+      <p>Wir besprechen im Vorfeld, welche körperlichen und psychischen Anforderungen für Ihre jeweilige Zielgruppe passend und verantwortbar sind.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="naechste-schritte" class="prose max-w-none">
+      <h2>Nächste Schritte</h2>
+      <p>In einem Vorgespräch klären wir mit Ihnen:</p>
+      <ul class="card-list">
+        <li>Welche Organisation / Einheit Sie vertreten</li>
+        <li>Worum es Ihnen aktuell geht (Teamzusammenhalt, Belastung, Nachwuchs usw.)</li>
+        <li>Welche Rahmenbedingungen Sie mitbringen (Zeit, Budget, Anreise, Dienstplanung)</li>
+      </ul>
+      <p>Darauf aufbauend erhalten Sie von uns einen Vorschlag, wie ein passendes Format im Waldseilgarten aussehen kann.</p>
+      <div class="mt-6">
+        <Button href="#anfrage" type="primary">Kontakt für Einsatzkräfte aufnehmen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.einsatzkraefte-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>

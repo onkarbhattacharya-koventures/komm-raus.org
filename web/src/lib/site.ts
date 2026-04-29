@@ -2,7 +2,7 @@ export const site = {
   title: 'Komm Raus',
   description: 'Angebote für Schulen, Kinder- und Jugendgruppen im Freien',
   url: 'https://komm-raus.org',
-  image: '/images/lagerfeuer-bg.jpg',
+  image: '/images/lagerfeuer-bg-800.jpg',
 };
 
 export function buildMeta({ title, description, url, image }: Partial<typeof site> = {}) {

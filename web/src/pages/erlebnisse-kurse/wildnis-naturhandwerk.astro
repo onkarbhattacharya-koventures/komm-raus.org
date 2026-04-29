@@ -1,0 +1,184 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/kanu-fahren-400.jpg',
+    alt: 'Wildnis und Naturhandwerk im Wald',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#themenfelder-formate',
+    image: '/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.jpg',
+    alt: 'Themenfelder und Formate',
+    label: 'Themenfelder und Formate',
+  },
+  {
+    href: '#paedagogische-haltung',
+    image: '/images/Baumklettern-Seilaufstiegstechnik-400.jpg',
+    alt: 'Pädagogische Haltung in Kursen',
+    label: 'Pädagogische Haltung',
+  },
+  {
+    href: '#fuer-wen',
+    image: '/images/Leiterueberwindung-teamwork-400.jpg',
+    alt: 'Für wen die Kurse geeignet sind',
+    label: 'Für wen geeignet',
+  },
+  {
+    href: '#organisatorisches',
+    image: '/images/Baumstamm-sortieren-Balance-400.jpg',
+    alt: 'Organisatorische Hinweise',
+    label: 'Organisatorisches',
+  },
+];
+---
+
+<MainLayout title="Wildnis & Naturhandwerk - Komm Raus">
+  <Hero title="Wildnis & Naturhandwerk" subtitle="Überlebenstechniken, Pflanzenwissen und Arbeiten mit den Händen." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" />
+
+  <Section class="wildnis-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Viele Menschen spüren den Wunsch, sich wieder unmittelbarer mit Natur zu verbinden: Feuer nicht nur am Schalter, sondern aus Holz und Funken; Essen, bei dem man den Weg vom Boden auf den Teller kennt; einfache Gegenstände, die mit den eigenen Händen entstanden sind.</p>
+      <p>Unsere Wildnis- und Naturhandwerkskurse bieten einen Rahmen, in dem Teilnehmende grundlegende Fertigkeiten aus Survival, Bushcraft und Naturhandwerk kennenlernen und ausprobieren können – Schritt für Schritt und unter Anleitung.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="themenfelder-formate" class="prose max-w-none">
+      <h2>Themenfelder & Formate</h2>
+      <p class="mb-4">Je nach Kurs oder Veranstaltung können unterschiedliche Schwerpunkte im Vordergrund stehen:</p>
+      
+      <h3 class="mb-2">Survival & Bushcraft (Grundlagen)</h3>
+      <div class="cards mt-4">
+        <Card title="Feuer machen" body="Feuer machen mit einfachen Hilfsmitteln" class="card-compact" />
+        <Card title="Unterschlupf" body="Unterschlupf bauen" class="card-compact" />
+        <Card title="Wasser" body="Wasser finden und aufbereiten (im Rahmen des Möglichen vor Ort)" class="card-compact" />
+        <Card title="Orientierung" body="Orientierung und einfache Knotentechniken" class="card-compact" />
+      </div>
+
+      <h3 class="mt-4 mb-2">Wildkräutertour & Pflanzenwissen</h3>
+      <div class="cards mt-4">
+        <Card title="Pflanzen erkennen" body="Erkennen ausgewählter Wild- und Heilpflanzen" class="card-compact" />
+        <Card title="Grundlagen" body="Grundlagen zu Nutzung, möglichen Risiken und rechtlichen Rahmenbedingungen" class="card-compact" />
+        <Card title="Verarbeitung" body="Einfache Verarbeitungsschritte (z.B. Tees, kleine Ansätze, je nach Kurs)" class="card-compact" />
+      </div>
+
+      <h3 class="mt-4 mb-2">Naturhandwerk</h3>
+      <div class="cards mt-4">
+        <Card title="Schnitzen" body="Schnitzen und Arbeiten mit Holz" class="card-compact" />
+        <Card title="Knoten" body="Bünde und Knoten" class="card-compact" />
+        <Card title="Naturmaterialien" body="Einfache Arbeiten mit Ton oder anderen Naturmaterialien (wo passend)" class="card-compact" />
+      </div>
+      
+      <p class="mt-4">Die Inhalte werden dem Gelände, der Jahreszeit und den Vorkenntnissen der Gruppe angepasst.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="paedagogische-haltung" class="prose max-w-none">
+      <h2>Pädagogische Haltung</h2>
+      <p class="mb-4">Auch in diesen Kursen geht es nicht nur um "Techniken", sondern um einen Umgang mit Natur, der:</p>
+      <div class="cards mt-4">
+        <Card title="Respektvoll" body="Aufmerksam, respektvoll und ressourcenschonend ist" class="card-compact" />
+        <Card title="Kreisläufe" body="Kreisläufe (Boden, Wasser, Pflanzen, Tiere) erkennbar macht" class="card-compact" />
+        <Card title="Zutrauen" body="Menschen ermutigt, sich wieder mehr selbst zuzutrauen – ohne zu romantisieren" class="card-compact" />
+      </div>
+      <p class="mt-4">Was Teilnehmende später davon regelmäßig in ihren Alltag integrieren, ist sehr individuell. Wir geben Impulse und Erfahrungsräume, keine fertigen Lebenskonzepte.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="fuer-wen" class="prose max-w-none">
+      <h2>Für wen diese Kurse geeignet sind</h2>
+      <p class="mb-4">Je nach Format:</p>
+      <div class="cards mt-4">
+        <Card title="Erwachsene" body="Erwachsene, die sich für Wildnistechniken interessieren" class="card-compact" />
+        <Card title="Familien" body="Familien, die gemeinsam etwas Neues ausprobieren möchten" class="card-compact" />
+        <Card title="Jugendgruppen" body="Jugendgruppen, die einen besonderen Tag in der Natur verbringen wollen" class="card-compact" />
+      </div>
+      <p class="mt-4">Die körperlichen Anforderungen, Altersangaben und Gruppengrößen werden im Vorfeld klar kommuniziert.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches</h2>
+      <div class="cards mt-4">
+        <Card title="Ort" body="In der Regel auf dem Gelände rund um den Waldseilgarten / angrenzende Naturbereiche" class="card-compact" />
+        <Card title="Dauer" body="Von halbtägigen Workshops bis zu Tagesformaten" class="card-compact" />
+        <Card title="Ausrüstung" body="Informationen zu Kleidung, Schuhwerk und ggf. mitzubringendem Material erhalten Sie vorab" class="card-compact" />
+      </div>
+      <p class="mt-4">Aktuelle Kurstermine und Möglichkeiten für Gruppenbuchungen nennen wir Ihnen auf Anfrage.</p>
+      <button id="wildnis-naturhandwerk-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+        Anfrage „Wildnis & Naturhandwerk"
+      </button>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.wildnis-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('wildnis-naturhandwerk-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

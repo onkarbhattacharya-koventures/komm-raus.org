@@ -1,0 +1,186 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+{ href: '#allgemeines', image: '/images/lagerfeuer-bg-400.jpg', alt: 'Allgemeines', label: 'Allgemeines' },
+
+{ href: '#buchung', image: '/images/Reflexion-teamkreis-kommunikation-400.jpg', alt: 'Buchung', label: 'Buchung' },
+
+{ href: '#teilnahme', image: '/images/feuerwehr-laubfrosch-waldseilgarten-400.jpg', alt: 'Teilnahme', label: 'Teilnahme' },
+
+  { href: '#sicherheit', image: '/images/lagerfeuer-bg-400.jpg', alt: 'Sicherheit', label: 'Sicherheit' },
+  { href: '#lehrkraefte', image: '/images/lagerfeuer-bg-400.jpg', alt: 'Lehrkräfte', label: 'Lehrkräfte' },
+  { href: '#kontakt', image: '/images/lagerfeuer-bg-400.jpg', alt: 'Kontakt', label: 'Kontakt' },
+];
+---
+
+<MainLayout title="FAQ - Häufige Fragen" description="Antworten auf häufige Fragen zum Waldseilgarten Laubfrosch & komm raus GmbH.">
+  <Section class="bg-brand-primary text-white text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">FAQ</h1>
+    <p class="text-xl">Häufige Fragen zum Waldseilgarten Laubfrosch & komm raus GmbH</p>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="allgemeines" class="prose max-w-none">
+      <h2>Allgemeines & Konzept</h2>
+      
+      <h3>Was ist der Waldseilgarten Laubfrosch?</h3>
+      <p>Der Waldseilgarten Laubfrosch ist ein erlebnispädagogisch geführter Hochseilgarten in Büdingen.</p>
+      <p>Wir verstehen uns als pädagogische Bildungseinrichtung mit:</p>
+      <ul class="card-list">
+        <li>Kooperations- und Problemlöseaufgaben am Boden</li>
+        <li>Niedrigseilelementen</li>
+        <li>Hochseilelementen mit Toprope- und Team-Sicherung</li>
+        <li>Strukturierter Reflexion zur Übertragung in Alltag, Schule, Beruf</li>
+      </ul>
+
+      <h3>Was unterscheidet Sie von einem Kletterwald?</h3>
+      <ul class="card-list">
+        <li><strong>Toprope-gesicherte Hochseilgärten</strong> – Teilnehmende werden von anderen gesichert</li>
+        <li><strong>Kletterwälder mit Selbstsicherung</strong> – Teilnehmende hängen sich selbst ein</li>
+        <li><strong>Niedrigseilgärten</strong> – Elemente bis ca. 1,80 m, Sicherung durch Spotting</li>
+      </ul>
+      <p>Wir arbeiten bewusst mit Fremd- und Teamsicherung, weil gegenseitige Verantwortung zum pädagogischen Kern gehört.</p>
+
+      <h3>Für welche Zielgruppen?</h3>
+      <ul class="card-list">
+        <li>Schulklassen, Kitas, Jugendgruppen</li>
+        <li>Unternehmen & Organisationen</li>
+        <li>Einsatzkräfte (Feuerwehr, Rettungsdienst, Polizei)</li>
+        <li>Bildungseinrichtungen</li>
+        <li>Familien & Privatpersonen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="buchung" class="prose max-w-none">
+      <h2>Buchung, Vorbereitung & Organisation</h2>
+      
+      <h3>Wie läuft eine Buchung ab?</h3>
+      <ul class="card-list">
+        <li>Anfrage per E-Mail oder Telefon</li>
+        <li>Erhalt eines Fragebogens zu Termin, Zielgruppe, Zielen</li>
+        <li>Individuelles Programm mit Angebot</li>
+        <li>Buchungsvereinbarung unterschreiben</li>
+        <li>Abrechnung nach der Veranstaltung</li>
+      </ul>
+
+      <h3>Was kostet ein Besuch?</h3>
+      <ul class="card-list">
+        <li>Programme werden individuell kalkuliert</li>
+        <li>Halbtagesangebote beginnen bei ca. 22 € pro Person</li>
+        <li>Spezialformate haben eigene Preismodelle</li>
+      </ul>
+
+      <h3>Welche Unterlagen benötige ich?</h3>
+      <ul class="card-list">
+        <li>Elternanschreiben / Einverständniserklärungen</li>
+        <li>Informationsschreiben für minderjährige Teilnehmende</li>
+        <li>AGB und Hinweise zur Aufsichtspflicht</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="teilnahme" class="prose max-w-none">
+      <h2>Teilnahmevoraussetzungen & Gruppengrößen</h2>
+      
+      <h3>Alters- oder Größenbeschränkungen?</h3>
+      <ul class="card-list">
+        <li>Programme für Grundschulkinder, Jugendliche und Erwachsene</li>
+        <li>Nicht alle Elemente eignen sich für jede Altersgruppe</li>
+        <li>Kinder unter Grundschulalter: Boden- und Niedrigseilelemente</li>
+      </ul>
+
+      <h3>Gruppengrößen?</h3>
+      <ul class="card-list">
+        <li>Maximal ca. 100 Personen für den gesamten Tag</li>
+        <li>Gleichzeitig im Hochseilprogramm: bis ca. 50 Personen</li>
+        <li>Kleinere Gruppen ermöglichen intensivere Begleitung</li>
+      </ul>
+
+      <h3>Gesundheitliche Einschränkungen?</h3>
+      <ul class="card-list">
+        <li>Ähnliche Voraussetzungen wie im Schulsport</li>
+        <li>Bei bestimmten Erkrankungen: Vorsicht geboten</li>
+        <li>Bodenprogramm oft auch für Teilnehmende mit Einschränkungen möglich</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit" class="prose max-w-none">
+      <h2>Sicherheit & Qualität</h2>
+      
+      <h3>Sicherheitsstandards</h3>
+      <ul class="card-list">
+        <li>DIN 15567 (Hochseilgärten)</li>
+        <li>ERCA-Standards</li>
+        <li>DGUV-Rahmenvorgaben</li>
+        <li>Regelmäßige sicherheitstechnische Prüfungen</li>
+      </ul>
+
+      <h3>Wie wird gesichert?</h3>
+      <ul class="card-list">
+        <li>Toprope- und Teamsicherung nach aktueller Lehrmeinung</li>
+        <li>Teilnehmende werden in Sicherungsaufgaben einbezogen</li>
+        <li>Redundante Sicherungssysteme und Aufsicht</li>
+      </ul>
+
+      <h3>Wetter</h3>
+      <ul class="card-list">
+        <li>Programme finden grundsätzlich auch bei Regen statt</li>
+        <li>Bei Sturm/Gewitter: Verlegung auf Bodenprogramme oder Abbruch</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="lehrkraefte" class="prose max-w-none">
+      <h2>Speziell für Lehrkräfte</h2>
+      
+      <h3>Qualifikation erforderlich?</h3>
+      <ul class="card-list">
+        <li>Qualifikationskurs „Klettern im Toprope" (ZfS)</li>
+        <li>Einführungskurs „Klettern in Kletterwäldern und Seilgärten"</li>
+      </ul>
+
+      <h3>Aufsichtspflicht</h3>
+      <ul class="card-list">
+        <li>Lehrkraft bleibt schulrechtlich verantwortlich</li>
+        <li>Muss sich über Anlage, Ablauf, Qualifikation informieren</li>
+        <li>Organisatorische & disziplinare Aufgaben übernehmen</li>
+      </ul>
+
+      <h3>Grundschulklassen?</h3>
+      <ul class="card-list">
+        <li>Ja, möglich mit pädagogischer Eignung</li>
+        <li>Aufsichtsschlüssel und körperliche Voraussetzungen berücksichtigen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="kontakt" class="prose max-w-none">
+      <h2>Kontakt</h2>
+      <ul class="card-list">
+        <li><strong>Telefon:</strong> 0641 / 966 189 21 (Mo–Fr 14–19 Uhr)</li>
+        <li><strong>E-Mail:</strong> info@komm-raus.org</li>
+        <li><strong>Adresse:</strong> Komm Raus GmbH, Röntgenstraße 32, 35463 Fernwald</li>
+      </ul>
+      <p>Wir beantworten Anfragen so klar und ehrlich wie möglich – auch wenn etwas nicht zu uns passt.</p>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+

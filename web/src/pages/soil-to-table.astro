@@ -1,0 +1,177 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import GlassPanel from '../components/GlassPanel.astro';
+import SectionTeaserGrid from '../components/SectionTeaserGrid.astro';
+import Button from '../components/Button.astro';
+
+const teaserItems = [
+  { href: '#worum-es-geht', image: '/bilder_nach_page/soil-to-table/soil to table-komm-raus-gmbh.jpg', alt: 'Worum es geht - Soil to Table Konzept', label: 'Worum es geht' },
+  { href: '#kreislauf', image: '/bilder_nach_page/soil-to-table/gruenes-klassenzimmer-04.jpg', alt: 'Ein Kreislauf - Grünes Klassenzimmer', label: 'Der Kreislauf' },
+  { href: '#forschung', image: '/bilder_nach_page/bildungseinrichtungen/schulgarten/soilfoodweb.jpg', alt: 'Forschung - Soil Food Web', label: 'Forschung' },
+  { href: '#koerper-erleben', image: '/bilder_nach_page/bildungseinrichtungen/kindergaerten-eltern/soil-to-table-maedchen-hände-erdbeere.jpg', alt: 'Körperlich erleben - Ernte', label: 'Körperlich erleben' },
+  { href: '#umsetzung', image: '/bilder_nach_page/bildungseinrichtungen/gruenes-klassenzimmer/kochen.jpg', alt: 'Umsetzung - Kochen und Verarbeitung', label: 'Umsetzung' },
+];
+---
+
+<MainLayout title="Soil to Table - Komm Raus">
+  <Hero title="Soil to Table" subtitle="Vom Boden auf den Teller, vom Kreislauf ins Verstehen" imagePath="/bilder_nach_page/soil-to-table/soil to table-komm-raus-gmbh.jpg" />
+
+  <Section class="soil-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Wenn wir über Ernährung sprechen, beginnen wir meistens beim Teller. Wir beginnen einen Schritt früher - beim Boden.</p>
+      <p>Denn was auf dem Teller landet, hängt davon ab, was im Boden passiert. Ein lebendiger Boden voller Mikroorganismen bringt andere Lebensmittel hervor als ein ausgelaugter Boden.</p>
+      <p>Gleichzeitig zeigt die Forschung: Was wir essen, beeinflusst über das Darmmikrobiom unsere Stimmung, Konzentration, Immunsystem und Stressverarbeitung.</p>
+      <p>Unser Soil-to-Table-Ansatz verbindet diese beiden Seiten: Boden → Teller → Darm → Gehirn → Entscheidungen → Landwirtschaft → Boden.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="kreislauf" class="prose max-w-none">
+      <h2>Ein Kreislauf, kein Einbahnstraße</h2>
+      <p>Es gibt Kreisläufe:</p>
+      <ul class="card-list">
+        <li>Sonne → Photosynthese → Pflanzen → Bodenmikrobiom</li>
+        <li>Bodenmikrobiom → Mineralien → Pflanzen → Nährstoffe</li>
+        <li>Lebensmittel → Darm → Darmmikrobiom → Gehirn</li>
+        <li>Gehirn → Entscheidungen → Landwirtschaft → Boden</li>
+      </ul>
+      <p><strong>Aufwärtsspirale:</strong> Lebendiger Boden → nährstoffreiche Lebensmittel → vielfältiges Darmmikrobiom → bessere Kognition → bewusstere Entscheidungen → regenerativer Boden.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="forschung" class="prose max-w-none">
+      <h2>Was die Forschung nahelegt</h2>
+      
+      <h3>Boden und Lebensmittelqualität</h3>
+      <ul class="card-list">
+        <li>Mikrobielle Vielfalt im Boden korreliert mit höherer Nährstoffdichte.</li>
+        <li>Mykorrhiza-Pilze stellen Pflanzen vielfältigere Nährstoffe bereit.</li>
+      </ul>
+      
+      <h3>Das Darmmikrobiom</h3>
+      <ul class="card-list">
+        <li>Mikrobielle Diversität gilt als Marker für Gesundheit.</li>
+        <li>Ballaststoffe werden zu kurzkettigen Fettsäuren fermentiert.</li>
+        <li>Fermentierte Lebensmittel erhöhen die mikrobielle Diversität.</li>
+        <li>Die Gut-Brain-Axis ist real: ~90% des Serotonins werden im Darm produziert.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="koerper-erleben" class="prose max-w-none">
+      <h2>Fünf Zusammenhänge, die man am eigenen Körper erleben kann</h2>
+      <ul class="card-list">
+        <li><strong>Vielfalt auf dem Teller = Vielfalt im Darm.</strong> 30+ verschiedene Pflanzen pro Woche.</li>
+        <li><strong>Fermentiertes ist mehr als Geschmack.</strong> Unpasteurisiertes Sauerkraut, Kefir.</li>
+        <li><strong>Verarbeitungsgrad entscheidet.</strong> Ein Apfel ist etwas anderes als Frühstückscerealien.</li>
+        <li><strong>Der Darm reagiert auf Stress.</strong> Chronischer Stress beeinträchtigt die Darmbarriere.</li>
+        <li><strong>Boden riecht nach Gesundheit.</strong> Geosmin zeigt lebendigen Boden an.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="umsetzung" class="prose max-w-none">
+      <h2>Wie wir das umsetzen</h2>
+      
+      <h3>Am Boden</h3>
+      <ul class="card-list">
+        <li>Kompost und Wurmfarm: Stoffkreisläufe sichtbar machen.</li>
+        <li>Beete anlegen, pflegen, ernten.</li>
+        <li>Bodenleben erkunden: Spatenprobe, Regenwürmer zählen.</li>
+      </ul>
+      
+      <h3>In der Verarbeitung</h3>
+      <ul class="card-list">
+        <li>Garstufen und ihre Wirkung.</li>
+        <li>Brühen als Fundament.</li>
+        <li>Werkzeugkunde: Messer richtig schärfen.</li>
+        <li>Fermentation: Sauerkraut herstellen, Kefir ansetzen.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="konzentration" class="prose max-w-none">
+      <h2>Warum Soil to Table auch Konzentrationsarbeit ist</h2>
+      <ul class="card-list">
+        <li>Ein Messer schleifen erfordert Geduld über Minuten.</li>
+        <li>Gemüse schneiden mit einem scharfen Messer fördert Präsenz.</li>
+        <li>Pflanzen setzen erfordert andere Aufmerksamkeit.</li>
+        <li>Fermentation begleiten ist ein Übungsfeld für Langfristigkeit.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="leitprinzipien" class="prose max-w-none">
+      <h2>Leitprinzipien</h2>
+      <ul class="card-list">
+        <li><strong>Kreislauf statt Einbahnstraße.</strong></li>
+        <li><strong>Vielfalt vor Menge.</strong></li>
+        <li><strong>Verarbeitung bewusst wählen.</strong></li>
+        <li><strong>Beobachten vor Handeln.</strong></li>
+        <li><strong>Biologische Zeitskalen respektieren.</strong></li>
+        <li><strong>Ehrlich über Evidenz.</strong></li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="nicht-sein" class="prose max-w-none">
+      <h2>Was dieser Ansatz NICHT ist</h2>
+      <ul class="card-list">
+        <li><strong>Keine Diät.</strong> Wir empfehlen kein bestimmtes Ernährungsmodell.</li>
+        <li><strong>Keine Therapie.</strong> Bei gesundheitlichen Problemen empfehlen wir Fachpersonen.</li>
+        <li><strong>Kein Landwirtschaftsprojekt.</strong> Wir nutzen es als Lernräume.</li>
+        <li><strong>Kein geschlossenes System.</strong> Wir passen uns an neue Erkenntnisse an.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="relevant" class="prose max-w-none">
+      <h2>Für wen das besonders relevant ist</h2>
+      <ul class="card-list">
+        <li><strong>Schulen und Kitas:</strong> Grünes Klassenzimmer integriert BNE.</li>
+        <li><strong>Unternehmen:</strong> Gemeinsames Kochen am Feuer.</li>
+        <li><strong>Familien:</strong> Wildkräuterwanderungen, Gartenmodule.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Der Zusammenhang mit unseren anderen Grundlagen</h2>
+      <ul class="card-list">
+        <li><strong>Bewegung:</strong> Gartenarbeit ist körperliche Arbeit.</li>
+        <li><strong>Fokus:</strong> Messer schärfen, Kräuter bestimmen.</li>
+        <li><strong>Biologisches Fundament:</strong> Ernährung ist eine der 5 Säulen.</li>
+        <li><strong>BNE:</strong> Kreislaufwirtschaft konkret erlebbar.</li>
+      </ul>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Anfrage Soil to Table stellen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.soil-overview {
+  padding-top: 0;
+}
+</style>
+

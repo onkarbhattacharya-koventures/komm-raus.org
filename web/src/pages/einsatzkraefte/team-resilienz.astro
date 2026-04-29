@@ -1,0 +1,178 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+import Button from '../../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#ausgangslage',
+    image: '/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.jpg',
+    alt: 'Ausgangslage',
+    label: 'Ausgangslage',
+  },
+  {
+    href: '#ziele-inhalte',
+    image: '/images/Leiterueberwindung-teamwork-400.jpg',
+    alt: 'Ziele und Inhalte',
+    label: 'Ziele und Inhalte',
+  },
+  {
+    href: '#methodik',
+    image: '/images/kanu-fahren-400.jpg',
+    alt: 'Methodik',
+    label: 'Methodik',
+  },
+  {
+    href: '#themen',
+    image: '/images/Baumklettern-Seilaufstiegstechnik-400.jpg',
+    alt: 'Was Teams bearbeiten',
+    label: 'Was Teams bearbeiten',
+  },
+  {
+    href: '#grenzen',
+    image: '/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.jpg',
+    alt: 'Grenzen und Einordnung',
+    label: 'Grenzen und Einordnung',
+  },
+  {
+    href: '#organisatorisches',
+    image: '/images/Baumstamm-sortieren-Balance-400.jpg',
+    alt: 'Organisatorisches',
+    label: 'Organisatorisches',
+  },
+];
+---
+
+<MainLayout title="Einsatztraining & Team-Resilienz – Laubfrosch">
+<Hero title="Einsatztraining & Team-Resilienz" subtitle="Funktionieren, wenn es darauf ankommt. Kommunikation unter physischer und psychischer Belastung." imagePath="/images/Baumklettern-Seilaufstiegstechnik-800.jpg" />
+
+  <Section class="team-resilienz-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="ausgangslage" class="prose max-w-none">
+      <h2>Ausgangslage</h2>
+      <p>In Einsätzen zählen oft Sekunden. Gleichzeitig müssen Informationen aufgenommen, weitergegeben, bewertet und in Handlungen übersetzt werden. Technik und Taktik werden intensiv geschult. Die Frage, wie Teams unter Druck tatsächlich miteinander umgehen, bekommt im Alltag jedoch oft weniger Raum.</p>
+      <p>Im Waldseilgarten schaffen wir Situationen, in denen genau dieser Umgang sichtbar wird – ohne Blaulicht, aber mit realer körperlicher und mentaler Anforderung: Höhe, Verantwortung füreinander, Zeitdruck, Unklarheit. Wie ein Team damit umgeht, lässt sich gut beobachten und gemeinsam reflektieren.</p>
+      <figure>
+        <img
+src="/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.jpg"
+          alt="Sanitäter im Teamtraining im Waldseilgarten"
+          loading="lazy"
+          decoding="async"
+          class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+        />
+      </figure>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="ziele-inhalte" class="prose max-w-none">
+      <h2>Ziele und Inhalte</h2>
+      <p>Mögliche Schwerpunkte eines Einsatztrainings sind:</p>
+      <ul class="card-list">
+        <li><strong>Kommunikation unter Belastung</strong><br>klare Ansagen, Rückmeldungen, Nachfragen, wenn etwas unklar ist</li>
+        <li><strong>Führung und Rollen im Einsatzteam</strong><br>wer übernimmt Leitung, wie wird Verantwortung verteilt, wie werden Entscheidungen getroffen</li>
+        <li><strong>Team-Resilienz</strong><br>wie sich das Team gegenseitig stützt, wenn etwas schief läuft oder jemand an Grenzen kommt</li>
+        <li><strong>Wagniskompetenz und Risikoeinschätzung</strong><br>bewusstes Abwägen statt Vermeiden oder Übermut</li>
+      </ul>
+      <p>Wir halten den Spiegel, geben Rückmeldung und moderieren den Austausch. Die fachliche Einordnung in Ihre Einsatzrealität erfolgt durch Sie; bei Bedarf können externe Fachleute eingebunden werden.</p>
+      <figure>
+        <img
+src="/images/Leiterueberwindung-teamwork-400.jpg"
+          alt="Befindlichkeitsindex zur Team-Resilienz im Einsatztraining"
+          loading="lazy"
+          decoding="async"
+          class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+        />
+      </figure>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="methodik" class="prose max-w-none">
+      <h2>Methodik</h2>
+      <p>Typische Elemente eines solchen Trainings:</p>
+      <ul class="card-list">
+        <li><strong>Vorbesprechung mit Führungskräften</strong><br>Klärung der Ziele: Was soll im Fokus stehen? Kommunikation, Führung, Fehlerkultur, o.ä.?</li>
+        <li><strong>Kooperationsaufgaben am Boden</strong><br>Teamaufgaben mit begrenzter Zeit, wechselnden Informationen oder knappen Ressourcen. Erste Beobachtungen zu Kommunikation, Rollen, Konfliktverhalten</li>
+        <li><strong>Hochseilgarten mit Toprope-Sicherung</strong><br>gegenseitige Sicherung, Aufgaben in der Höhe. Erleben von Stress, Höhe, Verantwortung füreinander</li>
+        <li><strong>Reflexion im Anschluss</strong><br>moderierte Auswertung im Team oder in Teilgruppen. Konkrete Beispiele aus den Übungen werden aufgegriffen. Übertragung in den Einsatzalltag: „Wo kennen wir das? Was wollen wir beibehalten, was verändern?"</li>
+      </ul>
+      <p>Wir passen Anspruch und Intensität an die körperlichen Voraussetzungen und die Erfahrung der Gruppe an.</p>
+      <figure>
+        <img
+src="/images/kanu-fahren-400.jpg"
+          alt="Feuerwehr-Teamtraining an der Leiter mit Fokus auf Vertrauen"
+          loading="lazy"
+          decoding="async"
+          class="w-full rounded-xl shadow-md object-cover aspect-[4/3]"
+        />
+      </figure>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="themen" class="prose max-w-none">
+      <h2>Was Teams häufig bearbeiten</h2>
+      <p>Im Laufe solcher Tage entstehen oft Gespräche über:</p>
+      <ul class="card-list">
+        <li>unausgesprochene Spannungen im Team</li>
+        <li>Unterschiede in der Wahrnehmung von Risiken</li>
+        <li>Kommunikationslücken zwischen Ebenen oder Funktionen</li>
+        <li>den Umgang mit Fehlern und Unsicherheiten</li>
+      </ul>
+      <p>Wir geben dafür einen sicheren Rahmen, machen Angebote zur Struktur, und lassen Raum, damit die Themen in der Gruppe selbst bearbeitet werden können.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="grenzen" class="prose max-w-none">
+      <h2>Grenzen und Einordnung</h2>
+      <p>Ein Tag im Waldseilgarten ersetzt keine fachliche Einsatzübung, keine Supervision und keine therapeutische Begleitung. Er kann:</p>
+      <ul class="card-list">
+        <li>Verhaltensmuster sichtbar machen</li>
+        <li>Gesprächsanlässe schaffen</li>
+        <li>und Impulse für den weiteren Umgang mit Belastungen geben</li>
+      </ul>
+      <p>Wir empfehlen häufig, erlebnisorientierte Trainings in bestehende Aus- und Fortbildungsstrukturen einzubetten und im Anschluss intern weiterzuarbeiten.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches</h2>
+      <ul class="card-list">
+        <li><strong>Zielgruppen:</strong> Einsatzabteilungen, Bereitschaften, gemischte Teams</li>
+        <li><strong>Dauer:</strong> meist Tagesformate; verkürzte Varianten möglich</li>
+        <li><strong>Teilnehmendenzahl:</strong> kleine bis mittlere Gruppen; bei größeren Einheiten Aufteilung in Teilgruppen</li>
+        <li><strong>Ort:</strong> Waldseilgarten Laubfrosch bei Büdingen</li>
+      </ul>
+      <p>Konkrete Fragen zu Schutzausrüstung, körperlichen Einschränkungen oder Dienstplanung klären wir im Vorgespräch.</p>
+      <div class="mt-6">
+        <Button href="#anfrage" type="primary">Anfrage zu Einsatztraining & Team-Resilienz</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.team-resilienz-overview {
+  padding-top: 0;
+}
+
+figure {
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+</style>

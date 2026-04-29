@@ -6,8 +6,8 @@ interface Props {
 const { id = '', class: cls = '' } = Astro.props as Props;
 ---
 
-<section id={id} class={`py-12 ${cls}`}>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id={id} class={`section ${cls}`}>
+  <div class="container">
     <slot />
   </div>
 </section>

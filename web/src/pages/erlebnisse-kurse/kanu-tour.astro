@@ -1,0 +1,283 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  { href: '#worum-es-geht', image: '/images/kanu-1.jpg', alt: 'Worum es geht', label: 'Worum es geht' },
+  { href: '#fuer-wen', image: '/images/kanu-2.jpg', alt: 'Für wen geeignet', label: 'Für wen geeignet' },
+  { href: '#inhalte-ablauf', image: '/images/kanu-3.jpg', alt: 'Inhalte und Ablauf', label: 'Inhalte und Ablauf' },
+  { href: '#wissenschaft', image: '/images/kanu-4.jpg', alt: 'Wissenschaftliche Einordnung', label: 'Wissenschaft' },
+  { href: '#sicherheit-haltung', image: '/images/kanu-5.jpg', alt: 'Sicherheit und Haltung', label: 'Sicherheit und Haltung' },
+  { href: '#organisatorisches-anfrage', image: '/images/kanu-6.jpg', alt: 'Organisatorisches und Anfrage', label: 'Organisatorisches und Anfrage' },
+];
+---
+
+<MainLayout title="Kanu Tour - Komm Raus">
+  <Hero title="Kanu Tour" subtitle="Natur vom Wasser aus erleben – mit Bushcraft, Wildkräutern und Feuerkunst an Land." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" />
+
+  <Section class="kanu-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Eine Kanutour ist mehr als „Boot fahren“.</p>
+      <p>Sobald das Kanu vom Ufer abstößt, verändert sich der Rahmen:</p>
+      <ul class="card-list">
+        <li>Der Körper arbeitet im Rhythmus des Paddels.</li>
+        <li>Der Blick richtet sich auf Wasser, Ufer, Strömung.</li>
+        <li>Geräusche werden leiser, gleichmäßiger.</li>
+      </ul>
+      <p>Viele Menschen berichten, dass mit dem Einsteigen ins Kanu der Alltagslärm in den Hintergrund tritt und der Fokus fast automatisch im Hier und Jetzt ankommt.</p>
+      <p>Unsere Kanutouren verbinden dieses Unterwegssein auf dem Wasser mit Wildniselementen an Land:</p>
+      <ul class="card-list">
+        <li>Feuer machen (auch ohne Feuerzeug)</li>
+        <li>einfache Bushcraft-Techniken</li>
+        <li>Wildkräuter- und Baumpilz-Wissen</li>
+        <li>Schnitzen und kleine Handwerksarbeiten</li>
+        <li>Orientierung in der Landschaft</li>
+        <li>Rudimentäre Survival Skills</li>
+      </ul>
+      <p>So entsteht ein Tag, an dem Bewegung, Natur, Lernen und Erholung organisch zusammengehören.</p>
+      <picture class="image-card">
+        <img src="/images/kanu-1.jpg" alt="Kanu auf dem Wasser" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="fuer-wen" class="prose max-w-none">
+      <h2>Für wen diese Kanutouren geeignet sind</h2>
+      <p>Je nach Termin und Format richten sich unsere Touren an:</p>
+      <ul class="card-list">
+        <li><strong>Familien</strong><br>– gemeinsame Zeit fern von Bildschirmen, Naturerlebnis für Kinder und Erwachsene</li>
+        <li><strong>Einzelpersonen</strong><br>– die Abstand vom Alltag suchen, zur Ruhe kommen und sich körperlich betätigen möchten</li>
+        <li><strong>Freundesgruppen & Vereine</strong><br>– die ein gemeinsames Naturerlebnis mit echtem „Draußen-Sein“ verbinden wollen</li>
+      </ul>
+      <p>In anderen Bereichen (z.B. „Für Unternehmen“, „Für Einsatzkräfte“, „Für Schulen & Jugend“) nutzen wir Kanutouren zusätzlich als Baustein für Team- und Bildungsprogramme.</p>
+      <p>Auf dieser Seite stehen vor allem offene Erlebnisse und privat buchbare Touren im Mittelpunkt.</p>
+      <p>Voraussetzung ist in der Regel:</p>
+      <ul class="card-list">
+        <li>grundlegende körperliche Belastbarkeit für leichtes bis moderates Paddeln</li>
+        <li>die Bereitschaft, einige Stunden draußen zu sein (Wetter, Natur, einfache Bedingungen)</li>
+      </ul>
+      <p>Individuelle Einschränkungen können wir im Vorfeld besprechen.</p>
+      <picture class="image-card">
+        <img src="/images/kanu-2.jpg" alt="Familie beim Paddeln" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="inhalte-ablauf" class="prose max-w-none">
+      <h2>Inhalte & Ablauf einer Kanutour</h2>
+      <p>Die genaue Gestaltung hängt von Gruppe, Dauer und Gewässer ab. Typische Elemente sind:</p>
+      <h3>3.1 Auf dem Wasser: Paddeln, Navigieren, Erleben</h3>
+      <ul class="card-list">
+        <li><strong>Einweisung in Paddeltechnik, Verhalten auf dem Wasser und Sicherheit</strong></li>
+        <li><strong>ruhige Abschnitte zum Einfinden in Boot, Rhythmus und Balance</strong></li>
+        <li><strong>je nach Strecke: leichtere Strömungen, kleine Herausforderungen, Hindernisse (z.B. Baumstämme, enge Kurven)</strong></li>
+      </ul>
+      <p>Im Kanu erfährt man:</p>
+      <ul class="card-list">
+        <li><strong>Eigenverantwortung</strong> – das Boot reagiert unmittelbar auf die eigene Bewegung</li>
+        <li><strong>Koordination im Team</strong> – im Zweier- oder Dreierkanadier ist Abstimmung gefragt</li>
+        <li><strong>Wechsel von Ruhe und Spannung</strong> – langsames Dahingleiten und Momente, in denen konzentriertes Handeln nötig ist</li>
+      </ul>
+      <h3>3.2 Am Ufer: Bushcraft, Wildkräuter, Feuer</h3>
+      <p>Eine Kanutour mit uns ist immer auch ein kleiner Wildniskurs. Mögliche Bausteine am Ufer:</p>
+      <ul class="card-list">
+        <li><strong>Feuer machen</strong><br>– Grundlagen des Feuermachens, ggf. auch ohne Feuerzeug oder Streichholz<br>– Materialauswahl, Feuerschutz, Verantwortung im Umgang mit Feuer</li>
+        <li><strong>Wildkräuterwanderung</strong><br>– Ausgewählte, sicher bestimmbare Wildkräuter<br>– einfache Nutzung (z.B. Tee, kleine Snacks), Hinweise zu Giftpflanzen und Naturschutz</li>
+        <li><strong>Nützliche Baumpilze</strong><br>– Erkennen einiger markanter Arten, mögliche Verwendungen (z.B. Zunderpilz, wenn vorhanden)</li>
+        <li><strong>Schnitzen & kleine Handarbeiten</strong><br>– einfacher Umgang mit dem Messer, Sicherheitsregeln, kleine Objekte (z.B. Löffel, Heringe)</li>
+        <li><strong>Orientierung</strong><br>– grundlegendes Kartenlesen, Sonnenstand, einfache Orientierung im Gelände<br>– Bewusstsein dafür, wo man sich befindet und wie man wieder zurückfindet</li>
+      </ul>
+      <p>Diese Elemente werden so gewählt, dass sie zur Gruppe, zur Jahreszeit und zur zur Verfügung stehenden Zeit passen.</p>
+      <h3>3.3 Tempo & Schwierigkeitsgrad</h3>
+      <p>Wir passen Touren an:</p>
+      <ul class="card-list">
+        <li><strong>Erfahrung</strong> (Anfänger:innen vs. Erfahrene)</li>
+        <li><strong>Alter</strong> (z.B. familienfreundliche Strecken mit jüngeren Kindern vs. ambitioniertere Varianten)</li>
+        <li><strong>Ziele</strong> (mehr Entspannung, mehr Wildniswissen, mehr körperliche Herausforderung)</li>
+      </ul>
+      <p>Sicherheit und Wohlbefinden haben Vorrang vor Geschwindigkeit oder „Abenteuer um jeden Preis“.</p>
+      <picture class="image-card">
+        <img src="/images/kanu-3.jpg" alt="Bushcraft am Ufer" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wissenschaft" class="prose max-w-none">
+      <h2>Warum eine Kanutour gut tun kann – wissenschaftlich eingeordnet</h2>
+      <p>Die Wirkung einer Kanutour entsteht durch mehrere Faktoren, die in der Forschung unabhängig voneinander als hilfreich beschrieben werden. In Kombination verstärken sie sich.</p>
+      <h3>4.1 Wasser & Gegenwart – „Blue Space“</h3>
+      <p>Studien zu sogenannten „Blue Spaces“ (Gewässer, Küsten, Seen, Flüsse) deuten darauf hin, dass Umgebungen mit Wasser:</p>
+      <ul class="card-list">
+        <li>beruhigend auf das Nervensystem wirken können</li>
+        <li>mit besserer Stimmung und geringerer Stressbelastung assoziiert sind</li>
+        <li>die Aufmerksamkeit entlasten und das „Abschalten“ erleichtern</li>
+      </ul>
+      <p>Der Blick auf Wasserbewegungen, Spiegelungen und Uferzonen ist visuell reich, aber nicht überfordernd. Das unterstützt einen Zustand, in dem Gedanken zur Ruhe kommen können, ohne dass man sich „anstrengen“ muss, präsent zu sein.</p>
+      <h3>4.2 Rhythmische Bewegung & Gesundheit</h3>
+      <p>Paddeln ist eine Form von moderater Ausdauerbewegung:</p>
+      <ul class="card-list">
+        <li>Große Muskelgruppen arbeiten rhythmisch,</li>
+        <li>Herz-Kreislauf-System wird angeregt,</li>
+        <li>der Körper verbraucht die im Alltag aufgebaute Anspannung.</li>
+      </ul>
+      <p>Regelmäßige, rhythmische Bewegung ist gut belegt als unterstützender Faktor für:</p>
+      <ul class="card-list">
+        <li>Stressabbau</li>
+        <li>Stimmungsaufhellung</li>
+        <li>verbesserte Schlafqualität</li>
+        <li>und kognitive Funktionen (z.B. Aufmerksamkeit)</li>
+      </ul>
+      <p>Das Zusammenspiel von Bewegung + Gleichgewicht + Arm-Rumpf-Koordination trainiert zusätzlich Körpergefühl und Motorik – bei Kindern wie bei Erwachsenen.</p>
+      <h3>4.3 Naturkontakt & Stressregulation</h3>
+      <p>Auf dem Wasser ist man von Natur umgeben:</p>
+      <ul class="card-list">
+        <li>Ufervegetation, Vögel, Insekten, Wassergeräusche</li>
+        <li>wechselnde Lichtverhältnisse und Temperaturen</li>
+      </ul>
+      <p>Forschungen zu Naturaufenthalten (Grün- und Waldräume) zeigen u.a.:</p>
+      <ul class="card-list">
+        <li>Senkung von Stresshormonen (z.B. Cortisol)</li>
+        <li>positiven Einfluss auf Blutdruck und Herzfrequenz</li>
+        <li>verbesserte Stimmung und größere innere Ruhe</li>
+      </ul>
+      <p>Wenn wir Bushcraft- und Wildpflanzen-Elemente ergänzen, kommt noch ein weiterer Aspekt hinzu: Die aktive Auseinandersetzung mit der Umgebung (Pflanzen erkennen, Spuren lesen, Feuer machen) stärkt das Gefühl von Verbundenheit und Kompetenz im Umgang mit Natur.</p>
+      <h3>4.4 Selbstwirksamkeit & Team</h3>
+      <p>Eine Kanutour bietet viele kleine, überschaubare Herausforderungen:</p>
+      <ul class="card-list">
+        <li>Ein- und Aussteigen ins Boot</li>
+        <li>Manövrieren durch engere Stellen oder leichte Strömungen</li>
+        <li>gemeinsam ans Ziel kommen, ohne „Motor von außen“</li>
+      </ul>
+      <p>Wenn eine Gruppe das gemeinsam bewältigt, entsteht häufig:</p>
+      <ul class="card-list">
+        <li>ein Gefühl: „Wir schaffen das zusammen.“</li>
+        <li>Vertrauen in die eigene Handlungsfähigkeit – auch bei Kindern oder Menschen, die sonst wenig draußen sind</li>
+        <li>geteilte Erinnerung an eine konkrete, positive Erfahrung</li>
+      </ul>
+      <p>Für Kinder und Jugendliche – einschließlich solcher mit ADHS-Symptomen oder viel Bewegungsdrang – kann eine solche Tour ein gut strukturierter Rahmen sein, in denen Energie, Aufmerksamkeit und Verantwortung in sichtbare Erfolge münden.</p>
+      <picture class="image-card">
+        <img src="/images/kanu-4.jpg" alt="Natur und Wasser" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit-haltung" class="prose max-w-none">
+      <h2>Sicherheit & Haltung</h2>
+      <p>Sicherheit hat bei allen Touren Vorrang:</p>
+      <ul class="card-list">
+        <li>Einweisung in Material, Paddeltechnik und Verhalten auf dem Wasser</li>
+        <li>passende Schwimmwesten für alle Teilnehmenden</li>
+        <li>Auswahl von Strecken, die zur Gruppe und zu den Bedingungen passen</li>
+        <li>achtsamer Umgang mit Wetter, Wasserstand und Gruppendynamik</li>
+      </ul>
+      <p>Am Feuer, beim Schnitzen und bei Bushcraft-Elementen gelten klare Regeln:</p>
+      <ul class="card-list">
+        <li>bewusster Umgang mit Werkzeug und Glut</li>
+        <li>Schutz von Natur und Lebensräumen</li>
+        <li>„So viel wie nötig, so wenig wie möglich“ beim Eingriff in ökologische Zusammenhänge</li>
+      </ul>
+      <p>Wir wollen ermöglichen, dass Menschen Mut und Zutrauen gewinnen – nicht sie in Situationen bringen, in denen sie sich dauerhaft unsicher fühlen.</p>
+      <picture class="image-card">
+        <img src="/images/kanu-5.jpg" alt="Sicherheitsausrüstung" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches-anfrage" class="prose max-w-none">
+      <h2>Organisatorisches & Anfrage</h2>
+      <p>Mögliche Formate:</p>
+      <ul class="card-list">
+        <li>halbtägige Kanutouren mit Wildnisbausteinen</li>
+        <li>ganztägige Touren mit größerem Anteil an Bushcraft / Kochen am Feuer</li>
+        <li>individuell abgestimmte Familien- oder Gruppentouren</li>
+      </ul>
+      <p>Typische Eckpunkte (variieren je nach Tour):</p>
+      <ul class="card-list">
+        <li><strong>Dauer:</strong> mehrere Stunden bis ganzer Tag</li>
+        <li><strong>Gruppengröße:</strong> kleine bis mittlere Gruppen; bei größeren Gruppen Arbeit in Teilgruppen</li>
+        <li><strong>Ausrüstung:</strong> Kanadier, Paddel und Schwimmwesten werden gestellt; eigene wetterangepasste Kleidung, ggf. Wechselkleidung</li>
+      </ul>
+      <p>In einem Vorgespräch klären wir:</p>
+      <ul class="card-list">
+        <li>wer in Ihrer Gruppe ist (Alter, Erfahrung, besondere Bedürfnisse)</li>
+        <li>welche Schwerpunkte Sie sich wünschen (mehr Entspannung, mehr Lernen, mehr Herausforderung)</li>
+        <li>welcher zeitliche Rahmen und welche Jahreszeit passen</li>
+      </ul>
+      <p>Auf dieser Basis entwickeln wir eine Tour, die zu Ihnen, Ihren Kindern oder Ihrer Gruppe stimmig ist.</p>
+      <button id="kanu-tour-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+        Anfrage „Kanu Tour“ stellen
+      </button>
+      <picture class="image-card">
+        <img src="/images/kanu-6.jpg" alt="Organisatorisches" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.kanu-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('kanu-tour-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

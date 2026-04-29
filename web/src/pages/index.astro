@@ -1,150 +1,244 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
+import GlassPanel from '../components/GlassPanel.astro';
 import Card from '../components/Card.astro';
 import Button from '../components/Button.astro';
 ---
 
-<MainLayout title="Laubfrosch Waldseilgarten – Startseite">
-  <!-- HERO -->
-  <section class="home-hero" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto px-4 px-6 px-8">
-      <div class="w-28 h-28 rounded-full bg-gray-200 mb-6"></div>
+<MainLayout title="Laubfrosch Waldseilgarten - Komm Raus">
+  <Hero 
+    title="Wachsen. Über sich hinaus." 
+    subtitle="Entfalte Deine Potentiale und mach' Deine wilde Truppe zum Dreamteam."
+    imagePath="/bilder_nach_page/Startseite/Waldseilgarten Laubfrosch Büdingen - komm raus GmbH - Klettergarten - Kletterpark - Kletterwald.jpg"
+  />
 
-      <p class="font-bold tracking-wider mb-2">
-        LAUBFROSCH<br />WALDSEILGARTEN
-      </p>
-
-      <h1 class="text-3xl md-text-4xl md-text-6xl text-huge font-bold max-w-xl font-display leading-tight">
-        Wachsen.<br />Über sich hinaus.
-      </h1>
-
-      <p class="max-w-md mt-4">
-        Entfalte Deine Potentiale und mach’ Deine wilde Truppe zum Dreamteam.
-      </p>
-
-      <div class="mt-6">
-        <Button href="#" type="primary">Jetzt anfragen</Button>
-      </div>
-    </div>
-  </section>
-
-  <!-- FÜR WEN? -->
-  <Section class="centered" id="fuer" data-aos="fade-up">
-    <h2 class="uppercase tracking-wider mb-8">Für wen?</h2>
-
-    <div class="cards">
-      <div class="audience-card">
-        <picture>
-          <source type="image/webp" srcset="/images/prog_schule_400-400.webp 400w, /images/prog_schule_400-800.webp 800w, /images/prog_schule_400-1200.webp 1200w" />
-          <img src="/images/prog_schule_400-400.jpg" srcset="/images/prog_schule_400-400.jpg 400w, /images/prog_schule_400-800.jpg 800w, /images/prog_schule_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Schulen & Vereine" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
-        </picture>
-        <h3 class="mt-4 mb-2">Schulen &amp; Vereine</h3>
-        <p class="mb-4 text-sm">Teamgeist fördern, Klassengemeinschaft stärken. Klassenfahrten, Konzentrations- und Mindset-Trainings, „Train the Trainer“-Kurse.</p>
-        <Button href="#" type="dark">anfragen</Button>
-      </div>
-
-      <div class="audience-card">
-        <picture>
-          <source type="image/webp" srcset="/images/prog_firmen_400-400.webp 400w, /images/prog_firmen_400-800.webp 800w, /images/prog_firmen_400-1200.webp 1200w" />
-          <img src="/images/prog_firmen_400-400.jpg" srcset="/images/prog_firmen_400-400.jpg 400w, /images/prog_firmen_400-800.jpg 800w, /images/prog_firmen_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Unternehmen" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
-        </picture>
-        <h3 class="mt-4 mb-2">Unternehmen</h3>
-        <p class="mb-4 text-sm">Teams entwickeln, Growth Mindset stärken, Führungskräfte trainieren, Assessment Center und Firmenevents mit echtem Mehrwert.</p>
-        <Button href="#" type="dark">anfragen</Button>
-      </div>
-
-      <div class="audience-card">
-        <picture>
-          <source type="image/webp" srcset="/images/prog_fobi_400-400.webp 400w, /images/prog_fobi_400-800.webp 800w, /images/prog_fobi_400-1200.webp 1200w" />
-          <img src="/images/prog_fobi_400-400.jpg" srcset="/images/prog_fobi_400-400.jpg 400w, /images/prog_fobi_400-800.jpg 800w, /images/prog_fobi_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Blaulicht‑Verbände" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
-        </picture>
-        <h3 class="mt-4 mb-2">Blaulicht‑Verbände</h3>
-        <p class="mb-4 text-sm">Spezielle Trainings zu Stressmanagement, Höhenangst, Teamkommunikation und Einsatzresilienz – gemeinsam eine richtig gute Zeit haben.</p>
-        <Button href="#" type="dark">anfragen</Button>
-      </div>
-
-      <div class="audience-card">
-        <picture>
-          <source type="image/webp" srcset="/images/prog_kindergeb_400-400.webp 400w, /images/prog_kindergeb_400-800.webp 800w, /images/prog_kindergeb_400-1200.webp 1200w" />
-          <img src="/images/prog_kindergeb_400-400.jpg" srcset="/images/prog_kindergeb_400-400.jpg 400w, /images/prog_kindergeb_400-800.jpg 800w, /images/prog_kindergeb_400-1200.jpg 1200w" sizes="(max-width: 640px) 100vw, 33vw" alt="Familie & Freizeit" loading="lazy" class="audience-img w-full h-40 object-cover rounded-md" />
-        </picture>
-        <h3 class="mt-4 mb-2">Familie &amp; Freizeit</h3>
-        <p class="mb-4 text-sm">Besondere Momente mit Mehrwert schaffen, gemeinsam Abenteuer erleben: Familientage, Initiationen, Wildkräuter‑Workshops u.&nbsp;v.&nbsp;m.</p>
-        <Button href="#" type="dark">anfragen</Button>
-      </div>
-    </div>
-  </Section>
-
-  <!-- IMAGE STRIP -->
-  <Section class="strip-image p-0" data-aos="fade-up">
-    <picture>
-      <source type="image/webp" srcset="/images/lagerfeuer-bg-400.webp 400w, /images/lagerfeuer-bg-800.webp 800w, /images/lagerfeuer-bg-1200.webp 1200w" />
-      <img src="/images/lagerfeuer-bg-400.jpg" srcset="/images/lagerfeuer-bg-400.jpg 400w, /images/lagerfeuer-bg-800.jpg 800w, /images/lagerfeuer-bg-1200.jpg 1200w" sizes="100vw" alt="Lagerfeuer" loading="lazy" class="w-full h-[220px] object-cover" />
-    </picture>
-  </Section>
-
-  <!-- WARUM LAUBFROSCH? -->
-  <Section class="light" data-aos="fade-up">
-    <h2>Warum Laubfrosch?</h2>
-
-    <div class="grid md:grid-cols-2 gap-8 mt-6">
+  <Section class="section light">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
       <div>
-        <p class="mb-4">Wir sind kein klassischer Kletterwald. Wir sind Anbieter von Erlebnis‑ und Wildnispädagogik und Methoden zur Potentialentfaltung auf vielen verschiedenen Ebenen.</p>
-        <p class="mb-4">Bei uns kaufen Sie kein Ticket, um einen Parcours abzuklettern. Sie buchen einen maßgeschneiderten, begleiteten Prozess für sich oder Ihre Gruppe. Unser Ziel ist nicht nur die Baumkrone, sondern die nachhaltige Entwicklung Ihres Teams, Ihrer Klasse oder Ihrer Familie.</p>
+    <h3>Was Sie bei uns finden</h3>
+        <p>Die komm raus GmbH mit dem Waldseilgarten Laubfrosch bietet erlebnis- und wildnispädagogisch geführte Programme in der Natur, die darauf ausgerichtet sind, Menschen und Gruppen in zentralen Lebens- und Arbeitsbereichen zu unterstützen:</p>
+        <ul class="list-disc pl-6 mb-6">
+          <li>Teams & Führungskräfte – Zusammenarbeit, Verantwortung, Resilienz</li>
+          <li>Einsatzkräfte – Kommunikation und Belastbarkeit im Einsatzkontext</li>
+          <li>Schulen, Kitas & Bildungsträger – Soziales Lernen, BNE, Konzentration, Naturverbindung</li>
+          <li>Familien & Einzelpersonen – Naturerfahrung, Stressregulation, persönliche Entwicklung</li>
+        </ul>
+        <p>Statt abstrakter Methoden vermitteln wir konkrete Erfahrungen in realen Situationen: im Hochseilgarten, im Wald, auf dem Wasser, im Garten, in der Küche, mit Feuer, Pflanzen und tausend Ideen.</p>
       </div>
-
       <div>
-        <p class="mb-4">Wir entwickeln erlebnisorientierte Programme – von kooperativen Bodenübungen bis zur gemeinsamen Höhenherausforderung – die systematisch Ihre Ziele adressieren: Vertrauen stärken, Kommunikation verbessern, Potentiale entfalten, Ängsten begegnen und praktikable Methoden etablieren.</p>
-        <p class="mb-4">Sicher, pädagogisch begleitet und wirkungsorientiert: Schritt für Schritt, behutsam. Atmen. Loslassen. Wachsen.</p>
+        <picture class="image-card">
+          <img src="/bilder_nach_page/bildungseinrichtungen/gruenes-klassenzimmer/feuer_tee_wildkraeuter.jpg" alt="Naturerfahrung mit Wildkräutertee am Feuer" loading="lazy" class="image-card-img" />
+        </picture>
       </div>
-    </div>
-
-    <p class="text-center mt-8 font-bold">Bei uns steht der Mensch im Mittelpunkt, nicht der Parcours.</p>
-  </Section>
-
-  <!-- WAS UNS AUSZEICHNET -->
-  <Section class="sand" data-aos="fade-up">
-    <div class="flex items-start justify-between mb-6">
-      <h2>Was uns auszeichnet</h2>
-      <div class="text-right">
-        <p class="font-bold tracking-wider mb-2">LAUBFROSCH<br />WALDSEILGARTEN</p>
-        <img src="/images/logo_laubfrosch-400.jpg" srcset="/images/logo_laubfrosch-400.jpg 400w, /images/logo_laubfrosch-800.jpg 800w" alt="Laubfrosch" class="w-24 h-24 rounded-md ml-auto object-cover" loading="lazy" />
-      </div>
-    </div>
-
-    <div class="cards">
-      <Card image="konzept_toprope_240px" title="Maßgeschneiderte Programme" body="Wir arbeiten prozessorientiert, nicht nach Schema F, und richten jedes Setting an Ihren Zielen aus." />
-      <Card image="konzept_team_240px" title="Qualifizierte Trainer:innen" body="Pädagogisch geschulte, erfahrene Trainer:innen, zertifiziert und sicherheitsorientiert, mit Blick fürs Wesentliche." />
-      <Card image="konzept_koop_240px" title="Gelebte Sicherheit" body="Durchdachtes Sicherheitskonzept, klare Abläufe, kleine Gruppen und viel Raum für Reflexion." />
-      <Card image="konzept_toprope_240px" title="Nachhaltige Erlebnisse" body="Wir schaffen Erkenntnisse, die sich in Alltag, Schule und Arbeitswelt übertragen lassen – nicht nur ein toller Tag im Wald." />
     </div>
   </Section>
 
-  <!-- Baumkletter-Bildband -->
-  <Section class="strip-image p-0" data-aos="fade-up">
-    <picture>
-      <source type="image/webp" srcset="/images/Baumklettern-Seilaufstiegstechnik-400.webp 400w, /images/Baumklettern-Seilaufstiegstechnik-800.webp 800w, /images/Baumklettern-Seilaufstiegstechnik-1200.webp 1200w" />
-      <img src="/images/Baumklettern-Seilaufstiegstechnik-400.jpg" srcset="/images/Baumklettern-Seilaufstiegstechnik-400.jpg 400w, /images/Baumklettern-Seilaufstiegstechnik-800.jpg 800w, /images/Baumklettern-Seilaufstiegstechnik-1200.jpg 1200w" sizes="100vw" alt="Baumklettern" loading="lazy" class="w-full h-[220px] object-cover" />
-    </picture>
+  <Section>
+    <h3>Für wen wir arbeiten – Ihre Einstiege</h3>
+    <div class="cards mt-4">
+      <Card 
+        title="Für Unternehmen" 
+        body="Teamentwicklung, Führung und Recruiting-Assessment im realen Stress- und Teamsetting."
+        href="/unternehmen"
+        imagePath="/images/Himmelsleiter-teambuilding-laubfrosch-wald-800.jpg"
+      />
+      <Card 
+        title="Für Einsatzkräfte" 
+        body="Trainings zu Einsatzkommunikation, Team-Resilienz und Regeneration für Feuerwehr, Rettungsdienst, Polizei u.a."
+        href="/einsatzkraefte"
+        imagePath="/images/feuerwehr-laubfrosch-waldseilgarten-800.jpg"
+      />
+      <Card 
+        title="Für Schulen & Bildung" 
+        body="Klassentage, Klassenfahrten, Grünes Klassenzimmer (BNE), Schulgartenentwicklung, RP-KIDS für Kitas und Eltern."
+        href="/bildungseinrichtungen"
+        imagePath="/images/blind-führen-kids-800.jpg"
+      />
+      <Card 
+        title="Erlebnisse & Kurse" 
+        body="Offene Angebote für Familien und Einzelpersonen: Waldseilgarten & Klettern, Kanu-Touren, Wildkräuterwanderungen, Waldbaden, ADHS-orientierte Natur- und Resilienzkurse u.a."
+        href="/erlebnisse-kurse"
+        imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg"
+      />
+    </div>
   </Section>
 
-  <!-- ABSCHLUSS-CTA -->
-  <section class="cta-hero py-16" data-aos="fade-up">
-    <div class="max-w-7xl mx-auto px-4 px-6 px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-      <div class="text-left">
-        <img src="/images/logo_laubfrosch-400.jpg" srcset="/images/logo_laubfrosch-400.jpg 400w, /images/logo_laubfrosch-800.jpg 800w" alt="Laubfrosch Logo" class="w-24 h-24 object-cover mb-4 rounded-md" loading="lazy" />
-        <p class="font-bold tracking-wider">LAUBFROSCH<br />WALDSEILGARTEN</p>
-      </div>
-
-      <div class="max-w-lg">
-        <h1 class="text-3xl md-text-4xl font-bold font-display">SPRECHEN SIE<br />MIT UNS ÜBER<br />IHRE ZIELE</h1>
-        <p class="text-lg mt-2">Wir freuen uns auf Sie!</p>
-      </div>
-
+  <Section class="section light">
+    <div class="grid md:grid-cols-2 gap-8 items-start">
       <div>
-        <Button href="#" type="primary">Kontakt aufnehmen</Button>
+    <h3>Warum wir mit Natur und realer Erfahrung arbeiten</h3>
+        <p>Viele der Themen, mit denen wir arbeiten – Teamarbeit, Selbstvertrauen, Stress, Aufmerksamkeit, Gesundheit – sind gut erforscht. Eine Reihe von Befunden legt nahe:</p>
+        <ul class="list-disc pl-6 mb-6">
+          <li><strong>Bewegung</strong> – Regelmäßige körperliche Aktivität verbessert nachweislich Stimmung, kognitive Leistungsfähigkeit und Stressverarbeitung. – Gerade intensivere, koordinativ anspruchsvolle Bewegungen (Klettern, Paddeln, Balancieren) fördern Gleichgewicht und Körpergefühl.</li>
+          <li><strong>Naturaufenthalt</strong> – Studien zu „Grün- und Blauräumen" (Wald, Wiesen, Gewässer) deuten auf Senkung von Stresshormonen, bessere Stimmungswerte und Erholung der Aufmerksamkeit hin. – Kindern und Jugendlichen kann regelmäßige Naturerfahrung bei Konzentration, Kreativität und Sozialverhalten helfen.</li>
+          <li><strong>Erfahrungsbasiertes Lernen</strong> – Inhalte, die über konkrete Erfahrung (Versuch, Körpererlebnis, eigenständiges Tun) erschlossen werden, bleiben eher im Gedächtnis und lassen sich besser auf den Alltag übertragen als rein theoretische Inputs.</li>
+          <li><strong>Rhythmus & Struktur</strong> – Gut gestaltete Wechsel von Aktivität und Ruhe, von Herausforderung und Reflexion, unterstützen die Selbstregulation – bei Kindern wie bei Erwachsenen.</li>
+        </ul>
+        <p>Unsere Formate nutzen diese Zusammenhänge, indem sie Bewegung, Naturkontakt, Achtsamkeit und Reflexion gezielt kombinieren. Wir verstehen uns dabei als Ergänzung zu Schule, Unternehmen, medizinischen oder therapeutischen Angeboten – nicht als Ersatz.</p>
+      </div>
+      <div>
+        <picture class="image-card">
+          <img src="/bilder_nach_page/bildungseinrichtungen/gruenes-klassenzimmer/bushcraft-feuer.jpg" alt="Erfahrungsbasiertes Lernen - Feuer machen in der Natur" loading="lazy" class="image-card-img" />
+        </picture>
       </div>
     </div>
-  </section>
+  </Section>
+
+  <Section>
+    <h3>Unsere Arbeitsfelder – in der Übersicht</h3>
+    <div class="cards mt-4">
+      <Card 
+        title="Teams, Führung & Organisationen" 
+        body="Im Waldseilgarten erleben Teams unmittelbar Kommunikation unter Druck, Verantwortung und Umgang mit Unsicherheit. Wir bieten Teamentwicklung, Führungskräfte-Trainings und Recruiting-Assessments."
+        href="/unternehmen"
+        imagePath="/images/Leiterueberwindung-teamwork-800.jpg"
+      />
+      <Card 
+        title="Einsatzkräfte & Blaulichtorganisationen" 
+        body="Für Feuerwehren, Rettungsdienste und Polizei: Einsatztraining, Regeneration und Nachwuchsförderung in sicheren Übungsfeldern."
+        href="/einsatzkraefte"
+        imagePath="/images/vertikale-leiterueberwindung-laubfrosch-800.jpg"
+      />
+      <Card 
+        title="Schulen, Kitas & Bildungsträger" 
+        body="Klassenfahrten, Grünes Klassenzimmer, Schulgärten und RP-KIDS für soziales Lernen und Naturverbindung."
+        href="/bildungseinrichtungen"
+        imagePath="/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-800.jpg"
+      />
+      <Card 
+        title="Erlebnisse & Kurse für Privatpersonen" 
+        body="Waldseilgarten, Kanu-Touren, Waldbaden und ADHS-Formate für Familien und Einzelpersonen."
+        href="/erlebnisse-kurse"
+        imagePath="/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-800.jpg"
+      />
+    </div>
+  </Section>
+
+  <Section class="section bg-gray-50">
+    <h3>Wie wir arbeiten – unser Ansatz</h3>
+    <h3>Erfahrungsbasiert statt theoretisch</h3>
+    <p>Wir kombinieren:</p>
+    <ul class="list-disc pl-6 mb-6">
+      <li>reale Herausforderungen (z.B. Höhe, Balance, Teamaufgaben)</li>
+      <li>klare Strukturen und Sicherheitsrahmen</li>
+      <li>gezielte kurze Inputs (z.B. zu Stress, Schlaf, Kommunikation, Umwelt)</li>
+      <li>und strukturierte Reflexionen</li>
+    </ul>
+    <p>So wird aus einem „schönen Tag draußen" ein Lern- und Entwicklungsraum, in dem Erfahrungen bewusst eingeordnet werden können.</p>
+    
+    <h3>Wissenschaftlich inspiriert, ohne Versprechen</h3>
+    <p>Wir orientieren uns an Erkenntnissen aus:</p>
+    <ul class="list-disc pl-6 mb-6">
+      <li>Neurobiologie und Stressforschung</li>
+      <li>Lern- und Entwicklungspsychologie</li>
+      <li>Resilienz- und Gesundheitsforschung</li>
+      <li>Natur- und Umweltwissenschaften (Boden, Ökologie, BNE)</li>
+    </ul>
+    <p>Wir übersetzen diese Erkenntnisse in einfach handhabbare Übungen und Rahmenbedingungen – ohne zu behaupten, dass einzelne Interventionen bestimmte Ergebnisse garantieren.</p>
+    <p>Formulierungen wie „kann unterstützen", „kann dazu beitragen" sind für uns bewusst gewählt. Menschen und Systeme sind komplex; wir können Bedingungen gestalten und begleiten, nicht Ergebnisse erzwingen.</p>
+    
+    <h3>Ganzheitlich, aber bodenständig</h3>
+    <p>„Ganzheitlich" verstehen wir im wörtlichen Sinn:</p>
+    <ul class="list-disc pl-6 mb-6">
+      <li>Körper (Bewegung, Atmung, Schlaf, Ernährung)</li>
+      <li>Geist (Aufmerksamkeit, Denken, Sinn)</li>
+      <li>Beziehung (Team, Familie, Gruppe)</li>
+      <li>Umwelt (Natur, Boden, Kreisläufe)</li>
+    </ul>
+    <p>Statt große Versprechen zu machen, beginnen wir mit kleinen, konkreten Schritten, die sich in Alltag und Organisationen integrieren lassen – und die sich mehrfach wiederholen lassen, damit echte Gewohnheiten entstehen können.</p>
+  </Section>
+
+  <Section>
+    <h3>Sicherheit & Qualität</h2>
+    <p>Gerade bei physischen und emotional anspruchsvollen Formaten ist Sicherheit zentral:</p>
+    <ul class="list-disc pl-6 mb-6">
+      <li>Betrieb des Waldseilgartens nach DIN 15567, ERCA-Standards und DGUV-Rahmenvorgaben</li>
+      <li>regelmäßige technische Überprüfungen und dokumentierte Wartung</li>
+      <li>geschulte Trainer:innen (Erlebnis-/Wildnispädagogik, Klettern, Rettung, BNE, Bewegung, Achtsamkeit u.a.)</li>
+      <li>Notfall- und Rettungskonzepte (inkl. Erste Hilfe)</li>
+      <li>besondere Sorgfalt im Umgang mit Kindern, Jugendlichen und sensiblen Themen (z.B. Stress, ADHS, psychische Belastung)</li>
+    </ul>
+    <p>Wir prüfen gemeinsam mit Ihnen, welche Formate für Ihre Gruppe und Ihre Ziele passen – und wo Grenzen sinnvoll sind.</p>
+    <p><a href="/info-orga/sicherheitskonzept">Details unter "Sicherheit & Qualität"</a></p>
+  </Section>
+
+  <Section class="section bg-gray-50">
+    <h3>Über uns – wer hinter den Angeboten steht</h2>
+    <p>Die komm raus GmbH wird getragen von:</p>
+    <ul class="list-disc pl-6 mb-6">
+      <li>Christopher Sartory – Geschäftsführer, Erlebnis- und Wildnispädagoge, langjährige Erfahrung in Event, Bildung und Führung</li>
+      <li>einem Trainer:innen- und Expert:innennetzwerk mit Hintergründen in Sportwissenschaft, Therapie, Achtsamkeit, Kampfkunst, Naturpädagogik, BNE u.a.</li>
+      <li>Kooperationspartnern im Bildungs- und Beratungsbereich (z.B. ehemalige Geschäftsführung, pädagogische Fachkräfte, Familienberatung)</li>
+    </ul>
+    <p>Wichtig ist uns:</p>
+    <ul class="list-disc pl-6 mb-6">
+      <li>eine klare fachliche Grundlage,</li>
+      <li>eine respektvolle, zugewandte Haltung,</li>
+      <li>und die Bereitschaft, die eigenen Grenzen zu kennen und offen zu benennen.</li>
+    </ul>
+    <p><a href="/info-orga/ueber-uns">Mehr unter "Über uns"</a></p>
+  </Section>
+
+  <Section>
+    <h3>Grenzen & Einordnung</h2>
+    <p>Transparenz ist uns wichtig. Unsere Angebote:</p>
+    <ul class="list-disc pl-6 mb-6">
+      <li>ersetzen keine ärztliche Diagnostik, Psychotherapie oder medizinische Behandlung,</li>
+      <li>sind kein Garant für bestimmte wirtschaftliche, schulische oder gesundheitliche Ergebnisse, können aber – nach allem, was wir aus Forschung und Praxis wissen – Rahmenbedingungen schaffen, die Lernen, Entwicklung und Gesundheit begünstigen.</li>
+    </ul>
+    <p>Wir arbeiten gerne mit bestehenden Strukturen (Schulen, Betriebe, Hilfesysteme) zusammen und verstehen uns als ergänzender Baustein in einem größeren Ganzen.</p>
+  </Section>
+
+  <Section class="section bg-gray-50">
+    <h3>Nächste Schritte – wie eine Zusammenarbeit beginnt</h2>
+    <ul class="list-disc pl-6 mb-6">
+      <li><strong>Anfrage / Erstkontakt</strong> – Kurz schildern: Wer sind Sie? Um welche Zielgruppe geht es (Unternehmen, Einsatzkräfte, Schule, Kita, Familie, Einzelperson)? Was ist Ihr Anliegen?</li>
+      <li><strong>Gemeinsame Klärung</strong> – In einem Gespräch (telefonisch oder online) klären wir Ziele, Rahmenbedingungen, zeitliche und finanzielle Möglichkeiten.</li>
+      <li><strong>Vorschlag & Feinschliff</strong> – Wir entwickeln einen Vorschlag, der zu Ihrem Kontext passt (Dauer, Inhalte, Intensität) und passen ihn bei Bedarf gemeinsam an.</li>
+      <li><strong>Durchführung & Auswertung</strong> – Wir begleiten die Umsetzung und – wo sinnvoll – abschließende Reflexion oder Rückmeldungen für Verantwortliche.</li>
+    </ul>
+    <p>Wenn Sie prüfen möchten, ob und wie unsere Angebote zu Ihrer Situation passen, ist ein kurzer, unverbindlicher Austausch ein guter Anfang.</p>
+    <div class="text-center mt-8">
+      <Button href="/kontakt" type="primary">Kontakt aufnehmen</Button>
+      <Button href="/unternehmen" type="secondary">Für Unternehmen</Button>
+      <Button href="/einsatzkraefte" type="secondary">Für Einsatzkräfte</Button>
+      <Button href="/bildungseinrichtungen" type="secondary">Für Schulen & Bildung</Button>
+      <Button href="/erlebnisse-kurse" type="secondary">Erlebnisse & Kurse</Button>
+    </div>
+  </Section>
 </MainLayout>
+
+<style>
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+

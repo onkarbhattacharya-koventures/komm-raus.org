@@ -1,0 +1,218 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import GlassPanel from '../components/GlassPanel.astro';
+import SectionTeaserGrid from '../components/SectionTeaserGrid.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/blind-führen-kids-400.jpg',
+    alt: 'Worum es geht',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#zielgruppen',
+    image: '/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-400.jpg',
+    alt: 'Für wen',
+    label: 'Für wen',
+  },
+  {
+    href: '#formate',
+    image: '/images/Baumstamm-sortieren-Balance-400.jpg',
+    alt: 'Formate',
+    label: 'Formate',
+  },
+  {
+    href: '#ansatz',
+    image: '/images/Feuer-machen-bowdrill-set-400.jpg',
+    alt: 'Ansatz und Sicherheit',
+    label: 'Ansatz',
+  },
+  {
+    href: '#kontakt',
+    image: '/images/Chris-Feuer-bohren_xs-400.jpg',
+    alt: 'Kontakt',
+    label: 'Kontakt',
+  },
+];
+---
+
+<MainLayout title="Bildungseinrichtungen - Komm Raus">
+  <Hero title="Für Schulen & Jugend" subtitle="Erlebnispädagogische Klassentage, Klassenfahrten und BNE-Formate im Waldseilgarten Laubfrosch bei Büdingen." imagePath="/bilder_nach_page/bildungseinrichtungen/klassenfahrten-projekttage/kooperation-teamtraining-laubfrosch-waldseilgarten.jpg" />
+
+  <Section class="bildung-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Der Waldseilgarten Laubfrosch ist ein außerschulischer Lernort, an dem Schüler, Lehrer – und auf Wunsch auch Kinder aus Kitas – außerhalb des Klassenzimmers zentrale soziale, emotionale und motorische Kompetenzen üben können.</p>
+      <p>Im Mittelpunkt stehen:</p>
+      <ul class="card-list">
+        <li>Klassengemeinschaft und Sozialverhalten</li>
+        <li>Selbstvertrauen, Verantwortungsbewusstsein und Wagniskompetenz</li>
+        <li>Konzentration und Umgang mit Stress</li>
+        <li>Naturerfahrung und Bildung für nachhaltige Entwicklung (BNE)</li>
+      </ul>
+      <p>Die Programme kombinieren:</p>
+      <ul class="card-list">
+        <li>Herausforderungen im Hochseilgarten</li>
+        <li>Kooperations- und Problemlöseaufgaben am Boden</li>
+        <li>Natur- und Wildnispädagogik</li>
+        <li>strukturierte Reflexionsrunden</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zielgruppen" class="prose max-w-none">
+      <h2>Für wen die Angebote gedacht sind</h2>
+      <div class="cards mt-4">
+        <Card title="Grundschulen" body="Erlebnispädagogik für junge Schülerinnen und Schüler." imagePath="/bilder_nach_page/bildungseinrichtungen/kindergaerten-eltern/kinder-blind-augenbinde.jpg" />
+        <Card title="Weiterführende Schulen" body="Soziales Lernen und Selbstvertrauen stärken." imagePath="/bilder_nach_page/bildungseinrichtungen/klassenfahrten-projekttage/jugendliche-balken.jpg" />
+        <Card title="Berufliche Schulen" body="Teamarbeit und Verantwortung in der Berufsvorbereitung." imagePath="/bilder_nach_page/bildungseinrichtungen/lehrerfortbildung/PXL_20230908_084220076.jpg" />
+        <Card title="Förderschulen" body="Angepasste Programme für besondere Bedürfnisse." imagePath="/bilder_nach_page/bildungseinrichtungen/adhs-fokus-training/kurs_fokus-achtsamkeit.jpg" />
+        <Card title="Kindergärten / Kitas" body="Spielerisches Lernen in der Natur." imagePath="/bilder_nach_page/bildungseinrichtungen/kindergaerten-eltern/PXL_20230321_091226962.PORTRAIT.jpg" />
+      </div>
+      <p>Die Inhalte und Anforderungen werden jeweils an Alter, Gruppenzusammensetzung und besondere Bedarfe angepasst.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <h2>Bilder aus unseren Programmen</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <picture>
+        <source type="image/webp" srcset="/images/blind-führen-kids-250.webp 250w, /images/blind-führen-kids-400.webp 400w, /images/blind-führen-kids-800.webp 800w" />
+        <img src="/images/blind-führen-kids-400.jpg" alt="Kinder führen sich gegenseitig blind" class="rounded-2xl shadow-xl object-cover aspect-[4/3] w-full" loading="lazy" />
+      </picture>
+      <picture>
+        <source type="image/webp" srcset="/images/Baumstamm-sortieren-Balance-250.webp 250w, /images/Baumstamm-sortieren-Balance-400.webp 400w, /images/Baumstamm-sortieren-Balance-800.webp 800w, /images/Baumstamm-sortieren-Balance-1200.webp 1200w" />
+        <img src="/images/Baumstamm-sortieren-Balance-400.jpg" alt="Schüler sortieren Baumstämme" class="rounded-2xl shadow-xl object-cover aspect-[4/3] w-full" loading="lazy" />
+      </picture>
+      <picture>
+        <source type="image/webp" srcset="/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-250.webp 250w, /images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-400.webp 400w, /images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-800.webp 800w" />
+        <img src="/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-400.jpg" alt="Fliegende Eichhörnchen Seilbahn" class="rounded-2xl shadow-xl object-cover aspect-[4/3] w-full" loading="lazy" />
+      </picture>
+      <picture>
+        <source type="image/webp" srcset="/images/himmelsleiter-teambuilding-laubfrosch-250.webp 250w, /images/himmelsleiter-teambuilding-laubfrosch-400.webp 400w, /images/himmelsleiter-teambuilding-laubfrosch-800.webp 800w" />
+        <img src="/images/himmelsleiter-teambuilding-laubfrosch-400.jpg" alt="Himmelsleiter Teambuilding" class="rounded-2xl shadow-xl object-cover aspect-[4/3] w-full" loading="lazy" />
+      </picture>
+      <picture>
+        <source type="image/webp" srcset="/images/Chris-Feuer-bohren_xs-250.webp 250w, /images/Chris-Feuer-bohren_xs-400.webp 400w, /images/Chris-Feuer-bohren_xs-800.webp 800w" />
+        <img src="/images/Chris-Feuer-bohren_xs-400.jpg" alt="Feuer bohren" class="rounded-2xl shadow-xl object-cover aspect-[4/3] w-full" loading="lazy" />
+      </picture>
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="formate" class="prose max-w-none">
+      <h2>Unsere Formate für Schulen & Jugend</h2>
+      <p>Wir bündeln unsere Angebote in folgenden Schwerpunkten:</p>
+      <ul class="card-list">
+        <li><strong>Grünes Klassenzimmer (BNE)</strong> – Lehrplaninhalte haptisch begreifen. Biologie und Nachhaltigkeit erleben. <a href="/bildungseinrichtungen/gruenes-klassenzimmer">Mehr</a></li>
+        <li><strong>Soil to Table</strong> – Vom Boden ins Gehirn. <a href="/soil-to-table">Mehr</a></li>
+        <li><strong>Schulgarten</strong> – Lernort vor der Tür. <a href="/bildungseinrichtungen/schulgarten">Mehr</a></li>
+        <li><strong>Klassenfahrten & Projekttage</strong> – Soziales Lernen außerhalb des Klassenzimmers. <a href="/bildungseinrichtungen/klassenfahrten-projekttage">Mehr</a></li>
+        <li><strong>Meditation & Achtsamkeit</strong> – Präsenz trainieren. <a href="/bildungseinrichtungen/meditation">Mehr</a></li>
+        <li><strong>Fokus & Konzentration</strong> – Aufmerksamkeitsräume gestalten. <a href="/bildungseinrichtungen/fokus-und-konzentration">Mehr</a></li>
+        <li><strong>Bildungsreisen</strong> – Reisen als Lern- und Entwicklungsräume. <a href="/erlebnisse-kurse/bildungsreisen">Mehr</a></li>
+        <li><strong>Hochbegabtenförderung</strong> – 6-Säulen-Programm. <a href="/bildungseinrichtungen/hochbegabtenfoerderung">Mehr</a></li>
+        <li><strong>ADHS & Fokus-Training</strong> – Bewegung kanalisieren. <a href="/bildungseinrichtungen/adhs-fokus-training">Mehr</a></li>
+        <li><strong>Kindergärten & Eltern</strong> – RP-KIDS. <a href="/bildungseinrichtungen/kindergaerten-eltern">Mehr</a></li>
+        <li><strong>Lehrerfortbildung</strong> – Train the Trainer. <a href="/bildungseinrichtungen/lehrerfortbildung">Mehr</a></li>
+        <li><strong>Sprachreisen</strong> – The Journey. <a href="/erlebnisse-kurse/sprachreisen">Mehr</a></li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <h2>Pädagogischer Ansatz & Sicherheit</h2>
+    <GlassPanel id="ansatz" class="prose max-w-none">
+      <div class="grid md:grid-cols-2 gap-8 items-start">
+        <div>
+          <p>Unser Ansatz verbindet klassische Erlebnispädagogik mit:</p>
+          <ul class="card-list">
+            <li>Erkenntnissen aus Lernpsychologie und Stressforschung</li>
+            <li>Achtsamkeits- und Konzentrationspraxis</li>
+            <li>Natur- und Wildnispädagogik</li>
+            <li>Bildung für nachhaltige Entwicklung (BNE)</li>
+          </ul>
+          <p>Sicherheit und Verantwortung:</p>
+          <ul class="card-list">
+            <li>Betrieb nach DIN 15567, ERCA-Standards und DGUV-Rahmenvorgaben</li>
+            <li>regelmäßige sicherheitstechnische Überprüfungen</li>
+            <li>geschulte Trainer:innen mit klar geregelten Rollen</li>
+            <li>Toprope-Sicherungssystem mit Fremdsicherung</li>
+          </ul>
+        </div>
+        <div>
+          <picture class="image-card">
+            <source type="image/webp" srcset="/images/Feuer-machen-bowdrill-set-400.webp 400w, /images/Feuer-machen-bowdrill-set-800.webp 800w" />
+            <img src="/images/Feuer-machen-bowdrill-set-400.jpg" alt="Sicherheit und Naturerfahrung" loading="lazy" class="image-card-img" />
+          </picture>
+        </div>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="kontakt" class="prose max-w-none">
+      <h2>Nächste Schritte</h2>
+      <p>In einem kurzen Austausch klären wir mit Ihnen:</p>
+      <ul class="card-list">
+        <li>Klassenstufe und Gruppengröße</li>
+        <li>pädagogische Ziele (z.B. Klassengemeinschaft, Konzentration, BNE-Schwerpunkt)</li>
+        <li>zeitlichen Rahmen (Projekttag, mehrtägige Fahrt, wiederkehrende Besuche)</li>
+      </ul>
+      <p>Darauf aufbauend entwickeln wir ein Format, das zu Ihrer Klasse, Schule oder Einrichtung passt.</p>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Anfrage für Schulen & Jugend stellen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.bildung-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

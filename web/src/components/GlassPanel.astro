@@ -1,0 +1,19 @@
+---
+interface Props {
+  id?: string;
+  class?: string;
+  tag?: 'div' | 'article';
+}
+
+const {
+  id = '',
+  class: className = '',
+  tag = 'div',
+} = Astro.props as Props;
+
+const Tag = tag;
+---
+
+<Tag id={id} class={`glass-panel glass-panel-cards ${className}`.trim()}>
+  <slot />
+</Tag>

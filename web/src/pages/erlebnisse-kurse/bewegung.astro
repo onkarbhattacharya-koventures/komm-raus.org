@@ -1,0 +1,268 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  {
+    href: '#was-sie-finden',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/abseilen-laubfrosch-waldseilgarten.jpg',
+    alt: 'Körperliches Training im Naturraum',
+    label: 'Was Sie bei uns finden',
+  },
+  {
+    href: '#warum-bewegung',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/eingurten-psa-waldseilgarten-laubfrosch.jpg',
+    alt: 'Bewegung als Grundlage für Gesundheit',
+    label: 'Warum Bewegung mehr ist',
+  },
+  {
+    href: '#bewegungsframework',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/fliegendes-eichhoernchen-laubfrosch-waldseilgarten.jpg',
+    alt: 'Bewegungsframework mit acht Schichten',
+    label: 'Acht Schichten',
+  },
+  {
+    href: '#einsatz-in-angeboten',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Seilbahn-flying-fox-laubfrosch-waldseilgarten.jpg',
+    alt: 'Bewegungsarbeit in unterschiedlichen Formaten',
+    label: 'Einsatz in Angeboten',
+  },
+  {
+    href: '#leitprinzipien',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Sicherheit-waldseilgarten-laubfrosch.jpg',
+    alt: 'Leitprinzipien für nachhaltige Bewegungsarbeit',
+    label: 'Leitprinzipien',
+  },
+  {
+    href: '#praxisbeispiele',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Waldseilgarten-Laubfrosch-buedingen.jpg',
+    alt: 'Praxisbeispiele aus Trainings- und Kursformaten',
+    label: 'Praktische Beispiele',
+  },
+];
+---
+
+<MainLayout title="Bewegung - Komm Raus">
+  <Hero title="BEWEGUNG & MOVEMENT – TRAINING FÜR KÖRPER, NERVENSYSTEM UND ALLTAG" subtitle="Wie wir mit Kraft, Mobilität und Alltagsbewegung arbeiten – für Gesundheit, Handlungsfähigkeit und psychische Stabilität." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" />
+
+  <Section class="bewegung-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="was-sie-finden" class="prose max-w-none">
+      <h2>WAS SIE BEI UNS IM BEREICH BEWEGUNG FINDEN</h2>
+      <p>Bewegung ist für uns kein Zusatzprogramm, sondern ein zentrales Fundament.</p>
+      <p>Im Bereich „Bewegung & Movement“ arbeiten wir mit Menschen und Teams daran,</p>
+      <ul class="card-list">
+        <li>den Körper wieder als verlässliche Ressource zu erleben,</li>
+        <li>Kraft, Mobilität und Ausdauer alltagstauglich aufzubauen,</li>
+        <li>Spannung abzubauen und das Nervensystem zu entlasten,</li>
+        <li>die Basis für Konzentration, Belastbarkeit und Regeneration zu legen.</li>
+      </ul>
+      <p>Wir verbinden dabei:</p>
+      <ul class="card-list">
+        <li>Krafttraining und natürliche Bewegungsmuster (Tragen, Klettern, Hocken, Hängen),</li>
+        <li>Ausdauer und Atemarbeit,</li>
+        <li>Mobilität, Dehnen und langsame Bewegung (z.B. yoga-inspirierte Praxis),</li>
+        <li>einfache Alltagsgewohnheiten, die Bewegung wieder in den Tag zurückholen.</li>
+      </ul>
+      <p>Die Angebote reichen von integrierten Bewegungsmodulen in Team- und Einsatztrainings bis hin zu speziellen Kursen für Kinder, Jugendliche und Erwachsene im Bereich Kraft, Mobilität und Stressregulation.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="warum-bewegung" class="prose max-w-none">
+      <h2>WARUM BEWEGUNG MEHR IST ALS „SPORT“</h2>
+      <p>Aus der Forschung der letzten Jahrzehnte lässt sich recht klar ablesen:</p>
+      <ul class="card-list">
+        <li>Zu wenig und zu einseitige Bewegung steht im Zusammenhang mit einer Reihe von Gesundheitsrisiken (z.B. Herz-Kreislauf-Erkrankungen, Diabetes, muskuloskelettale Beschwerden).</li>
+        <li>Regelmäßige Bewegung, insbesondere Kraft- und Ausdauertraining, geht typischerweise mit besserer körperlicher Gesundheit, mehr funktionaler Unabhängigkeit im Alter und geringerer Gesamtsterblichkeit einher.</li>
+        <li>Bewegung beeinflusst auch die Psyche: Viele Studien deuten darauf hin, dass körperliche Aktivität depressive Symptome, Angstsymptome und Grübelschleifen reduzieren kann.</li>
+        <li>Spannungszustände im Körper belasten das Nervensystem: Ein chronisch verspannter, unbeweglicher Körper erzeugt ein dauerhaftes Hintergrundrauschen an Körpersignalen, das Wahrnehmungs- und Denkkapazität bindet.</li>
+      </ul>
+      <p>Wir verstehen Bewegung deshalb nicht als „nice to have“, sondern als eine biologische Grundanforderung. Unser Ansatz versucht, diese Erkenntnisse in eine Praxis zu übersetzen, die für unterschiedliche Menschen und Kontexte handhabbar ist – ohne einfache Versprechen.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="bewegungsframework" class="prose max-w-none">
+      <h2>UNSER BEWEGUNGSFRAMEWORK – DIE ACHT SCHICHTEN</h2>
+      <p>Um Komplexität handhabbar zu machen, ordnen wir unser Arbeiten mit Bewegung in acht Schichten. Sie bauen aufeinander auf:</p>
+      <div class="cards mt-4 mb-8">
+        <Card title="1. Biologisches Fundament" body="Schlaf, Flüssigkeit, Ernährung, Atmung, Stressniveau und Alltagsbewegung." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" class="card-compact" />
+        <Card title="2. Schmerzfreiheit" body="Beschwerden klären und nur im medizinisch verantwortbaren Rahmen trainieren." imagePath="/images/eingurten-psa-waldseilgarten-laubfrosch-800.jpg" class="card-compact" />
+        <Card title="3. Stabilität & Mobilität" body="Kontrollierte, schmerzfreie Bewegungsfreiheit statt maximaler Verrenkung." imagePath="/images/Baumstamm-sortieren-waldseilgarten-800.jpg" class="card-compact" />
+        <Card title="4. Körperliche Qualitäten" body="Kraft, Ausdauer, Schnellkraft, Beweglichkeit und Muskelaufbau dosiert entwickeln." imagePath="/images/himmelsleiter-teambuilding-laubfrosch-800.jpg" class="card-compact" />
+        <Card title="5. Bewegungsmuster" body="Grundmuster wie Drücken, Ziehen, Tragen, Hocken, Klettern und Balancieren." imagePath="/images/abseilen-laubfrosch-waldseilgarten-800.jpg" class="card-compact" />
+        <Card title="6. Programmierung" body="Häufigkeit, Intensität und Dauer nachhaltig statt punktuell extrem planen." imagePath="/images/kanu-fahren-800.jpg" class="card-compact" />
+        <Card title="7. Körper ↔ Psyche" body="Körperzustand und psychischer Zustand beeinflussen sich wechselseitig." imagePath="/images/blindfold-catwalk-selbstvertrauen-800.jpg" class="card-compact" />
+        <Card title="8. Lebenspraxis" body="Bewegung in Routinen verankern: Gehen, Tragen, Haltungswechsel, Mikropausen." imagePath="/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-800.jpg" class="card-compact" />
+      </div>
+      <h3>Schicht 1: Biologisches Fundament</h3>
+      <p>Schlaf, Flüssigkeitsversorgung, Ernährung, Atmung, Stressniveau und minimale Alltagsbewegung.</p>
+      <p>Bevor Training wirkt, braucht der Körper eine Basisversorgung. Kein Trainingsplan kann dauerhaft fehlenden Schlaf oder dauerhaften Stress „wegtrainieren“.</p>
+      <h3>Schicht 2: Schmerzfreiheit und Basiszustand</h3>
+      <p>Wo akute Schmerzen oder deutliche Einschränkungen vorliegen, hat deren Klärung Vorrang. Wir arbeiten nur im Rahmen dessen, was medizinisch und physiotherapeutisch verantwortbar ist – und empfehlen im Zweifel ärztliche Abklärung.</p>
+      <h3>Schicht 3: Stabilität und Mobilität</h3>
+      <p>Gelenke und Segmente sollen ihre Kernaufgabe wieder erfüllen können: Einige brauchen mehr Beweglichkeit, andere mehr Stabilität. Ziel ist kontrollierte, schmerzfreie Bewegungsfreiheit, nicht maximale Verrenkung.</p>
+      <h3>Schicht 4: Trainierbare körperliche Qualitäten</h3>
+      <p>Kraft, Muskelmasse, Ausdauer, Schnellkraft, Beweglichkeit u.a. – all das sind Anpassungen, die der Körper auf passende Reize hin entwickeln kann. Wir versuchen, alle relevanten Qualitäten in angemessenem Maß zu berücksichtigen.</p>
+      <h3>Schicht 5: Bewegungsmuster und Werkzeuge</h3>
+      <p>Statt in Übungen zu denken, denken wir in Grundmustern: Drücken, Ziehen, Heben, Hocken, Tragen, Gehen/Laufen, Rotieren, Klettern, Hängen, Kriechen, Balancieren. Ob mit Körpergewicht, Kettlebell, Baumstamm oder an der Wand ist zweitrangig – entscheidend ist, dass das Muster passt und sicher ist.</p>
+      <h3>Schicht 6: Programmierung und Dosierung</h3>
+      <p>Wie oft, wie intensiv, wie lange? Hier geht es um eine Trainingsplanung, die fordernd, aber nachhaltig ist. Für die meisten Menschen ist regelmäßige, moderate Belastung sinnvoller als seltene Spitzen.</p>
+      <h3>Schicht 7: Regelkreis Körper ↔ Psyche</h3>
+      <p>Körperzustand und psychischer Zustand beeinflussen sich gegenseitig. Ein beweglicher, gekräftigter Körper mit weniger Spannungsrauschen kann das Erleben von Sicherheit und Handlungsfähigkeit unterstützen; ein überlasteter, verspannter Körper kann Unruhe und Erschöpfung verstärken.</p>
+      <h3>Schicht 8: Bewegung als Lebenspraxis</h3>
+      <p>Über einzelne Trainings hinaus interessiert uns, wie Bewegung im Alltag verankert werden kann: mehr Gehen, anders Sitzen, öfter Tragen statt Rollen, kurze Bewegungsfenster zwischen Terminen. Ziel ist ein Leben, in dem Bewegung wieder selbstverständlich wird.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="einsatz-in-angeboten" class="prose max-w-none">
+      <h2>WIE WIR BEWEGUNG IN UNSEREN ANGEBOTEN EINSETZEN</h2>
+      <h3>Für Unternehmen und Teams</h3>
+      <p>In Team- und Führungstrainings nutzen wir Bewegung, um:</p>
+      <ul class="card-list">
+        <li>Kommunikations- und Entscheidungsverhalten unter Belastung sichtbar zu machen,</li>
+        <li>ein gemeinsames Verständnis von Leistungsfähigkeit und Regeneration zu entwickeln,</li>
+        <li>einfache Bewegungsroutinen zu vermitteln, die sich in den Arbeitsalltag integrieren lassen (z.B. kurze Mobilitäts-Sequenzen, Geh-Meetings, Kraft-Basics für Bildschirmarbeitsplätze).</li>
+      </ul>
+      <h3>Für Einsatzkräfte</h3>
+      <p>Bei Feuerwehr, Rettungsdienst, Polizei u.a. fließen Bewegungsinhalte ein in:</p>
+      <ul class="card-list">
+        <li>Übungsformate im Hochseilgarten (Sichern, Klettern, Tragen, Balancieren),</li>
+        <li>Training von Kraft, Mobilität und Wagniskompetenz mit Blick auf Einsatzerfordernisse,</li>
+        <li>Module zu Regeneration, Schlaf, Spannungsausgleich und Atemarbeit.</li>
+      </ul>
+      <p>Wir wollen reale Belastung nicht nachstellen, sondern Werkzeugkasten und Körpergefühl stärken, damit Einsatzkräfte ihre Aufgaben etwas besser tragen können.</p>
+      <h3>Für Schulen, Kitas und Jugendliche</h3>
+      <p>Hier steht im Vordergrund:</p>
+      <ul class="card-list">
+        <li>natürliche Bewegungsformen: Klettern, Hocken, Rennen, Balancieren, Spielen,</li>
+        <li>Konzentrations- und Fokusübungen über Bewegung,</li>
+        <li>kindgerechte Kraft- und Koordinationsaufgaben,</li>
+        <li>Elemente für den Unterrichtsalltag (Bewegungspausen, einfache Haltungs- und Atemübungen).</li>
+      </ul>
+      <p>Besonders bei Kindern mit hohem Bewegungsdrang oder ADHS-Symptomen kann natur- und bewegungsorientierte Arbeit einen Ausgleich bieten. Wir ersetzen damit keine Diagnostik oder Therapie, sondern schaffen zusätzliche Erfahrungsräume.</p>
+      <h3>Für Einzelpersonen und Familien</h3>
+      <p>In Kursen und 1:1-Settings arbeiten wir u.a. mit:</p>
+      <ul class="card-list">
+        <li>grundlegenden Kraft- und Mobilitätsprogrammen,</li>
+        <li>Yoga-inspirierten Dehn- und Achtsamkeitssequenzen,</li>
+        <li>Bewegungsroutinen für Menschen mit viel Sitztätigkeit,</li>
+        <li>naturbasierten Bewegungserfahrungen (z.B. Barfußgehen, Balancieren, Klettern, Tragen im Gelände).</li>
+      </ul>
+      <p>Die Intensität reicht von sanft und regenerativ bis hin zu fordernd – je nach Person und Zielsetzung.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="leitprinzipien" class="prose max-w-none">
+      <h2>LEITPRINZIPIEN UNSERER BEWEGUNGSARBEIT</h2>
+      <p>Einige Prinzipien, an denen wir uns orientieren:</p>
+      <ol class="card-list">
+        <li><strong>Grundlagen vor Spezialübungen.</strong><br />Schlaf, Flüssigkeit, Ernährung, Atmung, Alltagsbewegung und Stressniveau bilden die Basis. Darauf baut Training auf.</li>
+        <li><strong>Qualität vor Quantität.</strong><br />Saubere, schmerzfreie Bewegungen sind wichtiger als möglichst viele Wiederholungen oder hohe Gewichte. Wo Schmerzen auftreten, wird angepasst oder pausiert.</li>
+        <li><strong>Spannung ernst nehmen.</strong><br />Chronische Anspannung ist nicht nur ein „Verspannungsproblem“, sondern auch ein Thema für Nervensystem und Psyche. Dehnen, langsame Bewegung und Atemarbeit sind für uns grundlegende Bausteine, keine „Wellness-Beigabe“.</li>
+        <li><strong>Kraft und Sanftheit gehören zusammen.</strong><br />Krafttraining und ruhigere Praktiken wie Yoga oder Mobilitätstraining sprechen unterschiedliche, sich ergänzende Mechanismen an. Wir nutzen beides.</li>
+        <li><strong>Konsistenz wichtiger als Intensität.</strong><br />Lieber über Monate und Jahre in Bewegung bleiben, als in kurzen Phasen alles zu geben und dann auszusteigen.</li>
+        <li><strong>Alltag zählt.</strong><br />Wir fragen nicht nur: „Wie sieht das Training aus?“, sondern auch: „Wie verbringen Sie die übrige Zeit des Tages?“ Kleine Veränderungen im Alltag können viel bewirken.</li>
+        <li><strong>Individuelle Unterschiede respektieren.</strong><br />Alter, Vorgeschichte, Berufsalltag, psychische Situation – all das fließt in die Gestaltung der Bewegungsarbeit ein. Standardpläne sind Ausgangspunkte, keine Dogmen.</li>
+      </ol>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="praxisbeispiele" class="prose max-w-none">
+      <h2>PRAKTISCHE BEISPIELE – WIE ES AUSSEHEN KANN</h2>
+      <p>Die konkrete Umsetzung variiert je nach Kontext. Einige beispielhafte Szenarien:</p>
+      <ul class="card-list">
+        <li><strong>Teamtag im Waldseilgarten</strong><br />Aufwärmen und Mobilität, kooperative Aufgaben mit Tragen, Balancieren und Klettern, kurze Inputs zu Stress, Atmung und Haltung, Reflexionsrunden und Übertragung in den Berufsalltag.</li>
+        <li><strong>Einsatzkräfte-Modul</strong><br />Kombination aus praktischen Bewegungsaufgaben (Kraft, Koordination, Wagnis), einfachen Screening-Übungen für Mobilität und Stabilität, sowie Bausteinen zu Regeneration, Schlafhygiene und Spannungsabbau.</li>
+        <li><strong>Schulprojekt „Bewegtes Lernen“</strong><br />Bewegungsstationen im Wald, Spiele, die Konzentration und Kooperation fordern, Einführung einfacher Übungen, die Lehrkräfte später im Unterricht nutzen können.</li>
+        <li><strong>Individuelles Bewegungscoaching</strong><br />Anamnese, einfache Tests zu Beweglichkeit und Kraft, Aufbau eines angepassten Wochenplans mit Geh-Einheiten, Kraft- und Mobilitätsübungen sowie kleinen Alltagsanpassungen.</li>
+      </ul>
+      <p>Diese Beispiele sind Orientierungshilfen. Die tatsächliche Ausgestaltung entsteht im Gespräch mit den Beteiligten.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="grenzen-einordnung" class="prose max-w-none">
+      <h2>GRENZEN & EINORDNUNG</h2>
+      <p>Unser Bewegungsframework und die dazugehörigen Angebote:</p>
+      <ul class="card-list">
+        <li>ersetzen keine medizinische Diagnostik, Physiotherapie oder Psychotherapie,</li>
+        <li>sind kein Garant für bestimmte gesundheitliche, berufliche oder psychische Ergebnisse,</li>
+        <li>beruhen auf dem aktuellen Stand der Forschung und unserer praktischen Erfahrung und werden laufend überprüft und weiterentwickelt.</li>
+      </ul>
+      <p>Menschen reagieren sehr unterschiedlich auf Training und Bewegung. Genetik, Vorerkrankungen, psychische Verfassung, Alltag und soziale Faktoren spielen eine große Rolle. Wir verstehen unser Angebot als eine Möglichkeit, den eigenen Körper und die eigene Handlungsfähigkeit besser zu nutzen – im Rahmen dessen, was für die jeweilige Person oder Gruppe verantwortbar und stimmig ist.</p>
+      <picture class="image-card">
+        <img src="/images/fokus-bewegung-1.jpg" alt="Bewegung" loading="lazy" class="image-card-img" />
+      </picture>
+      <button id="bewegung-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+      Anfrage "Bewegung"
+    </button>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.bewegung-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('bewegung-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

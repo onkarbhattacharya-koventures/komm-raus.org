@@ -1,0 +1,84 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import Button from '../../components/Button.astro';
+---
+
+<MainLayout 
+  title="Vordrucke & Haftungsausschluss - Komm Raus"
+  description="Wichtige Formulare und Haftungsausschlussinformationen."
+>
+  <Section class="bg-brand-primary text-white text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Vordrucke & Haftungsausschluss</h1>
+    <p class="text-xl">Wichtige Informationen für Ihre Teilnahme</p>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Elternanschreiben & Einverständniserklärungen</h2>
+      <p>Für Gruppen mit minderjährigen Teilnehmenden benötigen wir entsprechende Einverständniserklärungen der Erziehungsberechtigten.</p>
+      <p>Diese Formulare stellen wir Ihnen nach der Buchung zur Verfügung.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Informationsblatt für Teilnehmende</h2>
+      <p>Vor der Veranstaltung erhalten alle Teilnehmenden ein Informationsblatt mit:</p>
+      <ul class="card-list">
+        <li>Angaben zum Programmablauf</li>
+        <li>Empfehlungen zur Kleidung</li>
+        <li>Verhaltensregeln</li>
+        <li>Notfallkontakten</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Haftungsausschluss</h2>
+      <p>Die Teilnahme an unseren Programmen erfolgt auf eigene Verantwortung.</p>
+      <ul class="card-list">
+        <li>Alle Teilnehmenden müssen gesundheitlich fit sein</li>
+        <li>Bei Vorerkrankungen oder Einschränkungen bitten wir um frühzeitige Information</li>
+        <li>Die Teilnahme an Hochseilelementen erfordert körperliche Eignung</li>
+        <li>Unsere Trainer:innen behalten sich vor, Teilnehmende bei gesundheitlichen Bedenken auszuschließen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Aufsichtspflicht</h2>
+      <ul class="card-list">
+        <li>Die verantwortliche Lehrkraft/Gruppenleitung bleibt aufsichtspflichtig</li>
+        <li>Eine ausreichende Zahl von Betreuungspersonen muss anwesend sein</li>
+        <li>Die Aufsichtspflicht kann nicht an unser Personal übertragen werden</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Checkliste zur Vorbereitung</h2>
+      <ul class="card-list">
+        <li>Einverständniserklärungen einholen</li>
+        <li>Gesundheitsinformationen (Allergien, Medikamente) erfassen</li>
+        <li>Geeignete Kleidung besprechen</li>
+        <li>Notfallkontakte hinterlegen</li>
+        <li>Aufsichtsschlüssel planen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none text-center">
+      <h2>Noch Fragen?</h2>
+      <p>Wenn Sie Fragen zu den Vordrucken haben, sprechen Sie uns gerne an.</p>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Kontakt aufnehmen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>

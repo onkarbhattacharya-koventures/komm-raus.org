@@ -1,0 +1,96 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import Button from '../../components/Button.astro';
+---
+
+<MainLayout 
+  title="Sicherheitskonzept - Komm Raus"
+  description="Informationen zu unseren Sicherheitsstandards und Qualitätsmaßnahmen."
+>
+  <Section class="bg-brand-primary text-white text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Sicherheitskonzept</h1>
+    <p class="text-xl">Sicherheit hat bei uns höchste Priorität</p>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Unsere Sicherheitsstandards</h2>
+      <p>Der Waldseilgarten Laubfrosch wird nach höchsten Sicherheitsstandards betrieben. Die Sicherheit unserer Teilnehmenden ist uns sehr wichtig.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Normen und Richtlinien</h2>
+      <ul class="card-list">
+        <li><strong>DIN 15567</strong> - Bau und Betrieb von Hochseilgärten</li>
+        <li><strong>ERCA-Standards</strong> - European Ropes Course Association</li>
+        <li><strong>DGUV-Rahmenvorgaben</strong> - z.B. GUV-SI 8082</li>
+        <li>Regelmäßige sicherheitstechnische Prüfungen</li>
+        <li>Dokumentierte Wartung aller Elemente</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Sicherungssystem</h2>
+      <p>Wir arbeiten mit Toprope- und Teamsicherung nach aktueller Lehrmeinung:</p>
+      <ul class="card-list">
+        <li>Toprope-Sicherung für alle Hochseilelemente</li>
+        <li>Redundante Sicherungssysteme</li>
+        <li>Intensive Einweisung aller Teilnehmenden</li>
+        <li>Geschultes und erfahrenes Personal</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Qualifikation unseres Teams</h2>
+      <ul class="card-list">
+        <li>Ausbildung in Erlebnispädagogik</li>
+        <li>Technische Ausbildung für Seilgarten-Sicherung</li>
+        <li>Erste-Hilfe-Ausbildung (regelmäßig aufgefrischt)</li>
+        <li>Erfahrung im Umgang mit verschiedenen Zielgruppen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Ausrüstung</h2>
+      <ul class="card-list">
+        <li>Klettergurte (regelmäßig geprüft)</li>
+        <li>Helme</li>
+        <li>Sicherungsgeräte</li>
+      </ul>
+      <p>Die Ausrüstung wird regelmäßig kontrolliert und gewartet.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Wetterbedingungen</h2>
+      <p>Bei bestimmten Wetterbedingungen kann das Hochseilprogramm eingeschränkt werden:</p>
+      <ul class="card-list">
+        <li>Sturm</li>
+        <li>Starkes Gewitter</li>
+        <li>Extremregen</li>
+      </ul>
+      <p>In diesen Fällen werden Programme verlegt oder alternative Bodenprogramme angeboten.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none text-center">
+      <h2>Noch Fragen?</h2>
+      <p>Wenn Sie weitere Fragen zu unserem Sicherheitskonzept haben, sprechen Sie uns gerne an.</p>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Kontakt aufnehmen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>

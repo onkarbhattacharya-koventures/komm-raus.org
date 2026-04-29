@@ -1,0 +1,330 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  { href: '#worum-es-geht', image: '/images/waldbaden-1.jpg', alt: 'Worum es geht', label: 'Worum es geht' },
+  { href: '#fuer-wen', image: '/images/waldbaden-2.jpg', alt: 'Für wen geeignet', label: 'Für wen geeignet' },
+  { href: '#inhalte-ablauf', image: '/images/waldbaden-3.jpg', alt: 'Inhalte und Ablauf', label: 'Inhalte und Ablauf' },
+  { href: '#wissenschaft', image: '/images/waldbaden-4.jpg', alt: 'Wissenschaftliche Einordnung', label: 'Wissenschaft' },
+  { href: '#sicherheit-haltung', image: '/images/waldbaden-6.jpg', alt: 'Sicherheit und Haltung', label: 'Sicherheit und Haltung' },
+  { href: '#organisatorisches-anfrage', image: '/images/waldbaden-7.jpg', alt: 'Organisatorisches und Anfrage', label: 'Organisatorisches und Anfrage' },
+];
+---
+
+<MainLayout title="Waldbaden - Komm Raus">
+  <Hero title="Waldbaden" subtitle="Bewusst im Wald ankommen – Stress regulieren, Sinne öffnen, zur Ruhe kommen." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" />
+
+  <Section class="waldbaden-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="worum-es-geht">
+      <h2>Worum es geht</h2>
+      <p>„Waldbaden“ (angelehnt an das japanische Shinrin-yoku) meint nicht Schwimmen im Wald, sondern bewussten Aufenthalt im Wald:</p>
+      <ul class="card-list">
+        <li>langsam gehen statt „Wandern“,</li>
+        <li>wahrnehmen statt „abarbeiten“,</li>
+        <li>ankommen statt „leisten“.</li>
+      </ul>
+      <p>In unseren Waldbaden-Angeboten geht es darum,</p>
+      <ul class="card-list">
+        <li>den Nervensystem-Modus zu wechseln – von Alarm, Zeitdruck und Multitasking in mehr Ruhe und Präsenz,</li>
+        <li>die Sinne wieder bewusst zu nutzen (sehen, hören, riechen, fühlen),</li>
+        <li>den Wald als Regulationsraum kennenzulernen, der im Alltag immer wieder genutzt werden kann.</li>
+      </ul>
+      <p>Waldbaden ist dabei kein esoterisches Ritual, sondern ein einfaches, angeleitetes Setting: langsames Gehen, angeleitete Wahrnehmungsübungen, stille Phasen, ggf. kurze Atem- und Körperübungen – mit dem Fokus auf Erfahrung, nicht auf Leistung.</p>
+      <picture class="image-card">
+        <img src="/images/waldbaden-1.jpg" alt="Worum es geht" loading="lazy" class="image-card-img" />
+      </picture>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="fuer-wen">
+      <h2>Für wen Waldbaden geeignet ist</h2>
+      <p>Die Waldbaden-Formate im Bereich „Erlebnisse & Kurse“ richten sich vor allem an:</p>
+      <ul class="card-list">
+        <li>Einzelpersonen, die eine Pause vom Dauerreiz des Alltags suchen</li>
+        <li>Eltern, die einen Ort brauchen, an dem sie selbst regulieren und auftanken können</li>
+        <li>Menschen in belastenden Lebensphasen (beruflich oder privat), die einfache, körperlich gut umsetzbare Zugänge zu Entspannung suchen</li>
+        <li>Familien oder kleine Freundesgruppen, die gemeinsam entschleunigen möchten</li>
+      </ul>
+      <p>Darüber hinaus eignet sich Waldbaden – in angepasster Form – auch als Baustein für:</p>
+      <ul class="card-list">
+        <li>Teams aus Unternehmen (z.B. im Rahmen von BGM, Teamtagen)</li>
+        <li>Einsatzkräfte (als Ergänzung zu Resilienz- und Regenerationsmodulen)</li>
+        <li>Schulklassen / Jugendgruppen (z.B. im Rahmen von Projekttagen oder BNE-Angeboten)</li>
+      </ul>
+      <p>In diesem Text stehen jedoch vor allem die offenen und privat buchbaren Erlebnisse im Vordergrund.</p>
+      <picture class="image-card">
+        <img src="/images/waldbaden-2.jpg" alt="Für wen Waldbaden geeignet ist" loading="lazy" class="image-card-img" />
+      </picture>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="inhalte-ablauf">
+      <h2>Inhalte & Ablauf: Wie Waldbaden bei uns aussieht</h2>
+      <p>Der genaue Ablauf richtet sich nach Gruppe, Jahreszeit und Dauer. Typische Elemente sind:</p>
+      <h3>3.1 Ankommen & Einstimmen</h3>
+      <ul class="card-list">
+        <li>Treffpunkt am Waldrand oder an einem ruhigen Einstiegspunkt</li>
+        <li>kurze Einführung: Was machen wir (und was nicht)?</li>
+        <li>langsames Ankommen mit einfachen Atem- oder Körperübungen (z.B. bewusstes Stehen, langsames Ein- und Ausatmen, Kontakt zum Boden spüren)</li>
+      </ul>
+      <p>Ziel: vom „Anfahr-Stress“ in einen aufmerksameren, langsameren Modus wechseln.</p>
+      <h3>3.2 Langsames Gehen & Sinnesübungen</h3>
+      <ul class="card-list">
+        <li>sehr langsames Gehen, deutlich unter normalem Wandertempo</li>
+        <li>Übungen wie:</li>
+        <ul class="card-list">
+          <li>„Was höre ich gerade – in der Nähe, in der Ferne?“</li>
+          <li>„Welche Grüntöne sehe ich?“</li>
+          <li>„Wie fühlt sich der Boden unter meinen Füßen an?“</li>
+        </ul>
+        <li>gelegentliche Stopps an ausgewählten Orten (Lichtungen, Bach, Waldweg)</li>
+      </ul>
+      <p>Ziel: die Aufmerksamkeit aus Grübelschleifen und To-do-Listen in gegenwärtige Wahrnehmung zurückholen.</p>
+      <h3>3.3 Sitzen & Verweilen</h3>
+      <ul class="card-list">
+        <li>Phasen, in denen jede Person sich einen Platz sucht (Baumstamm, Mooskante, Wurzelbereich)</li>
+        <li>geführte oder stille Sequenzen:</li>
+        <ul class="card-list">
+          <li>kurze Anleitung zur Körperwahrnehmung</li>
+          <li>oder freie Beobachtung von Licht, Blättern, Geräuschen</li>
+        </ul>
+      </ul>
+      <p>Ziel: erleben, dass „einfach sitzen“ im Wald nicht „Zeitverschwendung“, sondern eine eigenständige Qualität ist, die beruhigend wirken kann.</p>
+      <h3>3.4 Kleine Impulse aus Wildnis- und Naturpädagogik (optional)</h3>
+      <p>Je nach Gruppe und Interesse:</p>
+      <ul class="card-list">
+        <li>Bäume ertasten mit geschlossenen Augen</li>
+        <li>Blätter, Rinde, Bodenstrukturen bewusst fühlen</li>
+        <li>ggf. einzelne Pflanzen oder Spuren ansehen – ohne den Ablauf in einen „Biologieunterricht“ zu verwandeln</li>
+      </ul>
+      <p>Ziel: Natur nicht nur als Kulisse, sondern als lebendigen Raum wahrnehmen – im Rahmen der Gruppe und ohne Überfrachtung.</p>
+      <h3>3.5 Abschluss & Rückkehr</h3>
+      <ul class="card-list">
+        <li>kurze Austauschrunde (wer möchte):</li>
+        <ul class="card-list">
+          <li>„Was ist mir aufgefallen? Was nehme ich mit?“</li>
+        </ul>
+        <li>behutsamer Übergang zurück in den Alltagsmodus</li>
+      </ul>
+      <p>Je nach Dauer (z.B. 2–3 Stunden oder Halbtagesformat) wird der Anteil von Gehen, Stillsein und Übungen angepasst.</p>
+      <picture class="image-card">
+        <img src="/images/waldbaden-3.jpg" alt="Inhalte & Ablauf" loading="lazy" class="image-card-img" />
+      </picture>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="wissenschaft">
+      <h2>Warum Waldbaden gut tun kann – wissenschaftliche Einordnung</h2>
+      <p>Die Effekte von Waldbaden ergeben sich aus dem Zusammenspiel mehrerer Faktoren, zu denen es jeweils Forschungsarbeiten gibt. Wichtig: Die meisten Studien zeigen durchschnittliche Tendenzen, keine Garantien für Einzelne.</p>
+      <h3>4.1 Stressregulation & Nervensystem</h3>
+      <p>Studien zu Waldaufenthalten im Vergleich zu Stadtumgebungen zeigen u.a.:</p>
+      <ul class="card-list">
+        <li>gesunkene Stresshormonwerte (z.B. Cortisol im Speichel) nach einem Waldbesuch</li>
+        <li>verringerte Herzfrequenz und niedrigeren Blutdruck</li>
+        <li>eine Verbesserung der Herzratenvariabilität (HRV), ein Marker für die Anpassungsfähigkeit des autonomen Nervensystems</li>
+      </ul>
+      <p>Diese Effekte werden in Japan und anderen Ländern seit Jahren im Kontext von „Shinrin-yoku“ untersucht. Die Vermutung ist, dass Kombinationen aus:</p>
+      <ul class="card-list">
+        <li>natürlicher Geräuschkulisse (Wind, Vögel),</li>
+        <li>visuellen Reizen (unregelmäßige, fraktale Muster statt scharfe Kanten, Reklame, Bildschirme),</li>
+        <li>moderater körperlicher Aktivität,</li>
+        <li>und Dosierung von Licht, Temperatur, Luftzusammensetzung</li>
+      </ul>
+      <p>das Nervensystem in Richtung parasympathische Dominanz (Ruhemodus) unterstützen.</p>
+      <h3>4.2 Stimmung & psychisches Wohlbefinden</h3>
+      <p>Mehrere Arbeiten berichten, dass Menschen nach Waldbaden- oder Waldaufenthaltsformaten:</p>
+      <ul class="card-list">
+        <li>sich ruhiger, ausgeglichener fühlen,</li>
+        <li>weniger Anzeichen von Anspannung, Angst oder Gereiztheit zeigen,</li>
+        <li>teilweise auch über leichtere, freundlichere Stimmung berichten.</li>
+      </ul>
+      <p>Mechanistisch vermutet man u.a.:</p>
+      <ul class="card-list">
+        <li>das Nachlassen von Reizüberflutung,</li>
+        <li>eine Verringerung von Grübelneigung (Rumination),</li>
+        <li>die Möglichkeit, Abstand zu gewinnen und Dinge aus einer anderen Perspektive zu betrachten.</li>
+      </ul>
+      <p>Waldbaden ist keine Psychotherapie und kein Ersatz für Behandlung bei psychischen Erkrankungen. Es kann aber – je nach Person und Lage – ein ergänzender, entlastender Erfahrungsraum sein.</p>
+      <h3>4.3 Aufmerksamkeits-Erholung & kognitive Funktionen</h3>
+      <p>Die sogenannte „Attention Restoration Theory“ geht davon aus:</p>
+      <ul class="card-list">
+        <li>Dauerhafte, willentliche Aufmerksamkeit (z.B. am Bildschirm, im Straßenverkehr) ermüdet bestimmte Systeme im Gehirn.</li>
+        <li>Naturnahe Umgebungen entlasten diese Systeme, indem sie eine „weiche“ Form von Aufmerksamkeit anregen.</li>
+      </ul>
+      <p>Empirisch finden sich Hinweise darauf, dass:</p>
+      <ul class="card-list">
+        <li>kurze Aufenthalte im Grünen die Leistungsfähigkeit in Aufmerksamkeitstests verbessern können,</li>
+        <li>insbesondere bei Menschen, die sich zuvor stark konzentrieren mussten.</li>
+      </ul>
+      <p>Für Zielgruppen mit hoher mentaler Belastung (z.B. Lehrkräfte, Einsatzkräfte, Eltern, Menschen in intensiven Berufen) kann Waldbaden so auch ein Training in bewusster Erholung sein.</p>
+      <h3>4.4 Immunsystem (vorsichtig eingeordnet)</h3>
+      <p>Einige Studien aus Japan berichten über:</p>
+      <ul class="card-list">
+        <li>erhöhte Aktivität bestimmter Immunzellen (z.B. natürlicher Killerzellen, NK-Zellen) nach mehrtägigen Waldausflügen,</li>
+        <li>und Anstiege, die noch Tage bis Wochen nachhalten können.</li>
+      </ul>
+      <p>Diese Ergebnisse sind interessant, aber:</p>
+      <ul class="card-list">
+        <li>meist an kleinen Stichproben erhoben,</li>
+        <li>stark kontextabhängig (Art des Waldes, Dauer, Lebensstil),</li>
+        <li>und nicht ohne Weiteres 1:1 auf jede Person und jeden Wald übertragbar.</li>
+      </ul>
+      <p>Wir sehen darin eher einen Hinweis darauf, dass regelmäßiger Naturkontakt langfristig gesundheitsförderlich sein kann – nicht eine „Wunderwirkung“ einzelner Waldbaden-Termine.</p>
+      <picture class="image-card">
+        <img src="/images/waldbaden-4.jpg" alt="Warum Waldbaden gut tun kann" loading="lazy" class="image-card-img" />
+      </picture>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="zielgruppenperspektiven">
+      <h2>Zielgruppenperspektiven: Wie Waldbaden unterschiedliche Bedürfnisse ansprechen kann</h2>
+      <h3>5.1 Privatpersonen & Eltern</h3>
+      <ul class="card-list">
+        <li>Entlastung vom permanenten Input (Arbeit, Familie, Medien)</li>
+        <li>niedrigschwelliger Einstieg in Achtsamkeit, ohne still auf einem Kissen sitzen zu müssen</li>
+        <li>ein Ort, an dem eigene Themen ohne Leistungsdruck „durchatmen“ können</li>
+      </ul>
+      <h3>5.2 Teams & Fachkräfte (in angepassten Formaten)</h3>
+      <ul class="card-list">
+        <li>als Baustein in Teamtagen oder Fortbildungen (z.B. „Regeneration & Prävention“ für Einsatzkräfte, BGM für Unternehmen)</li>
+        <li>um gemeinsame Erfahrung von Entschleunigung zu ermöglichen</li>
+        <li>als Ausgangspunkt, um später im Alltag bewusst kurze Natur- und Pausenräume zu schaffen</li>
+      </ul>
+      <h3>5.3 Kinder & Jugendliche</h3>
+      <ul class="card-list">
+        <li>in altersgerechter Form (kürzere Zeiten, spielerische Elemente) als Ergänzung zu bewegungsintensiveren Angeboten</li>
+        <li>um zu zeigen, dass „Nichts-tun im Wald“ eine eigenständige Qualität sein kann, nicht nur „Langeweile“</li>
+        <li>als Kontrapunkt zum Bildschirmalltag</li>
+      </ul>
+      <picture class="image-card">
+        <img src="/images/waldbaden-5.jpg" alt="Zielgruppenperspektiven" loading="lazy" class="image-card-img" />
+      </picture>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="sicherheit-haltung">
+      <h2>Sicherheit & Haltung</h2>
+      <h3>6.1 Sicherheit im Wald</h3>
+      <ul class="card-list">
+        <li>Auswahl geeigneter Wege und Bereiche (angepasst an Gruppengröße, Alter, Mobilität)</li>
+        <li>Berücksichtigung von Wetter, Wegbeschaffenheit und Tageszeit</li>
+        <li>Hinweise zu Kleidung und Schuhwerk im Vorfeld</li>
+        <li>Bewusstes Umgehen mit waldtypischen Risiken (z.B. Zecken, Wurzeln, rutschige Stellen), ohne Angst zu schüren</li>
+      </ul>
+      <h3>6.2 Psychische Sicherheit</h3>
+      <ul class="card-list">
+        <li>niemand muss über persönliche Themen sprechen – Angebote, kein Zwang</li>
+        <li>Übungen können jederzeit angepasst oder ausgelassen werden</li>
+        <li>Waldbaden ist kein Setting für akute psychische Krisen; bei schweren Belastungen verweisen wir auf professionelle Hilfe</li>
+      </ul>
+      <h3>6.3 Haltung</h3>
+      <ul class="card-list">
+        <li>keine Heilsversprechen, keine „muss“-Formulierungen</li>
+        <li>viel Raum für eigene Erfahrungen und Deutung</li>
+        <li>wir geben Impulse und Struktur, die Gruppe gestaltet den inneren Prozess mit</li>
+      </ul>
+      <picture class="image-card">
+        <img src="/images/waldbaden-6.jpg" alt="Sicherheit & Haltung" loading="lazy" class="image-card-img" />
+      </picture>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="organisatorisches-anfrage">
+      <h2>Organisatorisches & Anfrage</h2>
+      <p>Formate (Beispiele):</p>
+      <ul class="card-list">
+        <li>Einführungsformat (ca. 2–3 Stunden)</li>
+        <li>Halbtagesformat (z.B. Waldbaden + kleine Natur-/Wildniselemente)</li>
+        <li>spezielle Waldbaden-Angebote zu bestimmten Tageszeiten (z.B. Morgenstimmung, Dämmerung)</li>
+      </ul>
+      <p>Gruppengrößen:</p>
+      <p>kleine bis mittlere Gruppen; bei größeren Gruppen Arbeit in Teilgruppen, um Ruhe und Aufmerksamkeit zu gewährleisten.</p>
+      <p>Mitbringen:</p>
+      <ul class="card-list">
+        <li>wetterangepasste, bequeme Kleidung</li>
+        <li>ggf. Sitzunterlage</li>
+        <li>Getränk, je nach Dauer kleiner Snack</li>
+      </ul>
+      <p>In einem kurzen Vorgespräch klären wir:</p>
+      <ul class="card-list">
+        <li>wer in der Gruppe ist (Alter, besondere Bedürfnisse),</li>
+        <li>ob eher Entschleunigung, Achtsamkeit, Teambuilding oder Regeneration im Vordergrund stehen soll,</li>
+        <li>und welche Dauer und Jahreszeit passend sind.</li>
+      </ul>
+      <button id="waldbaden-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+        Anfrage „Waldbaden“ stellen
+      </button>
+      <picture class="image-card">
+        <img src="/images/waldbaden-7.jpg" alt="Organisatorisches & Anfrage" loading="lazy" class="image-card-img" />
+      </picture>
+    </div>
+  </Section>
+</MainLayout>
+
+<style>
+.waldbaden-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('waldbaden-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

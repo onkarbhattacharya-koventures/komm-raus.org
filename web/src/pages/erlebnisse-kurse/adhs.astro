@@ -1,0 +1,459 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/bilder_nach_page/erlebnisse-kurse/adhs/balkenzickzack.jpg',
+    alt: 'Kinder balancieren im Waldseilgarten',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#fuer-wen',
+    image: '/bilder_nach_page/erlebnisse-kurse/adhs/cut_PXL_20230908_084708936.jpg',
+    alt: 'Gruppe in gemeinsamer Übung im Wald',
+    label: 'Für wen geeignet',
+  },
+  {
+    href: '#inhalte-aufbau',
+    image: '/bilder_nach_page/erlebnisse-kurse/adhs/cut_PXL_20240613_142631987.jpg',
+    alt: 'Übung mit Fokus und Bewegung',
+    label: 'Inhalte und Aufbau',
+  },
+  {
+    href: '#wissenschaft',
+    image: '/bilder_nach_page/erlebnisse-kurse/adhs/PXL_20250426_185244693.MP.jpg',
+    alt: 'Naturraum als Lern- und Erfahrungsort',
+    label: 'Wissenschaftliche Einordnung',
+  },
+  {
+    href: '#sicherheit-haltung',
+    image: '/bilder_nach_page/erlebnisse-kurse/adhs/PXL_20250902_115212509.MP.jpg',
+    alt: 'Begleitung und Sicherheit im Waldseilgarten',
+    label: 'Sicherheit und Haltung',
+  },
+  {
+    href: '#organisatorisches-anfrage',
+    image: '/bilder_nach_page/erlebnisse-kurse/adhs/PXL_20250902_115215890.MP.jpg',
+    alt: 'Gemeinsame Reflexion in der Gruppe',
+    label: 'Organisatorisches und Anfrage',
+  },
+];
+---
+
+<MainLayout title="ADHS - Komm Raus">
+  <Hero
+    title="Natur, Bewegung, Selbstregulation"
+    subtitle="Ein Ort, an dem das ADHS-Gehirn bekommt, was es braucht: Echte Herausforderung, unmittelbares Feedback, körperliche Verankerung – und einen Wald, der nicht verlangt, stillzusitzen."
+    imagePath="/bilder_nach_page/erlebnisse-kurse/adhs/PXL_20250426_185242803.MP.jpg"
+  />
+
+  <Section class="adhs-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Es gibt einen Grund, warum Menschen mit ADHS in Klassenzimmern kämpfen und in der Natur aufblühen.</p>
+      <p>Das ADHS-Gehirn ist kein defektes Gehirn. Es ist ein Gehirn, das nach anderen Regeln funktioniert. Wo andere durch Wichtigkeit und Konsequenz in Gang kommen, braucht das ADHS-Nervensystem Interesse, Herausforderung, Neuheit oder Dringlichkeit. Ein Baumstamm in 10 Metern Höhe liefert alle vier – gleichzeitig, unmittelbar und körperlich spürbar.</p>
+      <p>Unsere ADHS-Programme nutzen diese natürliche Passung. Wir bieten keine Therapie und keine Heilung. Wir bieten einen Erfahrungsraum, in dem Selbstregulation nicht erklärt, sondern erlebt wird. Einen Ort, an dem die Umgebung zum neurologischen Profil passt – statt dagegen zu arbeiten. Und effektive niedrigschwellige Methoden, die ein stabiles Fundament für den ADHS Alltag liefern. </p>
+      <p><strong>Was hier passiert:</strong></p>
+      <ul class="card-list">
+        <li>Fokus und Konzentration verstehen, trainieren und anwenden</li>
+        <li>Klettern, Balancieren, Kooperieren unter herausfordernden Bedingungen</li>
+        <li>Körperbasierte Regulationswerkzeuge (Atem, Bewegung) am Ort des Geschehens, also genau dann, wenn sie gebraucht werden</li>
+        <li>Erfolge, die man mit dem ganzen Körper spürt, nicht nur mit dem Kopf versteht</li>
+        <li>Naturerfahrung, die nachweislich zur Regeneration der Aufmerksamkeit beitragen kann</li>
+        <li>Transpher für konkrete Strategien im ADHS-Alltag</li>
+      </ul>
+      <p><strong>Was hier nicht passiert:</strong></p>
+      <ul class="card-list">
+        <li>Diagnosen stellen oder medizinische Empfehlungen geben</li>
+        <li>Therapie ersetzen</li>
+      </ul>
+      <p>Wir verstehen uns als ein Baustein im Unterstützungssystem für Menschen mit ADHS – neben Medizin, Therapie und Pädagogik, nicht als Ersatz dafür.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="fuer-wen">
+      <h2>Für wen unsere Programme geeignet sind</h2>
+
+      <h3>Schulen, Kitas und Bildungseinrichtungen</h3>
+      <p>Klassenzimmer fordern Stillsitzen, fokussierte Aufmerksamkeit auf abstrakte Inhalte und verzögerte Belohnung – alles, was ADHS-Nervensystemen besonders schwerfällt. Der Wald bietet das Gegenteil.</p>
+      <p><strong>Unsere Angebote für Bildungseinrichtungen:</strong></p>
+      <ul class="card-list">
+        <li>ADHS-sensible Klassentage: Unser bewährtes Klassenformat, gestaltet nach ADHS-Prinzipien (kürzere Einheiten, mehr Bewegung, klarere Struktur). Gut für alle Schüler – besonders gut für jene mit ADHS.</li>
+        <li>Lehrkräfte-Fortbildung: ADHS neurobiologisch verstehen, Classroom-Strategien entwickeln, eigene Regulation stärken. Ein Tag im Wald, der den Blick auf schwierige Schüler verändern kann.</li>
+        <li>Grünes Klassenzimmer, ADHS-Variante: Lehrplaninhalte draußen, mit Bewegung, kürzeren Einheiten und handlungsorientiertem Lernen.</li>
+        <li>Regelmäßige Waldgruppe für Schüler mit ADHS: Als schulergänzendes Angebot, in Kooperation mit Schulsozialarbeit oder Inklusionsbegleitung.</li>
+      </ul>
+      <p><strong>Warum das sinnvoll ist:</strong></p>
+      <p>Studien zeigen, dass bereits 20 Minuten Naturkontakt die Konzentrationsfähigkeit von Kindern mit ADHS messbar verbessern können. Bewegung vor kognitiven Anforderungen erhöht die Dopaminverfügbarkeit – genau das, was ADHS-Gehirne brauchen. Und echte Herausforderungen bauen echtes Selbstvertrauen auf, nicht die fragile Sorte, die beim ersten Rückschlag zusammenbricht.</p>
+
+      <h3>Eltern und Familien</h3>
+      <p>Wenn Ihr Kind ADHS hat, wissen Sie: Der Alltag ist oft anstrengend – für Ihr Kind und für Sie. Die Hausaufgaben, die Übergänge, die emotionalen Ausbrüche, die gut gemeinten Ratschläge, die nicht funktionieren.</p>
+      <p><strong>Unsere Angebote für Familien:</strong></p>
+      <ul class="card-list">
+        <li>Schnuppertag: Ein unverbindlicher Halbtag, um das Setting kennenzulernen. Für Kinder ab 6 Jahren mit Elternbegleitung.</li>
+        <li>WALDANKER Kids (6-11 Jahre): Unser fortlaufendes Jahresprogramm. Alle zwei Wochen, samstags, 3,5 Stunden. Eine feste Gruppe, verlässliche Rituale, wachsende Herausforderungen. Ein Anker im Alltag.</li>
+        <li>WALDANKER Teens (12-17 Jahre): Das Gleiche für Jugendliche – mit altersgerechten Themen wie Selbstständigkeit, Identität und Wer bin ich jenseits meiner Diagnose.</li>
+        <li>Familien-Waldtag: Ein Tag für die ganze Familie. Gemeinsam Herausforderungen meistern, Vertrauen erleben, Werkzeuge für zu Hause mitnehmen. Fokus auf Beziehung, nicht auf Problemverhalten.</li>
+        <li>Familien-Serie (4 Termine): Vertiefte Arbeit an Familienthemen. Signale entwickeln, Rituale etablieren, als Team wachsen.</li>
+        <li>Eltern-Workshop: ADHS verstehen – neurobiologisch, nicht moralisch. Werkzeuge für den Alltag. Und: Selbstfürsorge für erschöpfte Eltern.</li>
+      </ul>
+      <p><strong>Was Eltern uns oft berichten:</strong></p>
+      <p>Mein Kind kommt anders aus dem Wald zurück als es reingegangen ist. Ruhiger. Zufriedener. Und manchmal erzählt es tagelang davon.</p>
+      <p>Wir versprechen nicht, dass das immer so ist. Aber wir schaffen Bedingungen, unter denen es wahrscheinlicher wird.</p>
+
+      <h3>Erwachsene mit ADHS</h3>
+      <p>Vielleicht wurden Sie erst spät diagnostiziert. Vielleicht kompensieren Sie seit Jahrzehnten, und es kostet Sie mehr Energie, als Sie haben. Vielleicht suchen Sie etwas, das kein Stuhlkreis und kein Seminarraum ist.</p>
+      <p><strong>Unsere Angebote für Erwachsene:</strong></p>
+      <ul class="card-list">
+        <li>WURZELN & FLUEGEL, Intensiv-Wochenende: Zwei Tage Eintauchen. ADHS verstehen, Resilienz-Werkzeuge lernen, körperliche Herausforderung im Hochseilgarten, konkrete Strategien für den Alltag. Kleine Gruppe (8-12 Personen), intensiv begleitet. Mit Follow-Up nach 6 Wochen.</li>
+        <li>Naturcoaching ADHS (Einzelbegleitung): 90 Minuten, im Wald, zu zweit. Körperbasierte Arbeit an Ihren Themen. Ob Emotionsregulation, Impulskontrolle, Fokus oder Lebensentscheidungen – wir arbeiten mit Kopf, Körper und Natur. Empfohlen: 8 Sitzungen, wöchentlich oder 14-tägig.</li>
+        <li>Regelmäßige Waldgruppe: Alle zwei Wochen, 3 Stunden. Community, Übung, Naturkontakt. Niedrigschwellig, aber wirksam.</li>
+      </ul>
+      <p><strong>Was wir von Erwachsenen mit ADHS oft hören:</strong></p>
+      <p>Zum ersten Mal muss ich nicht gegen mein Gehirn arbeiten, sondern es arbeitet mit mir.</p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="inhalte-aufbau">
+      <h2>Inhalte und Aufbau: Unser Ansatz</h2>
+
+      <h3>Das Fundament: Das Resilienzprotokoll</h3>
+      <p>Bevor Entwicklung geschehen kann, müssen die Grundlagen stimmen. Unser Resilienzprotokoll adressiert fünf Säulen, die für Menschen mit ADHS besonders relevant sind:</p>
+      <div class="cards-grid">
+        <Card title="Atem" body="Der direkteste Zugang zum Nervensystem. Mit einfachen Atemübungen wie dem physiologischen Seufzer kann man innerhalb von Sekunden von Stress zu Fokus wechseln. Wir üben das auf dem Hochseil, wenn die Angst real ist." />
+        <Card title="Schlaf" body="ADHS und Schlafprobleme gehen oft Hand in Hand – und schlechter Schlaf verstärkt jedes ADHS-Symptom. Wir sprechen über Schlafhygiene, Abend-Routinen und was tatsächlich hilft." />
+        <Card title="Bewegung" body="Bewegung ist für ADHS-Gehirne keine Zugabe. Sie erhöht Dopamin und Noradrenalin, baut Stresshormone ab und bringt den Kopf zur Ruhe. Koordinativ anspruchsvolle Bewegung wirkt besonders gut." />
+        <Card title="Ernährung" body="Kein Diätprogramm. Ein einfaches Prinzip: Stabiler Blutzucker bedeutet stabilere Konzentration und Stimmung. In unserer Lehrküche wird das praktisch und essbar." />
+        <Card title="Fokus" body="Die Fähigkeit, Aufmerksamkeit bewusst zu lenken, ist trainierbar. Wir nutzen Naturwahrnehmung, Sitzplatz-Übungen und bewegte Achtsamkeit." />
+      </div>
+
+      <h3>Die Erfahrungsräume: Wo Lernen passiert</h3>
+      <p>Unser Gelände bietet fünf verschiedene Lernräume, die wir gezielt kombinieren:</p>
+      <div class="cards-grid">
+        <Card title="Der Hochseilgarten" body="Hier wird's ernst – und genau deshalb funktioniert es. Die Höhe aktiviert das ADHS-Gehirn auf natürliche Weise. Mit Toprope-Sicherung durch Trainer oder Gruppenmitglied wird Vertrauen körperlich erfahrbar." />
+        <Card title="Der Naturraum" body="Naturkontakt kann ADHS-Symptome lindern. Der Wald verlangt Aufmerksamkeit auf sanfte Weise, die regeneriert statt erschöpft. Wir nutzen Waldwahrnehmung, Wildkräuterwanderungen, Sitzplatz-Übungen und Da sein." />
+        <Card title="Der Übungsraum" body="Hier trainieren wir Werkzeuge für den Alltag: Atemübungen, Fokusarbeit, bewegte Meditation. Kurz, konkret und ADHS-gerecht." />
+        <Card title="Die Lehrküche" body="Gemeinsam kochen verbindet Teamarbeit, Ernährungsbildung und Achtsamkeitsübung in einem praktischen Format." />
+        <Card title="Der digitale Raum" body="Zwischen den Terminen unterstützen Erinnerungen, kurze Übungsanleitungen und Check-ins den Transfer in den Alltag." />
+      </div>
+
+      <h3>Selbstregulation: Der Pause-Knopf</h3>
+      <p>Das Kerndefizit bei ADHS ist nicht mangelnder Wille oder fehlendes Wissen. Es ist die beeinträchtigte Fähigkeit zur Selbstregulation – die Pause zwischen Reiz und Reaktion, die bei anderen automatisch funktioniert.</p>
+      <p>Wir trainieren diese Pause praktisch und authentisch:</p>
+      <ul class="card-list">
+        <li>Am Ort des Geschehens: Die Atemübung kommt, wenn die Angst da ist. Nicht drei Stunden vorher in einem Vortrag.</li>
+        <li>Unter echten Bedingungen: Impulsivität zeigt sich in der Höhe. Da lernen wir, sie zu regulieren.</li>
+        <li>Mit dem Körper: Spür deine Füße. Atme aus. Dann der nächste Schritt.</li>
+      </ul>
+      <p><strong>Was Teilnehmende lernen:</strong></p>
+      <ul class="card-list">
+        <li>Signale des eigenen Körpers früh erkennen</li>
+        <li>Übererregung herunterregulieren und Unteraktivierung heraufregulieren</li>
+        <li>Emotionen haben, ohne von ihnen gesteuert zu werden</li>
+        <li>Zwei Sekunden gewinnen, in denen man sich "bewusst" zu einer Reaktion entscheidet</li>
+      </ul>
+
+      <h3>Fokus und Flow: Wenn das ADHS-Gehirn aufblüht</h3>
+      <p>Menschen mit ADHS kennen beide Extreme: Die Unfähigkeit, sich auf etwas zu konzentrieren, das sie nicht interessiert – und den Hyperfokus, der sie stundenlang in eine Aufgabe versenken kann.</p>
+      <div class="cards-grid">
+        <Card title="ICNU-Prinzip nutzen" body="ADHS-Gehirne aktivieren sich durch Interest, Challenge, Novelty und Urgency. Der Hochseilgarten liefert alle vier. Statt gegen das ADHS-Gehirn zu kämpfen, nutzen wir seine natürlichen Aktivierungsmechanismen." />
+        <Card title="Fokus trainieren" body="Mit Sitzplatz-Übungen, Bogenschießen, Balancier-Aufgaben und anderen fokusintensiven Aktivitäten trainieren wir bewusste Aufmerksamkeitssteuerung: kurz, konkret, mit dem Körper." />
+        <Card title="Stärken nutzen" body="ADHS bringt auch Kreativität, Energie, Spontaneität und Krisenresilienz mit. Wir helfen, Stärken sichtbar zu machen und gezielt einzusetzen." />
+      </div>
+
+      <h3>Transfer: Vom Wald in den Alltag</h3>
+      <p>Die beste Erfahrung im Wald nützt wenig, wenn sie am Montagmorgen vergessen ist. Der Transfer ist der entscheidende und schwierigste Teil.</p>
+      <p><strong>Unsere Transfer-Strategien:</strong></p>
+      <ul class="card-list">
+        <li>Konkrete Mikro-Vereinbarungen: Am Ende jedes Termins steht eine kleine, machbare Vereinbarung.</li>
+        <li>Externalisierung: Aufschreiben, Erinnerung setzen, visualisieren. Was nicht extern ist, existiert für ADHS-Gehirne oft nicht.</li>
+        <li>Buddy-Systeme: Partner für gegenseitige Erinnerung und Unterstützung.</li>
+        <li>Digitale Begleitung: Automatische Erinnerungen, kurze Check-ins, Übungsanleitungen.</li>
+        <li>Follow-Up-Termine: Bei Intensivformaten Treffen nach 6 Wochen mit Anpassungen.</li>
+      </ul>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="wissenschaft">
+      <h2>Warum dieser Ansatz Sinn macht – Wissenschaftliche Einordnung</h2>
+
+      <h3>Die Mismatch-Hypothese</h3>
+      <p>Der Mensch hat sich über Hunderttausende von Jahren in einer Umgebung entwickelt, die geprägt war von Bewegung, Naturkontakt, unmittelbarem Feedback und wechselnden Herausforderungen.</p>
+      <p>Die moderne Welt verlangt oft das Gegenteil: Stillsitzen, Innenräume, abstrakte Aufgaben, verzögerte Belohnung. Für Menschen mit bestimmten neurologischen Profilen, darunter viele mit ADHS, ist diese Diskrepanz besonders folgenreich.</p>
+      <p>Der Waldseilgarten bietet eine Umgebung, die dem ursprünglichen Setting näherkommt: Körperlichkeit, unmittelbare Konsequenzen, wechselnde Stimulation, echte Herausforderung. Das erklärt möglicherweise, warum viele ADHS-Betroffene berichten, dass sie sich im Wald anders fühlen – fokussierter, ruhiger, lebendiger.</p>
+
+      <h3>Forschung zu Natur und ADHS</h3>
+      <p>Die Evidenz wächst:</p>
+      <ul class="card-list">
+        <li>Kuo und Faber Taylor (2004) analysierten Daten von 452 Kindern mit ADHS und fanden, dass Aktivitäten in naturnahen Umgebungen mit signifikant geringeren Symptomausprägungen assoziiert waren.</li>
+        <li>Faber Taylor und Kuo (2009) zeigten, dass ein 20-minütiger Spaziergang im Park die Konzentrationsfähigkeit von Kindern mit ADHS stärker verbesserte als vergleichbare Spaziergänge in urbaner Umgebung.</li>
+        <li>Weitere Studien legen nahe, dass die regelmäßige Nähe zu Grünflächen mit geringerer ADHS-Symptomatik zusammenhängt.</li>
+      </ul>
+      <p>Einordnung: Diese Befunde bedeuten nicht, dass Natur ADHS heilt. Sie legen nahe, dass die Umgebung einen Unterschied für Ausprägung und Bewältigung von Symptomen machen kann.</p>
+
+      <h3>Forschung zu Bewegung und ADHS</h3>
+      <p>Die Evidenz für positive Effekte körperlicher Aktivität auf ADHS-Symptome ist substanziell:</p>
+      <ul class="card-list">
+        <li>Eine Metaanalyse von Cerrillo-Urbina et al. (2015) fasste acht Studien zusammen und fand moderate bis starke Effekte auf Aufmerksamkeit, Hyperaktivität und Impulsivität.</li>
+        <li>Pontifex et al. (2013) zeigten, dass bereits 20 Minuten moderate Bewegung die Leistung in Aufmerksamkeits- und Inhibitionsaufgaben verbesserte.</li>
+      </ul>
+      <p>Mögliche Mechanismen: erhöhte Dopamin- und Noradrenalinverfügbarkeit, Abbau von Stresshormonen und Förderung der Neuroplastizität.</p>
+
+      <h3>Das Konzept der Externalisierung</h3>
+      <p>Der ADHS-Forscher Russell Barkley beschreibt ADHS als Störung, bei der interne Steuerungsprozesse beeinträchtigt sind. Die Lösung: externe Strukturen, die kompensieren.</p>
+      <p>Der Waldseilgarten externalisiert auf natürliche Weise:</p>
+      <ul class="card-list">
+        <li>Zeit wird körperlich spürbar (Muskelermüdung, Sonnenstand)</li>
+        <li>Struktur ist physisch gegeben (der Parcours gibt den Weg vor)</li>
+        <li>Konsequenzen sind unmittelbar (Höhe, Balance)</li>
+        <li>Der nächste Schritt ist sichtbar</li>
+      </ul>
+      <p>Was ADHS-Gehirne intern schwer aufrechterhalten können, liefert die Umgebung extern.</p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="sicherheit-haltung">
+      <h2>Sicherheit und Haltung</h2>
+
+      <h3>Physische Sicherheit</h3>
+      <p>Sicherheit ist das Fundament, auf dem alles andere steht.</p>
+      <ul class="card-list">
+        <li>Betrieb nach DIN 15567, ERCA-Standards und DGUV-Vorgaben</li>
+        <li>TUEV-geprüft (TUEV SUED), jährliche sicherheitstechnische Überprüfung</li>
+        <li>Qualifizierte Trainer mit dokumentierter Ausbildung</li>
+        <li>Notfall- und Rettungskonzept</li>
+        <li>18 Saisons unfallfreier Betrieb</li>
+      </ul>
+      <p><strong>ADHS-spezifische Sicherheitsaspekte:</strong></p>
+      <ul class="card-list">
+        <li>Klare, kurze Sicherheitsinstruktionen (eine nach der anderen)</li>
+        <li>Erhöhte Aufmerksamkeit für impulsives Verhalten</li>
+        <li>Konsequentes Einhalten der Regeln (freundlich, aber bestimmt)</li>
+        <li>Keine Aktion ohne Go des Trainers</li>
+      </ul>
+
+      <h3>Psychologische Sicherheit</h3>
+      <p>Körperliche Sicherheit reicht nicht. Menschen mit ADHS haben oft eine Geschichte von Beschämung, Kritik und Du könntest, wenn du wolltest. Deswegen möchten wir einen Raum des Wohlwollens und der gesunden Fehlerkultur schaffen.</p>
+      <p><strong>Unsere Haltung:</strong></p>
+      <ul class="card-list">
+        <li>Keine Beschämung, keine Bloßstellung. Niemals. Was hier passiert, bleibt hier.</li>
+        <li>Freiwilligkeit schützen. Nein ist eine vollwertige Antwort. Wer nicht klettern will, klettert nicht.</li>
+        <li>Geduld bei Wiederholungen. ADHS-Gehirne brauchen manchmal mehr Durchgänge. Das ist keine Schwäche.</li>
+        <li>Stärken sehen. Wir arbeiten ressourcenorientiert. ADHS ist nicht nur Defizit.</li>
+        <li>Fehlerfreundlichkeit. Rückschläge gehören dazu.</li>
+      </ul>
+
+      <h3>Zusammenarbeit mit Familien, Schulen und Fachpersonen</h3>
+      <p>Wir verstehen uns als Teil eines Netzwerks. Menschen mit ADHS profitieren oft von einem Team aus verschiedenen Unterstützern.</p>
+      <div class="cards-grid">
+        <Card title="Mit Eltern" body="Regelmäßige Elternabende bei Kinderprogrammen, Einzelgespräche nach Bedarf und Transfer-Tipps für den Alltag." />
+        <Card title="Mit Schulen" body="Abstimmung mit Lehrkräften, Schulsozialarbeit oder Inklusionsbegleitung, wenn gewünscht und sinnvoll." />
+        <Card title="Mit Therapeuten und Ärzten" body="Informationsaustausch mit Einverständnis und gegenseitige Empfehlungen. Wir arbeiten zusammen, nicht gegeneinander." />
+      </div>
+      <p><strong>Was wir klar benennen:</strong></p>
+      <p>Wir ersetzen keine Therapie und keine medizinische Behandlung. Wenn Medikation ärztlich empfohlen wurde, ist es nicht unsere Aufgabe, diese infrage zu stellen. Wir sind ein Baustein, nicht das ganze Gebäude.</p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="organisatorisches-anfrage">
+      <h2>Organisatorisches und Anfrage</h2>
+
+      <h3>Formate für Bildungseinrichtungen und Vereine</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th>Dauer</th>
+              <th>Beschreibung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ADHS-sensibler Klassentag</td>
+              <td>4-6 Stunden</td>
+              <td>Unser Klassenformat, nach ADHS-Prinzipien gestaltet</td>
+            </tr>
+            <tr>
+              <td>Grünes Klassenzimmer ADHS</td>
+              <td>3-4 Stunden</td>
+              <td>Lehrplaninhalte draußen, bewegungsorientiert</td>
+            </tr>
+            <tr>
+              <td>Regelmäßige Schul-Waldgruppe</td>
+              <td>wöchentlich oder 14-tägig</td>
+              <td>In Kooperation mit der Schule</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p><strong>Anfrage:</strong> Gerne besprechen wir mit Ihnen, welches Format zu Ihrer Einrichtung passt. Jede Schule ist anders, jede Klasse ist anders. Wir passen an.</p>
+
+      <h3>Formate für Privatpersonen und Familien</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th>Zielgruppe</th>
+              <th>Rhythmus</th>
+              <th>Dauer</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Schnuppertag</td>
+              <td>Alle</td>
+              <td>Einmalig</td>
+              <td>4 Stunden</td>
+            </tr>
+            <tr>
+              <td>WALDANKER Kids</td>
+              <td>6-11 Jahre</td>
+              <td>14-tägig (26/Schuljahr)</td>
+              <td>3,5 Stunden/Termin</td>
+            </tr>
+            <tr>
+              <td>WALDANKER Teens</td>
+              <td>12-17 Jahre</td>
+              <td>14-tägig (26/Schuljahr)</td>
+              <td>3,5 Stunden/Termin</td>
+            </tr>
+            <tr>
+              <td>WALDANKER Erwachsene</td>
+              <td>18+</td>
+              <td>14-tägig (26/Jahr)</td>
+              <td>3 Stunden/Termin</td>
+            </tr>
+            <tr>
+              <td>WURZELN & FLUEGEL</td>
+              <td>Jugendliche oder Erwachsene</td>
+              <td>4x pro Jahr</td>
+              <td>Wochenende</td>
+            </tr>
+            <tr>
+              <td>Naturcoaching ADHS</td>
+              <td>Alle (Einzel)</td>
+              <td>Nach Vereinbarung</td>
+              <td>90 Min./Sitzung</td>
+            </tr>
+            <tr>
+              <td>Familien-Waldtag</td>
+              <td>Familien</td>
+              <td>Nach Vereinbarung</td>
+              <td>4-5 Stunden</td>
+            </tr>
+            <tr>
+              <td>Familien-Serie</td>
+              <td>Familien</td>
+              <td>4 Termine</td>
+              <td>4-5 Stunden/Termin</td>
+            </tr>
+            <tr>
+              <td>Eltern-Workshop</td>
+              <td>Eltern</td>
+              <td>Nach Vereinbarung</td>
+              <td>5-6 Stunden</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Ablauf der Zusammenarbeit</h3>
+      <p><strong>Schritt 1: Erstkontakt</strong><br />Sie rufen an oder schreiben. Wir sprechen kurz (15-20 Minuten): Was ist die Situation? Was suchen Sie? Passt unser Angebot?</p>
+      <p><strong>Schritt 2: Erstgespräch</strong><br />Bei Interesse: ein persönliches Gespräch (ca. 60 Minuten, kostenlos). Bei Kindern/Jugendlichen mit Eltern. Wir lernen uns kennen, klären Erwartungen und besprechen die Optionen.</p>
+      <p><strong>Schritt 3: Schnuppertermin (optional)</strong><br />Besonders für Kinder empfohlen: Ein unverbindlicher Halbtag, um das Setting zu erleben.</p>
+      <p><strong>Schritt 4: Programmstart</strong><br />Verbindliche Anmeldung, Informationsbogen, los geht's.</p>
+      <p><strong>Laufende Begleitung:</strong></p>
+      <ul class="card-list">
+        <li>Regelmäßige Rückmeldungen an Eltern (bei Kindern/Jugendlichen)</li>
+        <li>Digitale Begleitung zwischen den Terminen</li>
+        <li>Elternabende (bei Jahresprogrammen)</li>
+        <li>Einzelgespräche nach Bedarf</li>
+      </ul>
+
+      <h3>Kosten</h3>
+      <p>Die Kosten variieren je nach Format, Gruppengröße und Dauer. Gerne erstellen wir Ihnen ein individuelles Angebot.</p>
+      <p><strong>Gut zu wissen:</strong></p>
+      <ul class="card-list">
+        <li>Manche Krankenkassen oder Jugendämter beteiligen sich an den Kosten für präventive Programme. Sprechen Sie uns an – wir unterstützen bei der Antragstellung.</li>
+        <li>Für Familien in schwierigen finanziellen Situationen suchen wir nach Lösungen.</li>
+      </ul>
+
+      <h3>Anfrage stellen</h3>
+      <button id="adhs-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+        Anfrage "ADHS – Erlebnisse & Kurse" stellen
+      </button>
+
+      <h3>Ein letzter Gedanke</h3>
+      <p>Wenn ein Kind mit ADHS vom Baumklettern kommt und sagt: Das konnte ich nicht – und dann konnte ich es doch, dann ist das keine Heilung.</p>
+      <p>Aber es ist ein Moment, der zählt. Eine Erfahrung, die im Körper bleibt. Ein kleiner Beweis dafür, dass das eigene Nervensystem nicht der Feind ist.</p>
+      <p>Solche Momente zu ermöglichen – bescheiden, realistisch, aber mit Überzeugung – das ist unser Beitrag.</p>
+      <p><strong>Komm raus. In den Wald. Zu dir selbst.</strong></p>
+    </div>
+  </Section>
+</MainLayout>
+
+<style>
+.adhs-overview {
+  padding-top: 0;
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    // enhanceLeadBeforeColon functionality - inline
+    const selectors = [
+      '#worum-es-geht li',
+      '#fuer-wen li',
+      '#inhalte-aufbau li',
+      '#wissenschaft li',
+      '#sicherheit-haltung li',
+      '#organisatorisches-anfrage li',
+    ];
+    const selectorText = selectors.join(',');
+    const targets = document.querySelectorAll(selectorText);
+    targets.forEach((node) => {
+      if (node.children.length > 0) return;
+      let text = node.textContent?.trim() ?? '';
+      if (!text) return;
+      const colonIndex = text.indexOf(':');
+      if (colonIndex < 2 || colonIndex > 90) return;
+      const lead = text.slice(0, colonIndex + 1).trim();
+      const rest = text.slice(colonIndex + 1).trim();
+      if (!rest) return;
+      node.innerHTML = `<strong class="card-lead">${lead}</strong> ${rest}`;
+    });
+
+    // Modal trigger
+    const button = document.getElementById('adhs-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

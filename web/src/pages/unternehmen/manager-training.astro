@@ -1,0 +1,250 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+import Card from '../../components/Card.astro';
+import Button from '../../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/Baumklettern-Seilaufstiegstechnik-400.jpg',
+    alt: 'Worum es geht',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#zielgruppen',
+    image: '/images/Leiterueberwindung-teamwork-400.jpg',
+    alt: 'Für wen geeignet',
+    label: 'Für wen geeignet',
+  },
+  {
+    href: '#inhalte',
+    image: '/images/kanu-fahren-400.jpg',
+    alt: 'Inhalte und Aufbau',
+    label: 'Inhalte und Aufbau',
+  },
+  {
+    href: '#wissenschaft',
+    image: '/images/Feuer-machen-bowdrill-set-400.jpg',
+    alt: 'Wissenschaftliche Einordnung',
+    label: 'Wissenschaft',
+  },
+  {
+    href: '#sicherheit',
+    image: '/images/Baumstamm-sortieren-Balance-400.jpg',
+    alt: 'Sicherheit und Haltung',
+    label: 'Sicherheit',
+  },
+  {
+    href: '#organisatorisches',
+    image: '/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.jpg',
+    alt: 'Organisatorisches',
+    label: 'Organisatorisches',
+  },
+];
+---
+
+<MainLayout title="Leadership Management – Komm Raus">
+  <Hero 
+    title="Leadership Management" 
+    subtitle="Lead Self under Pressure – Führung erlebbar machen, bevor sie unter Last bricht." 
+    imagePath="/images/Baumklettern-Seilaufstiegstechnik-800.jpg" 
+  />
+
+  <Section class="manager-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Viele Unternehmen haben heute klar definierte Führungsleitbilder – ob in Form von Kompetenzmodellen, Werten oder Leadership Frameworks. Auf dem Papier ist oft gut beschrieben, wie moderne Führung aussehen soll:</p>
+      <ul class="card-list">
+        <li>selbstreflektiert,</li>
+        <li>integer,</li>
+        <li>resilient,</li>
+        <li>kooperations- und lernorientiert.</li>
+      </ul>
+      <p>In der Praxis zeigt sich jedoch immer wieder dieselbe Lücke:</p>
+      <p>Unter hohem Druck – Zeitstress, Unsicherheit, Erwartungsdruck – setzen sich nicht selten alte Muster durch: Mikromanagement, Tunnelblick, Kontrollverlust.</p>
+      <p>Neurobiologisch ist das nachvollziehbar:</p>
+      <ul class="card-list">
+        <li>Unter Stress schaltet das Gehirn von präfrontalem Cortex auf limbische/reaktive Muster um.</li>
+        <li>Fachliche Exzellenz bleibt, aber das "Lead Self" gerät ins Wanken.</li>
+      </ul>
+      <p>Unser Manager-Training setzt genau dort an:</p>
+      <ul class="card-list">
+        <li>Wir verlagern Führungstraining aus dem Seminarraum in ein Erfahrungslabor im Waldseilgarten.</li>
+        <li>Dort werden reale Stressoren simuliert (Höhe, Interdependenz, Ressourcenknappheit, Zeitdruck),</li>
+        <li>um Muster sichtbar zu machen und konkrete Werkzeuge zur Selbstregulation zu vermitteln.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zielgruppen" class="prose max-w-none">
+      <h2>Für wen dieses Training geeignet ist</h2>
+      
+      <h3>2.1 Zielgruppen im Unternehmen</h3>
+      <ul class="card-list">
+        <li>Führungskräfte (Team-/Abteilungsleitung bis obere Managementebene)</li>
+        <li>Nachwuchsführungskräfte / High Potentials</li>
+        <li>Projekt- und Bereichsleiter:innen mit hoher Verantwortung</li>
+        <li>Führungsteams, die gemeinsam an Resilienz arbeiten möchten</li>
+      </ul>
+
+      <h3>2.2 Typische Anlässe</h3>
+      <ul class="card-list">
+        <li>Vorbereitung von Mitarbeitenden auf eine neue Führungsebene</li>
+        <li>Ergänzung bestehender Leadership-Programme</li>
+        <li>Begleitung von Teams in Change- oder Hochlastphasen</li>
+        <li>Prävention von Burnout durch frühe Arbeit an Selbstführung</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="inhalte" class="prose max-w-none">
+      <h2>Inhalte & Aufbau</h2>
+      <p>Wir unterscheiden zwischen:</p>
+      <ul class="card-list">
+        <li>einem kompakten 1 Tages-Modul ("Leadership Embodiment Lab") und</li>
+        <li>einem optionalen 6 Monats-Transformationsprogramm ("Lead Self Mastery").</li>
+      </ul>
+
+      <h3>3.1 Leadership Embodiment Lab – 6 Stunden</h3>
+      <p><strong>Thema:</strong> Lead Self – The biological foundation of integrity & performance</p>
+      <p><strong>Ziel:</strong> eigene Stress- und Verhaltensmuster unter Druck sichtbar machen, erste Werkzeuge zur Regulation erleben.</p>
+
+      <h4>Phase 1 – Diagnostik & Grounding (ca. 2,5 h)</h4>
+      <ul class="card-list">
+        <li><strong>Die "5 Säulen" als Systemcheck:</strong> Atmung, Schlaf, Bewegung, Ernährung, Geist.</li>
+        <li><strong>Kooperationsaufgaben:</strong> "Kontrollverlust" und Unübersichtlichkeit erzeugen, um spontane Reaktionsmuster zu sehen.</li>
+        <li><strong>Kommunikationsübung:</strong> Umgang mit Einschränkungen sichtbar machen.</li>
+        <li><strong>Reflexion:</strong> Atemtechnik als "Notbremse" für das Nervensystem.</li>
+      </ul>
+
+      <h4>Phase 2 – "High-Stakes Lab" in der Höhe (ca. 2,5 h)</h4>
+      <p>Unter "Challenge by Choice" verlassen wir die Komfortzone.</p>
+      <ul class="card-list">
+        <li><strong>Team Beam / Schwebebalken:</strong> Konflikt: eigenes Sicherheitsbedürfnis vs. Teamaufgabe.</li>
+        <li><strong>Himmelsleiter:</strong> Physische Aufgabe, die nur durch gegenseitiges Unterstützen gelingt.</li>
+        <li><strong>Weitere Elemente:</strong> Bewusste Anwendung der gelernten Regulationsmethoden.</li>
+      </ul>
+
+      <h4>Phase 3 – Integration & Transfer (ca. 1 h)</h4>
+      <ul class="card-list">
+        <li>Gemeinsamer Rückblick: "Wo habe ich mich wiedererkannt?"</li>
+        <li>Verknüpfung mit Ihrem Führungsleitbild.</li>
+        <li>Individuelle Takeaways: konkrete Mikro-Routinen für den Alltag.</li>
+      </ul>
+
+      <h3>3.2 Optional: 6 Monats-Programm</h3>
+      <p>Für langfristige Führungssouveränität:</p>
+      <ul class="card-list">
+        <li>1 Intensivtag/Modul pro Monat</li>
+        <li>Module: Atmung, Schlaf, Bewegung, Ernährung, Geist, Integration</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wissenschaft" class="prose max-w-none">
+      <h2>Warum sinnvoll – wissenschaftliche Einordnung</h2>
+
+      <h3>4.1 Stressphysiologie & Polyvagal-Theorie</h3>
+      <ul class="card-list">
+        <li>Unter hohem Druck schaltet das Nervensystem in Alarmzustände.</li>
+        <li>Die Polyvagal-Theorie betont: ein Gefühl von Sicherheit ist Voraussetzung für soziale Kooperation.</li>
+      </ul>
+
+      <h3>4.2 System 1 / System 2 (Kahneman)</h3>
+      <ul class="card-list">
+        <li>"System 1": schnell, intuitiv, emotional – fehleranfällig.</li>
+        <li>"System 2": langsam, reflektiert – nötig für komplexe Führungsentscheidungen.</li>
+      </ul>
+
+      <h3>4.3 Somatic Markers & Embodiment</h3>
+      <ul class="card-list">
+        <li>Entscheidungen werden nicht nur kognitiv getroffen, sondern stark durch körperliche Signale beeinflusst.</li>
+        <li>Körperlich-emotionale Erfahrungen prägen sich nachhaltiger ein.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit" class="prose max-w-none">
+      <h2>Sicherheit & Haltung</h2>
+
+      <h3>5.1 Physische Sicherheit</h3>
+      <ul class="card-list">
+        <li>Betrieb nach DIN EN 15567, ERCA- und DGUV Standards</li>
+        <li>Ausgebildete Sicherheitstrainer:innen</li>
+        <li>Wettersicherheitskonzept</li>
+      </ul>
+
+      <h3>5.2 Psychische Sicherheit</h3>
+      <ul class="card-list">
+        <li>Challenge by Choice: niemand muss gegen seinen Willen etwas tun.</li>
+        <li>Keine Beschämung oder Bloßstellung.</li>
+        <li>Ziel ist Lernen, nicht Bewertung.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches & nächste Schritte</h2>
+      
+      <p><strong>Formate:</strong></p>
+      <ul class="card-list">
+        <li>6 Stunden- oder 1 Tagesmodul</li>
+        <li>Erweiterbare 2 Tages- oder Mehrmodulvarianten</li>
+        <li>Optionales 6 Monats-Programm</li>
+      </ul>
+
+      <p><strong>Gruppengrößen:</strong></p>
+      <ul class="card-list">
+        <li>ideal: 6–12 Personen pro Gruppe</li>
+        <li>größere Kohorten in Teilgruppen möglich</li>
+      </ul>
+
+      <p><strong>Nächste Schritte:</strong></p>
+      <ul class="card-list">
+        <li>Kontaktaufnahme mit Beschreibung der Zielgruppe und Ausgangslage</li>
+        <li>Konzeptgespräch zur Anpassung</li>
+        <li>Angebot & Terminplanung</li>
+      </ul>
+
+      <div class="mt-6">
+        <Button href="/kontakt" cta="Leadership Management anfragen" />
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.manager-overview {
+  padding-top: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+

@@ -1,0 +1,121 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+---
+
+<MainLayout title="Sitemap – Komm Raus">
+  <Section class="bg-brand-primary text-white text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Sitemap</h1>
+    <p class="text-xl">Übersicht aller Seiten unserer Website</p>
+  </Section>
+
+  <Section>
+    <GlassPanel>
+      <div class="sitemap">
+        <ul class="sitemap-list">
+          <li><a href="/">Startseite</a></li>
+          <li><a href="/blaulicht">Blaulicht</a></li>
+          <li>
+            <a href="/bildungseinrichtungen">Bildungseinrichtungen</a>
+            <ul>
+              <li><a href="/bildungseinrichtungen/adhs-fokus-training">ADHS-Fokus-Training</a></li>
+              <li><a href="/bildungseinrichtungen/fokus-und-konzentration">Fokus & Konzentration</a></li>
+              <li><a href="/bildungseinrichtungen/gruenes-klassenzimmer">Grünes Klassenzimmer</a></li>
+              <li><a href="/bildungseinrichtungen/hochbegabtenfoerderung">Hochbegabtenförderung</a></li>
+              <li><a href="/bildungseinrichtungen/kindergaerten-eltern">Kindergärten & Eltern</a></li>
+              <li><a href="/bildungseinrichtungen/klassenfahrten-projekttage">Klassenfahrten & Projekttage</a></li>
+              <li><a href="/bildungseinrichtungen/lehrerfortbildung">Lehrerfortbildung</a></li>
+              <li><a href="/bildungseinrichtungen/meditation">Meditation</a></li>
+              <li><a href="/bildungseinrichtungen/schulgarten">Schulgarten</a></li>
+              <li><a href="/bildungseinrichtungen/teambuilding-schulklassen">Teambuilding Schulklassen</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/unternehmen">Unternehmen</a>
+            <ul>
+              <li><a href="/unternehmen/assessment-center">Assessment-Center</a></li>
+              <li><a href="/unternehmen/csr">CSR</a></li>
+              <li><a href="/unternehmen/leadership-management">Leadership & Management</a></li>
+              <li><a href="/unternehmen/manager-training">Manager-Training</a></li>
+              <li><a href="/unternehmen/teambuilding">Teambuilding</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/einsatzkraefte">Einsatzkräfte</a>
+            <ul>
+              <li><a href="/einsatzkraefte/nachwuchsfoerderung">Nachwuchsförderung</a></li>
+              <li><a href="/einsatzkraefte/regeneration-praevention">Regeneration & Prävention</a></li>
+              <li><a href="/einsatzkraefte/team-resilienz">Team-Resilienz</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/erlebnisse-kurse">Erlebnisse & Kurse</a>
+            <ul>
+              <li><a href="/erlebnisse-kurse/adhs">ADHS</a></li>
+              <li><a href="/erlebnisse-kurse/bildungsreisen">Bildungsreisen</a></li>
+              <li><a href="/erlebnisse-kurse/coaching-entwicklung">Coaching & Entwicklung</a></li>
+              <li><a href="/erlebnisse-kurse/bewegung">Bewegung</a></li>
+              <li><a href="/erlebnisse-kurse/kanu-tour">Kanu-Tour</a></li>
+              <li><a href="/erlebnisse-kurse/sprachreisen">Sprachreisen</a></li>
+              <li><a href="/erlebnisse-kurse/waldbaden">Waldbaden</a></li>
+              <li><a href="/erlebnisse-kurse/waldseilgarten-klettern">Waldseilgarten & Klettern</a></li>
+              <li><a href="/erlebnisse-kurse/wildkraeutertour">Wildkräutertour</a></li>
+              <li><a href="/erlebnisse-kurse/wildnis-naturhandwerk">Wildnis & Naturhandwerk</a></li>
+            </ul>
+          </li>
+          <li><a href="/soil-to-table">Soil-to-Table</a></li>
+          <li><a href="/info-orga/faq">FAQ</a></li>
+          <li>
+            <a href="/kontakt">Kontakt</a>
+            <ul>
+              <li><a href="/kontakt/agb">AGB</a></li>
+              <li><a href="/kontakt/datenschutz">Datenschutz</a></li>
+              <li><a href="/kontakt/impressum">Impressum</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/info-orga">Info & Orga</a>
+            <ul>
+              <li><a href="/info-orga/ueber-uns">Über uns</a></li>
+              <li><a href="/info-orga/sicherheitskonzept">Sicherheitskonzept</a></li>
+              <li><a href="/info-orga/frageboegen">Fragebögen</a></li>
+              <li><a href="/info-orga/vordrucke">Vordrucke & Haftungsausschluss</a></li>
+              <li><a href="/info-orga/faq">FAQs</a></li>
+              <li><a href="/info-orga/glossar">Glossar</a></li>
+              <li><a href="/info-orga/sitemap">Sitemap</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="/download/fragebogen-lehrer">Download / Fragebogen Lehrer</a>
+          </li>
+        </ul>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+  .sitemap-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sitemap-list li {
+    margin-bottom: 0.5rem;
+  }
+
+  .sitemap-list ul {
+    margin-left: 1.5rem;
+    list-style: disc;
+  }
+
+  .sitemap-list a {
+    color: var(--color-secondary);
+    text-decoration: none;
+  }
+
+  .sitemap-list a:hover {
+    text-decoration: underline;
+  }
+</style>

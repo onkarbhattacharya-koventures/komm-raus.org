@@ -1,0 +1,263 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+import Card from '../../components/Card.astro';
+import Button from '../../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/Baumklettern-Seilaufstiegstechnik-400.jpg',
+    alt: 'Worum es geht',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#zielgruppen',
+    image: '/images/Leiterueberwindung-teamwork-400.jpg',
+    alt: 'Für wen sinnvoll',
+    label: 'Für wen sinnvoll',
+  },
+  {
+    href: '#inhalte',
+    image: '/images/kanu-fahren-400.jpg',
+    alt: 'Inhalte und Aufbau',
+    label: 'Inhalte und Aufbau',
+  },
+  {
+    href: '#wissenschaft',
+    image: '/images/Feuer-machen-bowdrill-set-400.jpg',
+    alt: 'Warum sinnvoll',
+    label: 'Warum sinnvoll',
+  },
+  {
+    href: '#sicherheit',
+    image: '/images/Baumstamm-sortieren-Balance-400.jpg',
+    alt: 'Sicherheit und Haltung',
+    label: 'Sicherheit und Haltung',
+  },
+  {
+    href: '#organisatorisches',
+    image: '/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.jpg',
+    alt: 'Organisatorisches',
+    label: 'Organisatorisches',
+  },
+];
+---
+
+<MainLayout title="Assessment Center im Waldseilgarten – Laubfrosch">
+  <Hero 
+    imagePath="/images/Baumklettern-Seilaufstiegstechnik-800.jpg" 
+  />
+
+  <Section class="assessment-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+<h2>Worum es geht</h2>
+      <picture class="image-card">
+        <source srcset="/images/Himmelsleiter-teambuilding-laubfrosch-wald-250.webp 250w, /images/Himmelsleiter-teambuilding-laubfrosch-wald-400.webp 400w, /images/Himmelsleiter-teambuilding-laubfrosch-wald-800.webp 800w">
+        <img src="/images/Himmelsleiter-teambuilding-laubfrosch-wald-400.jpg" alt="Team beim Himmelsleiter-Teambuilding" loading="lazy" class="image-card-img" />
+      </picture>
+      <p>Klassische assessment-Center (AC) sind ein wichtiges Instrument der Personalauswahl. Sie arbeiten mit Übungen, Rollenspielen und Tests, um Kompetenzen sichtbar zu machen, die im Interview oft verborgen bleiben. Gleichzeitig sind sie:</p>
+      <ul class="card-list">
+        <li>stark simulationsbasiert,</li>
+        <li>formal und prüfungsähnlich,</li>
+        <li>für viele Kandidaten eine eher künstliche Situation.</li>
+      </ul>
+      <p>Unser Ansatz im Waldseilgarten Laubfrosch setzt an derselben Stelle an – aber unter anderen Bedingungen:</p>
+      <ul class="card-list">
+        <li>reale körperliche und soziale Herausforderungen,</li>
+        <li>in einer ungewohnten, natürlichen Umgebung,</li>
+        <li>mit echtem Zeitdruck, Unsicherheit und wechselseitiger Verantwortung.</li>
+      </ul>
+      <p>Ziel ist nicht "Action um der Action willen", sondern ein ergänzendes, verhaltensnahes Beobachtungsfeld:</p>
+      <p><strong>Wie verhalten sich Bewerber, wenn sie gemeinsam eine Aufgabe lösen müssen, Verantwortung übernehmen, körperliche Anstrengung, (Höhen-)Stress, Spaß und Teamdynamik gleichzeitig im Spiel sind?</strong></p>
+      <p>Wir sehen uns als Erweiterung des klassischen AC – nicht als Ersatz.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zielgruppen" class="prose max-w-none">
+      <h2>Für wen dieses Assessment sinnvoll ist</h2>
+<h3>2.1 Unternehmen & Organisationen</h3>
+      <picture class="image-card">
+        <source srcset="/images/Leiter-ueberwinden-vertrauen-kooperation-250.webp 250w, /images/Leiter-ueberwinden-vertrauen-kooperation-400.webp 400w, /images/Leiter-ueberwinden-vertrauen-kooperation-800.webp 800w">
+        <img src="/images/Leiter-ueberwinden-vertrauen-kooperation-400.jpg" alt="Leiterüberwindung für Vertrauen und Kooperation" loading="lazy" class="image-card-img" />
+      </picture>
+      <p>Insbesondere für:</p>
+      <ul class="card-list">
+        <li>Auswahl von Fach- und Führungskräften mit Teamverantwortung,</li>
+        <li>Rekrutierung von Nachwuchsführungskräften, Trainees, High Potentials,</li>
+        <li>Auszubildende, duale Studierende, FSJler,</li>
+        <li>Teams, in denen Belastbarkeit, Kooperation und Verantwortung unter Unsicherheit zentrale Rollen spielen.</li>
+      </ul>
+      <p>Branchenübergreifend interessant:</p>
+      <div class="cards mt-4">
+        <Card title="Industrie & Mittelstand" body="Für produktionsnahe und technische Bereiche" />
+        <Card title="Dienstleistungsunternehmen" body="Für kundennahe und beratende Rollen" />
+        <Card title="Sozial- und Bildungsträger" body="Für pädagogische und betreuende Positionen" />
+        <Card title="Blaulichtorganisationen" body="Für Nachwuchs- oder Führungsauswahl" />
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="inhalte" class="prose max-w-none">
+<h2>Inhalte & Aufbau des Recruiting-Assessment</h2>
+      <picture class="image-card">
+        <source srcset="/images/midage-kids-Leiterueberwindung-teamwork-250.webp 250w, /images/midage-kids-Leiterueberwindung-teamwork-400.webp 400w, /images/midage-kids-Leiterueberwindung-teamwork-800.webp 800w">
+        <img src="/images/midage-kids-Leiterueberwindung-teamwork-400.jpg" alt="Teamwork Leiterüberwindung" loading="lazy" class="image-card-img" />
+      </picture>
+      <p>Der genaue Zuschnitt wird mit Ihnen abgestimmt. Typische Bausteine:</p>
+
+      <h3>3.1 Kooperations- und Problemlöseaufgaben am Boden</h3>
+      <ul class="card-list">
+        <li>Kleine Teams bearbeiten anspruchsvolle Aufgaben mit knappen Ressourcen und begrenzter Zeit.</li>
+        <li><strong>Beobachtungsfokus u.a.:</strong> Kommunikationsverhalten, Rollenfindung, Initiative und Verantwortungsübernahme, Umgang mit Fehlern und Rückschlägen.</li>
+      </ul>
+
+      <h3>3.2 Hochseilgarten-Elemente (Toprope-Sicherung)</h3>
+      <ul class="card-list">
+        <li>Bewerber sichern sich gegenseitig und begegnen Höhe, Unsicherheit und körperlicher Belastung.</li>
+        <li><strong>Beobachtungsfokus u.a.:</strong> Stressbewältigung, Risikoeinschätzung, Vertrauen geben und annehmen, Führungsverhalten in Momenten realer Anspannung.</li>
+      </ul>
+
+      <h3>3.3 Bewusste Stressoren & Frustrationstoleranz</h3>
+      <ul class="card-list">
+        <li>In einigen Übungen werden gezielt Stressoren eingebaut: Zeitdruck, Informationslücken, unerwartete Schwierigkeiten.</li>
+        <li><strong>Beobachtung:</strong> Wie gehen Kandidaten mit Frustration und Scheitern um?</li>
+      </ul>
+
+      <h3>3.4 Reflexions- und Auswertungseinheiten</h3>
+      <ul class="card-list">
+        <li>Geführte Selbstreflexion mit den Teilnehmenden.</li>
+        <li>Gemeinsame Auswertung mit Ihren HR-Verantwortlichen.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wissenschaft" class="prose max-w-none">
+<h2>Warum das sinnvoll ist</h2>
+      <picture class="image-card">
+        <source srcset="/images/Reflexion-teamkreis-kommunikation-250.webp 250w, /images/Reflexion-teamkreis-kommunikation-400.webp 400w, /images/Reflexion-teamkreis-kommunikation-800.webp 800w">
+        <img src="/images/Reflexion-teamkreis-kommunikation-400.jpg" alt="Teamreflexion Kommunikation" loading="lazy" class="image-card-img" />
+      </picture>
+
+      <h3>4.1 Verhalten statt nur Selbstauskunft</h3>
+      <p>Im Waldseilgarten sehen Sie:</p>
+      <ul class="card-list">
+        <li>konkrete Verhaltensweisen in echten, körperlich und sozial fordernden Situationen,</li>
+        <li>weniger "glatte" Selbstdarstellung,</li>
+        <li>mehr spontane Reaktionen.</li>
+      </ul>
+
+      <h3>4.2 "Stress demaskiert"</h3>
+      <p>Sie sehen:</p>
+      <ul class="card-list">
+        <li>Wer behält Überblick, wer blockiert, wer fragt um Hilfe,</li>
+        <li>wer andere unterstützt, wer dominiert, wer abtaucht,</li>
+        <li>wie schnell jemand aus reaktiven Mustern wieder in selbstbestimmtes Handeln findet.</li>
+      </ul>
+
+      <h3>4.3 Kosten von Fehleinstellungen</h3>
+      <p>Die Kosten einer Fehleinstellung liegen oft zwischen 30 % und 150 % eines Jahresgehalts.</p>
+      <div class="cards mt-4">
+        <Card title="Beispielrechnung" body="Bei einer Jahresgesamtvergütung von ca. 50.000 € liegen die konservative Schätzung der Fehleinstellungskosten bei 15.000–75.000 €." />
+      </div>
+
+      <h3>4.4 Mehr als Auswahl</h3>
+      <p>Kandidaten nehmen aus dem Tag:</p>
+      <ul class="card-list">
+        <li>konkrete Erfahrungen zu Teamarbeit, Kommunikation, Selbststeuerung,</li>
+        <li>ein realistisches Bild Ihrer Unternehmenskultur,</li>
+        <li>oft ein positives Erlebnis, auch wenn es nicht zur Einstellung kommt.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit" class="prose max-w-none">
+<h2>Sicherheit & Haltung</h2>
+      <picture class="image-card">
+        <source srcset="/images/Sicherheit-waldseilgarten-laubfrosch-250.webp 250w, /images/Sicherheit-waldseilgarten-laubfrosch-400.webp 400w, /images/Sicherheit-waldseilgarten-laubfrosch-800.webp 800w">
+        <img src="/images/Sicherheit-waldseilgarten-laubfrosch-400.jpg" alt="Sicherheit im Waldseilgarten" loading="lazy" class="image-card-img" />
+      </picture>
+
+      <h3>5.1 Physische Sicherheit</h3>
+      <ul class="card-list">
+        <li>Betrieb nach DIN EN 15567, ERCA- und DGUV Standards,</li>
+        <li>eigene, regelmäßig geprüfte PSA (Gurte, Helme, Sicherungsgeräte),</li>
+        <li>ausgebildetes Sicherheitspersonal,</li>
+        <li>klare Wettersicherheitsregeln.</li>
+      </ul>
+
+      <h3>5.2 Psychische Sicherheit</h3>
+      <ul class="card-list">
+        <li>keine Bloßstellung oder Beschämung,</li>
+        <li>keine "Mutproben" gegen den erklärten Willen der Teilnehmenden,</li>
+        <li> klarer Rahmen: Kandidaten wissen, worauf sie sich einlassen,</li>
+        <li>sensible Themen werden vorab berücksichtigt.</li>
+      </ul>
+      <p>Wir wollen Verhalten unter Stress sichtbar machen – nicht Menschen brechen.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches & Anfrage</h2>
+
+      <h3>Typische Formate</h3>
+      <div class="cards mt-4">
+        <Card title="Halbtages-Assessment" body="z.B. Ergänzung zu Interview- oder Test-Verfahren" />
+        <Card title="Ganztages-Assessment" body="mit umfassendem Programm" />
+        <Card title="Mehrstufige Verfahren" body="z.B. erstes Screening im Unternehmen, vertiefende Phase im Waldseilgarten" />
+      </div>
+
+      <h3>Gruppengrößen</h3>
+      <ul class="card-list">
+        <li><strong>Kleine Gruppen</strong> (z.B. 4–10 Personen) ermöglichen tiefere Beobachtung.</li>
+        <li><strong>Größere Gruppen</strong> sind möglich; dann modulare Aufteilung.</li>
+      </ul>
+
+      <h3>Nächste Schritte</h3>
+      <ul class="card-list">
+        <li><strong>Kurze Anfrage mit:</strong> Zielgruppe, Anzahl der Kandidaten, gewünschtem zeitlichen Rahmen.</li>
+        <li><strong>Gemeinsames Konzeptgespräch</strong> (telefonisch/online).</li>
+        <li><strong>Erstellung eines maßgeschneiderten Assessment Designs</strong> mit transparentem Angebot.</li>
+      </ul>
+
+      <div class="mt-6">
+        <Button href="/kontakt" text="Anfrage Assessment Center stellen" />
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.assessment-overview {
+  padding-top: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+

@@ -1,0 +1,221 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+import Button from '../../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/Baumklettern-Seilaufstiegstechnik-400.jpg',
+    alt: 'Worum es geht',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#zielgruppen',
+    image: '/images/Leiterueberwindung-teamwork-400.jpg',
+    alt: 'Für wen sinnvoll',
+    label: 'Für wen sinnvoll',
+  },
+  {
+    href: '#bausteine',
+    image: '/images/kanu-fahren-400.jpg',
+    alt: 'CSR-Bausteine',
+    label: 'CSR-Bausteine',
+  },
+  {
+    href: '#wissenschaft',
+    image: '/images/Feuer-machen-bowdrill-set-400.jpg',
+    alt: 'Wissenschaft',
+    label: 'Wissenschaft',
+  },
+  {
+    href: '#qualitaet',
+    image: '/images/Baumstamm-sortieren-Balance-400.jpg',
+    alt: 'Qualität und Haltung',
+    label: 'Qualität',
+  },
+  {
+    href: '#organisatorisches',
+    image: '/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.jpg',
+    alt: 'Organisatorisches',
+    label: 'Organisatorisches',
+  },
+];
+---
+
+<MainLayout title="CSR & Kooperationen – Komm Raus">
+  <Hero 
+    title="CSR & Kooperationen" 
+    subtitle="Mit Natur, Bildung und Gesundheit wirksam Verantwortung übernehmen – gemeinsam mit der komm raus GmbH." 
+    imagePath="/images/Baumklettern-Seilaufstiegstechnik-800.jpg" 
+  />
+
+  <Section class="csr-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Corporate Social Responsibility (CSR) ist längst mehr als "Spenden im Jahresbericht". Unternehmen stehen vor der Frage:</p>
+      <ul class="card-list">
+        <li>Wie können wir sozial und ökologisch sinnvoll handeln,</li>
+        <li>unsere Mitarbeitenden einbeziehen,</li>
+        <li>und dabei tatsächliche Wirkung für Menschen und Umwelt erzeugen?</li>
+      </ul>
+      <p>Die komm raus GmbH bietet praxisnahe Andockpunkte:</p>
+      <ul class="card-list">
+        <li>soziale Unterstützung für Kinder, Jugendliche und Bildungseinrichtungen,</li>
+        <li>Gesundheits- und Ernährungsprogramme im Unternehmen (Soil to Table),</li>
+        <li>ökologisch wirksame Projekte auf dem eigenen Firmengelände,</li>
+        <li>internationale Bildungs- und Naturschutzkooperationen,</li>
+        <li>sinnstiftende Aktionen mit der eigenen Belegschaft.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zielgruppen" class="prose max-w-none">
+      <h2>Für wen dieses CSR-Angebot sinnvoll ist</h2>
+      
+      <h3>2.1 Unternehmen & Organisationen</h3>
+      <p><strong>Besonders relevant für:</strong></p>
+      <ul class="card-list">
+        <li>mittelständische Unternehmen mit regionaler Verankerung,</li>
+        <li>Konzerne mit ESG-/CSR-Programmen,</li>
+        <li>öffentliche und halböffentliche Träger,</li>
+        <li>Unternehmen mit betrieblichen Gesundheitsprogrammen.</li>
+      </ul>
+
+      <h3>2.2 Indirekte Zielgruppen</h3>
+      <ul class="card-list">
+        <li>Bildungseinrichtungen (Schulen, Kitas, Jugendhilfe),</li>
+        <li>Vereine & Jugendgruppen,</li>
+        <li>Familien und Kindern aus einkommensschwächeren Kontexten,</li>
+        <li>internationalen Bildungs- und Naturschutzprojekten.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="bausteine" class="prose max-w-none">
+      <h2>Mögliche CSR-Bausteine</h2>
+
+      <h3>3.1 Bildungsgerechtigkeit & Stipendienfonds</h3>
+      <p><strong>Ziel:</strong> Kindern und Jugendlichen aus finanziell schwächeren Familien Zugang zu erlebnispädagogischen Angeboten ermöglichen.</p>
+      <ul class="card-list">
+        <li>Einrichtung eines Fonds für Klassenfahrten, ADHS- oder Resilienztrainings,</li>
+        <li>Auswahl von Partnerschulen oder Jugendhilfeeinrichtungen.</li>
+      </ul>
+
+      <h3>3.2 Gesundheit & Ernährung – "Soil to Table"</h3>
+      <ul class="card-list">
+        <li>Workshops zu Boden, Lebensmittelqualität, Mikrobiom,</li>
+        <li>Begleitung von Kantine/Catering für gesündere Angebote,</li>
+        <li>Integration von Kräuterbeeten und saisonalen Komponenten.</li>
+      </ul>
+
+      <h3>3.3 Firmengelände als Lebensraum</h3>
+      <ul class="card-list">
+        <li>Anlage von Naturinseln, Blühstreifen, Streuobst,</li>
+        <li>Permakultur-Beete oder Hochbeete,</li>
+        <li>Integration von Biodiversität.</li>
+      </ul>
+
+      <h3>3.4 Globale Verantwortung</h3>
+      <ul class="card-list">
+        <li><strong>Gambia Academy:</strong> Unterstützung einer Bildungseinrichtung in Gambia.</li>
+        <li><strong>Wilderness International:</strong> Schutz von Wildnisflächen.</li>
+      </ul>
+
+      <h3>3.5 Aktionen mit der Belegschaft</h3>
+      <ul class="card-list">
+        <li>Müllsammelaktionen, Bach- oder Waldrandpflege,</li>
+        <li>kombinierte Aktionen mit Reflexion und Teamformaten,</li>
+        <li>Stärkung von Teamgeist und Identifikation.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wissenschaft" class="prose max-w-none">
+      <h2>Warum sinnvoll – wissenschaftliche Einordnung</h2>
+
+      <h3>4.1 Wirkung auf Mitarbeitende</h3>
+      <ul class="card-list">
+        <li>gelebtes CSR steigert Engagement und Zufriedenheit,</li>
+        <li>Mitarbeitende mit sinnorientiertem Arbeitgeber zeigen höhere Motivation und stärkere Bindung,</li>
+        <li>Gesundheitsprogramme können Fehlzeiten reduzieren.</li>
+      </ul>
+
+      <h3>4.2 Wirkung auf Gesellschaft & Umwelt</h3>
+      <ul class="card-list">
+        <li>Naturpädagogische Angebote fördern soziale Kompetenzen und Naturbewusstsein,</li>
+        <li>Schulgärten und BNE-Projekte fördern nachhaltige Konsumentscheidungen,</li>
+        <li>Flächenbegrünung leistet Beiträge zu Biodiversität und Klimaresilienz.</li>
+      </ul>
+
+      <h3>4.3 Business Case</h3>
+      <ul class="card-list">
+        <li>Reduktion von Fluktuation wirkt sich finanziell aus,</li>
+        <li>CSR ist relevantes Kriterium bei Arbeitgeberwahl,</li>
+        <li>verbessert langfristig Image und Innovationskraft.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="qualitaet" class="prose max-w-none">
+      <h2>Qualität & Haltung</h2>
+      <ul class="card-list">
+        <li>Wir arbeiten transparent: Ziele und Wirkungen werden im Vorfeld geklärt.</li>
+        <li>Projekte werden von fachlich qualifizierten Expert:innen begleitet.</li>
+        <li>Wo sinnvoll, integrieren wir Evaluationselemente.</li>
+        <li>Wir vermeiden Heilsversprechen und benennen ehrlich, was ein Projekt leisten kann.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches & nächste Schritte</h2>
+      
+      <h3>Erstgespräch</h3>
+      <ul class="card-list">
+        <li>Was sind Ihre CSR-Schwerpunkte?</li>
+        <li>Welche Ressourcen stehen zur Verfügung?</li>
+        <li>Welche Zielgruppen möchten Sie erreichen?</li>
+      </ul>
+
+      <h3>Konzeptvorschlag</h3>
+      <p>Wir erarbeiten modulare Vorschläge.</p>
+
+      <h3>Feinabstimmung & Vereinbarung</h3>
+      <p>Festlegung von Zielen, Rollen, Budget, Zeitplan.</p>
+
+      <h3>Umsetzung & Begleitung</h3>
+      <p>Wir führen Maßnahmen durch.</p>
+
+      <h3>Reflexion & Weiterentwicklung</h3>
+      <p>Auswertung und Verstetigung.</p>
+
+      <div class="mt-6">
+        <Button href="/kontakt" cta="CSR-Kooperation anfragen" />
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.csr-overview {
+  padding-top: 0;
+}
+</style>
+

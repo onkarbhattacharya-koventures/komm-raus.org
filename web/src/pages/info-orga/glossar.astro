@@ -1,0 +1,127 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import Button from '../../components/Button.astro';
+---
+
+<MainLayout 
+  title="Glossar - Komm Raus"
+  description="Erklärungen zu Fachbegriffen aus der Erlebnispädagogik."
+>
+  <Section class="bg-brand-primary text-white text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Glossar</h1>
+    <p class="text-xl">Fachbegriffe einfach erklärt</p>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Erlebnispädagogik</h2>
+      <dl class="glossary-list">
+        <dt>Erlebnispädagogik</dt>
+        <dd>Eine Methode, bei der Menschen durch erlebnisreiche Aktivitäten in der Natur persönliche und soziale Kompetenzen entwickeln.</dd>
+        
+        <dt>Wildnispädagogik</dt>
+        <dd>Ein Bereich der Erlebnispädagogik, der sich auf Naturerlebnisse in der freien Wildnis konzentriert.</dd>
+        
+        <dt>Action-Pädagogik</dt>
+        <dd>Erlebnispädagogik mit Fokus auf actionreiche Aktivitäten wie Klettern, Kanufahren etc.</dd>
+      </dl>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Seilgarten-Begriffe</h2>
+      <dl class="glossary-list">
+        <dt>Hochseilgarten</dt>
+        <dd>Ein Seilgarten mit Elementen in großer Höhe, die mit Seilen und Gurten gesichert werden.</dd>
+        
+        <dt>Niedrigseilgarten</dt>
+        <dd>Ein Seilgarten mit Elementen in niedriger Höhe (ca. 1-2 Meter), die ohne Seilsicherung durch Spotting absolviert werden.</dd>
+        
+        <dt>Toprope</dt>
+        <dd>Eine Sicherungsmethode, bei der das Seil oben am Fixpunkt befestigt ist und der Sicherer unten das Seil kontrolliert.</dd>
+        
+        <dt>Partner-Sicherung</dt>
+        <dd>Eine Sicherungsmethode, bei der Teilnehmende sich gegenseitig sichern.</dd>
+        
+        <dt>PSA</dt>
+        <dd>Persönliche Schutzausrüstung - umfasst Gurt, Helm und Sicherungsgerät.</dd>
+      </dl>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Pädagogische Begriffe</h2>
+      <dl class="glossary-list">
+        <dt>Reflexion</dt>
+        <dd>Nachbereitung eines Erlebnisses, um Erkenntnisse zu vertiefen.</dd>
+        
+        <dt>Transfer</dt>
+        <dd>Die Übertragung von Erfahrungen aus dem Erlebnis in den Alltag.</dd>
+        
+        <dt>Teambuilding</dt>
+        <dd>Maßnahmen zur Stärkung des Teamgeistes und der Zusammenarbeit.</dd>
+        
+        <dt>Resilienz</dt>
+        <dd>Die Fähigkeit, mit schwierigen Situationen umzugehen.</dd>
+        
+        <dt>Selbstwirksamkeit</dt>
+        <dd>Der Glaube an die eigene Fähigkeit, etwas zu erreichen.</dd>
+      </dl>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Sicherheitsbegriffe</h2>
+      <dl class="glossary-list">
+        <dt>DGUV</dt>
+        <dd>Deutsche Gesetzliche Unfallversicherung.</dd>
+        
+        <dt>ERCA</dt>
+        <dd>European Ropes Course Association.</dd>
+        
+        <dt>DIN 15567</dt>
+        <dd>Deutsche Norm für Bau und Betrieb von Hochseilgärten.</dd>
+        
+        <dt>Aufsichtspflicht</dt>
+        <dd>Die rechtliche Verpflichtung, Aufsicht über minderjährige Personen zu führen.</dd>
+      </dl>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none text-center">
+      <h2>Noch Fragen?</h2>
+      <p>Wenn Sie einen Begriff nicht finden, sprechen Sie uns gerne an.</p>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Kontakt aufnehmen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+  .glossary-list {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .glossary-list dt {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .glossary-list dd {
+    margin-left: 0;
+    line-height: 1.6;
+    color: var(--color-gray-700);
+    padding-left: 1rem;
+    border-left: 3px solid var(--color-primary-light);
+  }
+</style>

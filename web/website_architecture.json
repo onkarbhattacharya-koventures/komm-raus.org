@@ -1,0 +1,980 @@
+{
+  "baseUrl": "https://komm-raus.org",
+  "crawlTimestamp": "2026-02-11T15:34:48.647Z",
+  "totalPages": 2,
+  "siteMap": {
+    "https://komm-raus.org": {
+      "title": "Laubfrosch Waldseilgarten – Startseite",
+      "metaDescription": "Angebote für Schulen, Kinder- und Jugendgruppen im Freien",
+      "h1": [],
+      "navigationLinks": [
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Komm Raus",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/about",
+          "text": "Über uns",
+          "href": "/about"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/teambuilding",
+          "text": "Teambuilding",
+          "href": "/angebote/teambuilding"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stressresilienz",
+          "text": "Stressresilienz",
+          "href": "/angebote/stressresilienz"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/konzentration",
+          "text": "Konzentration",
+          "href": "/angebote/konzentration"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/train-the-trainer",
+          "text": "Train the Trainer",
+          "href": "/angebote/train-the-trainer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/vertrauen",
+          "text": "Vertrauen",
+          "href": "/angebote/vertrauen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/wildkraeutertour",
+          "text": "Wildkräutertour",
+          "href": "/angebote/wildkraeutertour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/kanutour",
+          "text": "Kanutour",
+          "href": "/angebote/kanutour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/survival-bushcraft",
+          "text": "Survival & Bushcraft",
+          "href": "/angebote/survival-bushcraft"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/gruenes-klassenzimmer",
+          "text": "Grünes Klassenzimmer",
+          "href": "/angebote/gruenes-klassenzimmer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/klassenfahrt",
+          "text": "Klassenfahrt",
+          "href": "/angebote/klassenfahrt"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stockfechten",
+          "text": "Stockfechten",
+          "href": "/angebote/stockfechten"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/intuitives-bogen-schiessen",
+          "text": "intuitives Bogen schießen",
+          "href": "/angebote/intuitives-bogen-schiessen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/spass-feiern",
+          "text": "Spaß & Feiern",
+          "href": "/angebote/spass-feiern"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/angebote/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/schule",
+          "text": "Schule",
+          "href": "/zielgruppen/schule"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen",
+          "text": "Überblick",
+          "href": "/zielgruppen/unternehmen"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/assessment-center",
+          "text": "Assessment Center",
+          "href": "/zielgruppen/unternehmen/assessment-center"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/manager-training",
+          "text": "Manager Training",
+          "href": "/zielgruppen/unternehmen/manager-training"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/csr",
+          "text": "CSR",
+          "href": "/zielgruppen/unternehmen/csr"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/blaulicht",
+          "text": "Blaulicht",
+          "href": "/zielgruppen/blaulicht"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/vereine",
+          "text": "Vereine",
+          "href": "/zielgruppen/vereine"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/zielgruppen/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/download/fragebogen-lehrer",
+          "text": "Fragebogen Lehrer",
+          "href": "/download/fragebogen-lehrer"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/impressum",
+          "text": "Impressum",
+          "href": "/kontakt/impressum"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/datenschutz",
+          "text": "Datenschutz",
+          "href": "/kontakt/datenschutz"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/agb",
+          "text": "AGB",
+          "href": "/kontakt/agb"
+        },
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/about",
+          "text": "Über uns",
+          "href": "/about"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/teambuilding",
+          "text": "Teambuilding",
+          "href": "/angebote/teambuilding"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stressresilienz",
+          "text": "Stressresilienz",
+          "href": "/angebote/stressresilienz"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/konzentration",
+          "text": "Konzentration",
+          "href": "/angebote/konzentration"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/train-the-trainer",
+          "text": "Train the Trainer",
+          "href": "/angebote/train-the-trainer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/vertrauen",
+          "text": "Vertrauen",
+          "href": "/angebote/vertrauen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/wildkraeutertour",
+          "text": "Wildkräutertour",
+          "href": "/angebote/wildkraeutertour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/kanutour",
+          "text": "Kanutour",
+          "href": "/angebote/kanutour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/survival-bushcraft",
+          "text": "Survival & Bushcraft",
+          "href": "/angebote/survival-bushcraft"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/gruenes-klassenzimmer",
+          "text": "Grünes Klassenzimmer",
+          "href": "/angebote/gruenes-klassenzimmer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/klassenfahrt",
+          "text": "Klassenfahrt",
+          "href": "/angebote/klassenfahrt"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stockfechten",
+          "text": "Stockfechten",
+          "href": "/angebote/stockfechten"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/intuitives-bogen-schiessen",
+          "text": "intuitives Bogen schießen",
+          "href": "/angebote/intuitives-bogen-schiessen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/spass-feiern",
+          "text": "Spaß & Feiern",
+          "href": "/angebote/spass-feiern"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/angebote/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/schule",
+          "text": "Schule",
+          "href": "/zielgruppen/schule"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/assessment-center",
+          "text": "Assessment Center",
+          "href": "/zielgruppen/unternehmen/assessment-center"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/manager-training",
+          "text": "Manager Training",
+          "href": "/zielgruppen/unternehmen/manager-training"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/csr",
+          "text": "CSR",
+          "href": "/zielgruppen/unternehmen/csr"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/blaulicht",
+          "text": "Blaulicht",
+          "href": "/zielgruppen/blaulicht"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/vereine",
+          "text": "Vereine",
+          "href": "/zielgruppen/vereine"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/zielgruppen/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/download/fragebogen-lehrer",
+          "text": "Fragebogen Lehrer",
+          "href": "/download/fragebogen-lehrer"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/impressum",
+          "text": "Impressum",
+          "href": "/kontakt/impressum"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/datenschutz",
+          "text": "Datenschutz",
+          "href": "/kontakt/datenschutz"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/agb",
+          "text": "AGB",
+          "href": "/kontakt/agb"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Jetzt anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Kontakt aufnehmen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/about",
+          "text": "Über uns",
+          "href": "/about"
+        },
+        {
+          "url": "https://komm-raus.org/angebote",
+          "text": "Angebote",
+          "href": "/angebote"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen",
+          "text": "Zielgruppen",
+          "href": "/zielgruppen"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "📘",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "📷",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "📺",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Impressum",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Datenschutz",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "AGB",
+          "href": "#"
+        }
+      ],
+      "mainSections": []
+    },
+    "https://komm-raus.org/": {
+      "title": "Laubfrosch Waldseilgarten – Startseite",
+      "metaDescription": "Angebote für Schulen, Kinder- und Jugendgruppen im Freien",
+      "h1": [],
+      "navigationLinks": [
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Komm Raus",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/about",
+          "text": "Über uns",
+          "href": "/about"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/teambuilding",
+          "text": "Teambuilding",
+          "href": "/angebote/teambuilding"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stressresilienz",
+          "text": "Stressresilienz",
+          "href": "/angebote/stressresilienz"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/konzentration",
+          "text": "Konzentration",
+          "href": "/angebote/konzentration"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/train-the-trainer",
+          "text": "Train the Trainer",
+          "href": "/angebote/train-the-trainer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/vertrauen",
+          "text": "Vertrauen",
+          "href": "/angebote/vertrauen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/wildkraeutertour",
+          "text": "Wildkräutertour",
+          "href": "/angebote/wildkraeutertour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/kanutour",
+          "text": "Kanutour",
+          "href": "/angebote/kanutour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/survival-bushcraft",
+          "text": "Survival & Bushcraft",
+          "href": "/angebote/survival-bushcraft"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/gruenes-klassenzimmer",
+          "text": "Grünes Klassenzimmer",
+          "href": "/angebote/gruenes-klassenzimmer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/klassenfahrt",
+          "text": "Klassenfahrt",
+          "href": "/angebote/klassenfahrt"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stockfechten",
+          "text": "Stockfechten",
+          "href": "/angebote/stockfechten"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/intuitives-bogen-schiessen",
+          "text": "intuitives Bogen schießen",
+          "href": "/angebote/intuitives-bogen-schiessen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/spass-feiern",
+          "text": "Spaß & Feiern",
+          "href": "/angebote/spass-feiern"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/angebote/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/schule",
+          "text": "Schule",
+          "href": "/zielgruppen/schule"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen",
+          "text": "Überblick",
+          "href": "/zielgruppen/unternehmen"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/assessment-center",
+          "text": "Assessment Center",
+          "href": "/zielgruppen/unternehmen/assessment-center"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/manager-training",
+          "text": "Manager Training",
+          "href": "/zielgruppen/unternehmen/manager-training"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/csr",
+          "text": "CSR",
+          "href": "/zielgruppen/unternehmen/csr"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/blaulicht",
+          "text": "Blaulicht",
+          "href": "/zielgruppen/blaulicht"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/vereine",
+          "text": "Vereine",
+          "href": "/zielgruppen/vereine"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/zielgruppen/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/download/fragebogen-lehrer",
+          "text": "Fragebogen Lehrer",
+          "href": "/download/fragebogen-lehrer"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/impressum",
+          "text": "Impressum",
+          "href": "/kontakt/impressum"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/datenschutz",
+          "text": "Datenschutz",
+          "href": "/kontakt/datenschutz"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/agb",
+          "text": "AGB",
+          "href": "/kontakt/agb"
+        },
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/about",
+          "text": "Über uns",
+          "href": "/about"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/teambuilding",
+          "text": "Teambuilding",
+          "href": "/angebote/teambuilding"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stressresilienz",
+          "text": "Stressresilienz",
+          "href": "/angebote/stressresilienz"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/konzentration",
+          "text": "Konzentration",
+          "href": "/angebote/konzentration"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/train-the-trainer",
+          "text": "Train the Trainer",
+          "href": "/angebote/train-the-trainer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/vertrauen",
+          "text": "Vertrauen",
+          "href": "/angebote/vertrauen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/wildkraeutertour",
+          "text": "Wildkräutertour",
+          "href": "/angebote/wildkraeutertour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/kanutour",
+          "text": "Kanutour",
+          "href": "/angebote/kanutour"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/survival-bushcraft",
+          "text": "Survival & Bushcraft",
+          "href": "/angebote/survival-bushcraft"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/gruenes-klassenzimmer",
+          "text": "Grünes Klassenzimmer",
+          "href": "/angebote/gruenes-klassenzimmer"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/klassenfahrt",
+          "text": "Klassenfahrt",
+          "href": "/angebote/klassenfahrt"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/stockfechten",
+          "text": "Stockfechten",
+          "href": "/angebote/stockfechten"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/intuitives-bogen-schiessen",
+          "text": "intuitives Bogen schießen",
+          "href": "/angebote/intuitives-bogen-schiessen"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/spass-feiern",
+          "text": "Spaß & Feiern",
+          "href": "/angebote/spass-feiern"
+        },
+        {
+          "url": "https://komm-raus.org/angebote/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/angebote/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/schule",
+          "text": "Schule",
+          "href": "/zielgruppen/schule"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/assessment-center",
+          "text": "Assessment Center",
+          "href": "/zielgruppen/unternehmen/assessment-center"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/manager-training",
+          "text": "Manager Training",
+          "href": "/zielgruppen/unternehmen/manager-training"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/unternehmen/csr",
+          "text": "CSR",
+          "href": "/zielgruppen/unternehmen/csr"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/blaulicht",
+          "text": "Blaulicht",
+          "href": "/zielgruppen/blaulicht"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/vereine",
+          "text": "Vereine",
+          "href": "/zielgruppen/vereine"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen/eins-zu-eins",
+          "text": "Eins zu Eins",
+          "href": "/zielgruppen/eins-zu-eins"
+        },
+        {
+          "url": "https://komm-raus.org/download/fragebogen-lehrer",
+          "text": "Fragebogen Lehrer",
+          "href": "/download/fragebogen-lehrer"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/impressum",
+          "text": "Impressum",
+          "href": "/kontakt/impressum"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/datenschutz",
+          "text": "Datenschutz",
+          "href": "/kontakt/datenschutz"
+        },
+        {
+          "url": "https://komm-raus.org/kontakt/agb",
+          "text": "AGB",
+          "href": "/kontakt/agb"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Jetzt anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "anfragen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Kontakt aufnehmen",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/",
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "url": "https://komm-raus.org/about",
+          "text": "Über uns",
+          "href": "/about"
+        },
+        {
+          "url": "https://komm-raus.org/angebote",
+          "text": "Angebote",
+          "href": "/angebote"
+        },
+        {
+          "url": "https://komm-raus.org/zielgruppen",
+          "text": "Zielgruppen",
+          "href": "/zielgruppen"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "📘",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "📷",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "📺",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Impressum",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "Datenschutz",
+          "href": "#"
+        },
+        {
+          "url": "https://komm-raus.org/#",
+          "text": "AGB",
+          "href": "#"
+        }
+      ],
+      "mainSections": []
+    }
+  },
+  "navigationStructure": {
+    "mainNavigation": [
+      {
+        "text": "anfragen",
+        "frequency": 10,
+        "percentage": 500
+      },
+      {
+        "text": "Eins zu Eins",
+        "frequency": 8,
+        "percentage": 400
+      },
+      {
+        "text": "Home",
+        "frequency": 6,
+        "percentage": 300
+      },
+      {
+        "text": "Über uns",
+        "frequency": 6,
+        "percentage": 300
+      },
+      {
+        "text": "Impressum",
+        "frequency": 6,
+        "percentage": 300
+      },
+      {
+        "text": "Datenschutz",
+        "frequency": 6,
+        "percentage": 300
+      },
+      {
+        "text": "AGB",
+        "frequency": 6,
+        "percentage": 300
+      },
+      {
+        "text": "Teambuilding",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Stressresilienz",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Konzentration",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Train the Trainer",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Vertrauen",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Wildkräutertour",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Kanutour",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Survival & Bushcraft",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Grünes Klassenzimmer",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Klassenfahrt",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Stockfechten",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "intuitives Bogen schießen",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Spaß & Feiern",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Schule",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Assessment Center",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Manager Training",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "CSR",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Blaulicht",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Vereine",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Fragebogen Lehrer",
+        "frequency": 4,
+        "percentage": 200
+      },
+      {
+        "text": "Komm Raus",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "Überblick",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "Jetzt anfragen",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "Kontakt aufnehmen",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "Angebote",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "Zielgruppen",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "📘",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "📷",
+        "frequency": 2,
+        "percentage": 100
+      },
+      {
+        "text": "📺",
+        "frequency": 2,
+        "percentage": 100
+      }
+    ],
+    "pageHierarchy": {},
+    "urlPatterns": {
+      "homepage": [
+        {
+          "url": "https://komm-raus.org",
+          "path": "/",
+          "title": "Laubfrosch Waldseilgarten – Startseite"
+        },
+        {
+          "url": "https://komm-raus.org/",
+          "path": "/",
+          "title": "Laubfrosch Waldseilgarten – Startseite"
+        }
+      ]
+    },
+    "commonSections": []
+  },
+  "suggestedNavigation": [
+    {
+      "text": "Home",
+      "path": "/",
+      "frequency": 6
+    },
+    {
+      "text": "Über uns",
+      "path": "/about",
+      "frequency": 6
+    },
+    {
+      "text": "Impressum",
+      "path": "/kontakt/impressum",
+      "frequency": 6
+    },
+    {
+      "text": "Datenschutz",
+      "path": "/kontakt/datenschutz",
+      "frequency": 6
+    },
+    {
+      "text": "AGB",
+      "path": "/kontakt/agb",
+      "frequency": 6
+    }
+  ]
+}

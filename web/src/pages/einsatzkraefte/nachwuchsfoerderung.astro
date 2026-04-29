@@ -1,0 +1,240 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+import Button from '../../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/PXL_20230503_154641351-400.jpg',
+    alt: 'Nachwuchsförderung - Worum es geht bei der Jugendarbeit',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#zielgruppen',
+    image: '/bilder_nach_page/einsatzkraefte/leiter-feuerwehr-vertrauen-komm-raus.jpg',
+    alt: 'Zielgruppen - Jugendfeuerwehr und Nachwuchskräfte',
+    label: 'Zielgruppen',
+  },
+  {
+    href: '#themen',
+    image: '/bilder_nach_page/einsatzkraefte/Kooperation-vertrauen-laubfrosch.jpg',
+    alt: 'Themen und Lernfelder - Kooperation und Vertrauen',
+    label: 'Themen und Lernfelder',
+  },
+  {
+    href: '#ablauf',
+    image: '/bilder_nach_page/einsatzkraefte/vertikale-leiter-feuerwehr-teamtraining.jpg',
+    alt: 'Ablauf eines typischen Tages - Teamtraining an der Leiter',
+    label: 'Ablauf',
+  },
+  {
+    href: '#zusammenarbeit',
+    image: '/bilder_nach_page/einsatzkraefte/Reflexion-teamkreis-kommunikation.jpg',
+    alt: 'Zusammenarbeit mit Verantwortlichen - Reflexion und Kommunikation',
+    label: 'Zusammenarbeit',
+  },
+  {
+    href: '#organisatorisches',
+    image: '/bilder_nach_page/einsatzkraefte/Teamtraining-laubfrosch-waldseilgarten.jpg',
+    alt: 'Organisatorisches - Teamtraining im Waldseilgarten',
+    label: 'Organisatorisches',
+  },
+];
+
+const imagePath = "/images/PXL_20230503_154641351-800.jpg";
+---
+
+<MainLayout title="Nachwuchsförderung – Laubfrosch" imagePath={imagePath}>
+
+  <Section class="nachwuchsfoerderung-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Nachwuchs in Feuerwehr, Rettungsdienst oder anderen Einsatzbereichen bringt viel Energie und Motivation mit – und gleichzeitig Unsicherheiten: Wie gehe ich mit Verantwortung um? Was mache ich mit eigener Angst? Wie verhalte ich mich im Team?</p>
+      <p>Im Waldseilgarten erhalten Jugendgruppen und Anwärter:innen einen geschützten Rahmen, in dem sie diese Fragen praktisch erleben können: Verantwortung füreinander übernehmen, Grenzen wahrnehmen, klare Absprachen treffen, sich gegenseitig unterstützen.</p>
+      <picture class="image-card">
+        <img src="/images/PXL_20230503_154641351-400.jpg" alt="Nachwuchsgruppe im Waldseilgarten" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zielgruppen" class="prose max-w-none">
+      <h2>Zielgruppen</h2>
+      <ul class="card-list">
+        <li>Jugendfeuerwehr-Gruppen</li>
+        <li>Nachwuchs im Rettungsdienst oder Hilfsorganisationen</li>
+        <li>Anwärter:innen in Ausbildungsgängen (je nach Vorgaben der Organisation)</li>
+        <li>gemischte Jugend- oder Nachwuchsgruppen mit Interesse an Einsatz- und Rettungsthemen</li>
+      </ul>
+      <p>Die Programme werden in Sprache, Intensität und Aufgabenstellung an Alter und Erfahrung angepasst.</p>
+      <picture class="image-card">
+        <img src="/bilder_nach_page/einsatzkraefte/leiter-feuerwehr-vertrauen-komm-raus.jpg" alt="Jugendfeuerwehr beim Vertrauenstraining an der Leiter" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="themen" class="prose max-w-none">
+      <h2>Themen und Lernfelder</h2>
+      <p>Mögliche Schwerpunkte:</p>
+      <ul class="card-list">
+        <li><strong>Teamfähigkeit und Verlässlichkeit</strong><br>sich auf andere verlassen, selbst verlässlich sein</li>
+        <li><strong>Umgang mit Risiko und Angst</strong><br>eigene Grenzen wahrnehmen, „Nein" sagen dürfen, ohne Gesicht zu verlieren</li>
+        <li><strong>Kommunikation und Feedback</strong><br>sich äußern, wenn etwas nicht passt; Rückmeldungen geben und annehmen</li>
+        <li><strong>Verantwortung und Vorbildfunktion</strong><br>insbesondere bei älteren Jugendlichen und Jugendgruppenleitenden</li>
+      </ul>
+      <p>Wir arbeiten stärkenorientiert: Ziel ist es, vorhandene Ressourcen sichtbar zu machen und zu unterstützen.</p>
+
+      <div class="image-gallery">
+        <picture>
+          <img src="/bilder_nach_page/einsatzkraefte/Kooperation-vertrauen-laubfrosch.jpg" alt="Kooperationsübung für Vertrauen und Teamfähigkeit" loading="lazy" />
+        </picture>
+
+        <picture>
+          <img src="/bilder_nach_page/einsatzkraefte/nachwuchsfoerderung/PXL_20230503_154657474.jpg" alt="Nachwuchsgruppe bei praktischen Übungen" loading="lazy" />
+        </picture>
+
+        <picture>
+          <img src="/bilder_nach_page/einsatzkraefte/Teamtraining-laubfrosch-waldseilgarten.jpg" alt="Teamtraining im Waldseilgarten" loading="lazy" />
+        </picture>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="ablauf" class="prose max-w-none">
+      <h2>Ablauf eines typischen Tages</h2>
+      <p>Ein Beispielablauf:</p>
+      <ul class="card-list">
+        <li><strong>Ankommen &amp; Kennenlernen</strong><br>gemeinsame Einstimmung, Klärung der Ziele und Regeln</li>
+        <li><strong>Teamaufgaben am Boden</strong><br>Kooperationsspiele, kleine Herausforderungen, bei denen alle gebraucht werden</li>
+        <li><strong>Hochseilgarten in angepasster Schwierigkeit</strong><br>freiwillige Teilnahme, verschiedene Routen. Gegenseitige Sicherung mit Anleitung</li>
+        <li><strong>Reflexion &amp; Ausblick</strong><br>altersgerechte Auswertung: „Was hat heute gut geklappt? Was war schwierig? Was nehmen wir mit in unsere Gruppe / in die Ausbildung?"</li>
+      </ul>
+      <p>Der Anteil an Theorie wird bewusst gering gehalten; im Vordergrund stehen Erlebnis und begleitete Auswertung.</p>
+      <picture class="image-card">
+        <img src="/bilder_nach_page/einsatzkraefte/vertikale-leiter-feuerwehr-teamtraining.jpg" alt="Nachwuchsgruppe beim Vertrauensaufbau an einer Leiter im Waldseilgarten" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zusammenarbeit" class="prose max-w-none">
+      <h2>Zusammenarbeit mit Verantwortlichen</h2>
+      <p>Die Verantwortung für Ausbildung und Wertevermittlung liegt bei den jeweiligen Organisationen. Wir verstehen uns als externer Lernort und stimmen uns eng mit Jugendwarten, Ausbilder:innen oder Leitungspersonen ab:</p>
+      <ul class="card-list">
+        <li>Vor dem Termin klären wir Zielsetzung, Besonderheiten in der Gruppe und organisatorische Fragen.</li>
+        <li>Verantwortliche können aktiv am Programm teilnehmen oder beobachtend dabei sein.</li>
+        <li>Auf Wunsch können wir nach dem Tag eine kurze Rückmeldung zu beobachteten Stärken und Themen geben.</li>
+      </ul>
+      <picture class="image-card">
+        <img src="/bilder_nach_page/einsatzkraefte/Reflexion-teamkreis-kommunikation.jpg" alt="Reflexion und Zusammenarbeit mit Verantwortlichen" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches</h2>
+      <ul class="card-list">
+        <li><strong>Alter:</strong> je nach Organisation, in der Regel ab frühem Jugendalter (genaue Altersgrenzen nach Absprache)</li>
+        <li><strong>Dauer:</strong> meist Tagesprogramme; Halbtagsformate möglich</li>
+        <li><strong>Gruppengröße:</strong> abhängig von Betreuungsverhältnis und Sicherheitsvorgaben</li>
+      </ul>
+      <p>Fragen zu Aufsichtspflicht, Einverständniserklärungen und körperlichen Voraussetzungen klären wir gerne im Vorfeld.</p>
+      <div class="mt-6">
+        <Button href="#anfrage" type="primary">Anfrage zu Nachwuchsförderung</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.nachwuchsfoerderung-overview {
+  padding-top: 0;
+}
+
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  margin-top: 1.5rem;
+  align-items: stretch;
+}
+
+.image-gallery picture {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-gallery img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  display: block;
+  filter: saturate(1.02);
+}
+
+.image-gallery picture:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  .image-gallery img {
+    aspect-ratio: 1 / 1;
+  }
+
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+

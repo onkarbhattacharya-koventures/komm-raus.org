@@ -1,0 +1,585 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/bildungseinrichtungen-adhs-fokus-training-kurs-wagniskompetenz-400.jpg',
+    alt: 'Kinder in Bewegungsaufgaben im Waldseilgarten',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#fuer-wen',
+    image: '/images/bildungseinrichtungen-adhs-fokus-training-kurs-fokus-monch-400.jpg',
+    alt: 'Schulgruppe im Naturraum',
+    label: 'Fuer wen geeignet',
+  },
+  {
+    href: '#fuenf-saeulen',
+    image: '/images/bildungseinrichtungen-adhs-fokus-training-kurs-fokus-achtsamkeit-400.jpg',
+    alt: 'Fokus, Bewegung und Teamarbeit',
+    label: 'Inhalte und Aufbau',
+  },
+  {
+    href: '#wissenschaft',
+    image: '/images/bildungseinrichtungen-adhs-fokus-training-pxl-20250426-185244693-400.jpg',
+    alt: 'Lernen im naturnahen Umfeld',
+    label: 'Wissenschaft',
+  },
+  {
+    href: '#sicherheit-haltung',
+    image: '/images/bildungseinrichtungen-adhs-fokus-training-pxl-20250902-115212509-400.jpg',
+    alt: 'Sicher begleitetes Lernen',
+    label: 'Sicherheit und Haltung',
+  },
+  {
+    href: '#organisatorisches',
+    image: '/images/bildungseinrichtungen-adhs-fokus-training-pxl-20250902-115215890-400.jpg',
+    alt: 'Reflexion und Planung mit Schulen',
+    label: 'Organisatorisches',
+  },
+];
+
+---
+
+<MainLayout title="ADHS-Unterstuetzung fuer Schulen - Komm Raus">
+  <Hero
+    title="Wenn das Klassenzimmer zum Kaefig wird"
+    subtitle="ADHS-Unterstuetzung fuer Schulen: Ein ganzheitlicher Ansatz, der am Fundament arbeitet - nicht an der Fassade. Warum Stillsitzen, Frontalunterricht und isolierte Therapiestunden nicht reichen. Warum Medikamente der letzte Schritt sein sollten, nicht der erste. Und was Schulen fuer Schueler und Lehrer stattdessen tun koennen."
+    imagePath="/images/bildungseinrichtungen-adhs-fokus-training-kurs-wagniskompetenz-800.jpg"
+  />
+
+  <Section class="adhs-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="worum-es-geht">
+      <h2>Worum es geht</h2>
+      <h3>Die unbequeme Frage</h3>
+      <p>Jeden Morgen betreten in Deutschland Hunderttausende Kinder mit ADHS-Diagnose Klassenzimmer, die fuer sie nicht gebaut wurden.</p>
+      <p>Sie sollen sechs Stunden stillsitzen, obwohl ihr Koerper nach Bewegung schreit. Sie sollen sich auf Arbeitsblaetter konzentrieren, obwohl ihr Gehirn nach Relevanz und Stimulation verlangt. Sie sollen auf Noten in drei Wochen hinarbeiten, obwohl ihr Nervensystem nur das Jetzt kennt.</p>
+      <p>Die uebliche Interpretation lautet: Diese Kinder haben eine Stoerung. Ihr Gehirn funktioniert nicht richtig.</p>
+      <p>Aber stimmt das? Oder ist es andersherum: Diese Kinder haben ein Nervensystem, das fuer eine andere Umgebung gebaut wurde, und die Stoerung entsteht erst durch die Kollision mit einer Umwelt, die nicht zu ihnen passt.</p>
+
+      <h3>Die unbequeme These</h3>
+      <p>Der Mensch hat sich ueber Hunderttausende von Jahren entwickelt: fuer Bewegung, Naturkontakt, wechselnde Stimulation und unmittelbares Feedback. Fuer koerperliche Herausforderung, echte Konsequenzen und ein Leben im Rhythmus der Natur.</p>
+      <p>Die neolithische Revolution begann vor etwa 10.000 Jahren. Die industrielle Revolution liegt rund 250 Jahre zurueck. Das moderne Klassenzimmer mit langen Sitzphasen und abstraktem Stoff ist evolutionaer betrachtet ein Wimpernschlag.</p>
+      <p>Was wir heute ADHS nennen, koennte weniger eine Stoerung sein als eine Passung, die ihren Kontext verloren hat.</p>
+      <p>Die Ariaal-Studie aus Kenia ist aufschlussreich: Die Genvariante DRD4-7R, die mit ADHS assoziiert ist, war in der nomadisch lebenden Gruppe mit besserem Ernaehrungszustand verbunden, in der sesshaft gewordenen Gruppe mit schlechterem. Dieselbe genetische Ausstattung: in einem Kontext Vorteil, im anderen Nachteil.</p>
+      <p>Das bedeutet nicht, dass ADHS-Symptome nicht real sind oder nicht leiden machen. Aber vielleicht liegt das Problem nicht im Kind, sondern in der Diskrepanz zwischen dem, was das Kind braucht, und dem, was unsere Lebensweise bietet.</p>
+
+      <h3>Was derzeit passiert: Der Flickenteppich</h3>
+      <p>Wenn ein Kind mit ADHS auffaellig wird, setzt oft ein bekanntes Muster ein:</p>
+      <ul class="card-list">
+        <li>Diagnose nach Monaten oder Jahren von Leiden, Konflikten und Schuldzuweisungen.</li>
+        <li>Ergotherapie einmal pro Woche, 45 Minuten, isoliert vom Schulalltag.</li>
+        <li>Verhaltenstherapie bei langen Wartezeiten, haeufig 6 bis 12 Monate.</li>
+        <li>Nachhilfe, also mehr vom Gleichen, das bereits nicht funktioniert.</li>
+        <li>Nachteilsausgleich, der Symptome lindert, aber das Fundament nicht aendert.</li>
+        <li>Schulbegleitung, die oft am Personalmangel scheitert.</li>
+        <li>Und dann haeufig sehr schnell: Medikation.</li>
+      </ul>
+
+      <h3>Das Medikamenten-Problem</h3>
+      <p>Wir sagen klar: Medikation kann in schweren Faellen ein Werkzeug sein. Aber sie sollte der letzte Schritt sein, nicht der erste.</p>
+      <p>Stattdessen beobachten wir oft, dass fundamentale Fragen nicht gestellt werden, bevor das Rezept geschrieben wird:</p>
+      <ul class="card-list">
+        <li>Wie schlaeft dieses Kind? Wie lange und wie gut?</li>
+        <li>Wie viel echte Bewegung gibt es pro Woche?</li>
+        <li>Wie sieht die Ernaehrung aus?</li>
+        <li>Gibt es echte Herausforderung und Erfolgserlebnisse?</li>
+        <li>Wie viel Naturkontakt gibt es?</li>
+        <li>Wurden Atem- und Konzentrationstechniken systematisch trainiert?</li>
+      </ul>
+      <p>Einem Kind Medikamente zu geben, damit es in ein nicht passendes System passt, halten wir fuer keine Loesung. Das ist aus unserer Sicht eine Kapitulation vor der eigentlichen Aufgabe.</p>
+
+      <h3>Was fehlt: Das Fundament</h3>
+      <p>Wenn man die fuehrende ADHS-Forschung betrachtet, kristallisiert sich ein Bild heraus: ADHS ist primaer eine Selbstregulationsstoerung. Impulskontrolle, Emotionssteuerung, Zeitwahrnehmung und Selbstmotivation sind beeintraechtigt.</p>
+      <p>Selbstregulation ist koerperbasiert. Sie haengt ab von:</p>
+      <ul class="card-list">
+        <li>Ernaehrung: Das Gehirn braucht Bausteine fuer Neurotransmitter und Stabilitaet.</li>
+        <li>Schlaf: Regeneration in der Nacht ist Voraussetzung fuer Fokus am Tag.</li>
+        <li>Bewegung: Erhoeht Dopamin und Noradrenalin, ohne Nebenwirkungen.</li>
+        <li>Naturkontakt: Schon 20 Minuten im Gruenen koennen Konzentration verbessern.</li>
+        <li>Fokus und Konzentration: trainierbar wie ein Muskel.</li>
+        <li>Atemregulation: direkter Zugang zum Nervensystem in Sekunden.</li>
+      </ul>
+      <p>Nichts davon wird durch den ueblichen Flickenteppich ausreichend adressiert. Was fehlt, ist ein ganzheitlicher Ansatz, der am Fundament arbeitet, nicht an der Fassade.</p>
+
+      <h3>Nicht nur Schueler: Auch Lehrer leiden</h3>
+      <p>Viele Lehrkraefte erleben selbst Symptome wie Brain Fog, innere Unruhe, Reizbarkeit, Ueberlastung und Schlafmangel. Das sind keine Charakterschwaechen, sondern Folgen chronischer Belastung und fehlender Methodik zur Selbstregulation.</p>
+      <p>Unser Angebot richtet sich deshalb nicht nur an Schueler, sondern auch an Lehrer als Menschen, deren Nervensystem oft denselben Mismatch erlebt.</p>
+
+      <h3>Unser Angebot: Der fehlende Baustein</h3>
+      <p>Die komm raus GmbH bietet einen strukturierten, ganzheitlichen Ansatz fuer Schueler und Lehrer auf Basis von fuenf Saeulen und einer Entwicklungskaskade.</p>
+      <p>Unser Gelaende am Waldseilgarten Laubfrosch verbindet natuerliches Waldgelaende, Wiese, Bachzugang, Gruenes Klassenzimmer mit Lehrgarten, Lehrkueche, Raeume fuer Fokus- und Atemarbeit sowie Kajak-Angebote. Dazu kommen mobile Formate bei Ihnen vor Ort.</p>
+      <ul class="card-list">
+        <li>Ernaehrung als Fundament im Soil-to-Table-Verstaendnis</li>
+        <li>Regulierende Bewegung mit koordinativen Anforderungen</li>
+        <li>Systematischer Naturkontakt</li>
+        <li>Fokus- und Konzentrationstraining in jeder Einheit</li>
+        <li>Atemregulation unter echten Bedingungen</li>
+        <li>Echte Herausforderung mit unmittelbarem Feedback</li>
+        <li>Erfolge, die sich im Koerper verankern</li>
+      </ul>
+      <p>Wir ersetzen keine Therapie und keinen guten Unterricht. Wir sehen unseren Ansatz in den meisten Faellen vor einer Medikation, nicht danach.</p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="fuer-wen">
+      <h2>Fuer wen unsere Programme geeignet sind</h2>
+
+      <h3>Fuer Schulen mit ADHS-Schuelern</h3>
+      <p>Das betrifft praktisch jede Schule. Bei einer Praevalenz von 5 bis 7 Prozent sitzt statistisch in jeder Klasse mindestens ein Kind mit ADHS, diagnostiziert oder nicht.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Was</th>
+              <th>Fuer wen</th>
+              <th>Kern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Strukturiertes Jahresprogramm</td>
+              <td>Schueler mit ADHS</td>
+              <td>Fortlaufende Begleitung durch Atmung, Schlaf, Bewegung, Ernaehrung, Fokus und Entwicklungskaskade</td>
+            </tr>
+            <tr>
+              <td>ADHS-sensible Klassentage</td>
+              <td>Ganze Klassen</td>
+              <td>Erfahrungen nach ADHS-Prinzipien, gut fuer alle und besonders wirksam fuer ADHS-Kinder</td>
+            </tr>
+            <tr>
+              <td>Gruenes Klassenzimmer ADHS</td>
+              <td>Klassen</td>
+              <td>Lehrplan draussen, bewegungsorientiert, mit Fokus-Elementen</td>
+            </tr>
+            <tr>
+              <td>Projekttage und Projektwochen</td>
+              <td>Jahrgaenge</td>
+              <td>Intensive Erfahrung mit mehreren Saeulen</td>
+            </tr>
+            <tr>
+              <td>Fortbildung fuer Lehrkraefte</td>
+              <td>Kollegien</td>
+              <td>ADHS verstehen und eigene Regulation staerken</td>
+            </tr>
+            <tr>
+              <td>Mobile Formate</td>
+              <td>Klassen und Gruppen</td>
+              <td>Durchfuehrung bei Ihnen vor Ort</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Fuer Lehrer als Betroffene, nicht nur als Unterstuetzer</h3>
+      <p>Sie kennen vielleicht Brain Fog, innere Unruhe, kurze Zuendschnur und das Gefuehl, am Limit zu sein. Das sind Symptome und sie sind adressierbar.</p>
+      <p>Unsere Programme fuer Lehrkraefte sind keine reinen ADHS-Fortbildungen ueber schwierige Schueler. Es sind Erfahrungsraeume, in denen Sie selbst Regulation, Fokus und Nervensystemwissen praktisch erleben.</p>
+      <ul class="card-list">
+        <li>ADHS neurobiologisch verstehen, nicht moralisch bewerten</li>
+        <li>Eigenes Nervensystem verstehen und regulieren</li>
+        <li>Praktische Atemtechniken fuer den Schulalltag</li>
+        <li>Fokus- und Konzentrationstraining fuer Erwachsene</li>
+        <li>Bewegungsbasierte Regulation</li>
+        <li>Eigene Erfahrung im Hochseilgarten, auf dem Wasser und in der Natur</li>
+        <li>Ernaehrung im realen Berufsalltag verbessern</li>
+        <li>Kollegialer Austausch mit anderen stark belasteten Lehrkraeften</li>
+      </ul>
+
+      <h3>Fuer Schulsozialarbeit und Inklusionsbegleitung</h3>
+      <p>Diese Fachkraefte sehen oft zuerst, dass ein Kind kaempft, und haben gleichzeitig zu wenig Ressourcen. Wir koennen hier Partner sein.</p>
+      <ul class="card-list">
+        <li>Strukturierte Programme als fester Schulbaustein</li>
+        <li>Einzelfallbegleitung in Absprache</li>
+        <li>Fallbesprechung und kollegialer Austausch</li>
+        <li>Gemeinsame Elternarbeit</li>
+      </ul>
+
+      <h3>Fuer Ganztagsschulen und Horte</h3>
+      <p>Der Nachmittag ist fuer ADHS-Kinder oft der haerteste Teil: erschoepft, ueberstimuliert und dann noch Hausaufgaben. Unsere Formate setzen genau dort an.</p>
+      <ul class="card-list">
+        <li>Bewegung vor den Hausaufgaben</li>
+        <li>Naturkontakt als Regulation</li>
+        <li>Fokusuebungen mit echter Alltagstauglichkeit</li>
+        <li>Erfolgserlebnisse statt Frustration</li>
+      </ul>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="fuenf-saeulen">
+      <h2>Inhalte und Aufbau: Die fuenf Saeulen und die Entwicklungskaskade</h2>
+      <p>Unser Konzept ist kein Flickenteppich aus Einzelmassnahmen. Es ist ein strukturierter Aufbau, der auf fuenf Saeulen basiert und in eine Entwicklungskaskade muendet.</p>
+
+      <h3>Die fuenf Saeulen des Fundaments</h3>
+
+      <h4>Saeule Ernaehrung - Soil to Table</h4>
+      <p>Gute Ernaehrung ist Fundament fuer Konzentration. Neurotransmitter entstehen aus Aminosaeuren, Vitaminen und Mineralien. Ohne diese Bausteine kann das Gehirn nicht stabil arbeiten.</p>
+      <p>Unser Soil-to-Table-Ansatz verbindet Bodenleben, Pflanzenwachstum, Naehrstoffverfuegbarkeit und die Wirkung im menschlichen Koerper zu einem verstaendlichen Ganzen.</p>
+      <ul class="card-list">
+        <li>Wurmfarm und Kompost: Wie entsteht fruchtbarer Boden?</li>
+        <li>Eigener Anbau: Von der Saat zum Teller</li>
+        <li>Wildkraeuter: Was waechst am Waldrand und wie schmeckt es?</li>
+        <li>Lehrkueche: Einfache Gerichte fuer mehr Fokus und stabile Energie</li>
+        <li>Blutzucker verstehen: Warum das Fruehstueck den Tag steuert</li>
+      </ul>
+
+      <h4>Saeule Bewegung - koordinativ anspruchsvoll, in der Natur</h4>
+      <p>Bewegung ist fuer ADHS-Gehirne Medizin. Studien zeigen Effekte auf Aufmerksamkeit, Impulskontrolle sowie Dopamin- und Noradrenalinverfuegbarkeit.</p>
+      <p>In der Schule kommt Bewegung oft nach dem Lernen. Bei ADHS muss sie davor kommen.</p>
+      <ul class="card-list">
+        <li>Jedes Programm startet mit koerperlicher Aktivierung</li>
+        <li>Koordinative Aufgaben: Klettern, Balancieren, Paddeln</li>
+        <li>Bewegung in der Natur als Wirkverstaerker</li>
+        <li>Bewegung als fester Teil jeder Einheit</li>
+      </ul>
+
+      <h4>Saeule Fokus und Konzentration - trainierbar wie ein Muskel</h4>
+      <p>Aufmerksamkeit wird nicht durch Ermahnung trainiert, sondern durch Uebung. Fokusarbeit ist Kern jeder Einheit.</p>
+      <ul class="card-list">
+        <li>Sitzplatz-Uebungen im Wald mit klaren Auftraegen</li>
+        <li>Bogenschiessen als Punktfokus von Koerper, Atem und Geist</li>
+        <li>Balancieraufgaben mit unmittelbarer Rueckmeldung</li>
+        <li>Wahrnehmungsparcours mit praeziser Aufmerksamkeit</li>
+        <li>Bewegte Fokusuebungen und atembasierter Aufmerksamkeitsanker</li>
+      </ul>
+
+      <h4>Saeule Atem - der vergessene Hebel</h4>
+      <p>Der Atem ist der direkteste Zugang zum Nervensystem. Mit einfachen Techniken kann Aktivierung innerhalb von Sekunden reguliert werden.</p>
+      <p>Wir trainieren Atemtechnik nicht im Theorieraum, sondern im Point of Performance, also dort, wo Stress, Frust oder Unsicherheit real auftreten.</p>
+      <ul class="card-list">
+        <li>Physiologischer Seufzer fuer schnelle Beruhigung</li>
+        <li>Box Breathing fuer Fokus</li>
+        <li>Bauchatmung versus Brustatmung verstehen</li>
+        <li>Eigenen Atemrhythmus wahrnehmen und nutzen</li>
+      </ul>
+
+      <h4>Saeule Naturkontakt - Attention Restoration</h4>
+      <p>20 Minuten im Gruenen koennen Konzentration bei ADHS-Kindern messbar verbessern. Natur beansprucht Aufmerksamkeit sanft und ermoeglicht Regeneration gerichteter Aufmerksamkeit.</p>
+      <p>Naturkontakt ist bei uns keine Dekoration, sondern strukturierter Bestandteil jedes Formats.</p>
+      <ul class="card-list">
+        <li>Waldwahrnehmung mit allen Sinnen</li>
+        <li>Sitzplatz-Uebungen in der Natur</li>
+        <li>Wildkraeuterwanderungen und Spurenlesen</li>
+        <li>Regelmaessige Programme ueber Jahreszeiten hinweg</li>
+        <li>Draussen bei fast jedem Wetter</li>
+      </ul>
+
+      <h3>Die Entwicklungskaskade: Vom Fundament zur Kompetenz</h3>
+      <ul class="card-list">
+        <li>Phase 1: Fundament stabilisieren - fuenf Saeulen, Koerperwahrnehmung, erste Regulation</li>
+        <li>Phase 2: Selbstregulation entwickeln - Reiz-Reaktions-Pause zurueckgewinnen</li>
+        <li>Phase 3: Selbstvertrauen aufbauen - echte Herausforderungen meistern</li>
+        <li>Phase 4: Verantwortung uebernehmen - fuer sich selbst und andere</li>
+        <li>Phase 5: Transfer in den Alltag - Routinen, Anwendung, Rueckschlaege verarbeiten</li>
+      </ul>
+      <p>Diese Entwicklung braucht Zeit und Wiederholung. Deshalb wirken regelmaessige Programme meist nachhaltiger als Einzeltage.</p>
+
+      <h3>Die Erfahrungsraeume: Wo Lernen anders funktioniert</h3>
+      <h4>Der Hochseilgarten - ICNU in Aktion</h4>
+      <p>ADHS-Gehirne aktivieren sich ueber Interest, Challenge, Novelty und Urgency. Der Hochseilgarten liefert alle vier Faktoren gleichzeitig.</p>
+      <p>Unser Toprope-System bedeutet: Es sichert immer ein Mensch. Dadurch werden Vertrauen und Verantwortung koerperlich erfahrbar.</p>
+
+      <h4>Gruenes Klassenzimmer und Lehrgarten</h4>
+      <ul class="card-list">
+        <li>Wurmfarm, Kompost und Terra Preta</li>
+        <li>Kraeuter- und Gemuesebeete</li>
+        <li>Bach-Experimente zu Wasser und Oekologie</li>
+        <li>Verarbeitung in der Lehrkueche</li>
+      </ul>
+
+      <h4>Wildnispaedagogik und Naturhandwerk</h4>
+      <p>Feuermachen, Schnitzen und Bushcraft verlangen Fokus, Geduld und Feinmotorik. Das Feedback ist direkt und ehrlich.</p>
+
+      <h4>Wasser - Kajak und Kanu</h4>
+      <p>Paddeln fordert Koordination, Rhythmus und Aufmerksamkeit. Bewegung plus Naturerfahrung wirkt stark regulierend.</p>
+
+      <h4>Lehrkueche und Uebungsraum</h4>
+      <p>Kochen verbindet Teamarbeit und Ernaehrungsbildung. Im Uebungsraum trainieren wir Atemtechniken, Fokus und bewegte Achtsamkeit kurz, konkret und ADHS-gerecht.</p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="wissenschaft">
+      <h2>Warum dieser Ansatz Sinn macht - wissenschaftliche Einordnung</h2>
+
+      <h3>ADHS: Stoerung oder Passung ohne Kontext?</h3>
+      <p>Die Wissenschaft kann diese Frage nicht abschliessend beantworten.</p>
+      <p>Was wir haben: statistische Unterschiede in Gehirnen, genetische Assoziationen und beobachtete Beeintraechtigungen unter modernen Lebensbedingungen.</p>
+      <p>Was wir nicht haben: einen eindeutigen Biomarker, den Nachweis gleicher Probleme unter allen Lebensbedingungen und ausreichend Studien zu ADHS-Genotypen unter naturnahen Bedingungen.</p>
+      <p>Die Ariaal-Studie (Eisenberg et al., 2008) zeigt: dieselbe genetische Ausstattung kann je nach Kontext Vorteil oder Nachteil sein.</p>
+      <p>Unsere Position: Ob ADHS Stoerung oder Kontextmismatch ist, bleibt offen. Beobachtbar ist, dass viele Symptome in passender Umgebung deutlich geringer ausfallen.</p>
+
+      <h3>Forschung: Natur und ADHS</h3>
+      <ul class="card-list">
+        <li>Kuo und Faber Taylor (2004): naturnahe Aktivitaeten waren bei 452 Kindern mit ADHS mit geringerer Symptomstaerke assoziiert.</li>
+        <li>Faber Taylor und Kuo (2009): 20 Minuten Spaziergang im Park verbesserten Konzentration staerker als 20 Minuten in urbaner Umgebung.</li>
+      </ul>
+
+      <h3>Forschung: Bewegung und ADHS</h3>
+      <ul class="card-list">
+        <li>Cerrillo-Urbina et al. (2015): Metaanalyse mit moderaten bis starken Effekten auf Aufmerksamkeit, Hyperaktivitaet und Impulsivitaet.</li>
+        <li>Pontifex et al. (2013): 20 Minuten moderate Bewegung verbesserten Aufmerksamkeits- und Inhibitionsleistung.</li>
+        <li>Ratey (2008): Bewegung erhoeht Dopamin und Noradrenalin, zentrale Neurotransmitter bei ADHS.</li>
+      </ul>
+
+      <h3>Forschung: Grenzen der Medikation</h3>
+      <ul class="card-list">
+        <li>MTA-Studie: nach 14 Monaten war medikamentoese Behandlung ueberlegen, nach 3 und 6 Jahren keine signifikanten Unterschiede.</li>
+        <li>Schwartz et al. (2016): Langzeit-Outcomes wie Bildungsabschluss und Beruf wurden durch Medikation allein nicht verbessert.</li>
+      </ul>
+      <p>Interpretation: Medikation kann Zeit kaufen, baut aber keine Kompetenzen auf. Das muessen andere Interventionen leisten.</p>
+
+      <h3>Forschung: Ernaehrung und ADHS</h3>
+      <ul class="card-list">
+        <li>Millichap und Yee (2012): Omega-3, Eisen, Zink und Magnesium koennen Symptome beeinflussen.</li>
+        <li>Studien zeigen Zusammenhaenge zwischen Blutzuckerschwankungen und Konzentrationsproblemen.</li>
+        <li>Lebensmittelqualitaet und Verarbeitungsgrad beeinflussen kognitive Funktionen messbar.</li>
+      </ul>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="sicherheit-haltung">
+      <h2>Sicherheit und Haltung</h2>
+
+      <h3>Physische Sicherheit</h3>
+      <ul class="card-list">
+        <li>Hochseilgarten-Betrieb nach DIN 15567, ERCA-Standards und DGUV-Vorgaben</li>
+        <li>TUEV-geprueft (TUEV SUED), jaehrliche sicherheitstechnische Ueberpruefung</li>
+        <li>Qualifizierte Trainer mit dokumentierter Ausbildung</li>
+        <li>Notfall- und Rettungskonzept fuer alle Aktivitaeten</li>
+        <li>18 Saisons unfallfreier Betrieb</li>
+      </ul>
+      <p><strong>ADHS-spezifische Sicherheitsmassnahmen:</strong></p>
+      <ul class="card-list">
+        <li>Klare, kurze Instruktionen</li>
+        <li>Erhoehte Aufmerksamkeit fuer Impulsivitaet</li>
+        <li>Besondere Wachsamkeit bei Uebergaengen</li>
+        <li>Konsequentes, freundliches Durchsetzen der Regeln</li>
+      </ul>
+
+      <h3>Psychologische Sicherheit</h3>
+      <p>ADHS-Kinder und Erwachsene haben oft genug Beschaemung erlebt. Unsere Grundsaetze:</p>
+      <ul class="card-list">
+        <li>Keine Blossstellung. Was hier passiert, bleibt hier.</li>
+        <li>Freiwilligkeit. Nein ist eine vollwertige Antwort.</li>
+        <li>Geduld. Mehr Durchgaenge sind keine Schwaeche.</li>
+        <li>Staerken sehen, nicht nur Defizite.</li>
+        <li>Fehlerfreundlichkeit. Scheitern gehoert zum Lernen.</li>
+      </ul>
+
+      <h3>Zusammenarbeit mit Schule und Eltern</h3>
+      <p><strong>Mit Lehrkraeften:</strong></p>
+      <ul class="card-list">
+        <li>Vorabgespraech: Was sollten wir wissen?</li>
+        <li>Nachgespraech: Was haben wir beobachtet?</li>
+        <li>Transfer-Empfehlungen fuer den Schulalltag</li>
+      </ul>
+      <p><strong>Mit Eltern:</strong></p>
+      <ul class="card-list">
+        <li>Information vor Programmbeginn</li>
+        <li>Feedback nach den Terminen</li>
+        <li>Ernaehrungsgespraeche und Transfer-Tipps fuer zuhause</li>
+      </ul>
+
+      <h3>Was wir klar benennen</h3>
+      <p><strong>Wir sind:</strong></p>
+      <ul class="card-list">
+        <li>Ein erlebnispaedagogischer Anbieter mit strukturiertem, ganzheitlichem Konzept</li>
+        <li>Ein Ort fuer Fundamentstaerkung und verkoerperte Selbstregulation</li>
+        <li>Ein Baustein im Unterstuetzungssystem, der aus unserer Sicht vor Medikation kommen sollte</li>
+      </ul>
+      <p><strong>Wir sind nicht:</strong></p>
+      <ul class="card-list">
+        <li>Eine Therapieeinrichtung</li>
+        <li>Ein Ersatz fuer medizinische Behandlung in schweren Faellen</li>
+        <li>Eine Garantie fuer Heilung</li>
+      </ul>
+      <p>Unsere Position zur Medikation: In den meisten Faellen sollten die hier beschriebenen Ansaetze zuerst konsequent ausgeschopft werden. Wenn nach Monaten der Fundamentstaerkung weiterhin erhebliches Leiden besteht, kann Medikation ein Werkzeug sein.</p>
+    </div>
+  </Section>
+
+  <Section>
+    <div class="prose max-w-none content-panel" id="organisatorisches">
+      <h2>Organisatorisches</h2>
+
+      <h3>Das strukturierte Programm: WALDANKER</h3>
+      <p>Fuer nachhaltige Wirkung empfehlen wir unser Jahresprogramm.</p>
+      <ul class="card-list">
+        <li>Rhythmus: 14-taegig, 3,5 Stunden</li>
+        <li>Dauer: Schuljahr mit 20 Terminen</li>
+        <li>Gruppengroesse: 6 bis 8 Schueler</li>
+        <li>Betreuung: 2 Trainer</li>
+      </ul>
+      <p>Enthalten sind systematische Arbeit durch alle fuenf Saeulen, Fokus- und Konzentrationstraining in jeder Einheit, Entwicklungskaskade und enge Kommunikation mit Schule und Eltern.</p>
+
+      <h3>Einzelformate als Einstieg oder Ergaenzung</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th>Dauer</th>
+              <th>Kern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ADHS-sensibler Klassentag</td>
+              <td>4 bis 6 Stunden</td>
+              <td>Alle fuenf Saeulen angerissen, Lernen nach ADHS-Prinzipien</td>
+            </tr>
+            <tr>
+              <td>Gruenes Klassenzimmer ADHS</td>
+              <td>3 bis 4 Stunden</td>
+              <td>Lehrplan plus Fokus, Bewegung und Ernaehrung</td>
+            </tr>
+            <tr>
+              <td>Lehrkraefte-Fortbildung</td>
+              <td>1 bis 2 Tage</td>
+              <td>ADHS verstehen, eigene Regulation, praktische Werkzeuge</td>
+            </tr>
+            <tr>
+              <td>Projekttage und Projektwochen</td>
+              <td>1 bis 5 Tage</td>
+              <td>Intensive Erfahrung mit mehreren Saeulen</td>
+            </tr>
+            <tr>
+              <td>Intensiv-Wochenende</td>
+              <td>2 Tage</td>
+              <td>Kompakte Einfuehrung in alle Saeulen</td>
+            </tr>
+            <tr>
+              <td>Mobile Formate</td>
+              <td>2 bis 4 Stunden</td>
+              <td>Durchfuehrung an Ihrer Schule</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Fuer Lehrer als Betroffene</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Format</th>
+              <th>Dauer</th>
+              <th>Kern</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Selbstregulation fuer Paedagogen</td>
+              <td>1 bis 2 Tage</td>
+              <td>Eigene Symptome adressieren und Werkzeuge entwickeln</td>
+            </tr>
+            <tr>
+              <td>Regelmaessige Lehrergruppe</td>
+              <td>3 Stunden, 14-taegig</td>
+              <td>Fortlaufende Begleitung, Austausch und Uebung</td>
+            </tr>
+            <tr>
+              <td>Einzelcoaching</td>
+              <td>90 Minuten</td>
+              <td>Individuelle Arbeit an Fokus, Regulation und Ernaehrung</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Ablauf einer Zusammenarbeit</h3>
+      <ul class="card-list">
+        <li>Anfrage ueber das Kontakt- oder Anfrageformular</li>
+        <li>Bedarfsgespraech: Situation, Ziel, passendes Format</li>
+        <li>Konzeption gemeinsam mit Schule und ggf. Eltern</li>
+        <li>Durchfuehrung mit qualifizierten Trainern</li>
+        <li>Laufende Kommunikation, Feedback und Anpassung</li>
+      </ul>
+
+      <h3>Kosten und Finanzierung</h3>
+      <p>Die Kosten variieren je nach Format, Gruppengroesse, Dauer und Ort.</p>
+      <p>Moegliche Finanzierungsquellen:</p>
+      <ul class="card-list">
+        <li>Schulbudgets fuer Praevention oder Inklusion</li>
+        <li>Foerdervereine</li>
+        <li>Jugendhilfe bei Einzelfallfoerderung</li>
+        <li>Stiftungen und Foerderprogramme</li>
+      </ul>
+      <p>Wir unterstuetzen bei Recherche und Antragstellung.</p>
+
+      <h3>Ein Schlussgedanke fuer Schulen</h3>
+      <p>Wir bieten keine Wunderloesung und keinen Quick Fix. Wir bieten ein System, das Fundament staerkt, bevor Symptome verwaltet werden.</p>
+      <p>Ernaehrung. Bewegung. Fokus. Atem. Natur. Die Dinge, die das Nervensystem braucht, und die im modernen Alltag oft systematisch fehlen.</p>
+      <p>Ob ADHS Stoerung oder Kontextmismatch ist, koennen wir nicht abschliessend beantworten. Beobachtbar ist: Mit passender Umgebung und stabilem Fundament zeigen sich viele Symptome deutlich weniger.</p>
+      <p>Wenn ein Kind sagt: Das war anders als Schule, das hat richtig Bock gemacht, dann ist das kein Vorwurf an Schule. Es ist ein Hinweis darauf, dass es mehr braucht als Schule allein leisten kann.</p>
+      <p><strong>Fuer Schueler. Und fuer Lehrer. Komm raus.</strong></p>
+
+      <p class="company-note">
+        Die komm raus GmbH betreibt den Waldseilgarten Laubfrosch seit 2007 - ein Gelaende mit Hochseilgarten, Waldflaechen, Gruenem Klassenzimmer mit Lehrgarten, Lehrkueche und Wasserzugang. Unsere ADHS-Programme basieren auf einem strukturierten Fuenf-Saeulen-Modell und verbinden aktuelle ADHS-Forschung mit fast zwei Jahrzehnten erlebnispaedagogischer Erfahrung.
+      </p>
+
+      <button id="adhs-bildung-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+        Anfrage "ADHS-Unterstuetzung fuer Schulen" stellen
+      </button>
+    </div>
+  </Section>
+</MainLayout>
+
+<style>
+.adhs-overview {
+  padding-top: 0;
+}
+
+.company-note {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.card-lead {
+  font-weight: 700;
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const cardItems = document.querySelectorAll('.content-panel li');
+    cardItems.forEach((li) => {
+      const current = li.innerHTML.trim();
+      if (!current || /^<strong/i.test(current)) return;
+
+      const colonIndex = current.indexOf(':');
+      if (colonIndex < 2 || colonIndex > 90) return;
+
+      const lead = current.slice(0, colonIndex + 1).trim();
+      const rest = current.slice(colonIndex + 1).trim();
+      if (!rest) return;
+
+      li.innerHTML = `<strong class="card-lead">${lead}</strong> ${rest}`;
+    });
+
+    const button = document.getElementById('adhs-bildung-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+
+

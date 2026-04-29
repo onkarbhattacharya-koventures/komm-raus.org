@@ -1,0 +1,576 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Himmelsleiter-teambuilding-laubfrosch-wald-big.jpg',
+    alt: 'Team am Kletterelement im Waldseilgarten',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#was-der-waldseilgarten-kann',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Toprope-sicherung-schule-laubfrosch.jpg',
+    alt: 'Toprope-Sicherung im Waldseilgarten',
+    label: 'Was der Waldseilgarten kann',
+  },
+  {
+    href: '#was-konkret-passiert',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Seilbahn-flying-fox-laubfrosch-waldseilgarten.jpg',
+    alt: 'Seilbahn im Waldseilgarten',
+    label: 'Was konkret passiert',
+  },
+  {
+    href: '#ablauf-eines-tages',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Waldseilgarten-Laubfrosch-buedingen.jpg',
+    alt: 'Waldseilgarten Laubfrosch in Büdingen',
+    label: 'Ablauf eines Tages',
+  },
+  {
+    href: '#sicherheit',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Sicherheit-waldseilgarten-laubfrosch.jpg',
+    alt: 'Sicherheitscheck im Waldseilgarten',
+    label: 'Sicherheit & Qualität',
+  },
+];
+
+const elementeItems = [
+  {
+    title: 'Klettern und Aufstieg',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Klettern-Aufstieg-laubfrosch.jpg',
+    alt: 'Klettern und Aufstieg im Waldseilgarten',
+    description: 'Der Einstieg in die Höhe. Hände greifen ins Holz, Füße suchen Halt, der Boden wird kleiner. Hier beginnt für viele die Auseinandersetzung mit der eigenen Komfortzone – Meter für Meter.',
+  },
+  {
+    title: 'Sprung ans Trapez',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Sprung-Trapez-laubfrosch.jpg',
+    alt: 'Sprung ans Trapez im Waldseilgarten',
+    description: 'Auf einer Plattform stehen, in die Tiefe schauen, springen – und ein Trapez greifen, das unerreichbar wirkt, bis man es versucht. Ein Element, das wie kaum ein anderes den Moment der Entscheidung erfahrbar macht.',
+  },
+  {
+    title: 'Pamper Pole',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Pamper-Pole-laubfrosch.jpg',
+    alt: 'Pamper Pole im Waldseilgarten',
+    description: 'Aufstieg an einem senkrechten Baumstamm, vom Team gesichert. Oben stehen, sich sammeln, dann der Sprung in die Tiefe – gehalten vom Seil und vom Vertrauen in die Sichernden. Für viele der intensivste Moment des Tages.',
+  },
+  {
+    title: 'Fliegendes Eichhörnchen',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Fliegendes-Eichhornnchen-laubfrosch.jpg',
+    alt: 'Fliegendes Eichhörnchen im Waldseilgarten',
+    description: 'Das Team zieht eine Person am Seil auf bis zu zwölf Meter Höhe. Die kletternde Person gibt sich vollständig in die Hände der Gruppe. Eine ungewohnte Erfahrung für die meisten.',
+  },
+  {
+    title: 'Himmelsleiter',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Himmelsleiter-laubfrosch.jpg',
+    alt: 'Himmelsleiter im Waldseilgarten',
+    description: 'Zu dritt eine große Balkenleiter überwinden, bei der die Abstände zwischen den Sprossen immer größer werden. Geht nur gemeinsam: stützen, halten, hochhelfen, kommunizieren.',
+  },
+  {
+    title: 'Catwalk',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Catwalk-laubfrosch.jpg',
+    alt: 'Catwalk im Waldseilgarten',
+    description: 'Balancieren in der Höhe über einen schmalen Balken. Konzentration, Körpergefühl, Ruhe – und das Wissen, dass das Team unten sichert.',
+  },
+  {
+    title: 'Team Beam',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Team-Beam-laubfrosch.jpg',
+    alt: 'Team Beam im Waldseilgarten',
+    description: 'Balanceakt über bewegliche Balken, die vom Team am Boden koordiniert werden. Oben und unten müssen zusammenarbeiten.',
+  },
+  {
+    title: 'Flying Fox',
+    image: '/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Element-Flying-Fox-laubfrosch.jpg',
+    alt: 'Flying Fox im Waldseilgarten',
+    description: 'Die Seilbahn zum Abschluss – Geschwindigkeit, Höhe, Loslassen. Nach der Anspannung der Elemente ein Moment des freien Fliegens.',
+  },
+];
+---
+
+<MainLayout title="Waldseilgarten für Schulen & Bildungsträger - Komm Raus">
+<Hero
+    title="Höhe, Vertrauen, Verantwortung"
+    subtitle="Erlebnispädagogische Programme im Waldseilgarten Laubfrosch: echte Herausforderungen, echte Teamarbeit, echte Erfahrungen – für Schulklassen, Jugendgruppen und Bildungseinrichtungen."
+    imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg"
+  />
+
+  <Section class="wsg-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Es gibt Dinge, die lassen sich im Klassenzimmer nicht lernen. Nicht weil die Lehrkraft es nicht kann, sondern weil der Raum dafür fehlt. Wir schaffen solche Räume, in denen Verhalten sichtbar wird, Gefühle spürbar, Vertrauen wächst, Verantwortung stärkt.</p>
+      
+      <p>Wie reagiert eine Klasse, wenn jemand Angst hat? Wer übernimmt Verantwortung, wenn es darauf ankommt – nicht auf dem Papier, sondern tatsächlich? Wie geht eine Gruppe mit Frustration um, wenn die Aufgabe nicht beim ersten Versuch gelingt? Und was passiert mit einem Kind, das auf acht Metern Höhe steht und merkt: Das hätte ich mir niemals zugetraut – und ich habe es trotzdem geschafft?</p>
+
+      <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700 my-6">
+        <p class="font-semibold text-lg mb-2">Der Waldseilgarten Laubfrosch seit 18 Saisons</p>
+        <p>Im Eichenwaldgebiet der Stadt Büdingen ist unser Waldseilgarten ein bewährter Lernort für Schulklassen und Jugendgruppen. Kein Funpark, kein Adrenalin-Konsum, sondern ein pädagogisch geführter Hochseilgarten mit einem Sicherungssystem, das echte gegenseitige Verantwortung ermöglicht.</p>
+        <p class="font-semibold mt-4">18 Saisons ohne Unfall – mit Hunderten von Momenten, in denen Kinder und Jugendliche über sich selbst hinausgewachsen sind.</p>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="was-der-waldseilgarten-kann" class="prose max-w-none">
+      <h2>Was ein Waldseilgarten kann, was ein Klassenzimmer nicht kann</h2>
+
+      <div class="space-y-8">
+        <div class="border-l-4 border-blue-500 pl-6">
+          <h3>Verhalten wird sichtbar – sofort und ehrlich</h3>
+          <p>Im Klassenzimmer lässt sich vieles verbergen. Im Waldseilgarten nicht. Wenn eine Gruppe gemeinsam eine Aufgabe lösen muss, die körperlich fordernd, emotional aufwühlend und nur durch Zusammenarbeit machbar ist, zeigen sich Muster, die im Schulalltag oft unsichtbar bleiben:</p>
+          <div class="cards-grid mt-4">
+            <Card title="Kommunikation" body="Wer hört zu, bevor er handelt – und wer handelt, bevor er zuhört?" />
+            <Card title="Raumgeben" body="Wer gibt anderen Raum – und wer stellt sich in den Vordergrund?" />
+            <Card title="Motivation" body="Wer motiviert bei Rückschlägen – und wer jammert?" />
+            <Card title="Hilfe" body="Wer kann Hilfe annehmen – und wer tut sich damit schwer?" />
+            <Card title="Eigene Ideen" body="Wer traut sich, eine Idee einzubringen – und wer schweigt?" />
+            <Card title="Umgang mit Fehlern" body="Wie geht die Gruppe mit Fehlern, Niederlagen, dem Erfolg Einzelner um?" />
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-4">Im Gegensatz zu Rollenspielen oder abstraktem Sozialkompetenztraining sieht man hier echtes Verhalten in einer echten Situation – beobachtbar, besprechbar, veränderbar.</p>
+        </div>
+
+        <div class="border-l-4 border-emerald-500 pl-6">
+          <h3>Erfahrung statt Theorie</h3>
+          <p>Über Vertrauen kann man reden. Oder man kann erleben, wie es sich anfühlt, wenn jemand anderes buchstäblich das Seil hält, an dem man hängt. Über Mut kann man einen Aufsatz schreiben. Oder man kann auf einem Baumstamm in zehn Metern Höhe stehen und sich entscheiden: Springe ich – oder nicht?</p>
+          <p>Der Waldseilgarten erzeugt Lernsituationen, in denen zentrale Themen – Vertrauen, Verantwortung, Kommunikation, Angst, Mut, Frustration, Kooperation – nicht besprochen, sondern am eigenen Körper erfahren werden. Diese Erfahrungen bleiben im Gedächtnis anders haften als Worte.</p>
+        </div>
+
+        <div class="border-l-4 border-amber-500 pl-6">
+          <h3>Der Körper als Zugang</h3>
+          <p>Viele Kinder und Jugendliche, die im Schulalltag als unaufmerksam, unruhig oder schwer erreichbar gelten, blühen im Waldseilgarten auf. Nicht weil wir zaubern, sondern weil das Format ihnen entgegenkommt: Bewegung statt Stillsitzen. Körperliche Herausforderung statt kognitiver Abstraktion. Unmittelbares Feedback statt verzögerter Benotung.</p>
+          <p>Gerade für Kinder und Jugendliche mit hohem Bewegungsdrang oder ADHS-Symptomen kann der Waldseilgarten ein Raum sein, in dem ihre Energie keine Störung ist, sondern eine Ressource. Wo die Fähigkeit, schnell zu reagieren, mutig zu sein und körperlich voll da zu sein, plötzlich genau das Richtige ist.</p>
+        </div>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="was-konkret-passiert" class="prose max-w-none">
+      <h2>Was bei uns konkret passiert</h2>
+
+      <div class="space-y-8">
+        <div class="border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 bg-gradient-to-br from-blue-50/50 to-transparent dark:from-blue-950/20 dark:to-transparent">
+          <h3 class="flex items-center gap-2 mt-0 text-blue-900 dark:text-blue-100"><span class="text-2xl">🤝</span> Kooperations- und Problemlöseaufgaben am Boden</h3>
+          <p>Bevor es in die Höhe geht, beginnen wir am Boden. Teamaufgaben, die einfach klingen und es nicht sind. Aufgaben, bei denen die Gruppe planen, beraten, ausprobieren, scheitern und neu anfangen muss – gemeinsam.</p>
+          
+          <div class="bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200 dark:border-blue-800 p-6 rounded-lg my-4">
+            <p class="font-semibold mb-4">Was dabei sichtbar wird:</p>
+            <div class="cards-grid">
+              <Card title="Kommunikationsmuster" body="Wer spricht zuerst? Wer unterbricht? Wer hört zu? Wer wird überhört?" />
+              <Card title="Führung" body="Wer übernimmt Leitung? Geschieht das bewusst oder zufällig? Wie wird mit Widerstand umgegangen?" />
+              <Card title="Entscheidungen" body="Entscheidet die Gruppe gemeinsam oder setzt sich die lauteste Idee durch?" />
+              <Card title="Frustration" body="Was passiert, wenn der erste Versuch scheitert? Gibt es Schuldzuweisungen oder Neudenken?" />
+              <Card title="Inklusion" body="Wer wird einbezogen? Wer wird übergangen? Wer nimmt Rücksicht auf Schwächere?" />
+              <Card title="Gegenseitige Hilfe" body="Kann jemand Hilfe anbieten, ohne zu bevormunden? Kann man zugeben, nicht weiterzukommen?" />
+            </div>
+          </div>
+        </div>
+
+        <div class="border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 bg-gradient-to-br from-emerald-50/50 to-transparent dark:from-emerald-950/20 dark:to-transparent">
+          <h3 class="flex items-center gap-2 mt-0 text-emerald-900 dark:text-emerald-100"><span class="text-2xl">🌳</span> Der Waldseilgarten – Elemente, die fordern</h3>
+          <p>Der Waldseilgarten Laubfrosch besteht aus verschiedenen Hochseilelementen im alten Eichenbestand, die unterschiedliche körperliche, mentale und emotionale Anforderungen stellen.</p>
+          
+          <div class="grid gap-6 mt-8 md:grid-cols-2 lg:grid-cols-4">
+            {elementeItems.map((item) => (
+              <div class="group bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 border border-slate-200 dark:border-slate-700">
+                <div class="relative h-48 overflow-hidden bg-slate-200 dark:bg-slate-700">
+                  <img 
+                    src={item.image} 
+                    alt={item.alt}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onerror="this.style.display='none'"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 group-hover:to-black/40 transition-all" />
+                </div>
+                <div class="p-4">
+                  <h4 class="font-semibold text-base text-blue-600 dark:text-blue-400 mb-2">{item.title}</h4>
+                  <p class="text-sm text-slate-700 dark:text-slate-300 line-clamp-3">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-8"><em>Weitere Elemente: Schwungtau, Kistenklettern, vertikale und horizontale Leiter, Balkenzickzack – jedes mit eigenen Anforderungen an Balance, Kraft, Mut, Vertrauen, Wagnis und Konzentration.</em></p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm">
+          <h3 class="flex items-center gap-2 mt-0"><span class="text-2xl">🔒</span> Gegenseitige Sicherung im Toprope-System</h3>
+          <p class="font-semibold mb-3">Was den Waldseilgarten Laubfrosch von vielen anderen Kletterparks unterscheidet, ist kein Detail – es ist der Kern:</p>
+          
+          <p>Bei uns sichern sich die Teilnehmenden gegenseitig. Nicht an einer automatischen Sicherung, die man einklickt und vergisst. Sondern am Seil, das eine andere Person hält. Angeleitet und überwacht von geschulten Trainern, aber in den Händen des Teams.</p>
+
+          <p className="mt-4">Das bedeutet: Wer klettert, vertraut darauf, dass die Person am Boden aufmerksam ist, das Seil richtig hält und nicht loslässt. Und wer sichert, übernimmt echte Verantwortung für einen anderen Menschen.</p>
+
+          <p className="mt-4 font-semibold">Diese Erfahrung lässt sich nicht simulieren. Kein Vertrauensspiel im Stuhlkreis erzeugt dieselbe Qualität. Weil die Konsequenz real ist. Weil der Körper es weiß. Weil das Seil nicht lügt.</p>
+
+          <div class="bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900 dark:to-cyan-900 p-6 rounded-lg my-6">
+            <p class="font-semibold mb-4">Was die gegenseitige Sicherung bewirkt:</p>
+            <ul class="space-y-3">
+              <li class="flex gap-2">
+                <span class="text-green-600 dark:text-green-400">✓</span>
+                <span><strong>Vertrauen wird konkret.</strong> Nicht als Wort, sondern als körperliche Erfahrung: Ich lasse mich fallen, und jemand hält mich.</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-600 dark:text-green-400">✓</span>
+                <span><strong>Verantwortung wird spürbar.</strong> Wer das Seil hält, kann nicht nebenbei auf das Handy schauen.</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-600 dark:text-green-400">✓</span>
+                <span><strong>Konzentration entsteht von selbst.</strong> Nicht weil jemand „Konzentrier dich!" sagt, sondern weil die Situation es erfordert.</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-green-600 dark:text-green-400">✓</span>
+                <span><strong>Rollen verändern sich.</strong> Das Kind, das immer den Clown macht, sichert plötzlich still und konzentriert. Das Kind, das sonst nie auffällt, hält das Seil für den Klassensprecher.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm">
+          <h3 class="flex items-center gap-2 mt-0"><span class="text-2xl">📏</span> Wagniskompetenz – die eigene Grenze finden und kommunizieren</h3>
+          <p>Im Waldseilgarten gibt es kein „Du musst". Jedes Element ist freiwillig. Aber jedes Element stellt eine Frage: Wie weit willst du gehen?</p>
+
+          <p className="mt-4"><strong>Wagniskompetenz bedeutet:</strong> die eigene Grenze realistisch einschätzen, eine bewusste Entscheidung treffen – und diese Entscheidung vor der Gruppe vertreten, ohne falsche Scham. Das klingt einfach. Es ist eine der anspruchsvollsten Übungen des Tages.</p>
+
+          <div class="grid gap-4 mt-6">
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h4 class="font-semibold">Sich selbst einschätzen</h4>
+              <p class="text-sm">Wo liegt meine Grenze heute? Nicht die Grenze, von der ich glaube, dass andere sie von mir erwarten – sondern meine tatsächliche.</p>
+            </div>
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h4 class="font-semibold">Kommunizieren</h4>
+              <p class="text-sm">„Ich möchte bis zur dritten Sprosse und dann runter." Das vor der Gruppe auszusprechen – klar, ruhig, ohne sich zu entschuldigen – ist für viele Kinder und Jugendliche eine völlig neue Erfahrung.</p>
+            </div>
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h4 class="font-semibold">Respektieren</h4>
+              <p class="text-sm">Die Gruppe lernt, die Entscheidung anderer zu akzeptieren, ohne sie lächerlich zu machen, unter Druck zu setzen oder zu entwerten.</p>
+            </div>
+            <div class="border-l-4 border-purple-500 pl-4">
+              <h4 class="font-semibold">Über sich hinauswachsen</h4>
+              <p class="text-sm">Immer wieder passiert es: Jemand sagt „Ich gehe nur bis zur Hälfte" – und steht plötzlich oben. Nicht weil jemand gedrängt hat, sondern weil die Erfahrung der ersten Schritte Sicherheit gegeben hat, weiterzugehen.</p>
+            </div>
+          </div>
+
+          <p className="text-sm text-slate-600 dark:text-slate-400 mt-6 bg-slate-50 dark:bg-slate-800 p-4 rounded">Wagniskompetenz ist eine Fähigkeit, die weit über den Waldseilgarten hinausreicht. Die Fähigkeit, Risiken realistisch einzuschätzen, Entscheidungen zu treffen und sie zu kommunizieren – das brauchen Kinder und Jugendliche in der Schule, in Freundschaften, in der Familie, im späteren Berufsleben.</p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm">
+          <h3 class="flex items-center gap-2 mt-0"><span class="text-2xl">💭</span> Reflexion – aus Erlebnis wird Erfahrung</h3>
+          <p>Ein Tag im Waldseilgarten ohne Reflexion wäre ein schöner Ausflug. Mit Reflexion wird er zum Lernraum.</p>
+
+          <p className="mt-4">Nach jeder Aktivitätseinheit begleiten unsere Trainer die Auswertung – angepasst an Alter, Gruppensituation und Kontext:</p>
+
+          <div class="space-y-3 mt-6">
+            <div class="bg-indigo-50 dark:bg-indigo-900 p-4 rounded">
+              <p className="font-semibold">Was ist passiert?</p>
+              <p className="text-sm mt-1">Beobachtungen sammeln, ohne zu bewerten. Was haben wir getan? Wie haben wir kommuniziert? Wer hat welche Rolle eingenommen?</p>
+            </div>
+            <div class="bg-indigo-50 dark:bg-indigo-900 p-4 rounded">
+              <p className="font-semibold">Was hat mich überrascht?</p>
+              <p className="text-sm mt-1">Viele Teilnehmende stellen fest, dass ihre Vorab-Einschätzung daneben lag. „Ich dachte, ich schaffe das nie" – und dann stand ich oben.</p>
+            </div>
+            <div class="bg-indigo-50 dark:bg-indigo-900 p-4 rounded">
+              <p className="font-semibold">Was davon kennen wir?</p>
+              <p className="text-sm mt-1">Wo tauchen ähnliche Muster im Schulalltag auf? Die Übertragung vom Seilgarten in den Alltag muss begleitet werden.</p>
+            </div>
+            <div class="bg-indigo-50 dark:bg-indigo-900 p-4 rounded">
+              <p className="font-semibold">Was nehme ich mit?</p>
+              <p className="text-sm mt-1">Was will ich beibehalten? Was will ich anders machen? Gibt es eine konkrete Sache, die ich in den nächsten Tagen ausprobieren will?</p>
+            </div>
+          </div>
+
+          <p className="text-sm text-slate-600 dark:text-slate-400 mt-6 italic">Die Reflexion ist der Moment, in dem Erleben zu Erfahrung wird – und Erfahrung zu etwas, das im Alltag weiterwirkt.</p>
+        </div>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="warum-im-wald" class="prose max-w-none">
+      <h2>Warum ausgerechnet im Wald</h2>
+
+      <div class="space-y-6">
+        <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm border-l-4 border-l-green-500">
+          <h3 class="mt-0">🌿 Entschleunigung und Aktivierung zugleich</h3>
+          <p>Ein Tag im Wald bietet etwas, das selten zusammenkommt: Ruhe und Herausforderung am selben Ort. Die Umgebung entschleunigt – Vogelgezwitscher, raschelnde Blätter, Licht durch die Baumkronen, der Geruch von Erde und Holz. Gleichzeitig ist das Programm körperlich fordernd, aufregend, manchmal laut und immer intensiv.</p>
+          <p>Dieser Kontrast ist wertvoll. Statt entweder Reizüberflutung oder erzwungener Stille erleben Kinder und Jugendliche, dass beides nebeneinander existieren kann: Adrenalin und Ruhe, Herausforderung und Geborgenheit, Action und Achtsamkeit.</p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm border-l-4 border-l-green-600">
+          <h3 class="mt-0">🌲 Naturkontakt als Grundlage</h3>
+          <p>Forschung zu Naturaufenthalt (Shinrin Yoku) deutet darauf hin, dass bereits kurze Zeit im Wald Stresshormone senken, Aufmerksamkeit regenerieren und das Wohlbefinden verbessern kann. Bäume setzen Terpene frei – flüchtige Verbindungen, die in Studien mit einer Verbesserung der Immunfunktion und einer Senkung von Stressindikatoren in Verbindung gebracht wurden.</p>
+          <p>Wir nutzen die Waldumgebung nicht als Kulisse, sondern als aktiven Bestandteil des Programms. Die Kinder und Jugendlichen klettern in lebenden Bäumen, nicht an Kunsttürmen. Sie spüren Rinde unter den Händen, hören den Wind in den Kronen, riechen Erde und Moos.</p>
+        </div>
+
+        <div class="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-lg p-8 shadow-sm border-l-4 border-l-green-700">
+          <h3 class="mt-0">🧠 Besonders relevant bei ADHS</h3>
+          <p>Studien legen nahe, dass Naturaufenthalt konzentrationsfördernd wirken und Symptomen von ADHS entgegenwirken kann. Der Waldseilgarten verbindet diesen Naturkontakt mit genau den Anforderungen, die vielen Kindern mit ADHS-Symptomen entgegenkommen: hohe körperliche Aktivierung, unmittelbares Feedback, wechselnde Stationen, klare Strukturen, echte Konsequenzen.</p>
+        </div>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="ablauf-eines-tages" class="prose max-w-none">
+      <h2>Ablauf eines Tages</h2>
+      <p>Ein typischer Projekttag (Ganztagsformat) folgt in etwa diesem Aufbau:</p>
+
+      <div class="grid gap-3 my-8">
+        <div class="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 p-4 rounded-lg">
+          <div class="font-semibold text-blue-900 dark:text-blue-100">Ankommen</div>
+          <p class="text-sm mt-1">Begrüßung, Orientierung im Gelände, Kennenlernen der Trainer, Sicherheitseinweisung</p>
+        </div>
+        <div class="bg-gradient-to-r from-cyan-50 to-cyan-100 dark:from-cyan-900 dark:to-cyan-800 p-4 rounded-lg">
+          <div class="font-semibold text-cyan-900 dark:text-cyan-100">Einstieg</div>
+          <p class="text-sm mt-1">Kooperations- und Problemlöseaufgaben am Boden. Die Gruppe findet zusammen, erste Muster werden sichtbar. Erste kurze Reflexion.</p>
+        </div>
+        <div class="bg-gradient-to-r from-emerald-50 to-emerald-100 dark:from-emerald-900 dark:to-emerald-800 p-4 rounded-lg">
+          <div class="font-semibold text-emerald-900 dark:text-emerald-100">Kernphase Vormittag</div>
+          <p class="text-sm mt-1">Hochseilelemente mit gegenseitiger Sicherung. Steigende Anforderung, individuelle Wahlmöglichkeiten. Begleitung durch Trainer.</p>
+        </div>
+        <div class="bg-gradient-to-r from-amber-50 to-amber-100 dark:from-amber-900 dark:to-amber-800 p-4 rounded-lg">
+          <div class="font-semibold text-amber-900 dark:text-amber-100">Mittagspause</div>
+          <p class="text-sm mt-1">Gemeinsame Pause im Wald. Raum zum Ankommen, Verdauen, Energie sammeln.</p>
+        </div>
+        <div class="bg-gradient-to-r from-purple-50 to-purple-100 dark:from-purple-900 dark:to-purple-800 p-4 rounded-lg">
+          <div class="font-semibold text-purple-900 dark:text-purple-100">Kernphase Nachmittag</div>
+          <p class="text-sm mt-1">Weitere Elemente, Teamaufgaben in der Höhe, vertiefende Reflexion. Übertragung: Was hat das mit unserem Schulalltag zu tun?</p>
+        </div>
+        <div class="bg-gradient-to-r from-rose-50 to-rose-100 dark:from-rose-900 dark:to-rose-800 p-4 rounded-lg">
+          <div class="font-semibold text-rose-900 dark:text-rose-100">Abschluss</div>
+          <p class="text-sm mt-1">Gemeinsame Abschlussrunde: Was nehme ich mit? Was hat mich überrascht? Was hat sich verändert?</p>
+        </div>
+      </div>
+
+      <p class="bg-slate-50 dark:bg-slate-800 p-4 rounded italic">Inhalte und Zeitstruktur werden im Vorgespräch mit der Lehrkraft an die Klasse angepasst – Alter, Gruppengröße, Vorgeschichte, besondere Bedarfe, gewünschte Schwerpunkte.</p>
+
+      <h3 class="mt-8">Mögliche Schwerpunkte</h3>
+      <div class="cards-grid">
+        <Card title="Klassengemeinschaft" body="Stärken zu Beginn eines Schuljahres oder bei Konflikten" />
+        <Card title="Selbstvertrauen & Mut" body="Persönliche Grenzen erkennen und erweitern" />
+        <Card title="Kommunikation" body="Effektive Zusammenarbeit und gegenseitiges Verständnis" />
+        <Card title="Umgang mit Angst" body="Echte Bewältigung von Unsicherheit und Mut" />
+        <Card title="Verantwortung & Vertrauen" body="Verlässlichkeit und gegenseitige Abhängigkeit" />
+        <Card title="Wagniskompetenz" body="Entscheidungsfähigkeit und Risikoeinschätzung" />
+      </div>
+
+      <p class="mt-6 text-slate-600 dark:text-slate-400"><strong>Mehrtägige Formate:</strong> Bei mehrtägigen Formaten kommen vertiefende Elemente hinzu, und die Erfahrung, als Gruppe über mehrere Tage zusammenzuwachsen, erzeugt eine andere Tiefe. Im Halbtag können wir „Dinge" sichtbar machen, an 2 Tagen können wir wirklich an Veränderung arbeiten.</p>
+
+      <p class="text-slate-600 dark:text-slate-400"><strong>Ergänzende Module:</strong> Kajak-Touren, Naturhandwerk, Grünes Klassenzimmer – können kombiniert werden.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit" class="prose max-w-none">
+      <h2>Sicherheit und Qualität</h2>
+      <p>Bei Programmen mit Kindern und Jugendlichen in der Höhe ist Sicherheit nicht verhandelbar:</p>
+
+      <div class="space-y-4 my-8">
+        <div class="border-l-4 border-red-500 pl-6">
+          <h4 class="font-semibold">🏗️ Waldseilgarten</h4>
+          <p class="text-sm">Betrieb nach DIN 15567, ERCA-Standards und DGUV-Rahmenvorgaben. TÜV-Gutachten (TÜV SÜD). Regelmäßige technische Überprüfungen und dokumentierte Wartung. Jährliche sicherheitstechnische Prüfung.</p>
+        </div>
+
+        <div class="border-l-4 border-red-500 pl-6">
+          <h4 class="font-semibold">👥 Trainer</h4>
+          <p class="text-sm">Geschulte Fachkräfte mit Qualifikationen in Erlebnis- und Wildnispädagogik, Klettern, Rettung und Erste Hilfe. Erfahrung in der Arbeit mit Kindern und Jugendlichen unterschiedlicher Altersgruppen und Hintergründe.</p>
+        </div>
+
+        <div class="border-l-4 border-red-500 pl-6">
+          <h4 class="font-semibold">🔐 Toprope-System</h4>
+          <p class="text-sm">Fremdsicherung durch Trainer oder angeleitete Teilnehmende – nie ohne geschulte Aufsicht. Jeder Sicherungsvorgang wird von Trainer überwacht und bei Bedarf korrigiert.</p>
+        </div>
+
+        <div class="border-l-4 border-red-500 pl-6">
+          <h4 class="font-semibold">🚨 Notfallkonzepte</h4>
+          <p class="text-sm">Rettungs- und Evakuierungsplan, Erste-Hilfe-Ausstattung, klare Abläufe bei Unfällen oder Notfällen. Rettung aus der Höhe ist trainiert und jederzeit möglich.</p>
+        </div>
+
+        <div class="border-l-4 border-red-500 pl-6">
+          <h4 class="font-semibold">📋 Pädagogischer Rahmen</h4>
+          <p class="text-sm">Freiwilligkeitsprinzip bei jedem Element. Klare Kommunikation von Regeln und Grenzen. Besondere Sorgfalt im Umgang mit Angst, Überforderung und sensiblen Situationen.</p>
+        </div>
+      </div>
+
+      <div class="bg-green-50 dark:bg-green-900 p-6 rounded-lg border-l-4 border-green-500 my-6">
+        <p class="font-semibold text-lg mb-2">✓ 18 Saisons ohne Unfall und ohne Beschwerde</p>
+        <p>Wir prüfen gemeinsam mit Ihnen vor dem Programm, welche Elemente für Ihre Gruppe passen, wo besondere Rücksicht nötig ist und ob individuelle Anpassungen sinnvoll sind.</p>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="fuer-lehrkraefte" class="prose max-w-none">
+      <h2>Für Lehrkräfte und pädagogische Fachkräfte</h2>
+
+      <div class="grid gap-8 md:grid-cols-2 my-8">
+        <div class="bg-blue-50 dark:bg-blue-900 p-6 rounded-lg">
+          <h3 class="text-blue-900 dark:text-blue-100 mt-0">Was wir von Ihnen brauchen</h3>
+          <ul class="text-sm space-y-2">
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Ein kurzes Vorgespräch zu Klasse, Gruppensituation, Wünschen und besonderen Bedarfen</span>
+            </li>
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Begleitpersonen vor Ort (Aufsichtspflicht bleibt bei der Schule)</span>
+            </li>
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Offenheit für ein Format, das anders funktioniert als Unterricht – und Bereitschaft, die Leitung an unsere Trainer abzugeben</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-emerald-50 dark:bg-emerald-900 p-6 rounded-lg">
+          <h3 class="text-emerald-900 dark:text-emerald-100 mt-0">Was Sie von uns bekommen</h3>
+          <ul class="text-sm space-y-2">
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Ein auf Ihre Klasse abgestimmtes Programm</span>
+            </li>
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Professionelle Durchführung durch erfahrene Trainer</span>
+            </li>
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Beobachtungen und Rückmeldungen zur Gruppendynamik (auf Wunsch)</span>
+            </li>
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Vor- und Nachbereitungsmaterial, wenn gewünscht</span>
+            </li>
+            <li class="flex gap-2">
+              <span>•</span>
+              <span>Auf Wunsch ein Nachgespräch zur Auswertung</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="bg-amber-50 dark:bg-amber-900 p-6 rounded-lg my-8">
+        <h3 class="mt-0">Was viele Lehrkräfte berichten</h3>
+        <p class="text-sm italic">Dass sie ihre Klasse an diesem Tag anders erleben als in der Schule. Dass Kinder, die im Unterricht kaum auffallen, plötzlich die Gruppe tragen. Dass Kinder, die sonst stören, ruhig und konzentriert sichern. Dass der Tag nachwirkt – nicht immer sofort, aber oft in den Wochen danach, wenn in schwierigen Momenten jemand sagt: „Wisst ihr noch, im Seilgarten?"</p>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="adhs" class="prose max-w-none">
+      <h2>Besonders relevant: Kinder und Jugendliche mit ADHS-Symptomen</h2>
+      <p>Ein Waldseilgarten-Tag kann für Kinder und Jugendliche mit hohem Bewegungsdrang, Konzentrationsschwierigkeiten oder ADHS-Symptomen ein besonders wertvoller Erfahrungsraum sein. Nicht weil wir die Symptome behandeln – das können und wollen wir nicht –, sondern weil das Format vieles bietet, was der Schulalltag strukturell nicht bieten kann:</p>
+
+      <div class="cards-grid my-8">
+        <Card title="Bewegung als Grundmodus" body="Klettern, Springen, Balancieren – der ganze Tag ist körperlich. Es gibt nichts, wofür man still sitzen muss." />
+        <Card title="Unmittelbares Feedback" body="Nicht nach einer Woche, sondern in der Sekunde: Der Knoten hält oder nicht. Der Fuß findet Halt oder nicht." />
+        <Card title="Wechselnde Stationen" body="Verschiedene Elemente, verschiedene Anforderungen, verschiedene Rollen – im natürlichen Wechsel statt 90 Minuten ein Thema." />
+        <Card title="Klare Strukturen" body="Der Sicherheitsrahmen gibt Halt. Klare Abläufe, klare Anweisungen, klare Konsequenzen." />
+        <Card title="Stärken statt Defizite" body="Energie, Risikobereitschaft, Schnelligkeit werden nicht als störend empfunden, sondern sind genau das, was gebraucht wird." />
+        <Card title="Konzentration durch Konsequenz" body="Wer jemanden sichert, muss aufmerksam sein – nicht weil der Trainer es sagt, sondern weil ein anderer davon abhängt." />
+      </div>
+
+      <p class="bg-amber-50 dark:bg-amber-800 p-4 rounded text-sm"><strong>Wichtig:</strong> Diese Beobachtungen ersetzen keine Diagnostik, keine Therapie und keine medizinische Behandlung. Wir arbeiten in enger Abstimmung mit Lehrkräften und Familien und verweisen bei Bedarf an Fachpersonen weiter.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="grenzen" class="prose max-w-none">
+      <h2>Grenzen und Einordnung</h2>
+      <div class="space-y-3">
+        <div class="bg-slate-100 dark:bg-slate-700 p-4 rounded-lg">
+          <p class="m-0"><strong>Keine Ersetzung von Unterricht oder Therapie</strong></p>
+          <p class="text-sm m-0 mt-2">Ein Tag im Waldseilgarten ersetzt keinen Unterricht, keine schulpsychologische Beratung und keine therapeutische Behandlung. Er ergänzt.</p>
+        </div>
+        <div class="bg-slate-100 dark:bg-slate-700 p-4 rounded-lg">
+          <p class="m-0"><strong>Keine Erfolgsgarantie</strong></p>
+          <p class="text-sm m-0 mt-2">Wir garantieren keine bestimmten Ergebnisse – weder in Bezug auf Klassenklima noch auf individuelles Verhalten. Wir schaffen Bedingungen, die Entwicklung begünstigen können.</p>
+        </div>
+        <div class="bg-slate-100 dark:bg-slate-700 p-4 rounded-lg">
+          <p class="m-0"><strong>Individualisierte Abstimmung</strong></p>
+          <p class="text-sm m-0 mt-2">Bei Kindern und Jugendlichen mit diagnostizierten Störungen oder besonderem Förderbedarf arbeiten wir in enger Abstimmung mit Ihnen und verweisen bei Bedarf weiter.</p>
+        </div>
+        <div class="bg-slate-100 dark:bg-slate-700 p-4 rounded-lg">
+          <p class="m-0"><strong>Ehrliche Beratung</strong></p>
+          <p class="text-sm m-0 mt-2">Nicht jedes Element passt für jede Gruppe. Wir beraten ehrlich, was sinnvoll ist – und was nicht. Ein Vorgespräch ist deshalb fester Bestandteil jeder Buchung.</p>
+        </div>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="naechster-schritt" class="prose max-w-none">
+      <h2>Nächster Schritt</h2>
+      <p>Sie überlegen, ob ein Waldseilgarten-Tag für Ihre Klasse oder Gruppe passt?</p>
+      <p><strong>Sprechen Sie mit uns.</strong> In einem kurzen Telefonat oder einer Mail klären wir gemeinsam:</p>
+      
+      <div class="space-y-2 my-6">
+        <div class="flex gap-3">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold">✓</span>
+          <span>Welches Format zu Ihrer Gruppe passt</span>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold">✓</span>
+          <span>Welche Schwerpunkte sinnvoll sind</span>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold">✓</span>
+          <span>Was organisatorisch zu bedenken ist (Anfahrt, Zeiten, Kosten, Begleitpersonen)</span>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-blue-600 dark:text-blue-400 font-semibold">✓</span>
+          <span>Ob und wo besondere Rücksicht nötig ist</span>
+        </div>
+      </div>
+
+      <button id="waldseilgarten-klettern-anfrage-button" class="btn btn-primary btn-lg" type="button">
+        Kontakt aufnehmen
+      </button>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="weitere-angebote" class="prose max-w-none">
+      <h2>Weitere Angebote für Schulen und Bildungseinrichtungen</h2>
+      <div class="cards-grid">
+        <Card title="🌱 Grünes Klassenzimmer" body="Bildung für nachhaltige Entwicklung (BNE)" href="/bildungseinrichtungen/gruenes-klassenzimmer" />
+        <Card title="🌿 Schulgartenentwicklung" body="Nachhaltige Schulgärten" href="/bildungseinrichtungen/schulgarten" />
+        <Card title="👨‍👩‍👧‍👦 RP-KIDS" body="Resilienzprogramm für Kitas und Familien" href="/bildungseinrichtungen/kindergaerten-eltern" />
+        <Card title="🛶 Kajak-Touren" body="Naturerfahrung auf dem Wasser" href="/erlebnisse-kurse/kanu-tour" />
+        <Card title="🪵 Naturhandwerk" body="Handwerkliche Projekte im Freien" href="/erlebnisse-kurse/wildnis-naturhandwerk" />
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.wsg-overview {
+  padding-top: 0;
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('waldseilgarten-klettern-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

@@ -2,19 +2,50 @@
 interface Props {
   title?: string;
   subtitle?: string;
-  image?: string;
+  imagePath?: string;
 }
-const { title = 'Jetzt raus – Erleben', subtitle = '', image = 'lagerfeuer-bg' } = Astro.props as Props;
+
+const {
+  title = 'Jetzt raus – Erleben',
+  subtitle = '',
+  imagePath = '/images/lagerfeuer-bg-800.jpg',
+} = Astro.props as Props;
+
+// Build responsive srcset for /images/ paths that follow the -800.jpg naming convention
+const imagesMatch = imagePath.match(/^(\/images\/.+)-800\.jpg$/);
+const webpSrcset = imagesMatch ? `${imagesMatch[1]}-400.webp 400w, ${imagesMatch[1]}-800.webp 800w` : undefined;
+const jpgSrcset = imagesMatch ? `${imagesMatch[1]}-400.jpg 400w, ${imagesMatch[1]}-800.jpg 800w` : undefined;
 ---
 
-<section class="relative py-28 bg-md-primary text-md-on-primary">
-  <picture aria-hidden="true" class="absolute inset-0 -z-10">
-    <source type="image/webp" srcset={`/images/${image}-400.webp 400w, /images/${image}-800.webp 800w, /images/${image}-1200.webp 1200w`} />
-    <img src={`/images/${image}-400.jpg`} srcset={`/images/${image}-400.jpg 400w, /images/${image}-800.jpg 800w, /images/${image}-1200.jpg 1200w`} sizes="100vw" alt="" class="w-full h-full object-cover" loading="lazy" />
+<section class="hero-section">
+  <picture aria-hidden="true" class="hero-bg">
+    {webpSrcset && <source type="image/webp" srcset={webpSrcset} sizes="100vw" />}
+    <img
+      src={imagePath}
+      srcset={jpgSrcset}
+      sizes="100vw"
+      alt=""
+      class="hero-bg-img"
+      loading="eager"
+      decoding="async"
+    />
   </picture>
 
-  <div class="max-w-7xl mx-auto px-4 px-6 px-8">
-    <h1 class="text-4xl md-text-6xl font-bold">{title}</h1>
-    {subtitle && <p class="mt-4 text-lg">{subtitle}</p>}
+  <div class="container">
+    <div class="hero-text-sheen">
+      <h1 class="hero-title">{title}</h1>
+      {subtitle && <p class="hero-subtitle">{subtitle}</p>}
+    </div>
   </div>
 </section>
+
+<style>
+.hero-text-sheen {
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  padding: clamp(0.4rem, 1.2vw, 0.7rem) clamp(0.55rem, 1.5vw, 0.95rem);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+</style>

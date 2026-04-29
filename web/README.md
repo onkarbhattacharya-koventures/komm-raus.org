@@ -1,149 +1,113 @@
-# komm-raus.org Recreation
+# komm-raus.org
 
-This project is a modern recreation of the komm-raus.org website, transforming a legacy static HTML/CSS site into a performant, accessible, and maintainable Astro-based application. The original site is for Laubfrosch Waldseilgarten, offering outdoor adventure programs.
+Modern, accessible Astro site for **Komm Raus Erlebnispädagogik** with custom design system, advanced dropdown navigation, and optimized image pipeline (`/bilder_nach_page/` → `/images/`).
 
 ## Overview
 
-The recreation addresses issues in the original site, such as code duplication, inconsistent styling, poor performance, and limited accessibility. It uses modern web technologies to create a scalable, SEO-friendly, and user-friendly experience.
+Astro 5.16.9 TypeScript static site (~50 pages) targeting education (Bildungseinrichtungen), companies (Unternehmen), emergency services (Einsatzkräfte), experiences (Erlebnisse & Kurse), and org/info pages. Features responsive design, AOS animations, WCAG2AA accessibility, Sharp-optimized responsive images (JPG/WebP).
+
+**Current Development**: Image integration masterplan Phases 1-3 ✅ complete (master plan + 50+ page TODOs created). Waves 1-3 fixed (e.g., einsatzkraefte paths), Wave 4 (unternehmen) hero updates done, Wave 5 (bildungseinrichtungen) active. See [TODO-image-integration-masterplan.md](TODO-image-integration-masterplan.md), [TODO-image-integration-current-wave.md](TODO-image-integration-current-wave.md).
+
+Site: [https://komm-raus.org](https://komm-raus.org)
 
 ## Tech Stack
 
-- **Framework**: Astro (for content-heavy sites with fast builds)
-- **Language**: TypeScript (for type safety)
-- **Styling**: Tailwind CSS (utility-first design system)
-- **Icons**: Lucide React
-- **Animations**: AOS (Animate On Scroll), Framer Motion (advanced animations)
-- **Image Optimization**: Sharp (for WebP/AVIF conversion and responsive images)
-- **Accessibility**: Pa11y (automated WCAG2AA checks)
-- **Deployment**: Ready for Vercel/Netlify with global CDN
-
-## Features
-
-### Implemented
-- **Component Architecture**: Reusable components (Hero, Card, Section, Button) for consistent UI
-- **Layout System**: MainLayout.astro with unified Header/Footer and SEO meta tags
-- **Styling**: Tailwind config with custom brand colors, fonts (Inter, Playfair Display), and responsive breakpoints
-- **Image Optimization**: Sharp-based scripts for generating responsive JPG/WebP variants
-- **Accessibility**: Pa11y integration for automated checks (WCAG2AA standard)
-- **Animations**: AOS for subtle scroll animations, enhanced with Framer Motion for advanced animations
-- **SEO**: Centralized metadata with OpenGraph support, structured data (Schema.org), sitemap.xml, robots.txt
-- **Asset Management**: Organized public/assets and public/images directories
-- **UI/UX Enhancements**: Sticky navigation with active states, enhanced mobile menu with slide-in/out effects, loading states, and error handling
-- **Performance Monitoring**: Lighthouse audits and performance tracking
-
-### In Progress
-- Home page migration (index.astro) with optimized images and responsive design
-- Font loading with display=swap for performance
-
-## Todo
-
-Based on the AUDITnPLAN, the following phases remain:
-
-### Phase 2: Component Architecture (Continue)
-- Migrate remaining pages (about, adhs, assessment, blaulicht, schule)
-- Expand component library (Navigation, Footer, Contact Form)
-- Implement dynamic content loading
-
-### Phase 3: Asset Optimization (Enhance) ✅
-- Automate image pipeline in build process
-- Optimize videos and audio files
-- Implement lazy loading for all media
-
-### Phase 4: UI/UX Enhancements ✅
-- Add Framer Motion for advanced animations
-- Implement sticky navigation with active states
-- Enhance mobile menu and responsive design
-- Add loading states and error handling
-
-### Phase 5: Deployment & SEO ✅
-- Implement structured data (Schema.org)
-- Add sitemap and robots.txt
-- Performance monitoring and Lighthouse audits
-
-### Additional Tasks
-- Complete accessibility audits and fixes
-- Add internationalization (i18n) if needed
-- Implement contact forms and backend integration
-- Add analytics and tracking
+- **Framework**: Astro 5.16.9
+- **Language**: TypeScript
+- **Styling**: Custom design-system.css + utilities.css + global.css (Inter/Playfair fonts)
+- **Animations**: AOS 2.3.4
+- **Images**: Sharp 0.34.5 (optimize script generates srcset)
+- **Accessibility**: pa11y 9.0.1 (WCAG2AA)
+- **Build**: Vite, static dist/
 
 ## Project Structure
 
-```text
+```
 web/
-├── .astro/                 # Generated types
-├── .gitignore
-├── .pa11yrc.json           # Accessibility config
-├── .vscode/                # VS Code settings
-├── ACCESSIBILITY-REPORT.md # Audit reports
-├── ACCESSIBILITY.md        # Accessibility guidelines
-├── astro.config.mjs        # Astro configuration
-├── index.html              # Legacy HTML (to be removed)
+├── src/
+│   ├── components/     # Navigation.astro (complex dropdowns), Hero, Card, SectionTeaserGrid, etc.
+│   ├── layouts/        # MainLayout.astro
+│   ├── pages/          # ~50 pages
+│   │   ├── index.astro
+│   │   ├── bildungseinrichtungen/  # 10 subpages (adhs-fokus-training, gruenes-klassenzimmer, etc.)
+│   │   ├── einsatzkraefte/         # 3 (nachwuchsfoerderung, etc.)
+│   │   ├── erlebnisse-kurse/       # 10 (kanu-tour, waldbaden, etc.)
+│   │   ├── unternehmen/            # 5 (leadership-management, teambuilding, etc.)
+│   │   ├── info-orga/              # 8 (faq, ueber-uns, etc.)
+│   │   ├── kontakt/                # 3 legal (agb, etc.)
+│   │   ├── download/               # fragebogen-lehrer
+│   │   ├── soil-to-table.astro     # Special BNE page
+│   │   └── sitemap.astro
+│   ├── lib/site.ts                 # Metadata (title, desc)
+│   └── styles/
+├── public/bilder_nach_page/        # Source images (editorial, by page/hub)
+├── public/images/                  # Optimized output (run npm run images:optimize)
+├── scripts/                        # optimize-images.cjs, a11y-run-all.mjs
+├── astro.config.mjs
 ├── package.json
-├── package-lock.json
-├── README-images.md        # Image optimization notes
-├── README.md               # This file
-├── tailwind.config.cjs     # Tailwind configuration
-├── tsconfig.json           # TypeScript config
-├── dist/                   # Build output
-├── node_modules/
-├── public/
-│   ├── favicon.svg
-│   ├── assets/             # Original assets
-│   └── images/             # Optimized images
-├── scripts/
-│   ├── a11y-check.mjs      # Accessibility scripts
-│   ├── a11y-run-all.mjs
-│   ├── optimize-images.cjs # Image optimization
-│   └── optimize-images.js
-└── src/
-    ├── components/         # Reusable UI components
-    ├── layouts/            # Page layouts
-    ├── lib/                # Utilities (site config)
-    ├── pages/              # Astro pages
-    ├── scripts/            # Client-side scripts
-    └── styles/             # Global styles
+└── dist/                           # Build output
 ```
 
-## Commands
+## Key Routes (from Navigation.astro)
 
-All commands are run from the `web/` directory:
+**Main Nav**:
+- `/` (Home)
+- **Bildungseinrichtungen** → /bildungseinrichtungen + 10 subs (teambuilding-schulklassen, meditation, etc.)
+- **Unternehmen** → /unternehmen + subs (leadership-management, assessment-center, csr)
+- **Einsatzkräfte** → /einsatzkraefte + subs (team-resilienz, regeneration-praevention)
+- **Erlebnisse** → /erlebnisse-kurse + 10 subs (waldseilgarten-klettern, kanu-tour, wildnis-naturhandwerk)
+- **Info & Orga** → /info-orga + 8 subs (faq, sicherheitskonzept, ueber-uns)
+- **Kontakt** → /kontakt + legal subs
+- Special: /soil-to-table, /sitemap, /download/fragebogen-lehrer
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run images:optimize` | Optimize images using Sharp                      |
-| `npm run a11y`            | Run accessibility checks (WCAG2AA)               |
-| `npm run a11y:local`      | Run accessibility checks on local server         |
-| `npm run ci`              | CI pipeline: optimize, build, and check          |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+Full list: See [WEBSITE_ARCHITECTURE.md](WEBSITE_ARCHITECTURE.md).
 
-## Getting Started
+## Commands (cd web/ && ...)
 
-1. Navigate to the `web/` directory
-2. Install dependencies: `npm install`
-3. Start development server: `npm run dev`
-4. Open `http://localhost:4321` in your browser
+| Command | Action |
+|---------|--------|
+| `npm run dev` | Dev server (localhost:4321) |
+| `npm run images:optimize` | Optimize /bilder_nach_page/ → /images/ (JPG/WebP, responsive) |
+| `npm run build` | Full build (optimize + astro build → dist/) |
+| `npm run preview` | Preview dist/ |
+| `npm run a11y:local` | Pa11y WCAG2AA on localhost:4321 |
+| `npm run ci` | Optimize + build (CI-friendly) |
 
-## Accessibility
+**Image Pipeline**: Place sources in `public/bilder_nach_page/<hub>/<page>/` (fallback: hub/root). Run `npm run images:optimize`. Pages reference `/images/<seo-name>.webp`.
 
-Automated accessibility checks are integrated:
-- Run `npm run a11y` after starting the dev server
-- See `ACCESSIBILITY.md` for detailed guidelines
-- Reports are generated in `ACCESSIBILITY-REPORT.md`
+## Deployment
 
-## Contributing
+1. `cd web && npm install` (once).
+2. `npm run build` → `dist/`.
+3. Upload `dist/` to host root (replace old).
+4. Verify: `/`, hubs, Kontakt.
+5. Update `src/lib/site.ts` + `astro.config.mjs` (base/site) if subfolder/domain changes, rebuild.
 
-1. Follow the AUDITnPLAN for feature implementation
-2. Ensure all changes pass accessibility checks
-3. Optimize images before committing
-4. Test on multiple devices and browsers
+## Design System
 
-## Learn More
+`src/styles/design-system.css`: Colors (`--color-primary`), typography (modular scale), utilities (`.container`, `.grid-cols-*`, `.btn`, `.card`, `.hero-*`), responsive.
 
-- [Astro Documentation](https://docs.astro.build)
-- [Tailwind CSS](https://tailwindcss.com)
-- [AOS Documentation](https://michalsnik.github.io/aos/)
-- [Sharp Image Processing](https://sharp.pixelplumbing.com/)
+Example:
+```astro
+<Hero image="komm-raus-hero-800.webp" title="Welcome" />
+<Section title="Features" image="feature-section.webp">
+  Content with design-system classes.
+</Section>
+```
+
+## Current Tasks (Image Integration Waves)
+
+- **✅ Phases 1-3**: Masterplan, rules, all page TODOs created.
+- **✅ Waves 1-3**: Top-level + einsatzkraefte fixed.
+- **Active Wave 4/5**: unternehmen (leadership-management needs Glass redesign), bildungseinrichtungen (10 pages).
+- Trackers: [TODO-image-integration-current-wave.md](TODO-image-integration-current-wave.md), [TODO-image-integration-page-level.md](TODO-image-integration-page-level.md).
+
+## Accessibility & Performance
+
+- **a11y**: pa11y WCAG2AA (`npm run a11y:local`).
+- **Perf**: Lazy images, srcset, no JS bloat, static SSG.
+- **Responsive**: Mobile-first nav (hamburger + sub-sections).
+
+---
+*Updated: Current state as of image Waves 4-5 (2026).*
+

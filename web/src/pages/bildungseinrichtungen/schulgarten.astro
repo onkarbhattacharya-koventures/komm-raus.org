@@ -1,0 +1,83 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import Button from '../../components/Button.astro';
+---
+
+<MainLayout title="Schulgarten - Komm Raus">
+  <Hero title="Schulgarten" subtitle="Lernort vor der Tür – Natur, Ernährung und Nachhaltigkeit im Schulalltag verankern." imagePath="/images/bildungseinrichtungen-schulgarten-soil-table-800.jpg" />
+
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Ein gut genutzter Schulgarten ist ein dauerhafter Lernraum, in dem Schülerinnen und Schüler:</p>
+      <ul class="card-list">
+        <li>sehen, woher Nahrung kommt</li>
+        <li>Boden, Wasser, Wetter im Jahreslauf erleben</li>
+        <li>Verantwortung für lebende Systeme übernehmen</li>
+        <li>und gemeinsam etwas gestalten, das bleibt</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Für wen der Schulgarten gedacht ist</h2>
+      <ul class="card-list">
+        <li>Schulleitung und Schulträger</li>
+        <li>Lehrkräfte</li>
+        <li>Ganztags- und OGS-Teams</li>
+        <li>Schüler:innen aller Stufen</li>
+        <li>Eltern und Fördervereine</li>
+        <li>Kommunen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Lernfelder</h2>
+      <ul class="card-list">
+        <li><strong>Boden & Kreisläufe</strong> – Humus, Kompost, Bodenleben</li>
+        <li><strong>Pflanzen & Ernährung</strong> – Anzucht, Pflege, Verarbeitung</li>
+        <li><strong>Biodiversität</strong> – Insekten, Vögel, Lebensräume</li>
+        <li><strong>Klima & Wasser</strong> – Wasserhaushalt, Mulch</li>
+        <li><strong>Soziales Lernen</strong> – Teamarbeit, Verantwortung</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Didaktischer Ansatz</h2>
+      <ul class="card-list">
+        <li>Mitgestalten statt nur vorfinden</li>
+        <li>Jahreskreislauf nutzen</li>
+        <li>Projekt- statt Frontalunterricht</li>
+        <li>Fächerverbindung</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Wie wir unterstützen</h2>
+      <ul class="card-list">
+        <li>Einstieg & Bestandsaufnahme</li>
+        <li>Konzept & Planung</li>
+        <li>Bau- und Pflanztage</li>
+        <li>Einbindung in Unterricht</li>
+        <li>Lehrerfortbildung</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="text-center">
+      <Button href="/kontakt" type="primary">Anfrage "Schulgarten" stellen</Button>
+    </GlassPanel>
+  </Section>
+</MainLayout>

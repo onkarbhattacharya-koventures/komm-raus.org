@@ -1,0 +1,151 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import Card from '../../components/Card.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  { href: '#worum-es-geht', image: '/images/coaching-entwicklung-1.jpg', alt: 'Worum es geht', label: 'Worum es geht' },
+  { href: '#anlaesse', image: '/images/coaching-entwicklung-2.jpg', alt: 'Mögliche Anlässe', label: 'Mögliche Anlässe' },
+  { href: '#arbeitsweise', image: '/images/coaching-entwicklung-3.jpg', alt: 'Arbeitsweise', label: 'Arbeitsweise' },
+  { href: '#rahmen-grenzen', image: '/images/coaching-entwicklung-4.jpg', alt: 'Rahmen und Grenzen', label: 'Rahmen und Grenzen' },
+  { href: '#organisatorisches', image: '/images/coaching-entwicklung-5.jpg', alt: 'Organisatorisches', label: 'Organisatorisches' },
+];
+---
+
+<MainLayout title="Coaching & Entwicklung - Komm Raus">
+  <Hero title="Coaching & Entwicklung" subtitle="1:1-Begleitung in der Natur." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" />
+
+  <Section class="coaching-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Manche Themen lassen sich in Gruppen nur begrenzt bearbeiten: persönliche Entscheidungen, Belastungssituationen, Fragen nach Ausrichtung, Gesundheit oder Lebensstil. Für solche Anliegen bieten wir Einzelbegleitungen an, die Natur, Bewegung und Reflexion verbinden.</p>
+      <p>„Coaching & Entwicklung" meint hier keine Therapie, sondern ein strukturiertes Gesprächs- und Erfahrungsangebot, das von erlebnis- und wildnispädagogischen Elementen unterstützt wird.</p>
+      <picture class="image-card">
+        <img src="/images/coaching-entwicklung-1.jpg" alt="Coaching & Entwicklung" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="anlaesse" class="prose max-w-none">
+      <h2>Mögliche Anlässe</h2>
+      <p class="mb-4">Themen können zum Beispiel sein:</p>
+      <div class="cards mt-4">
+        <Card title="Stress & Anspannung" body="Umgang mit Stress und Anspannung im Alltag" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230908_084708936.jpg" class="card-compact" />
+        <Card title="Lebensrhythmus" body="Fragen zu Lebensrhythmus, Schlaf, Bewegung und Regeneration" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230908_084708936.jpg" class="card-compact" />
+        <Card title="Entscheidungssituationen" body="Klärung von beruflichen oder privaten Entscheidungssituationen" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230908_084708936.jpg" class="card-compact" />
+        <Card title="Naturbezug" body="Wunsch nach mehr Naturbezug im eigenen Leben" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230908_084708936.jpg" class="card-compact" />
+        <Card title="Eigene Muster" body="Reflexion eigener Muster (z.B. immer ‚funktionieren', schwer abschalten können)" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230908_084708936.jpg" class="card-compact" />
+      </div>
+      <p class="mt-4">Wir klären im Erstkontakt, ob und in welchem Rahmen wir ein passender Ansprechpartner sind. Wenn Themen eher in Richtung Therapie oder medizinische Abklärung weisen, empfehlen wir entsprechende Fachstellen.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="arbeitsweise" class="prose max-w-none">
+      <h2>Arbeitsweise</h2>
+      <p class="mb-4">Mögliche Elemente einer 1:1-Begleitung:</p>
+      <div class="cards mt-4">
+        <Card title="Gespräch in der Natur" body="Gesprächsphasen im Gehen oder Sitzen in der Natur" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230606_130852507.jpg" class="card-compact" />
+        <Card title="Körper & Atem" body="Einfache Körper- und Atemübungen zur Wahrnehmung und Beruhigung" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230606_130852507.jpg" class="card-compact" />
+        <Card title="Waldrituale" body="Kleine Aufgaben oder Rituale im Wald (z.B. Sitzen an einem Ort über mehrere Treffen)" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230606_130852507.jpg" class="card-compact" />
+        <Card title="Naturhandwerk" body="Auf Wunsch Einbindung von Naturhandwerk, leichten Bewegungsformen oder anderen Methoden" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20230606_130852507.jpg" class="card-compact" />
+      </div>
+      <p class="mt-4">Tempo und Tiefe werden gemeinsam vereinbart. Es geht nicht darum, „jemanden zu verändern", sondern darum, Räume zu öffnen, in denen neue Perspektiven und Handlungsoptionen sichtbar werden können.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="rahmen-grenzen" class="prose max-w-none">
+      <h2>Rahmen & Grenzen</h2>
+      <p class="mb-4">Transparenz ist uns wichtig:</p>
+      <div class="cards mt-4">
+        <Card title="Keine Therapie" body="Wir arbeiten nicht therapeutisch im klinischen Sinne" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240511_105730242.jpg" class="card-compact" />
+        <Card title="Keine Diagnosen" body="Wir stellen keine Diagnosen und geben keine Heilversprechen" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240511_105730242.jpg" class="card-compact" />
+        <Card title="Fachliche Grenzen" body="Wir achten darauf, unsere eigenen fachlichen Grenzen einzuhalten und benennen sie offen" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240511_105730242.jpg" class="card-compact" />
+      </div>
+      <p class="mt-4">Bei Themen, die klar in den Bereich Psychotherapie, Psychiatrie oder Medizin fallen, verweisen wir auf entsprechende Fachpersonen.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches</h2>
+      <div class="cards mt-4">
+        <Card title="Zielgruppe" body="Erwachsene; bei Jugendlichen in der Regel nur in Abstimmung mit Erziehungsberechtigten" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240608_120615368.jpg" class="card-compact" />
+        <Card title="Ort" body="Überwiegend im Außenraum rund um den Waldseilgarten" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240608_120615368.jpg" class="card-compact" />
+        <Card title="Dauer" body="Nach Absprache (z.B. 60–90 Minuten pro Treffen); auch als begrenzte Begleitungsreihe möglich" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240608_120615368.jpg" class="card-compact" />
+      </div>
+      <p class="mt-4 mb-4">Im Erstgespräch klären wir:</p>
+      <div class="cards mt-4">
+        <Card title="Anliegen" body="Thema und Anliegen" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240608_120615368.jpg" class="card-compact" />
+        <Card title="Ziele" body="Mögliche Ziele oder Fragestellungen" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240608_120615368.jpg" class="card-compact" />
+        <Card title="Rahmen" body="Organisatorische Rahmenbedingungen (Ort, Häufigkeit, Honorar)" imagePath="/bilder_nach_page/erlebnisse-kurse/coaching-entwicklung/PXL_20240608_120615368.jpg" class="card-compact" />
+      </div>
+      <button id="coaching-entwicklung-anfrage-button" class="btn btn-secondary btn-lg mt-4" type="button">
+        Anfrage „Coaching & Entwicklung"
+      </button>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.coaching-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+@media (max-width: 768px) {
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('coaching-entwicklung-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>

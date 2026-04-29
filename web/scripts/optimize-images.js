@@ -4,7 +4,7 @@ const path = require('path');
 
 const srcDir = path.resolve(__dirname, '../public/assets');
 const outDir = path.resolve(__dirname, '../public/images');
-const widths = [400, 800, 1200];
+const widths = [250, 400, 800, 1200];
 
 if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 

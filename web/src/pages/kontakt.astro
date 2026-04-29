@@ -1,0 +1,286 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+---
+
+<MainLayout title="Kontakt - Komm Raus">
+  <Hero title="Kontakt" subtitle="Nehmen Sie Kontakt mit uns auf" imagePath="/bilder_nach_page/Startseite/Waldseilgarten Laubfrosch Büdingen - komm raus GmbH - Klettergarten - Kletterpark - Kletterwald.jpg" />
+  
+  <Section>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Kontaktinformationen</h2>
+        <div class="contact-item">
+          <h3>Adresse</h3>
+          <p>
+            Komm Raus GmbH<br>
+            Waldseilgarten Laubfrosch<br>
+            Richard-Schirrmann-Weg 2<br>
+            63654 Büdingen
+          </p>
+        </div>
+        
+        <div class="contact-item">
+          <h3>E-Mail</h3>
+          <p><a href="mailto:info@komm-raus.org">info@komm-raus.org</a></p>
+        </div>
+        
+        <div class="contact-item">
+          <h3>Website</h3>
+          <p><a href="https://www.komm-raus.org">www.komm-raus.org</a></p>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <h2>Nachricht senden</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Telefon</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">Betreff</label>
+            <input type="text" id="subject" name="subject">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Nachricht *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Nachricht senden</button>
+        </form>
+        <div id="form-status" class="form-status"></div>
+      </div>
+    </div>
+  </Section>
+  
+  <Section>
+    <div class="legal-grid">
+      <a href="/kontakt/impressum" class="legal-card">
+        <h3>Impressum</h3>
+        <p>Rechtliche Informationen und Angaben</p>
+      </a>
+      
+      <a href="/kontakt/datenschutz" class="legal-card">
+        <h3>Datenschutz</h3>
+        <p>Informationen zum Datenschutz</p>
+      </a>
+      
+      <a href="/kontakt/agb" class="legal-card">
+        <h3>AGB</h3>
+        <p>Allgemeine Geschäftsbedingungen</p>
+      </a>
+    </div>
+  </Section>
+</MainLayout>
+
+<style>
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.contact-info h2,
+.contact-form h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-6);
+}
+
+.contact-item {
+  margin-bottom: var(--space-4);
+}
+
+.contact-item h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.contact-item p {
+  color: var(--color-gray-700);
+  line-height: 1.6;
+}
+
+.contact-item a {
+  color: var(--color-secondary);
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.form-group {
+  margin-bottom: var(--space-4);
+}
+
+.form-group label {
+  display: block;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--space-3);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-base);
+  transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(var(--color-secondary-rgb), 0.1);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary-dark);
+}
+
+.form-status {
+  margin-top: var(--space-4);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  display: none;
+}
+
+.form-status.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  display: block;
+}
+
+.form-status.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  display: block;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .legal-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.legal-card {
+  background-color: var(--color-white);
+  padding: var(--space-6);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.legal-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.legal-card h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  margin-bottom: var(--space-2);
+}
+
+.legal-card p {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+}
+</style>
+
+<script>
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  if (form && status) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'),
+        phone: formData.get('phone'),
+        subject: formData.get('subject'),
+        message: formData.get('message')
+      };
+      
+      // Create mailto link as fallback
+      const subject = encodeURIComponent(data.subject || 'Kontaktanfrage von Website');
+      const body = encodeURIComponent(
+        `Name: ${data.name}\n` +
+        `E-Mail: ${data.email}\n` +
+        `Telefon: ${data.phone || 'Nicht angegeben'}\n\n` +
+        `Nachricht:\n${data.message}`
+      );
+      
+      const mailtoLink = `mailto:info@komm-raus.org?subject=${subject}&body=${body}`;
+      
+      // Show success message
+      status.className = 'form-status success';
+      status.textContent = 'Ihr E-Mail-Programm wird geöffnet. Falls nicht, kopieren Sie bitte die Daten und senden Sie eine E-Mail an info@komm-raus.org';
+      
+      // Open mailto link
+      window.location.href = mailtoLink;
+      
+      // Reset form
+      form.reset();
+    });
+  }
+</script>

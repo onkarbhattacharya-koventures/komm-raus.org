@@ -1,0 +1,42 @@
+---
+interface TeaserItem {
+  href: string;
+  image: string;
+  alt: string;
+  label: string;
+}
+
+interface Props {
+  items: TeaserItem[];
+  class?: string;
+}
+
+const { items = [], class: className = '' } = Astro.props as Props;
+
+function getSrcset(image: string) {
+  const m = image.match(/^(\/images\/.+)-(\d+)\.jpg$/);
+  if (!m) return undefined;
+  return `${m[1]}-250.webp 250w, ${m[1]}-400.webp 400w`;
+}
+---
+
+<div class={`glass-teaser-grid ${className}`.trim()}>
+  {items.map((item) => (
+    <a href={item.href} class="glass-teaser">
+      <picture>
+        {getSrcset(item.image) && (
+          <source type="image/webp" srcset={getSrcset(item.image)} sizes="108px" />
+        )}
+        <img
+          src={item.image}
+          alt={item.alt}
+          loading="lazy"
+          decoding="async"
+          width="108"
+          height="88"
+        />
+      </picture>
+      <span>{item.label}</span>
+    </a>
+  ))}
+</div>

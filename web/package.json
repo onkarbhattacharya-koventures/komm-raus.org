@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "astro dev",
     "images:optimize": "node ./scripts/optimize-images.cjs",
-    "videos:copy": "node ./scripts/copy-videos.cjs",
-    "audio:copy": "node ./scripts/copy-audio.cjs",
-    "assets:optimize": "npm run images:optimize && npm run videos:copy && npm run audio:copy",
+    "assets:optimize": "npm run images:optimize",
     "build": "npm run assets:optimize && astro build",
     "preview": "astro preview",
     "astro": "astro",
@@ -21,10 +19,6 @@
     "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@astrojs/react": "^4.4.2",
-    "lucide-react": "^0.562.0",
-    "pa11y": "^6.2.3",
-    "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "pa11y": "^9.0.1"
   }
 }

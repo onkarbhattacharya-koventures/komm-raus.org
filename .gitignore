@@ -123,9 +123,7 @@ $RECYCLE.BIN/
 *.msp
 *.lnk
 
-# Logs
-logs
-*.log
+# Logs\nlogs\n*.log\n**/*.lock\n*.xlsx\n*.ps1\n*.cjs\n**/*.js\n**/scripts/
 
 # Accessibility reports
 ACCESSIBILITY-REPORT.md
@@ -133,8 +131,7 @@ ACCESSIBILITY-REPORT.md
 # Image optimization notes
 README-images.md
 
-# TODO files
-TODO.md
+# TODO files\n**/TODO*.md\nTODO.md
 
 # Legacy HTML files (if not needed in repo)
 # index.html (uncomment if keeping legacy)
@@ -146,3 +143,10 @@ TODO.md
 # OneDrive specific (optional)
 # ~$*
 # *.tmp
+
+komm-raus.org
+komm-raus.org-backup
+MIGRATION_SUMMARY.md
+NAVIGATION_IMPLEMENTATION.md
+.zencoder
+.zenflow

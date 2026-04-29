@@ -7,7 +7,7 @@ async function run(url){
     const results = await pa11y(url, { standard: 'WCAG2AA' });
     console.log(JSON.stringify(results, null, 2));
   } catch (err) {
-    console.error('Pa11y run failed:', err.message);
+    console.error('Pa11y run failed:', err?.message || err);
     process.exit(1);
   }
 }
@@ -17,4 +17,7 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-run(process.argv[2]);
+run(process.argv[2]).catch(err => {
+  console.error('Unhandled error:', err.message);
+  process.exit(1);
+});

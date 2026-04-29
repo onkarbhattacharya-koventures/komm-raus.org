@@ -1,8 +1,21 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react()]
+  image: {
+    domains: ['localhost', '127.0.0.1'],
+    remotePatterns: [{ protocol: 'https' }]
+  },
+  markdown: {
+    shikiConfig: {
+      theme: 'nord'
+    }
+  },
+  vite: {
+    optimizeDeps: {
+      exclude: ['aos']
+    }
+  },
+  site: 'https://komm-raus.org'
 });

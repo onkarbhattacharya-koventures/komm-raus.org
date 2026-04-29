@@ -1,0 +1,61 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import Button from '../../components/Button.astro';
+---
+
+<MainLayout 
+  title="Fragebögen - Komm Raus"
+  description="Die benötigten Fragebögen für Ihre Gruppenbuchung."
+>
+  <Section class="bg-brand-primary text-white text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Fragebögen</h1>
+    <p class="text-xl">Formulare für Ihre Buchung</p>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Für Schulen und Bildungseinrichtungen</h2>
+      <p>Um Ihnen ein maßgeschneidertes Programm anbieten zu können, benötigen wir einige Informationen zu Ihrer Gruppe.</p>
+      <div class="mt-4">
+        <Button href="/download/fragebogen-lehrer" type="primary">Fragebogen für Lehrkräfte</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Was wir benötigen</h2>
+      <ul class="card-list">
+        <li>Terminwunsch</li>
+        <li>Alter und Anzahl der Teilnehmenden</li>
+        <li>Ziele der Veranstaltung</li>
+        <li>Besonderheiten (z.B. körperliche Einschränkungen, Allergien)</li>
+        <li>Kontaktdaten der verantwortlichen Person</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none">
+      <h2>Wie es funktioniert</h2>
+      <ol>
+        <li>Sie füllen den Fragebogen aus</li>
+        <li>Wir erstellen ein individuelles Angebot</li>
+        <li>Sie erhalten das Angebot per E-Mail</li>
+        <li>Bei Zustimmung senden Sie die Buchungsvereinbarung zurück</li>
+      </ol>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel class="prose max-w-none text-center">
+      <h2>Noch Fragen?</h2>
+      <p>Wenn Sie Fragen zu den Fragebögen haben, sprechen Sie uns gerne an.</p>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Kontakt aufnehmen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>

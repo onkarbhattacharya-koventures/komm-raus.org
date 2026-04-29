@@ -1,87 +1,171 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Section from '../components/Section.astro';
+import GlassPanel from '../components/GlassPanel.astro';
+import SectionTeaserGrid from '../components/SectionTeaserGrid.astro';
+import Card from '../components/Card.astro';
 import Button from '../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#herausforderung',
+    image: '/bilder_nach_page/einsatzkraefte/feuerwehr-stressresilienz-training-komm-raus.jpg',
+    alt: 'Herausforderung - Stress im Einsatz',
+    label: 'Herausforderung',
+  },
+  {
+    href: '#loesung',
+    image: '/bilder_nach_page/einsatzkraefte/Himmelsleiter-teambuilding-laubfrosch-wald.jpg',
+    alt: 'Lösung - Training im Waldseilgarten',
+    label: 'Lösung',
+  },
+  {
+    href: '#module',
+    image: '/bilder_nach_page/einsatzkraefte/leiter-feuerwehr-vertrauen-komm-raus.jpg',
+    alt: 'Module - Vertrauenstraining',
+    label: 'Module',
+  },
+  {
+    href: '#mehrwert',
+    image: '/bilder_nach_page/einsatzkraefte/Reflexion-teamkreis-kommunikation.jpg',
+    alt: 'Mehrwert - Teamreflexion',
+    label: 'Mehrwert',
+  },
+  {
+    href: '#kontakt',
+    image: '/bilder_nach_page/einsatzkraefte/kooperationstraining-feuerwehr-komm-raus.jpg',
+    alt: 'Kontakt - Kooperationstraining',
+    label: 'Kontakt',
+  },
+];
 ---
 
 <MainLayout title="Blaulichtorganisationen & Hilfsdienste">
-  <Section class="sand">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <div class="border-l-4 border-brand-dark pl-3 mb-4">
-          <h2>Für Blaulichtorganisationen &amp; Hilfsdienste</h2>
-        </div>
-        <p class="font-bold mb-4">Stärke im Einsatz. Geschmiedet im Team.</p>
-        <p class="mb-4">Praxisorientierte Trainings und Stressregulation zur Stärkung von Kameradschaft, Belastbarkeit und Kommunikation.</p>
-        <Button href="#" type="primary">Jetzt Spezialtraining vereinbaren</Button>
-      </div>
+  <Section class="bg-brand-dark text-white text-center py-12">
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Evidenzbasiertes Stress- & Einsatztraining für Blaulichtverbände</h1>
+    <p class="text-xl mb-2">Prävention. Entscheidungsstärke. Einsatzsicherheit.</p>
+    <p class="mb-6 max-w-3xl mx-auto">Wenn Sekunden entscheiden, entscheidet das Nervensystem. Unsere Trainings befähigen Einsatzkräfte, unter Extremstress handlungsfähig, klar und gesund zu bleiben.</p>
+    <Button href="/kontakt" type="primary">Jetzt anfragen</Button>
+  </Section>
 
-      <div>
-        <div class="grid grid-cols-2 gap-4">
-          <picture>
-            <source type="image/webp" srcset="/images/Baumklettern-Seilaufstiegstechnik-400.webp 400w, /images/Baumklettern-Seilaufstiegstechnik-800.webp 800w" />
-            <img src="/images/Baumklettern-Seilaufstiegstechnik-400.jpg" alt="Baumklettern" loading="lazy" class="w-full h-64 object-cover rounded-xl" />
-          </picture>
-
-          <div class="grid gap-4">
-            <picture>
-              <source type="image/webp" srcset="/images/Feuer-machen-bowdrill-set-400.webp 400w, /images/Feuer-machen-bowdrill-set-800.webp 800w" />
-              <img src="/images/Feuer-machen-bowdrill-set-400.jpg" alt="Feuer machen" loading="lazy" class="w-full h-28 object-cover rounded-md" />
-            </picture>
-
-            <picture>
-              <source type="image/webp" srcset="/images/Rätsel-Rally-geocaching-schnitzeljagd-400.webp 400w, /images/Rätsel-Rally-geocaching-schnitzeljagd-800.webp 800w" />
-              <img src="/images/Rätsel-Rally-geocaching-schnitzeljagd-400.jpg" alt="Rätsel Rally" loading="lazy" class="w-full h-28 object-cover rounded-md" />
-            </picture>
-          </div>
-        </div>
-      </div>
+  <Section class="blaulicht-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <SectionTeaserGrid items={teaserItems} />
     </div>
   </Section>
 
   <Section>
-    <div class="grid md:grid-cols-2 gap-8 items-start">
-      <div>
-        <picture>
-          <source type="image/webp" srcset="/images/kanu-fahren-400.webp 400w, /images/kanu-fahren-800.webp 800w" />
-          <img src="/images/kanu-fahren-400.jpg" alt="Kanu fahren" loading="lazy" class="w-full h-64 object-cover rounded-md mb-4" />
-        </picture>
-      </div>
-
-      <div>
-        <h2>Aus eigener Erfahrung: Wir verstehen Ihre Welt</h2>
-        <p class="mb-4">Als aktives DLRG‑Mitglied und ehemaliger Feuerwehrmann wissen wir, was Kameradschaft bedeutet. Unsere Programme schaffen realitätsnahe Szenarien, in denen die Grundlagen jeder erfolgreichen Einheit unter kontrolliertem Stress trainiert werden.</p>
-        <h3 class="mb-2">Blindes Vertrauen erleben</h3>
-        <p class="mb-2">Wenn ein Kamerad den anderen sichert, wird Vertrauen zur körperlichen Erfahrung.</p>
-        <h3 class="mb-2">Klare Kommunikation unter Druck</h3>
-        <p class="mb-2">Unsere Aufgaben erfordern präzise Absprachen und klare Führung – wie im echten Einsatz.</p>
-        <h3 class="mb-2">Mentale Belastbarkeit steigern</h3>
-        <p>Das Überwinden persönlicher Grenzen stärkt individuelle Resilienz und die Fähigkeit, in belastenden Situationen handlungsfähig zu bleiben.</p>
-      </div>
-    </div>
+    <GlassPanel id="herausforderung" class="prose max-w-none">
+      <h2>Die Herausforderung im Einsatzalltag</h2>
+      <p>Feuerwehren operieren permanent in einer VUKA-Umwelt: Volatilität, Unsicherheit, Komplexität, Ambiguität. Die Folgen sind bekannt:</p>
+      <ul class="card-list">
+        <li>Entscheidungen unter massivem Zeit- und Erwartungsdruck</li>
+        <li>Stressbedingter Tunnelblick und Kommunikationsfehler</li>
+        <li>Chronische Belastung durch Schichtdienst und Alarmierungen</li>
+        <li>Psychische und körperliche Langzeitfolgen trotz hoher Resilienz</li>
+      </ul>
+      <p>Klassische Nachsorge greift zu spät. Was fehlt, ist systematische präventive Stress- und Entscheidungsfähigkeit.</p>
+    </GlassPanel>
   </Section>
 
-  <Section class="light">
-    <h2>Spezial‑Module &amp; Besondere Expertise</h2>
-    <p>Module mit Einsatzbezug: Abseilen, Simulationen zur Höhenrettung, Überwinden beweglicher Teile in der Höhe – individuell angepasste Module für Ihre Einheit.</p>
+  <Section>
+    <GlassPanel id="loesung" class="prose max-w-none">
+      <h2>Unsere Lösung</h2>
+      <p><strong>Einsatzrelevantes Training für Körper, Geist und Team</strong></p>
+      <p>Wir übertragen bewährte Hochleistungsmodelle aus Neurobiologie, Sport- und Stressforschung in den realen Feuerwehrkontext.</p>
+      <p>Kein Coaching. Kein Event. Kein Esoterik-Programm. Sondern belastbare Trainingsformate mit direktem Einsatztransfer.</p>
+    </GlassPanel>
   </Section>
 
-  <Section class="light">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2>Unsere Trainingspakete</h2>
-      <p class="italic">Maßgeschneidert für Ihre Einheit</p>
-
-      <div class="grid md:grid-cols-2 gap-6 mt-6">
-        <div class="p-4 bg-white rounded-md shadow-sm">
-          <strong>PAKET „KAMERADSCHAFT“</strong>
-          <p class="mt-2">Halbtägig, Fokus: Teamgeist und Kommunikation. Mindestpauschale: 3.000 €.</p>
-        </div>
-
-        <div class="p-4 bg-white rounded-md shadow-sm">
-          <strong>PAKET „EINSATZTRAINING“</strong>
-          <p class="mt-2">Ganztägig, Fokus: komplexe Herausforderungen und Reflexion. Mindestpauschale: 3.000 €.</p>
-        </div>
+  <Section>
+    <GlassPanel id="module" class="prose max-w-none">
+      <h2>Trainingsmodule</h2>
+      <div class="cards">
+        <Card title="Stress & Entscheidungsfindung" body="Handlungsfähigkeit unter maximalem Druck. Atem- und Regulationsprotokolle, Fokussteuerung unter realem Stress." />
+        <Card title="Team & Kommunikation" body="Klare Führung und sichere Kommunikation. Simulierte Hochstress-Szenarien." />
+        <Card title="Regeneration & Schlaf" body="Leistungsfähigkeit erhalten – langfristig. Schlafstrategien und Atemtechniken." />
+        <Card title="Jugendfeuerwehr" body="Die nächste Generation stärken. Feuerwehrnahe Elemente und kontrollierte Stressbelastung." />
+        <Card title="Mindset & Emotionsregulation" body="Klar bleiben, wenn es emotional wird. Emotionsregulation und Growth Mindset." />
       </div>
-    </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="formate" class="prose max-w-none">
+      <h2>Formate</h2>
+      <div class="cards">
+        <Card title="Intensiv-Wochenende" body="2,5 Tage | Theorie & Praxis | Nacht- & Höhenmodule" />
+        <Card title="Modulare Ausbildungsabende" body="z.B. 4 × 4 Stunden | Gerätehaus + Abschlussevent" />
+        <Card title="Führungskräfte-Special" body="Für Wehrführung, Gruppen- & Zugführer | inkl. Train-the-Trainer" />
+        <Card title="Nachwuchsprogramme" body="Langfristig integrierbar in die Jugendfeuerwehr-Ausbildung" />
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="infrastruktur" class="prose max-w-none">
+      <h2>Infrastruktur & Durchführung</h2>
+      <ul class="card-list">
+        <li>Pädagogischer Waldseilgarten</li>
+        <li>Mobile Durchführung im Gerätehaus möglich</li>
+        <li>Kanu- und Outdoor-Module optional integrierbar</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="mehrwert" class="prose max-w-none">
+      <h2>Der messbare Mehrwert</h2>
+      <div class="cards">
+        <Card title="Reduktion stressbedingter Entscheidungsfehler" body="Stabilere Entscheidungen unter Druck." />
+        <Card title="Schnellere Regeneration" body="Nach belastenden Einsätzen." />
+        <Card title="Höhere Team- & Kommunikationssicherheit" body="Weniger Missverständnisse." />
+        <Card title="Attraktivere Nachwuchsarbeit" body="Stärkere Bindung." />
+        <Card title="Präventive Resilienz" body="Statt reaktiver Krisenintervention." />
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wissenschaft" class="prose max-w-none">
+      <h2>Wissenschaftliche Grundlage</h2>
+      <ul class="card-list">
+        <li>Arnsten, A.F.T. (2009). Stress signalling pathways that impair prefrontal cortex function. Nature Reviews Neuroscience.</li>
+        <li>McEwen, B.S. (2017). Neurobiological effects of chronic stress. Neurobiology of Stress.</li>
+        <li>Huberman, A. et al. (Stanford). Atemtechniken & autonome Regulation.</li>
+        <li>Kales et al. (2019). Sleep deficiency and operational errors in shift workers.</li>
+        <li>COPSY-Studie (UKE). Psychische Belastung von Kindern und Jugendlichen.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section class="bg-brand-yellow py-12 text-center">
+    <GlassPanel id="kontakt" class="prose max-w-none">
+      <h2>Nächster Schritt</h2>
+      <p>Unverbindlicher Austausch oder kostenfreie Demo-Einheit → Klarheit, ob und wie das Training für Ihre Feuerwehr sinnvoll ist.</p>
+      <p>Prävention ist keine Wellnessmaßnahme. Sie ist Einsatzsicherheit.</p>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Jetzt kontaktieren</Button>
+      </div>
+    </GlassPanel>
   </Section>
 </MainLayout>
+
+<style>
+.blaulicht-overview {
+  padding-top: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

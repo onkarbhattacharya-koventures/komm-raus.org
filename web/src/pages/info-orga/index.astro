@@ -1,0 +1,62 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import Card from '../../components/Card.astro';
+---
+
+<MainLayout 
+  title="Info & Orga - Komm Raus"
+  description="Informationen und Organisation für Ihren Besuch im Waldseilgarten Laubfrosch."
+>
+  <Section class="bg-brand-primary text-white text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Info & Orga</h1>
+    <p class="text-xl">Alles Wichtige für Ihren Besuch bei uns</p>
+  </Section>
+
+  <Section>
+    <GlassPanel>
+      <div class="info-grid">
+        <Card title="Über uns" body="Erfahren Sie mehr über unser Unternehmen, unsere Philosophie und unser Team." href="/info-orga/ueber-uns" imagePath="/images/startseite-teamfoto-400.jpg" />
+
+        <Card title="Sicherheitskonzept" body="Informationen zu unseren Sicherheitsstandards und Qualitätsmaßnahmen." href="/info-orga/sicherheitskonzept" />
+        <Card title="Fragebögen" body="Die benötigten Fragebögen für Ihre Gruppenbuchung." href="/info-orga/frageboegen" />
+        <Card title="Vordrucke & Haftung" body="Wichtige Formulare und Informationen für Ihre Teilnahme." href="/info-orga/vordrucke" />
+        <Card title="FAQs" body="Antworten auf häufig gestellte Fragen zu unseren Angeboten." href="/info-orga/faq" />
+        <Card title="Glossar" body="Erklärungen zu Fachbegriffen aus der Erlebnispädagogik." href="/info-orga/glossar" />
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel>
+      <h2 class="text-2xl font-bold text-center mb-6">Rechtliche Informationen</h2>
+      <div class="links-grid">
+        <Card title="Impressum" body="Rechtliche Angaben" href="/kontakt/impressum" />
+        <Card title="Datenschutz" body="Informationen zum Datenschutz" href="/kontakt/datenschutz" />
+        <Card title="AGB" body="Allgemeine Geschäftsbedingungen" href="/kontakt/agb" />
+        <Card title="Sitemap" body="Übersicht aller Seiten" href="/info-orga/sitemap" />
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .info-grid, .links-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

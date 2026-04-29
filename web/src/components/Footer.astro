@@ -1,55 +1,55 @@
----
+﻿---
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-md-surface-variant text-md-on-surface-variant text-sm">
-  <div class="max-w-7xl mx-auto px-4 px-6 px-8">
-    <div class="grid md-grid-cols-3 gap-8 py-8">
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
       <!-- Logo & Contact -->
-      <div class="animate-fade-in">
-        <div class="font-bold text-lg mb-4">Komm Raus</div>
-        <p class="mb-2">Laubfrosch Waldseilgarten</p>
-        <p class="mb-2">Erlebnispädagogik & Wildnispädagogik</p>
-        <p class="mb-4">Für Kinder, Jugendliche & Erwachsene</p>
+      <div class="footer-section animate-fade-in">
+        <div class="footer-title">Komm Raus</div>
+        <p class="footer-text">Laubfrosch Waldseilgarten</p>
+        <p class="footer-text">Erlebnispädagogik & Wildnispädagogik</p>
+        <p class="footer-text">Für Kinder, Jugendliche & Erwachsene</p>
       </div>
 
       <!-- Quick Links -->
-      <div class="animate-fade-in animation-delay-200">
-        <h3 class="font-semibold mb-4">Navigation</h3>
-        <ul class="space-y-2">
-          <li><a href="/" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Home</a></li>
-          <li><a href="/about" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Über uns</a></li>
-          <li><a href="/angebote" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Angebote</a></li>
-          <li><a href="/schule" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Schule</a></li>
-          <li><a href="/assessment" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Assessment</a></li>
-          <li><a href="/adhs" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">ADHS</a></li>
-          <li><a href="/blaulicht" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Blaulicht</a></li>
+      <div class="footer-section animate-fade-in animation-delay-200">
+        <h3 class="footer-heading">Navigation</h3>
+        <ul class="footer-links">
+          <li><a href="/bildungseinrichtungen" class="footer-link">Bildungseinrichtungen</a></li>
+          <li><a href="/unternehmen" class="footer-link">Unternehmen</a></li>
+          <li><a href="/einsatzkraefte" class="footer-link">Einsatzkräfte</a></li>
+          <li><a href="/erlebnisse-kurse" class="footer-link">Erlebnisse</a></li>
+<li><a href="/info-orga" class="footer-link">Info & Orga</a></li>
+          <li><a href="/kontakt" class="footer-link">Kontakt</a></li>
         </ul>
       </div>
 
       <!-- Contact & Social -->
-      <div class="animate-fade-in animation-delay-400">
-        <h3 class="font-semibold mb-4">Kontakt</h3>
-        <p class="mb-2">📧 info@komm-raus.org</p>
-        <p class="mb-2">📞 +49 123 456789</p>
-        <p class="mb-4">📍 Musterstadt, Deutschland</p>
+      <div class="footer-section animate-fade-in animation-delay-400">
+        <h3 class="footer-heading">Kontakt</h3>
+        <p class="footer-text">📧 info@komm-raus.org</p>
+        <p class="footer-text">📞 +49 (0) 170 - 47 97 822</p>
+        <p class="footer-text">📍 Richard-Schirrmann-Weg 2, 63654 Büdingen, Deutschland</p>
 
         <!-- Social Links (placeholder) -->
-        <div class="flex gap-4">
-          <a href="#" class="no-underline transition-transform duration-200 hover:scale-110" aria-label="Facebook">📘</a>
-          <a href="#" class="no-underline transition-transform duration-200 hover:scale-110" aria-label="Instagram">📷</a>
-          <a href="#" class="no-underline transition-transform duration-200 hover:scale-110" aria-label="YouTube">📺</a>
+        <div class="footer-social">
+          <a href="#" class="footer-social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="footer-social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="footer-social-link" aria-label="YouTube">📺</a>
         </div>
       </div>
     </div>
 
     <!-- Copyright -->
-    <div class="border-t border-brand-dark/20 pt-4 mt-4 text-center animate-fade-in animation-delay-600">
+    <div class="footer-bottom animate-fade-in animation-delay-600">
       <p>© {currentYear} Komm Raus. Alle Rechte vorbehalten.</p>
-      <p class="text-xs mt-1">
-        <a href="#" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Impressum</a> |
-        <a href="#" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">Datenschutz</a> |
-        <a href="#" class="no-underline transition-colors duration-200 hover:text-brand-dark hover:underline">AGB</a>
+      <p class="footer-legal">
+        <a href="/kontakt/impressum" class="footer-link">Impressum</a> |
+        <a href="/kontakt/datenschutz" class="footer-link">Datenschutz</a> |
+        <a href="/kontakt/agb" class="footer-link">AGB</a> |
+        <a href="/info-orga/sitemap" class="footer-link">Sitemap</a>
       </p>
     </div>
   </div>

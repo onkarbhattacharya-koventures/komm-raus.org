@@ -1,121 +1,114 @@
 ---
 // AnfrageModal.astro
-const currentPath = Astro.url.pathname;
-
-// Only render on pages that are not excluded
-const excludedPaths = ['/', '/about', '/download', '/kontakt', '/impressum'];
-const shouldRender = !excludedPaths.includes(currentPath);
 ---
 
-{shouldRender && (
-  <>
-    <!-- Sticky Button -->
-    <button
-      id="anfrage-button"
-      class="fixed bottom-20 right-4 bg-brand-dark text-white px-4 py-2 rounded-full shadow-lg hover:bg-brand-darker transition-colors duration-200 z-40 flex items-center gap-2"
-      aria-label="Termin anfragen"
-    >
-      <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-      </svg>
-      Termin anfragen
-    </button>
+<>
+<!-- Sticky Button -->
+  <button
+    id="anfrage-button"
+    class="anfrage-button"
+    aria-label="unverbindlich anfragen"
+  >
+    unverbindlich anfragen
+  </button>
 
-    <!-- Modal Overlay -->
-    <div id="anfrage-modal" class="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-      <div class="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto relative">
-        <!-- Close Button -->
-        <button
-          id="close-modal"
-          class="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl"
-          aria-label="Modal schließen"
-        >
-          ×
-        </button>
+  <!-- Modal Overlay -->
+  <div id="anfrage-modal" class="anfrage-modal" aria-hidden="true">
+    <div class="anfrage-modal__content" role="dialog" aria-modal="true" aria-labelledby="anfrage-title">
+      <!-- Close Button -->
+      <button
+        id="close-modal"
+        class="anfrage-modal__close"
+        aria-label="Modal schließen"
+      >
+        ×
+      </button>
 
-        <!-- Form -->
-        <form
-          id="anfrage-form"
-          action="mailto:kontakt@komm-raus.org"
-          method="post"
-          enctype="text/plain"
-          class="p-6"
-        >
-          <h2 class="text-2xl font-bold mb-6 text-brand-dark">Termin anfragen</h2>
+      <!-- Form -->
+      <form
+        id="anfrage-form"
+        action="mailto:kontakt@komm-raus.org"
+        method="post"
+        enctype="text/plain"
+        class="anfrage-form"
+      >
+        <h2 id="anfrage-title" class="anfrage-title">Termin anfragen</h2>
 
           <!-- Gruppe 1: Termin & Kontakt -->
           <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-4 text-brand-dark">Termin & Kontakt</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <h3 class="anfrage-section-title">Termin & Kontakt</h3>
+            <div class="anfrage-grid">
               <div>
-                <label for="wunschtermin" class="block text-sm font-medium text-gray-700 mb-1">Wunschtermin</label>
-                <input type="date" id="wunschtermin" name="wunschtermin" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+                <label for="wunschtermin" class="anfrage-label">Wunschtermin</label>
+                <input type="date" id="wunschtermin" name="wunschtermin" class="anfrage-input" required />
               </div>
               <div>
-                <label for="alternative" class="block text-sm font-medium text-gray-700 mb-1">Alternative</label>
-                <input type="date" id="alternative" name="alternative" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+                <label for="alternative" class="anfrage-label">Alternative</label>
+                <input type="date" id="alternative" name="alternative" class="anfrage-input" />
               </div>
               <div>
-                <label for="beginn" class="block text-sm font-medium text-gray-700 mb-1">Beginn</label>
-                <input type="time" id="beginn" name="beginn" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+                <label for="beginn" class="anfrage-label">Beginn</label>
+                <input type="time" id="beginn" name="beginn" class="anfrage-input" required />
               </div>
               <div>
-                <label for="programmlaenge" class="block text-sm font-medium text-gray-700 mb-1">Programmlänge</label>
-                <select id="programmlaenge" name="programmlaenge" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required>
+                <label for="programmlaenge" class="anfrage-label">Programmlänge</label>
+                <select id="programmlaenge" name="programmlaenge" class="anfrage-input" required>
                   <option value="">Bitte wählen</option>
-                  <option value="1 Tag">1 Tag</option>
-                  <option value="2 Tage">2 Tage</option>
-                  <option value="3 Tage">3 Tage</option>
-                  <option value="Mehrtägig">Mehrtägig</option>
+                  <option value="3h">3h</option>
+                  <option value="4h">4h</option>
+                  <option value="6h">6h</option>
+                  <option value="10h">10h</option>
+                  <option value="12h">12h</option>
+                  <option value="Klassenfahrt">Klassenfahrt</option>
+                  <option value="Sprachreise">Sprachreise</option>
                 </select>
               </div>
               <div>
-                <label for="ansprechpartner" class="block text-sm font-medium text-gray-700 mb-1">Ansprechpartner</label>
-                <input type="text" id="ansprechpartner" name="ansprechpartner" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+                <label for="ansprechpartner" class="anfrage-label">Ansprechpartner</label>
+                <input type="text" id="ansprechpartner" name="ansprechpartner" class="anfrage-input" required />
               </div>
               <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+                <label for="email" class="anfrage-label">Email</label>
+                <input type="email" id="email" name="email" class="anfrage-input" required />
               </div>
               <div>
-                <label for="tel" class="block text-sm font-medium text-gray-700 mb-1">Telefon</label>
-                <input type="tel" id="tel" name="tel" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+                <label for="tel" class="anfrage-label">Telefon</label>
+                <input type="tel" id="tel" name="tel" class="anfrage-input" />
               </div>
               <div>
-                <label for="gruppe" class="block text-sm font-medium text-gray-700 mb-1">Gruppe/Organisation</label>
-                <input type="text" id="gruppe" name="gruppe" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+                <label for="gruppe" class="anfrage-label">Gruppe/Organisation</label>
+                <input type="text" id="gruppe" name="gruppe" class="anfrage-input" required />
               </div>
             </div>
-            <div class="mt-4">
-              <label class="flex items-center">
-                <input type="checkbox" id="abweichende-rechnung" class="mr-2" />
-                <span class="text-sm font-medium text-gray-700">Abweichende Rechnungsadresse?</span>
+            <div class="anfrage-check">
+              <label class="anfrage-check__label">
+                <input type="checkbox" id="abweichende-rechnung" class="anfrage-check__input" />
+                <span>Abweichende Rechnungsadresse?</span>
               </label>
             </div>
-            <div id="rechnungsadresse" class="hidden mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div id="rechnungsadresse" class="anfrage-grid anfrage-grid--3">
               <div>
-                <label for="strasse" class="block text-sm font-medium text-gray-700 mb-1">Straße</label>
-                <input type="text" id="strasse" name="strasse" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+                <label for="strasse" class="anfrage-label">Straße</label>
+                <input type="text" id="strasse" name="strasse" class="anfrage-input" />
               </div>
               <div>
-                <label for="plz" class="block text-sm font-medium text-gray-700 mb-1">PLZ</label>
-                <input type="text" id="plz" name="plz" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+                <label for="plz" class="anfrage-label">PLZ</label>
+                <input type="text" id="plz" name="plz" class="anfrage-input" />
               </div>
               <div>
-                <label for="ort" class="block text-sm font-medium text-gray-700 mb-1">Ort</label>
-                <input type="text" id="ort" name="ort" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" />
+                <label for="ort" class="anfrage-label">Ort</label>
+                <input type="text" id="ort" name="ort" class="anfrage-input" />
               </div>
             </div>
           </div>
 
           <!-- Gruppe 2: Details -->
           <div class="mb-6">
-            <h3 class="text-lg font-semibold mb-4 text-brand-dark">Details</h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <h3 class="anfrage-section-title">Details</h3>
+            <div class="anfrage-grid">
               <div>
-                <label for="programm-fuer" class="block text-sm font-medium text-gray-700 mb-1">Programm für</label>
-                <select id="programm-fuer" name="programm-fuer" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required>
+                <label for="programm-fuer" class="anfrage-label">Programm für</label>
+                <select id="programm-fuer" name="programm-fuer" class="anfrage-input" required>
                   <option value="">Bitte wählen</option>
                   <option value="Schulklasse">Schulklasse</option>
                   <option value="Firma">Firma</option>
@@ -125,49 +118,296 @@ const shouldRender = !excludedPaths.includes(currentPath);
                 </select>
               </div>
               <div>
-                <label for="alter" class="block text-sm font-medium text-gray-700 mb-1">Alter</label>
-                <input type="text" id="alter" name="alter" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" placeholder="z.B. 12-16 Jahre" />
+                <label for="alter" class="anfrage-label">Alter</label>
+                <input type="text" id="alter" name="alter" class="anfrage-input" placeholder="z.B. 12-16 Jahre" />
               </div>
               <div>
-                <label for="anzahl" class="block text-sm font-medium text-gray-700 mb-1">Anzahl Gesamt</label>
-                <input type="number" id="anzahl" name="anzahl" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark" required />
+                <label for="anzahl" class="anfrage-label">Anzahl Gesamt</label>
+                <input type="number" id="anzahl" name="anzahl" class="anfrage-input" required />
               </div>
             </div>
-            <div class="mt-4">
-              <label for="wünsche" class="block text-sm font-medium text-gray-700 mb-1">Wünsche / Zielsetzung</label>
-              <textarea id="wünsche" name="wünsche" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark"></textarea>
+            <div class="anfrage-field">
+              <label for="wünsche" class="anfrage-label">Wünsche / Zielsetzung</label>
+              <textarea id="wünsche" name="wünsche" rows="4" class="anfrage-input"></textarea>
             </div>
-            <div class="mt-4 space-y-2">
-              <label class="flex items-center">
-                <input type="checkbox" id="sicherungserfahrung" name="sicherungserfahrung" class="mr-2" />
-                <span class="text-sm font-medium text-gray-700">Sicherungserfahrung vorhanden?</span>
+            <div class="anfrage-checks">
+              <label class="anfrage-check__label">
+                <input type="checkbox" id="sicherungserfahrung" name="sicherungserfahrung" class="anfrage-check__input" />
+                <span>Sicherungserfahrung vorhanden?</span>
               </label>
-              <label class="flex items-center">
-                <input type="checkbox" id="gegenseitiges-sichern" name="gegenseitiges-sichern" class="mr-2" />
-                <span class="text-sm font-medium text-gray-700">Gegenseitiges Sichern unerwünscht?</span>
+              <label class="anfrage-check__label">
+                <input type="checkbox" id="gegenseitiges-sichern" name="gegenseitiges-sichern" class="anfrage-check__input" />
+                <span>Gegenseitiges Sichern unerwünscht?</span>
               </label>
-              <label class="flex items-center">
-                <input type="checkbox" id="besonderheiten" class="mr-2" />
-                <span class="text-sm font-medium text-gray-700">Besonderheiten/Behinderungen?</span>
+              <label class="anfrage-check__label">
+                <input type="checkbox" id="besonderheiten" class="anfrage-check__input" />
+                <span>Besonderheiten/Behinderungen?</span>
               </label>
             </div>
-            <div id="besonderheiten-details" class="hidden mt-4">
-              <label for="besonderheiten-text" class="block text-sm font-medium text-gray-700 mb-1">Details zu Besonderheiten</label>
-              <textarea id="besonderheiten-text" name="besonderheiten-text" rows="3" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-dark"></textarea>
+            <div id="besonderheiten-details" class="anfrage-field">
+              <label for="besonderheiten-text" class="anfrage-label">Details zu Besonderheiten</label>
+              <textarea id="besonderheiten-text" name="besonderheiten-text" rows="3" class="anfrage-input"></textarea>
+            </div>
+          </div>
+
+          <!-- Gruppe 3: Schwerpunkt des Trainings -->
+          <div class="mb-6">
+            <h3 class="anfrage-section-title">Schwerpunkt des Trainings</h3>
+            <p class="anfrage-hint">(Mehrfachauswahl möglich)</p>
+            <div class="anfrage-grid">
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Assessment Center" class="anfrage-check__input" />
+                <span>Assessment Center</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Fokus & Konzentration" class="anfrage-check__input" />
+                <span>Fokus & Konzentration</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Stressresilienz" class="anfrage-check__input" />
+                <span>Stressresilienz</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Kooperation & Kommunikation" class="anfrage-check__input" />
+                <span>Kooperation & Kommunikation</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Naturverbindung & Entschleunigung" class="anfrage-check__input" />
+                <span>Naturverbindung & Entschleunigung</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Grünes Klassenzimmer" class="anfrage-check__input" />
+                <span>Grünes Klassenzimmer</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Bushcraft & Survival" class="anfrage-check__input" />
+                <span>Bushcraft & Survival</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Kanu" class="anfrage-check__input" />
+                <span>Kanu</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Mindset, Disziplin, Struktur" class="anfrage-check__input" />
+                <span>Mindset, Disziplin, Struktur</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Spaß & Feiern" class="anfrage-check__input" />
+                <span>Spaß & Feiern</span>
+              </label>
+              <label class="anfrage-check__label">
+                <input type="checkbox" name="schwerpunkt[]" value="Train the Trainer" class="anfrage-check__input" />
+                <span>Train the Trainer</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Gruppe 4: Anzahl der Trainings pro Jahr -->
+          <div class="mb-6">
+            <h3 class="anfrage-section-title">Anzahl der Trainings pro Jahr</h3>
+            <p class="anfrage-hint">(Rabatt!)</p>
+            <div>
+              <label for="trainings-pro-jahr" class="anfrage-label">Anzahl</label>
+              <select id="trainings-pro-jahr" name="trainings-pro-jahr" class="anfrage-input">
+                <option value="">Bitte wählen</option>
+                <option value="1">1</option>
+                <option value="2-3">2-3</option>
+                <option value="4-5">4-5</option>
+                <option value="6+">6+</option>
+              </select>
             </div>
           </div>
 
           <!-- Submit Button -->
-          <div class="flex justify-end">
-            <button type="submit" class="bg-brand-dark text-white px-6 py-2 rounded-md hover:bg-brand-darker transition-colors duration-200">
-              Anfrage senden
-            </button>
-          </div>
-        </form>
-      </div>
+        <div class="anfrage-actions">
+          <button type="submit" class="anfrage-submit">
+            Anfrage senden
+          </button>
+        </div>
+      </form>
     </div>
-  </>
-)}
+  </div>
+</>
+
+<style>.anfrage-button {
+  position: fixed;
+  right: var(--space-4);
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom));
+  z-index: var(--z-sticky);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: none;
+  border-radius: 9999px;
+  font-weight: var(--font-weight-semibold);
+  box-shadow: var(--shadow-lg);
+  cursor: pointer;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.anfrage-button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+.anfrage-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-modal);
+}
+
+.anfrage-modal.is-open {
+  display: flex;
+}
+
+.anfrage-modal__content {
+  position: relative;
+  width: min(880px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: var(--space-6);
+}
+
+.anfrage-modal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  border: none;
+  background: transparent;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--color-gray-600);
+  cursor: pointer;
+}
+
+.anfrage-modal__close:hover {
+  color: var(--color-gray-900);
+}
+
+.anfrage-form {
+  padding: 0;
+}
+
+.anfrage-title {
+  font-size: var(--font-size-3xl);
+  margin-bottom: var(--space-6);
+  color: var(--color-primary-dark);
+}
+
+.anfrage-section-title {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-4);
+  color: var(--color-primary-dark);
+}
+
+.anfrage-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-4);
+}
+
+.anfrage-grid--3 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 768px) {
+  .anfrage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .anfrage-grid--3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.anfrage-label {
+  display: block;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  margin-bottom: var(--space-1);
+}
+
+.anfrage-input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+}
+
+.anfrage-input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.anfrage-field {
+  margin-top: var(--space-4);
+}
+
+.anfrage-check {
+  margin-top: var(--space-4);
+}
+
+.anfrage-checks {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.anfrage-check__label {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-700);
+}
+
+.anfrage-check__input {
+  width: 1rem;
+  height: 1rem;
+}
+
+.anfrage-hint {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-4);
+}
+
+.anfrage-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--space-4);
+}
+
+.anfrage-submit {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: var(--space-2) var(--space-6);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.anfrage-submit:hover {
+  background: var(--color-primary);
+  transform: translateY(-1px);
+}
+</style>
 
 <script client:load>
   // Modal open/close
@@ -176,17 +416,27 @@ const shouldRender = !excludedPaths.includes(currentPath);
   const closeBtn = document.getElementById('close-modal');
 
   if (button && modal && closeBtn) {
-    button.addEventListener('click', () => {
-      modal.classList.remove('hidden');
-    });
+    const openModal = () => {
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+    };
+    const closeModal = () => {
+      modal.classList.remove('is-open');
+      modal.setAttribute('aria-hidden', 'true');
+    };
 
-    closeBtn.addEventListener('click', () => {
-      modal.classList.add('hidden');
-    });
+    button.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
-        modal.classList.add('hidden');
+        closeModal();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
       }
     });
   }
@@ -198,14 +448,16 @@ const shouldRender = !excludedPaths.includes(currentPath);
   const besonderheitenDetails = document.getElementById('besonderheiten-details');
 
   if (rechnungCheckbox && rechnungsadresse) {
+    rechnungsadresse.style.display = 'none';
     rechnungCheckbox.addEventListener('change', () => {
-      rechnungsadresse.classList.toggle('hidden', !rechnungCheckbox.checked);
+      rechnungsadresse.style.display = rechnungCheckbox.checked ? 'grid' : 'none';
     });
   }
 
   if (besonderheitenCheckbox && besonderheitenDetails) {
+    besonderheitenDetails.style.display = 'none';
     besonderheitenCheckbox.addEventListener('change', () => {
-      besonderheitenDetails.classList.toggle('hidden', !besonderheitenCheckbox.checked);
+      besonderheitenDetails.style.display = besonderheitenCheckbox.checked ? 'block' : 'none';
     });
   }
 

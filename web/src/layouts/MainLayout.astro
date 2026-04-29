@@ -1,8 +1,10 @@
 ---
+import '../styles/design-system.css';
 import '../styles/global.css';
 import { buildMeta } from '../lib/site';
 import Navigation from '../components/Navigation.astro';
 import Footer from '../components/Footer.astro';
+import AnfrageModal from '../components/AnfrageModal.astro';
 
 interface Props {
   title?: string;
@@ -24,7 +26,7 @@ const meta = buildMeta({ title, description, image });
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
     <meta property="og:title" content={meta.title} />
     <meta property="og:description" content={meta.description} />
@@ -34,7 +36,7 @@ const meta = buildMeta({ title, description, image });
 
     <title>{meta.title}</title>
   </head>
-  <body class="min-h-screen bg-brand-light text-brand-text font-sans">
+  <body>
     <Navigation />
 
     <main>
@@ -44,10 +46,59 @@ const meta = buildMeta({ title, description, image });
     <Footer />
 
     <!-- AOS init (client-only) -->
-    <script type="module" client:load>
+    <script type="module">
       import AOS from 'aos';
       import 'aos/dist/aos.css';
-      AOS.init({ duration: 600, easing: 'ease-in-out', once: true });
+      AOS.init({
+        duration: 600,
+        easing: 'ease-in-out',
+        once: true,
+        offset: 50
+      });
     </script>
+
+    <!-- Accordion functionality for all h2 headings -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // Accordion functionality for all h2 headings
+        const h2s = document.querySelectorAll('h2');
+        h2s.forEach(h2 => {
+          // Skip headings that are already part of a manually-authored accordion.
+          if (h2.closest('summary') || h2.closest('details')) return;
+
+          const section = h2.closest('section');
+          if (!section) return;
+          section.classList.add('auto-accordion-section');
+          const details = document.createElement('details');
+          const summary = document.createElement('summary');
+          summary.innerHTML = h2.innerHTML;
+          details.appendChild(summary);
+
+          const contentDiv = document.createElement('div');
+          contentDiv.className = 'accordion-content';
+          details.appendChild(contentDiv);
+
+          // Move all content after the h2 until the next h2 or end of section
+          let sibling = h2.nextSibling;
+          while (sibling) {
+            const nextSibling = sibling.nextSibling;
+            if (sibling.nodeType === 1 && sibling.tagName === 'H2') {
+              break;
+            }
+            contentDiv.appendChild(sibling);
+            sibling = nextSibling;
+          }
+
+          h2.parentNode.replaceChild(details, h2);
+
+          const panel = details.closest('.glass-panel, .content-panel');
+          if (panel) {
+            panel.classList.add('accordion-panel');
+          }
+        });
+      });
+    </script>
+
+    <AnfrageModal />
   </body>
 </html>

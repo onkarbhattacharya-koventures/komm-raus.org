@@ -1,0 +1,285 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+import Card from '../../components/Card.astro';
+import Button from '../../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/Floß-bauen-Erlebnispädagogik-Teambuilding-400.jpg',
+    alt: 'Worum es geht',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#zielgruppen',
+    image: '/images/Leiterueberwindung-teamwork-400.jpg',
+    alt: 'Zielgruppen und Anlässe',
+    label: 'Zielgruppen und Anlässe',
+  },
+  {
+    href: '#formate',
+    image: '/images/kanu-fahren-400.jpg',
+    alt: 'Formate',
+    label: 'Formate',
+  },
+  {
+    href: '#inhalte',
+    image: '/images/Baumklettern-Seilaufstiegstechnik-400.jpg',
+    alt: 'Inhalte und Lernfelder',
+    label: 'Inhalte und Lernfelder',
+  },
+  {
+    href: '#didaktik',
+    image: '/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-400.jpg',
+    alt: 'Didaktischer Ansatz',
+    label: 'Didaktischer Ansatz',
+  },
+  {
+    href: '#einordnung',
+    image: '/images/Feuer-machen-bowdrill-set-400.jpg',
+    alt: 'Warum sinnvoll',
+    label: 'Warum sinnvoll',
+  },
+];
+---
+
+<MainLayout title="Teambuilding für Unternehmen – Laubfrosch">
+  <Hero 
+    imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" 
+  />
+
+  <Section class="teambuilding-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht: Das Team als Lernfeld</h2>
+      <p>Teams in Unternehmen sind selten nur Sachgemeinschaften. Es treffen unterschiedliche Biografien, Interessen, Arbeitsstile und Erwartungen auf Ziele, Kennzahlen und Zeitdruck. Wie gut dieses Gefüge funktioniert, wirkt sich direkt auf:</p>
+      <div class="cards mt-4 mb-4">
+        <Card title="Zusammenarbeit und Kommunikation" imagePath="/images/unternehmen-teambuilding-himmelsleiter-teambuilding-laubfrosch-800.jpg" class="card-compact" />
+        <Card title="Fehlerkultur und Lernfähigkeit" imagePath="/images/unternehmen-teambuilding-reflexion-teamkreis-kommunikation-800.jpg" class="card-compact" />
+        <Card title="Belastungserleben und Gesundheit" imagePath="/images/unternehmen-teambuilding-seilbahn-flying-fox-laubfrosch-800.jpg" class="card-compact" />
+      </div>
+      <p>Unser Teambuilding-Angebot setzt dort an, wo Meetings und Präsentationen oft an Grenzen stoßen:</p>
+      <ul class="card-list">
+        <li>Wie gehen wir miteinander um, wenn es unübersichtlich wird?</li>
+        <li>Wer übernimmt Verantwortung – und wer zieht sich zurück?</li>
+        <li>Welche Muster prägen Entscheidungen unter Druck?</li>
+        <li>Wie sicher fühlen sich Menschen, um Fehler und Zweifel offen anzusprechen?</li>
+      </ul>
+      <p>Im Waldseilgarten, im Wald, an Gewässern oder direkt bei Ihnen vor Ort gestalten wir Situationen, in denen solche Fragen erfahrbar werden:</p>
+      <ul class="card-list">
+        <li>gemeinsame Aufgaben, die nur durch Kooperation gelingen</li>
+        <li>Herausforderungen, in denen Mut, Klarheit und Abstimmung gefragt sind</li>
+        <li>Reflexionsphasen, in denen Teams ihr eigenes Miteinander von außen betrachten</li>
+      </ul>
+      <p>Ziel ist nicht das "perfekte Team", sondern realistische, tragfähige Schritte hin zu mehr Vertrauen, Verlässlichkeit und Leistungsfähigkeit ohne Selbstausbeutung.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zielgruppen" class="prose max-w-none">
+      <h2>Für welche Teams und Anlässe das Programm gedacht ist</h2>
+      <p>Das Angebot richtet sich an:</p>
+      <div class="cards mt-4 mb-4">
+<Card title="Fach- und Projektteams" body="z.B. bei neuen Projekten, nach Umstrukturierungen oder wenn Reibungen zunehmen" imagePath="/images/unternehmen-teambuilding-leiter-ueberwinden-vertrauen-kooperation-800.jpg" class="card-compact" />
+        <Card title="Führungsteams" body="Bereichs- oder Abteilungsebenen, die gemeinsam Entscheidungen tragen und Vorbild für Kultur sind" imagePath="/images/unternehmen-teambuilding-himmelsleiter-teambuilding-laubfrosch-wald-800.jpg" class="card-compact" />
+        <Card title="Bereiche und Abteilungen" body="zur Stärkung von Schnittstellen, z.B. zwischen Vertrieb & Innendienst, IT & Fachbereichen" imagePath="/images/unternehmen-teambuilding-toprope-sicherung-schule-laubfrosch-800.jpg" class="card-compact" />
+        <Card title="Interdisziplinäre Teams" body="z.B. bei Transformationsprojekten, agilen Teams, cross-funktionalen Squads" imagePath="/images/unternehmen-teambuilding-lions-spidermann-800.jpg" class="card-compact" />
+        <Card title="Neue Teams" body="nach Fusionen, Teamzusammenlegungen, Wechsel in neue Strukturen" imagePath="/images/unternehmen-teambuilding-vertikale-leiterueberwindung-laubfrosch-800.jpg" class="card-compact" />
+      </div>
+      <p><strong>Typische Anlässe:</strong></p>
+      <ul class="card-list">
+        <li>Start oder Neuaufstellung eines Teams</li>
+        <li>Begleitung von Change-Prozessen</li>
+        <li>Konfliktspannungen, die im Alltag "mitlaufen"</li>
+        <li>Wunsch nach vertiefter Zusammenarbeit jenseits klassischer Offsite-Formate</li>
+        <li>Führungskräfteentwicklung mit erlebnisorientierten Anteilen</li>
+        <li>Ein Betriebsausflug mit Spaßfaktor, Action und Mehrwert!</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="formate" class="prose max-w-none">
+      <h2>Formate: Wo und wie wir arbeiten</h2>
+      <p>Je nach Zielsetzung, Gruppengröße und Rahmenbedingungen bieten wir verschiedene Formate an, die sich kombinieren lassen.</p>
+      
+      <h3>3.1 Im Waldseilgarten</h3>
+      <p>Der Waldseilgarten Laubfrosch ist ein intensiver Übungsraum. Hier werden Abhängigkeiten und Verantwortung unmittelbar spürbar.</p>
+      <p><strong>Das Besondere:</strong></p>
+      <p>Unser Toprope-Sicherungssystem sieht vor, dass Teilnehmende einander sichern – unter fachkundiger Anleitung. Wer unten steht, hält das Seil und damit die Verantwortung für jemanden in der Höhe. Wer oben ist, gibt Kontrolle ab und muss Vertrauen zulassen. Verhaltensmuster in solchen Situationen sind oft sehr ehrlich.</p>
+      <p><strong>Typische Elemente:</strong></p>
+      <ul class="card-list">
+        <li>Kooperationsaufgaben am Boden (Planung, Abstimmung, Problemlösen)</li>
+        <li>Vertrauenselemente mit klarer Sicherheitsarchitektur</li>
+        <li>Kletterelemente im Hochseilgarten mit gegenseitiger Sicherung</li>
+        <li>strukturierte Reflexionsrunden zwischen den Elementen und zum Abschluss</li>
+      </ul>
+
+      <h3>3.2 In der Natur (Wald, Wasser, Gelände)</h3>
+      <p>Nicht jedes Team profitiert von Höhe. Manche Gruppen arbeiten besser mit Aufgaben am Boden, im Wald oder auf dem Wasser:</p>
+      <ul class="card-list">
+        <li>Kooperationsaufgaben mit Naturmaterialien (Brücken, Transport, Orientierung)</li>
+        <li>Orientierung und Navigation als Teamaufgabe (Entscheidungen, Führung, Folgen)</li>
+        <li>Kanutouren mit Abstimmung und Rollenverteilung</li>
+        <li>Naturhandwerk / Bushcraft (Feuer, Shelter, einfache Werkstücke) als gemeinsames Projekt</li>
+        <li>Reflexion an ruhigen Plätzen im Wald oder am Wasser</li>
+      </ul>
+      <p>Dieses Setting ermöglicht Abstand zum Büroalltag und öffnet oft andere Gesprächsräume als ein Tag im Seminarhotel.</p>
+
+      <h3>3.3 Vor Ort im Unternehmen oder Offsite-Hotel</h3>
+      <p>Wir kommen auch zu Ihnen – ins Unternehmen, in ein Tagungshotel, auf ein Firmengelände:</p>
+      <ul class="card-list">
+        <li>Kooperations- und Kommunikationsübungen im Innen- oder Außenbereich</li>
+        <li>Sequenzen zu Feedback, Konfliktverhalten und psychologischer Sicherheit</li>
+        <li>Kurzformate aus unserem Resilienzprotokoll (Atemregulation, kurze Fokus- und Erholungsübungen)</li>
+        <li>Transferworkshops: "Was bedeutet das für unseren Alltag, unsere Meetings, unsere Entscheidungen?"</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="inhalte" class="prose max-w-none">
+      <h2>Inhalte & Lernfelder: Was hier konkret passiert</h2>
+      <p>Die konkrete Ausgestaltung hängt von Branche, Teamreife und Zielsetzung ab. In vielen Programmen tauchen jedoch ähnliche Schwerpunkte auf.</p>
+      
+      <h3>4.1 Kooperation & Kommunikation</h3>
+      <ul class="card-list">
+        <li>Aufgaben, die ohne abgestimmtes Vorgehen kaum lösbar sind</li>
+        <li>Situationen, in denen parallele Initiativen scheitern und koordinierte Planung gefragt ist</li>
+        <li>Übungen, die aktives Zuhören, Nachfragen und Rollenklärung fördern</li>
+        <li>Umgang mit Missverständnissen, Informationslücken, unklaren Zuständigkeiten</li>
+      </ul>
+      <p>Ziel ist, dass Teams ihre eigenen Muster erkennen:</p>
+      <ul class="card-list">
+        <li>Wer spricht viel, wer wird kaum gehört?</li>
+        <li>Wie werden Entscheidungen vorbereitet?</li>
+        <li>Wo gehen Informationen "verloren"?</li>
+      </ul>
+
+      <h3>4.2 Vertrauen & Verantwortung</h3>
+      <ul class="card-list">
+        <li>gegenseitiges Sichern im Hochseilgarten als verdichtete Erfahrung von Verantwortung</li>
+        <li>Übungen, in denen man bewusst Führung abgibt oder übernimmt</li>
+        <li>Aufgaben, bei denen Fehler und Unsicherheit besprechbar werden</li>
+      </ul>
+
+      <h3>4.3 Konflikte, Feedback & psychologische Sicherheit</h3>
+      <ul class="card-list">
+        <li>Herausforderungen unter Zeitdruck oder mit knappen Ressourcen</li>
+        <li>Beobachtung: Wie geht das Team mit Fehlern um?</li>
+        <li>einfache Feedback-Formate, in denen Rückmeldungen gegeben und angenommen werden können</li>
+      </ul>
+
+      <h3>4.4 Führung & Rollenklärung</h3>
+      <ul class="card-list">
+        <li>Aufgaben, in denen Führung spontan entsteht oder bewusst verteilt wird</li>
+        <li>Rotierende Rollen (Leitung, Protokoll, Qualitätssicherung)</li>
+        <li>Reflexion über Führung im Arbeitsalltag</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="didaktik" class="prose max-w-none">
+      <h2>Didaktischer Ansatz</h2>
+      
+      <h3>5.1 Freiwilligkeit & psychologische Sicherheit</h3>
+      <ul class="card-list">
+        <li>Teilnahme an einzelnen Übungen (insbesondere Höhe) ist freiwillig.</li>
+        <li>Niemand wird zu Mutproben gedrängt oder vor der Gruppe bloßgestellt.</li>
+        <li>Trainer:innen achten auf Rang- und Machtverhältnisse.</li>
+      </ul>
+
+      <h3>5.2 Sinnvolle Dramaturgie</h3>
+      <ul class="card-list">
+        <li>Ankommen, Auftrag klären, Sicherheitsrahmen</li>
+        <li>Kooperationsaufgaben mit steigender Komplexität</li>
+        <li>bewusste Reibungszonen</li>
+        <li>Vertrauens- und Verantwortungselemente</li>
+        <li>Reflexion und Transfer</li>
+      </ul>
+
+      <h3>5.3 Trainer:innen als Prozessbegleitung</h3>
+      <ul class="card-list">
+        <li>halten den Rahmen und die Sicherheit</li>
+        <li>geben Aufgaben, beobachten und spiegeln</li>
+        <li>stellen Fragen statt Diagnosen</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="einordnung" class="prose max-w-none">
+      <h2>Warum Teambuilding für Unternehmen sinnvoll sein kann</h2>
+      <ul class="card-list">
+        <li>Teams mit hoher psychologischer Sicherheit zeigen eher Lern- und Innovationsbereitschaft.</li>
+        <li>Erlebnispädagogik-Programme zeigen Hinweise auf positive Effekte bei Kohäsion, Vertrauen und Kommunikation.</li>
+        <li>Gemeinsame, herausfordernde Erfahrungen können das Bild, das Teammitglieder voneinander haben, erweitern.</li>
+      </ul>
+      <p>Wir verstehen unsere Angebote als Möglichkeit, Muster sichtbar zu machen und alternative Erfahrungen zu ermöglichen.</p>
+
+      <h3>Abgrenzung</h3>
+      <ul class="card-list">
+        <li>keine Therapie oder Krisenintervention</li>
+        <li>kein Ersatz für Konfliktmediation</li>
+        <li>kein Allheilmittel für strukturelle Probleme</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches" class="prose max-w-none">
+      <h2>Organisatorisches & Anfrage</h2>
+      <p><strong>Zielgruppen:</strong> Projektteams, Bereichsteams, Management-Teams, Azubi-Gruppen, Nachwuchsführungskräfte.</p>
+      
+      <p><strong>Mögliche Formate:</strong></p>
+      <ul class="card-list">
+        <li><strong>Teamtag im Waldseilgarten:</strong> 1 Tag (4–8 Stunden)</li>
+        <li><strong>Outdoor-Teamtag:</strong> 1 Tag, Wald/Wasser</li>
+        <li><strong>Vor Ort:</strong> ½–1 Tag, im Unternehmen oder Tagungshotel</li>
+        <li><strong>Modulreihe:</strong> mehrere Termine</li>
+      </ul>
+
+      <p>Im Vorgespräch klären wir:</p>
+      <ul class="card-list">
+        <li>Zielgruppe und Ausgangssituation</li>
+        <li>Ziele des Einsatzes</li>
+        <li>gewünschten Rahmen (Ort, Dauer, Budget)</li>
+      </ul>
+
+      <div class="mt-6">
+        <Button href="/kontakt">Anfrage Teambuilding stellen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.teambuilding-overview {
+  padding-top: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+

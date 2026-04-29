@@ -1,0 +1,282 @@
+﻿---
+import MainLayout from '../../layouts/MainLayout.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import GlassPanel from '../../components/GlassPanel.astro';
+import SectionTeaserGrid from '../../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  { href: '#worum-es-geht', image: '/images/sprachreisen-1.jpg', alt: 'Worum es geht', label: 'Worum es geht' },
+  { href: '#fuer-wen', image: '/images/sprachreisen-2.jpg', alt: 'Für wen geeignet', label: 'Für wen geeignet' },
+  { href: '#inhalte-aufbau', image: '/images/sprachreisen-3.jpg', alt: 'Inhalte und Aufbau', label: 'Inhalte und Aufbau' },
+  { href: '#wissenschaft', image: '/images/sprachreisen-4.jpg', alt: 'Wissenschaftliche Fundierung', label: 'Wissenschaft' },
+  { href: '#sicherheit-haltung', image: '/images/sprachreisen-5.jpg', alt: 'Sicherheit und Haltung', label: 'Sicherheit und Haltung' },
+  { href: '#organisatorisches-anfrage', image: '/images/sprachreisen-6.jpg', alt: 'Organisatorisches und Anfrage', label: 'Organisatorisches und Anfrage' },
+];
+---
+
+<MainLayout title="Sprach- & Bildungsreisen - Komm Raus">
+  <Hero title="Sprach- & Bildungsreisen" subtitle="Reisen als Lern- und Entwicklungsräume – Sprache, Naturerlebnis und Selbstentwicklung verbinden." imagePath="/images/Waldseilgarten-Laubfrosch-Buedingen-Klettergarten-800.jpg" />
+
+  <Section class="bildungsreisen-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>WORUM ES GEHT</h2>
+      <p>Unsere Sprach- und Bildungsreisen sind keine „Urlaube mit Programm“, sondern bewusst gestaltete Lern- und Erfahrungsräume:</p>
+      <ul class="card-list">
+        <li>reale Naturerlebnisse (Wasser, Wald, Berge, Abgeschiedenheit),</li>
+        <li>eingebettet in wissenschaftlich fundierte Konzepte aus Stress-, Resilienz- und Lernpsychologie,</li>
+        <li>kombiniert mit Sprachpraxis (DE/EN), Achtsamkeit, Bewegung und bewusster Ernährung.</li>
+      </ul>
+      <p>Ziel ist es, Menschen – Jugendliche wie Erwachsene – in Settings zu bringen, in denen sie:</p>
+      <ul class="card-list">
+        <li>Abstand vom gewohnten Alltag und digitalen Dauerkonsum gewinnen,</li>
+        <li>eigene Ressourcen und Grenzen neu kennenlernen,</li>
+        <li>und konkrete Werkzeuge für Selbstregulation, Resilienz und Präsenz einüben.</li>
+      </ul>
+      <p>Ein Teil unserer Reisen ist als Sprachreise mit Fokus Englisch konzipiert (z.B. „The Journey“). Andere Formate sind Bildungs- und Entwicklungsreisen mit Schwerpunkten wie Wasser & Achtsamkeit, Meditation & Regeneration, oder Soil to Table & Ernährung.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="fuer-wen" class="prose max-w-none">
+      <h2>FÜR WEN UNSERE SPRACH- & BILDUNGSREISEN GEEIGNET SIND</h2>
+      <h3>2.1 BILDUNGSEINRICHTUNGEN</h3>
+      <ul class="card-list">
+        <li>Schulen (Sek I/II), berufliche Schulen, Internate</li>
+        <li>Hochschulen / Akademien mit Schwerpunkt Soft Skills, BNE, Gesundheit</li>
+        <li>Bildungsträger, die Sprachförderung, Resilienz und Naturerfahrung verbinden möchten</li>
+      </ul>
+      <p>Nutzbar als:</p>
+      <ul class="card-list">
+        <li>Ergänzung zu Klassikern wie „Sprachreisen ins Ausland“,</li>
+        <li>Baustein in Schulprogrammen zu Gesundheit, BNE oder Persönlichkeitsbildung,</li>
+        <li>Pilotprojekte für innovative, naturnahe Lernformate.</li>
+      </ul>
+      <h3>2.2 ELTERN, VEREINE & PRIVATPERSONEN</h3>
+      <ul class="card-list">
+        <li>Eltern, die für ihre Kinder oder sich selbst erholsame und zugleich entwicklungsorientierte Reisen suchen</li>
+        <li>Jugendgruppen, Vereine, kirchliche Träger</li>
+        <li>Einzelpersonen und Paare mit Interesse an Achtsamkeit, Resilienz und bewusster Ernährung</li>
+        <li>Führungskräfte und Teams (z.B. im Rahmen von BGM oder Führungskräfteentwicklungsprogrammen)</li>
+      </ul>
+      <p>Formate reichen von jugendgerechten Camps bis zu Retreats für Erwachsene.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="inhalte-aufbau" class="prose max-w-none">
+      <h2>INHALTE & AUFBAU: THEMATISCHE REISE-MODULE</h2>
+      <p>Die konkreten Reisen sind modular aufgebaut. Einige typische Themenwelten:</p>
+      <h3>3.1 WASSERERLEBNISSE & ACHTSAMKEIT</h3>
+      <p>Mehrtägige Kanutouren (z.B. Altmühltal)</p>
+      <ul class="card-list">
+        <li>Kombination aus Natur- und Survivalerlebnis, einfachem Bushcraft,</li>
+        <li>Teambuilding durch gemeinsame Navigation und Lagerorganisation,</li>
+        <li>Achtsamkeitsübungen am Wasser („Blue Space“ als Regenerationsraum).</li>
+      </ul>
+      <p>Provence-Paddeln</p>
+      <ul class="card-list">
+        <li>Verbindung von Bewegung, Flusserleben und mediterraner Lebensweise,</li>
+        <li>Integration von Methoden der achtsamkeitsbasierten Stressreduktion (MBSR),</li>
+        <li>bewusster Umgang mit Nahrung, Licht, Tagesrhythmen.</li>
+      </ul>
+      <p>Wildbachwanderungen in Ligurien</p>
+      <ul class="card-list">
+        <li>Bewegung in abgelegenen, wenig touristischen Landschaften,</li>
+        <li>Fokus auf Präsenz, Trittsicherheit, bewusste Risikoabwägung,</li>
+        <li>Reflexion über „Fluss“, Widerstand und Anpassung im eigenen Leben.</li>
+      </ul>
+      <p>Optional: Schwimmtraining und sichere Wassergewöhnung als Basis für angstfreies Genießen von Wasserlandschaften.</p>
+      <h3>3.2 MEDITATION, REGENERATION & RÜCKZUG</h3>
+      <p>Retreat in Ligurien (z.B. Agriturismo Al Pagan)</p>
+      <ul class="card-list">
+        <li>Professionell angeleitete Meditation und Yoga in ruhiger, abgeschiedener Umgebung,</li>
+        <li>Fokus auf Detox-Prozessen, Schlafhygiene, ayurvedisch inspirierter Ernährung,</li>
+        <li>bewusstes Durchbrechen von Dauerstimulation und Multitasking.</li>
+      </ul>
+      <p>Ziel ist eine ganzheitliche Regeneration: mental, emotional, körperlich – ohne Heilsversprechen, aber auf Basis dessen, was Forschung zu Schlaf, Naturaufenthalt, Ernährung und Achtsamkeit nahelegt.</p>
+      <h3>3.3 FOOD & MIND: SOIL TO TABLE AUF REISEN</h3>
+      <p>In vielen Reisen integriert:</p>
+      <ul class="card-list">
+        <li>Elemente aus unserem Soil to Table-Programm:</li>
+        <ul class="card-list">
+          <li>Verständnis von Boden, Nahrungsmittelkette und Mikrobiom,</li>
+          <li>gemeinsames Kochen mit frischen, regionalen Produkten,</li>
+          <li>Gespräche über Ernährung, Energie und Stimmung (Darm-Hirn-Achse).</li>
+        </ul>
+      </ul>
+      <h3>3.4 KULINARISCHES KONZEPT</h3>
+      <ul class="card-list">
+        <li>Bio-Catering mit saisonalen, regionalen Produkten, frei von künstlichen Zusätzen</li>
+        <li>je nach Reise ayurvedisch inspirierte Gerichte, Slow Food, Fokus auf Nährstoffdichte</li>
+        <li>auf Wunsch: Privatkoch oder Fine-Dining-Elemente</li>
+        <li>konsequente Berücksichtigung von Unverträglichkeiten, Allergien und kulturellen Ernährungsregeln</li>
+        <li>Essen als Achtsamkeits- und Lernfeld, nicht nur als Versorgung</li>
+      </ul>
+      <h3>3.5 SPEZIALFORMAT SPRACHREISE: „THE JOURNEY“ (JUGENDLICHE & SCHULEN)</h3>
+      <p>Ein eigenes Jugendformat ist die Sprachreise „The Journey“:</p>
+      <ul class="card-list">
+        <li>zweisprachiges Camp (DE/EN) mit Lucky Mushroom als englischsprachigem Begleiter,</li>
+        <li>Verbindung von Sprachpraxis mit Selbstregulation, Naturerlebnis und den fünf Säulen (Atmung, Schlaf, Bewegung, Ernährung, Geist),</li>
+        <li>modulare Lernreise von Selbstwahrnehmung (Phase 1) über Körper- und Geistverständnis (Phase 2), Anwendung im Alltag (Phase 3) bis hin zur Formulierung einer eigenen Erzählung (Phase 4).</li>
+      </ul>
+      <p>Im Fokus:</p>
+      <ul class="card-list">
+        <li>Sprechmut und Ausdrucksfähigkeit in Englisch,</li>
+        <li>gesünderer Umgang mit Stress, Medien und Leistungsdruck,</li>
+        <li>Stärkung von Selbstvertrauen und innerer Struktur.</li>
+      </ul>
+      <p>Für „The Journey“ empfehlen wir eine eigene, vertiefende Darstellung (z.B. separate Unterseite). Auf dieser Seite dient es als Beispiel dafür, wie Sprachlernen und Persönlichkeitsentwicklung in einem Reiseformat verbunden werden können.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="wissenschaft" class="prose max-w-none">
+      <h2>WISSENSCHAFTLICHE FUNDIERUNG: WARUM DIESE REISEN SINNVOLL SEIN KÖNNEN</h2>
+      <p>Unsere Bildungs- und Sprachreisen orientieren sich an mehreren Forschungslinien:</p>
+      <h3>4.1 ATTENTION RESTORATION & DIGITAL DETOX</h3>
+      <p>Die Attention Restoration Theory (Kaplan) legt nahe:</p>
+      <ul class="card-list">
+        <li>Naturnahe Umgebungen entlasten aufmerksame Systeme, die im digitalen Alltag überlastet sind.</li>
+        <li>Schon kurze Aufenthalte im Grünen können die Fähigkeit zur Konzentration messbar verbessern.</li>
+      </ul>
+      <p>Durch gezielte Reduktion von Bildschirmnutzung („Digital Detox“) und Aufenthalt in Naturumgebungen:</p>
+      <ul class="card-list">
+        <li>werden Aufmerksamkeitsressourcen geschont,</li>
+        <li>entsteht Raum für selbstgesteuerte, tiefe Erholung.</li>
+      </ul>
+      <h3>4.2 RESILIENZ & 7-SÄULEN-MODELLE</h3>
+      <p>Resilienzmodelle (z.B. 7-Säulen-Ansätze) betonen:</p>
+      <ul class="card-list">
+        <li>Selbstwahrnehmung, Optimismus, soziale Netzwerke, Lösungsorientierung, Selbstwirksamkeit, Zukunftsplanung, Akzeptanz.</li>
+      </ul>
+      <p>Unsere Reisen:</p>
+      <ul class="card-list">
+        <li>bieten Trainingsfelder für diese Qualitäten – etwa im Umgang mit Wetter, Gruppendynamik, körperlicher Herausforderung.</li>
+        <li>nutzen Reflexionsphasen, um Erlebtes auf diese Dimensionen zu beziehen.</li>
+      </ul>
+      <p>Ziel ist keine „Unverwundbarkeit“, sondern flexiblere, bewusstere Stressbewältigung.</p>
+      <h3>4.3 NATURBASIERTE INTERVENTIONEN & KONZENTRATION</h3>
+      <p>Studien zu naturbasierten Interventionen (bei Kindern und Erwachsenen, teils auch bei ADHS) zeigen Hinweise auf:</p>
+      <ul class="card-list">
+        <li>verbesserte Konzentrationsleistung,</li>
+        <li>verringerte Impulsivität,</li>
+        <li>bessere Stimmung.</li>
+      </ul>
+      <p>Mehrtägige Reisen mit dosierter körperlicher Aktivität und bewusster Naturerfahrung können diese Effekte vermutlich verstärken – abhängig von Person und Vorbelastung.</p>
+      <h3>4.4 ACHTSAMKEIT, MBSR & STRESS</h3>
+      <p>Programme der Mindfulness Based Stress Reduction (MBSR) und verwandte Verfahren zeigen:</p>
+      <ul class="card-list">
+        <li>moderate, aber konsistente Effekte auf Stress, Angst, Depressivität und Wohlbefinden.</li>
+      </ul>
+      <p>In unsere Reisen integrieren wir:</p>
+      <ul class="card-list">
+        <li>alltagstaugliche Achtsamkeitsübungen (im Gehen, Sitzen, Essen, Bewegen),</li>
+        <li>statt stundenlangem Sitzen in Meditationshaltung, was vielen Menschen schwerfällt.</li>
+      </ul>
+      <p>Die Verbindung mit Bewegung und Natur macht Achtsamkeit für viele zugänglicher.</p>
+      <h3>4.5 ERNÄHRUNG & WOHLBEFINDEN</h3>
+      <p>Forschung zur Darm-Hirn-Achse (Gut-Brain-Axis) und zur Rolle von Ernährung legt nahe:</p>
+      <ul class="card-list">
+        <li>dass Vielfalt, Ballaststoffe, Mikronährstoffe und reduzierte verarbeitete Komponenten</li>
+        <li>mit besserer Stimmung, stabilerem Energieverlauf und teilweise mit kognitiver Leistungsfähigkeit assoziiert sind.</li>
+      </ul>
+      <p>Unsere Reisen verstehen Essen nicht als Therapie, aber:</p>
+      <ul class="card-list">
+        <li>als Feld, in dem gesunde, genussvolle und nachhaltige Alternativen erlebt und ausprobiert werden können.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit-haltung" class="prose max-w-none">
+      <h2>SICHERHEIT & HALTUNG</h2>
+      <h3>5.1 PHYSISCHE SICHERHEIT</h3>
+      <ul class="card-list">
+        <li>erprobte Routen, Partnerunterkünfte und Outdoor-Settings</li>
+        <li>qualifizierte Guides (Wildnispädagogik, Kanu-, Kletter- und Rettungskompetenzen, Yogalehrer:innen etc.)</li>
+        <li>Risikoabschätzung und Notfallpläne je nach Setting (Wasser, Berge, abgelegene Regionen)</li>
+      </ul>
+      <h3>5.2 PSYCHISCHE SICHERHEIT</h3>
+      <ul class="card-list">
+        <li>keine Überforderung „um jeden Preis“</li>
+        <li>Freiwilligkeitsprinzip bei intensiven Selbsterfahrungsübungen</li>
+        <li>sensibler Umgang mit persönlichen Themen, kein Gruppendruck zur Offenlegung</li>
+      </ul>
+      <h3>5.3 MEDIZINISCHE & ERNÄHRUNGS-ASPEKTE</h3>
+      <ul class="card-list">
+        <li>Berücksichtigung von Vorerkrankungen, Allergien, Unverträglichkeiten nach Vorabklärung</li>
+        <li>klare Abgrenzung:</li>
+        <ul class="card-list">
+          <li>keine medizinische Behandlung,</li>
+          <li>keine therapeutische Versorgung im engeren Sinne,</li>
+          <li>ggf. Abstimmung mit behandelnden Ärzt:innen / Therapeut:innen.</li>
+        </ul>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="organisatorisches-anfrage" class="prose max-w-none">
+      <h2>ORGANISATORISCHES & ANFRAGE</h2>
+      <p>Mögliche Reisedauern:</p>
+      <ul class="card-list">
+        <li>Wochenenden (2–3 Tage)</li>
+        <li>Kurzwochen (4–7 Tage)</li>
+        <li>Intensivreisen (10–14 Tage)</li>
+      </ul>
+      <p>Zielregionen (Beispiele):</p>
+      <ul class="card-list">
+        <li>Altmühltal (Deutschland, Kanutouren)</li>
+        <li>Provence (Frankreich, Paddeln & MBSR-Schwerpunkt)</li>
+        <li>Ligurien (Italien, Wildbachwanderung, Meditationsretreat)</li>
+      </ul>
+      <p>Zielgruppen-spezifische Anpassung:</p>
+      <ul class="card-list">
+        <li>Bildungsinstitutionen: Einbettung in Lehrpläne, BNE- und Gesundheitsprogramme</li>
+        <li>Teams/Führungskräfte: Verbindung mit Leadership-, Change- oder BGM-Zielen</li>
+        <li>Privatgruppen/Familien: Fokus auf Erholung + Entwicklungsimpulse</li>
+      </ul>
+      <p>In einem Vorgespräch klären wir:</p>
+      <ul class="card-list">
+        <li>Wer reist (Alter, Gruppenkonstellation, Ziele)?</li>
+        <li>Welche Schwerpunkte sind wichtig (Sprache, Resilienz, Ernährung, Achtsamkeit, Team)?</li>
+        <li>Welche zeitlichen, finanziellen und organisatorischen Rahmenbedingungen bestehen?</li>
+      </ul>
+      <p>Auf dieser Basis entwickeln wir ein oder mehrere Reiseformate, die in Tiefe, Anspruch und Budget zu Ihnen passen.</p>
+      <button id="bildungsreisen-anfrage-button" class="btn btn-secondary btn-lg" type="button">
+        [Anfrage „Sprach- & Bildungsreisen“ stellen]
+      </button>
+      <p>[Mehr zu „The Journey“]</p>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.bildungsreisen-overview {
+  padding-top: 0;
+}
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    const button = document.getElementById('bildungsreisen-anfrage-button');
+    const modal = document.getElementById('anfrage-modal');
+
+    if (button && modal) {
+      button.addEventListener('click', () => {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    }
+  });
+</script>
+

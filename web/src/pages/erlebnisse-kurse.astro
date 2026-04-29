@@ -1,0 +1,144 @@
+﻿---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import GlassPanel from '../components/GlassPanel.astro';
+import SectionTeaserGrid from '../components/SectionTeaserGrid.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+
+const teaserItems = [
+  {
+    href: '#worum-es-geht',
+    image: '/images/lagerfeuer-bg-400.jpg',
+    alt: 'Worum es geht',
+    label: 'Worum es geht',
+  },
+  {
+    href: '#zielgruppen',
+    image: '/images/blind-führen-kids-400.jpg',
+    alt: 'Für wen',
+    label: 'Für wen',
+  },
+  {
+    href: '#formate',
+    image: '/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-400.jpg',
+    alt: 'Unsere Formate',
+    label: 'Formate',
+  },
+  {
+    href: '#sicherheit',
+    image: '/images/eingurten-psa-waldseilgarten-laubfrosch-400.jpg',
+    alt: 'Sicherheit',
+    label: 'Sicherheit',
+  },
+  {
+    href: '#buchung',
+    image: '/images/kanu-fahren-400.jpg',
+    alt: 'Buchung',
+    label: 'Buchung',
+  },
+];
+---
+
+<MainLayout title="Erlebnisse & Kurse - Komm Raus">
+  <Hero title="Erlebnisse & Kurse" subtitle="Natur erleben, sich bewegen, Neues ausprobieren – im Waldseilgarten Laubfrosch und drumherum." imagePath="/bilder_nach_page/erlebnisse-kurse/waldseilgarten-klettern/Waldseilgarten-Laubfrosch-buedingen.jpg" />
+
+  <Section class="erlebnisse-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="worum-es-geht" class="prose max-w-none">
+      <h2>Worum es geht</h2>
+      <p>Nicht jede Begegnung mit dem Waldseilgarten muss ein Training oder eine Fortbildung sein. Viele Menschen suchen einfach einen Ort, an dem sie:</p>
+      <div class="cards mt-4">
+        <Card title="Natur erleben" body="Zeit in der Natur verbringen und die Umgebung genießen." imagePath="/images/kurs_naturwanderung-800.jpg" class="card-compact" />
+        <Card title="Gemeinschaft" body="Gemeinsam etwas erleben und Erfahrungen teilen." imagePath="/images/blind-f\u00fcren-kids-800.jpg" class="card-compact" />
+        <Card title="Grenzen erkennen" body="Eigene Grenzen erkunden und persönlich wachsen." imagePath="/images/Baumstamm-sortieren-Balance-800.jpg" class="card-compact" />
+        <Card title="Ruhe finden" body="Zur Ruhe kommen und Entspannung finden." imagePath="/images/kurs_naturwanderung-800.jpg" class="card-compact" />
+      </div>
+      <p class="mt-4">Unter "Erlebnisse & Kurse" bündeln wir Angebote für Familien, Einzelpersonen und kleine Gruppen, die Natur, Bewegung und persönliche Entwicklung miteinander verbinden – ohne Leistungsdruck, mit gutem Blick auf Sicherheit und individuelle Grenzen.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="zielgruppen" class="prose max-w-none">
+      <h2>Für wen diese Angebote gedacht sind</h2>
+      <div class="cards mt-4">
+        <Card title="Familien" body="Gemeinsame Erlebnisse in der Natur." imagePath="/images/blind-f\u00fcren-kids-800.jpg" href="/erlebnisse-kurse" class="card-compact" />
+        <Card title="Freundeskreise" body="Abenteuer mit Freunden teilen." imagePath="/images/himmelsleiter-teambuilding-laubfrosch-800.jpg" href="/erlebnisse-kurse" class="card-compact" />
+        <Card title="Einzelpersonen" body="Persönliche Entwicklung und Entspannung." imagePath="/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-800.jpg" href="/erlebnisse-kurse" class="card-compact" />
+        <Card title="Private Gruppen" body="Vereine und kleine Teams." imagePath="/images/Baumstamm-sortieren-Balance-800.jpg" href="/erlebnisse-kurse" class="card-compact" />
+      </div>
+      <p>Je nach Format unterscheiden sich Anforderungen, Altersempfehlungen und körperliche Voraussetzungen.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="formate" class="prose max-w-none">
+      <h2>Unsere Erlebnis- und Kursformate</h2>
+      <div class="cards mt-4">
+        <Card title="Waldseilgarten & Klettern" body="Gemeinsam Höhe erleben – im eigenen Tempo." imagePath="/images/abseilen-laubfrosch-waldseilgarten-800.jpg" href="/erlebnisse-kurse/waldseilgarten-klettern" class="card-compact" />
+        <Card title="Wildnis & Naturhandwerk" body="Survival- und Bushcraft-Grundlagen." imagePath="/images/Feuer-machen-bushcraft-laubfrosch-800.jpg" href="/erlebnisse-kurse/wildnis-naturhandwerk" class="card-compact" />
+        <Card title="Bewegung" body="Training für Körper, Nervensystem und Alltag." imagePath="/images/Baumstamm-sortieren-waldseilgarten-800.jpg" href="/erlebnisse-kurse/bewegung" class="card-compact" />
+        <Card title="Coaching & Entwicklung" body="1:1-Begleitung in der Natur." imagePath="/images/blindfold-catwalk-selbstvertrauen-800.jpg" href="/erlebnisse-kurse/coaching-entwicklung" class="card-compact" />
+        <Card title="Meditation & Achtsamkeit" body="Präsenz trainieren, Nervensystem regulieren." imagePath="/images/kurs_naturwanderung-800.jpg" href="/bildungseinrichtungen/meditation" class="card-compact" />
+        <Card title="Hochbegabtenförderung" body="6-Säulen-Programm für Potenzialentfaltung." imagePath="/images/Himmelsleiter-teambuilding-laubfrosch-wald-800.jpg" href="/bildungseinrichtungen/hochbegabtenfoerderung" class="card-compact" />
+        <Card title="ADHS" body="Natur, Bewegung und Resilienztraining." imagePath="/images/fliegendes-eichhoernchen-laubfrosch-waldseilgarten-800.jpg" href="/erlebnisse-kurse/adhs" class="card-compact" />
+        <Card title="Waldbaden" body="Bewusst im Wald ankommen." imagePath="/images/kurs_naturwanderung-800.jpg" href="/erlebnisse-kurse/waldbaden" class="card-compact" />
+        <Card title="Kanu Tour" body="Natur vom Wasser aus erleben." imagePath="/images/kanu-fahren-800.jpg" href="/erlebnisse-kurse/kanu-tour" class="card-compact" />
+        <Card title="Wildkräuterwanderung" body="Pflanzen erkennen, Boden verstehen." imagePath="/images/kurs_naturwanderung-800.jpg" href="/erlebnisse-kurse/wildkraeutertour" class="card-compact" />
+        <Card title="Soil to Table" body="Vom Boden ins Gehirn." imagePath="/images/kochkurs-ern\u00e4hrung-2-800.jpg" href="/soil-to-table" class="card-compact" />
+        <Card title="Sprachreisen" body="The Journey – DE/EN-Camp in der Natur." imagePath="/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-800.jpg" href="/erlebnisse-kurse/sprachreisen" class="card-compact" />
+        <Card title="Bildungsreisen" body="Reisen als Lern- und Entwicklungsräume." imagePath="/images/internationale-schüler-austausch-kooperation-erlebnispädagogik-2-800.jpg" href="/erlebnisse-kurse/bildungsreisen" class="card-compact" />
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="sicherheit" class="prose max-w-none">
+      <h2>Sicherheit & Haltung</h2>
+      <p>Auch in offenen Erlebnissen gilt:</p>
+      <div class="cards mt-4">
+        <Card title="Sicherheitsstandards" body="Wir arbeiten mit klaren Sicherheitsstandards." imagePath="/images/eingurten-psa-waldseilgarten-laubfrosch-800.jpg" class="card-compact" />
+        <Card title="Freiwilligkeit" body="Niemand wird zu etwas gedrängt." imagePath="/images/abseilen-laubfrosch-waldseilgarten-800.jpg" class="card-compact" />
+        <Card title="Grenzen respektieren" body="Raum für eigene Grenzen." imagePath="/images/Feuer-machen-bushcraft-laubfrosch-800.jpg" class="card-compact" />
+      </div>
+      <p class="mt-4">Wir verstehen diese Angebote als Möglichkeit, Erfahrungen zu machen. Was Menschen daraus mitnehmen, ist individuell.</p>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="buchung" class="prose max-w-none">
+      <h2>Buchung & Termine</h2>
+      <p>Einige Angebote finden als offene Kurse zu festen Terminen statt, andere können individuell für Gruppen vereinbart werden.</p>
+      <p>Informationen zu aktuellen Terminen und Buchungsmöglichkeiten erhalten Sie direkt über unsere Kontaktseite.</p>
+      <div class="mt-6">
+        <Button href="/kontakt" type="primary">Anfrage zu Erlebnissen & Kursen stellen</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.erlebnisse-overview {
+  padding-top: 0;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+</style>

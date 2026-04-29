@@ -1,0 +1,172 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+import GlassPanel from '../components/GlassPanel.astro';
+import SectionTeaserGrid from '../components/SectionTeaserGrid.astro';
+
+const teaserItems = [
+  {
+    href: '#warum-training',
+    image: '/bilder_nach_page/unternehmen/teambuilding/Himmelsleiter-teambuilding-laubfrosch-wald.jpg',
+    alt: 'Warum klassische Trainings verpuffen - Teamtraining im Wald',
+    label: 'Warum klassische Trainings verpuffen',
+  },
+  {
+    href: '#saeulen',
+    image: '/bilder_nach_page/unternehmen/teambuilding/internationale schüler austausch kooperation erlebnispädagogik.jpg',
+    alt: 'Die 4 Säulen - Teamkooperation',
+    label: 'Die 4 Säulen',
+  },
+  {
+    href: '#rahmen',
+    image: '/bilder_nach_page/unternehmen/assessment-center/Sicherheit-waldseilgarten-laubfrosch.jpg',
+    alt: 'Sicherer Rahmen - Sicherheit im Waldseilgarten',
+    label: 'Sicherer Rahmen',
+  },
+  {
+    href: '#anfrage',
+    image: '/bilder_nach_page/unternehmen/teambuilding/Reflexion-teamkreis-kommunikation.jpg',
+    alt: 'Kontakt und Anfrage - Teamreflexion',
+    label: 'Kontakt und Anfrage',
+  },
+];
+---
+
+<MainLayout title="Unternehmen – Laubfrosch">
+  <div class="unternehmen-hero">
+    <Hero
+      title="Investition in Menschen statt Folien."
+      subtitle="Verlassen Sie den Konferenzraum. Nutzen Sie unseren geschützten Naturraum für Assessment, Resilienztraining und nachhaltige Teamentwicklung. Professionell, sicher und transferorientiert."
+      imagePath="/bilder_nach_page/unternehmen/teambuilding/Himmelsleiter-teambuilding-laubfrosch-wald-big.jpg"
+      cta="Kostenfreies Erstgespräch vereinbaren"
+      ctaHref="#anfrage"
+    />
+  </div>
+
+  <Section class="unternehmen-overview">
+    <div class="prose max-w-none">
+      <h2>Inhalte auf einen Blick</h2>
+      <p>Direkt zu den wichtigsten Bereichen springen:</p>
+      <SectionTeaserGrid items={teaserItems} />
+    </div>
+  </Section>
+
+  <Section>
+    <GlassPanel id="warum-training" class="prose max-w-none">
+      <h2>Warum klassische Trainings oft verpuffen.</h2>
+      <p>Im Seminarraum nicken alle. Doch unter Stress und im Alltag fallen Teams oft in alte Muster zurück. "Teamfähigkeit" und "Resilienz" lassen sich auf Powerpoint-Folien leicht behaupten, aber schwer überprüfen.</p>
+      <p>Wir bei der komm raus GmbH glauben: Wachstum geschieht außerhalb der Komfortzone.</p>
+      <p>Im Waldseilgarten Laubfrosch bieten wir kein "Händchenhalten", sondern echte kooperative Herausforderungen. Unser einzigartiges Toprope-Sicherungssystem zwingt zur Übernahme von Verantwortung: Niemand kommt allein ans Ziel, jeder ist für die Sicherheit des anderen zuständig. Das schafft eine Verbindlichkeit, die kein Workshop simulieren kann.</p>
+      <picture class="image-card">
+        <img src="/bilder_nach_page/unternehmen/teambuilding/himmelsleiter-teambuilding-laubfrosch.jpg" alt="Teamtraining und Herausforderungen im Waldseilgarten" loading="lazy" class="image-card-img" />
+      </picture>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="saeulen" class="prose max-w-none">
+      <h2>Die 4 Säulen</h2>
+      <div class="cards mt-4">
+        <Card
+          title="Vom Nebeneinander zum Miteinander."
+          body="Lösen Sie Silo-Denken auf. Unsere Programme machen Kommunikationsmuster sichtbar und bearbeitbar. Durch komplexe Problemlöseaufgaben am Boden und in der Höhe lernen Teams, Ressourcen effizient zu nutzen und Konflikte konstruktiv zu lösen."
+          image="/bilder_nach_page/unternehmen/teambuilding/internationale schüler austausch kooperation erlebnispädagogik.jpg"
+          cta="Zum Teambuilding & Training"
+          ctaHref="/unternehmen/teambuilding"
+        />
+        <Card
+          title="Charakter zeigt sich unter Stress."
+          body="Eine Fehlbesetzung kostet Unternehmen durchschnittlich 45.000 €. Klassische Interviews sind oft einstudiert. In unserem Assessment-Parcours sehen Sie Bewerber in realer Interaktion: Wie reagieren sie auf Frust? Wie kommunizieren sie unter Zeitdruck? Wir machen soziale Kompetenz beobachtbar."
+          image="/bilder_nach_page/unternehmen/assessment-center/Himmelsleiter-teambuilding-laubfrosch-wald.jpg"
+          cta="Zum Assessment-Center"
+          ctaHref="/unternehmen/assessment-center"
+        />
+        <Card
+          title="Gesunde Führung in fordernden Zeiten."
+          body="Wer andere führen will, muss sich selbst regulieren können. Wir kombinieren Erkenntnisse aus der Stressforschung mit Naturerfahrung. Ihre Führungskräfte lernen Techniken zur Fokussteuerung, Schlafhygiene und Entscheidungsfindung unter Belastung."
+          image="/bilder_nach_page/unternehmen/teambuilding/Leiter-ueberwinden-vertrauen-kooperation.jpg"
+          cta="Zum Führungskräftetraining"
+          ctaHref="/unternehmen/manager-training"
+        />
+        <Card
+          title="Gemeinsame Erlebnisse, die verbinden."
+          body="Ob Bogenschießen, Kanutour oder Kochen am offenen Feuer – wir schaffen den Rahmen für echte Begegnung abseits des Büroalltags. Professionell organisiert, natürlich entspannt und ideal zur Stärkung der Betriebsatmosphäre."
+          image="/bilder_nach_page/unternehmen/csr/kochen.jpg"
+          cta="Zu den Event-Formaten"
+          ctaHref="/unternehmen/csr"
+        />
+      </div>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="rahmen" class="prose max-w-none">
+      <h2>Ein sicherer Rahmen für Ihre Mitarbeiter.</h2>
+      <ul class="card-list">
+        <li><strong>Pädagogische Leitung:</strong> Geführt von Christopher Sartory (Unternehmer & Erlebnispädagoge) und einem interdisziplinären Team aus Sportwissenschaftlern und Trainern.</li>
+        <li><strong>Zertifizierte Sicherheit:</strong> Wir sind kein Freizeitpark, sondern eine Bildungseinrichtung. Unser Betrieb folgt strengen Normen (DIN 15567, ERCA) und wird jährlich vom TÜV geprüft.</li>
+        <li><strong>Exklusivität:</strong> Sie teilen den Raum nicht mit Schulklassen oder Touristen. Bei Firmenprogrammen gehört der Fokus ganz Ihrem Team.</li>
+      </ul>
+    </GlassPanel>
+  </Section>
+
+  <Section>
+    <GlassPanel id="anfrage" class="prose max-w-none">
+      <h2>Lassen Sie uns über Ihre Ziele sprechen.</h2>
+      <p>Jedes Unternehmen ist anders. Ob Sie ein Assessment für Azubis oder ein Resilienztraining für das C-Level suchen – wir erstellen Ihnen ein passgenaues Konzept und berücksichtigen Ihre Ressourcen.</p>
+      <div class="mt-6">
+        <Button href="#anfrage" type="primary">Anfrage senden</Button>
+      </div>
+    </GlassPanel>
+  </Section>
+</MainLayout>
+
+<style>
+.unternehmen-overview {
+  padding-top: 0;
+}
+
+.image-card {
+  display: block;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #f3f4f6;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.image-card-img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: saturate(1.02);
+}
+
+.image-card:hover .image-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-card-img {
+    aspect-ratio: 1 / 1;
+  }
+}
+</style>

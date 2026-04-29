@@ -2,19 +2,38 @@
 interface Props {
   title: string;
   body?: string;
-  image?: string; // base name, e.g., 'konzept_toprope_240px'
+  imagePath?: string;
+  imageAlt?: string;
+  href?: string;
+  class?: string;
 }
-const { title, body = '', image } = Astro.props as Props;
+
+const {
+  title,
+  body = '',
+  imagePath,
+  imageAlt,
+  href,
+  class: className = '',
+} = Astro.props as Props;
+
+const alt = imageAlt ?? title;
 ---
 
-<article class="p-md-6 bg-white rounded-md shadow-sm">
-  {image && (
-    <picture>
-      <source type="image/webp" srcset={`/images/${image}-400.webp 400w, /images/${image}-800.webp 800w`} />
-      <img src={`/images/${image}-400.jpg`} srcset={`/images/${image}-400.jpg 400w, /images/${image}-800.jpg 800w`} alt={title} class="w-full h-40 object-cover rounded-md mb-md-4" loading="lazy" />
-    </picture>
+<article class={`card ${className}`.trim()}>
+  {imagePath && (
+    <img
+      src={imagePath}
+      alt={alt}
+      class="card-image"
+      loading="lazy"
+      decoding="async"
+    />
   )}
 
-  <h3 class="font-semibold text-lg">{title}</h3>
-  {body && <p class="mt-md-3 text-sm text-gray-700">{body}</p>}
+  <div class="card-content">
+    <h3 class="card-title">{title}</h3>
+    {body && <p class="card-body" set:html={body}></p>}
+    {href && <a href={href} class="btn btn-primary btn-sm">Details</a>}
+  </div>
 </article>

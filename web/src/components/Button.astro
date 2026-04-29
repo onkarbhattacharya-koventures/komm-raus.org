@@ -1,15 +1,22 @@
 ---
 interface Props {
   href?: string;
-  type?: 'primary' | 'dark';
+  type?: 'primary' | 'secondary' | 'dark' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string;
 }
-const { href = '#', type = 'primary' } = Astro.props as Props;
+const { href = '#', type = 'primary', size = 'md', class: className = '' } = Astro.props as Props;
+
+const sizeClasses = {
+  sm: 'btn-sm',
+  md: 'btn-md',
+  lg: 'btn-lg'
+};
 ---
 
-<a href={href} class={`inline-flex items-center justify-center px-6 py-3 font-medium text-sm rounded-xl border-none cursor-pointer transition-all duration-200 ease-out shadow-md text-decoration-none ${
-  type === 'primary'
-    ? 'bg-md-primary text-md-on-primary hover:bg-md-primary-container hover:text-md-on-primary-container hover:shadow-lg hover:-translate-y-0.5 active:shadow-md active:translate-y-0'
-    : 'bg-md-secondary text-md-on-secondary hover:bg-md-secondary-container hover:text-md-on-secondary-container hover:shadow-lg hover:-translate-y-0.5 active:shadow-md active:translate-y-0'
-}`}>
+<a 
+  href={href} 
+  class={`btn btn-${type} ${sizeClasses[size]} ${className}`}
+>
   <slot />
 </a>
